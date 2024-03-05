@@ -1,6 +1,7 @@
 package com.example.qr_dasher;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -55,6 +56,9 @@ public class HomePage extends Activity {
 
                 // Create a User object
                 User user = new User(name, email, details, location);
+
+                Intent roleSelectionIntent = new Intent(HomePage.this, RoleSelection.class);
+                startActivity(roleSelectionIntent);
             }
         });
     }

@@ -1,4 +1,6 @@
 package com.example.qr_dasher;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class User {
@@ -9,13 +11,16 @@ public class User {
     private boolean location;
 
     private String profile_image;
-
+    private List<String> eventsCreated;
+    private List<String> eventsJoined;
     public User(String name, String email, boolean location){
         Random random = new Random();
         this.name = name;
         this.email = email;
         this.location = location;
         this.UserId = random.nextInt();
+        this.eventsCreated = new ArrayList<>();
+        this.eventsJoined = new ArrayList<>();
     }
 
     public String getName(){
@@ -46,4 +51,17 @@ public class User {
     }
     public void setProfile_image(String profile_image) { this.profile_image = profile_image; }
     public void setUserId(int userId) { UserId = userId; }
+
+    public void addEventsJoined(String qrCode){
+        this.eventsJoined.add(qrCode);
+    }
+    public void addEventsCreated(String qrCode){
+        this.eventsCreated.add(qrCode);
+    }
+    public List<String> getEventsJoined(){
+        return this.eventsJoined;
+    }
+    public List<String> getEventsCreated(){
+        return this.eventsCreated;
+    }
 }

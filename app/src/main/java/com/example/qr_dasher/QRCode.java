@@ -3,12 +3,27 @@ package com.example.qr_dasher;
 import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.util.Base64;
+import android.util.Log;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
+
+import org.checkerframework.checker.nullness.qual.NonNull;
+
+import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class QRCode {
@@ -81,5 +96,6 @@ public class QRCode {
         String qrImage = Picture.convertBitmaptoString(myBitmap);
         return qrImage;
     }
+
 
 }

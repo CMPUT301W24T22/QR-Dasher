@@ -37,7 +37,7 @@ android {
 
 dependencies {
     implementation("com.google.zxing:core:3.4.1")
-
+    implementation("com.journeyapps:zxing-android-embedded:4.2.0")
     implementation(platform("com.google.firebase:firebase-bom:32.7.3"))
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-analytics")

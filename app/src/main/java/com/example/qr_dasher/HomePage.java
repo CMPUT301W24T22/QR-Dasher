@@ -84,7 +84,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomePage.this, UserSelectionPage.class));
+                startActivity(new Intent(HomePage.this, RolePage.class));
             }
         });
     }

@@ -1,14 +1,16 @@
 package com.example.myapplication;
 
+
 import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,20 +20,9 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 
-import androidx.core.view.WindowCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.myapplication.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 // zxing lib
 import com.google.firebase.FirebaseApp;
@@ -39,9 +30,6 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.QRCodeWriter;
-
-import org.w3c.dom.Text;
 
 // adding firebase references
 import com.google.firebase.firestore.CollectionReference;
@@ -52,14 +40,18 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Nullable;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_QR_CODES = "extra_qr_codes";
     ImageView qrimage;
     Button generateQR;
+    Button displayQRcodes;
     EditText inputText;
 
     // Firebase link
@@ -72,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         qrimage = findViewById(R.id.qrCode); // image
         generateQR = findViewById(R.id.generateQR); // button
         inputText = findViewById(R.id.inputText); // TextView
-
+        displayQRcodes = findViewById(R.id.displayQRcodes);
         // Create Collection in Firebase
         FirebaseApp.initializeApp(this);
 
@@ -109,6 +101,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        displayQRcodes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getQRFromFirebase();
+            }
+        });
+
     }
     private Bitmap createBitmap(String text){
         BitMatrix result = null;
@@ -168,5 +168,49 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
+    public void getQRFromFirebase(){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("generatedQRCodes")
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    List<String> qrCodes = new ArrayList<>(); // list of qrCodes
+                    //Iterate through the list
+                    for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                        Map<String, Object> qrCodeData = documentSnapshot.getData();
+                        String qrCodeString = (String) qrCodeData.get("image");
+                        qrCodes.add(qrCodeString); // append to the list
+                    }
+                    // Process the retrieved QR codes, for example, display them or do further operations
+                    Intent intent = new Intent(MainActivity.this, DisplayQRActivity.class);
+                    intent.putStringArrayListExtra(EXTRA_QR_CODES, (ArrayList<String>) qrCodes);
+                    startActivity(intent);
+                })
+                    // Once we have all the qr codes, we can call in displayQRcodes activity
+                    //Intent intent = new Intent(MainActivity.this, displayQRcodes.class);
+                    //intent.putStringArrayListExtra(displayQRcodes.EXTRA_QR_CODES, (ArrayList<String>) qrCodes);
+                    // DisplayQRActivity.EXTRA_QR_CODES is the list of QRcodes we got from firebase
+                    //startActivity(intent);
+
+                .addOnFailureListener(e -> {
+                    Log.d("QR", "Failed to retrieve QR codes from Firestore");
+                    e.printStackTrace();
+                });
+
+    }
+
+//    private void displayQRcodes(List<String> qrCodes){
+//        for (String qrCodeString: qrCodes){
+//            // Converting it back to Bitmap from base 64
+//            byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
+//            Bitmap qrCodeBitmap  = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+//            ImageView imageView = new ImageView(this);
+//            imageView.setImageBitmap(qrCodeBitmap);
+//            setContentView(imageView);
+//        }
+//    }
+//
+
+
 
 }

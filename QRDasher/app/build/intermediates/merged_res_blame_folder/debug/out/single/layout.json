@@ -1,10 +1,18 @@
 [
     {
-        "merged": "/Users/rishabh2.7/.gradle/daemon/8.2/com.example.qr_dasher.app-mergeDebugResources-42:/layout/home_page.xml",
-        "source": "/Users/rishabh2.7/.gradle/daemon/8.2/com.example.qr_dasher.app-main-45:/layout/home_page.xml"
+        "merged": "com.example.qr_dasher.app-mergeDebugResources-44:/layout/list_item_event.xml",
+        "source": "com.example.qr_dasher.app-main-47:/layout/list_item_event.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-42:/layout/role_selection.xml",
-        "source": "com.example.qr_dasher.app-main-45:/layout/role_selection.xml"
+        "merged": "/Users/rishabh2.7/.gradle/daemon/8.2/com.example.qr_dasher.app-mergeDebugResources-44:/layout/attendee.xml",
+        "source": "/Users/rishabh2.7/.gradle/daemon/8.2/com.example.qr_dasher.app-main-47:/layout/attendee.xml"
+    },
+    {
+        "merged": "/Users/rishabh2.7/.gradle/daemon/8.2/com.example.qr_dasher.app-mergeDebugResources-44:/layout/role_selection.xml",
+        "source": "/Users/rishabh2.7/.gradle/daemon/8.2/com.example.qr_dasher.app-main-47:/layout/role_selection.xml"
+    },
+    {
+        "merged": "/Users/rishabh2.7/.gradle/daemon/8.2/com.example.qr_dasher.app-mergeDebugResources-44:/layout/home_page.xml",
+        "source": "/Users/rishabh2.7/.gradle/daemon/8.2/com.example.qr_dasher.app-main-47:/layout/home_page.xml"
     }
 ]

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-41:/values-tr/values-tr.xml",
+            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-43:/values-tr/values-tr.xml",
             "map": [
                 {
                     "source": "/Users/rishabh2.7/.gradle/caches/transforms-3/cae0069d1585611eb98b1d4f16fa8d6e/transformed/appcompat-1.6.1/res/values-tr/values-tr.xml",
@@ -71,6 +71,23 @@
                         "startOffsets": "8326,8431",
                         "endColumns": "104,116",
                         "endOffsets": "8426,8543"
+                    }
+                },
+                {
+                    "source": "/Users/rishabh2.7/.gradle/caches/transforms-3/995f8be794215d62ddfd2cdba7e44816/transformed/zxing-android-embedded-4.1.0/res/values-tr/values-tr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,116,166,313",
+                        "endColumns": "60,49,146,119",
+                        "endOffsets": "111,161,308,428"
+                    },
+                    "to": {
+                        "startLines": "105,106,107,108",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "8808,8869,8919,9066",
+                        "endColumns": "60,49,146,119",
+                        "endOffsets": "8864,8914,9061,9181"
                     }
                 }
             ]

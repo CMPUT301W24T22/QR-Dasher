@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-41:/values-hr/values-hr.xml",
+            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-43:/values-hr/values-hr.xml",
             "map": [
                 {
                     "source": "/Users/rishabh2.7/.gradle/caches/transforms-3/0b1b1a158da0668ca4bdcd3e34d70499/transformed/material-1.11.0/res/values-hr/values-hr.xml",

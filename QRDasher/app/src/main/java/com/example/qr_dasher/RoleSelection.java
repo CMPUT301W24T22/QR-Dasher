@@ -19,24 +19,24 @@ public class RoleSelection extends AppCompatActivity {
         organizer_button = findViewById(R.id.organizer_button); // replace with your actual button ID
         attendee_button = findViewById(R.id.attendee_button); // replace with your actual button ID
 
-//        organizer_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Intent to start Organizer Activity
-//                Intent intent = new Intent(RoleSelection.this, OrganizerActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        attendee_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Intent to start Attendee Activity
-//                Intent intent = new Intent(RoleSelection.this, AttendeeActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-    }
+        organizer_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent to start Organizer Activity
+                Intent intent = new Intent(RoleSelection.this, OrganizerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        attendee_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent to start Attendee Activity
+                Intent intent = new Intent(RoleSelection.this, AttendeeActivity.class);
+                startActivity(intent);
+            }
+        });
+}
 
 
 

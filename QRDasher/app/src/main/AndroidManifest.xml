@@ -23,12 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".RoleSelection"
 
-            android:theme="@style/Theme.QRDasher">
             <!-- No intent-filter needed unless it's a MAIN activity or should handle specific actions -->
-        </activity>
+        <activity android:name=".RoleSelection" />
+        <activity android:name=".OrganizerActivity" />
+        <activity android:name=".AttendeeActivity" />
+        <activity android:name=".Notifications" />
+        <activity android:name=".EventDetails" />
+        <activity android:name=".ScanQRCode" />
+
     </application>
 
 </manifest>

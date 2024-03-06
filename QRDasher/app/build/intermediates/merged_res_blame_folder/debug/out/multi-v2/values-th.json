@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-41:/values-th/values-th.xml",
+            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-43:/values-th/values-th.xml",
             "map": [
                 {
                     "source": "/Users/rishabh2.7/.gradle/caches/transforms-3/87f22283ee55c8414d476f8251d5c8dc/transformed/core-1.9.0/res/values-th/values-th.xml",
@@ -35,6 +35,23 @@
                         "startOffsets": "335,440,533,641,726,828,938,1016,1093,1184,1277,1368,1462,1562,1655,1750,1844,1935,2026,2107,2210,2308,2406,2509,2615,2716,2869,8533",
                         "endColumns": "104,92,107,84,101,109,77,76,90,92,90,93,99,92,94,93,90,90,80,102,97,97,102,105,100,152,94,81",
                         "endOffsets": "435,528,636,721,823,933,1011,1088,1179,1272,1363,1457,1557,1650,1745,1839,1930,2021,2102,2205,2303,2401,2504,2610,2711,2864,2959,8610"
+                    }
+                },
+                {
+                    "source": "/Users/rishabh2.7/.gradle/caches/transforms-3/995f8be794215d62ddfd2cdba7e44816/transformed/zxing-android-embedded-4.1.0/res/values-th/values-th.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,163,281",
+                        "endColumns": "58,48,117,107",
+                        "endOffsets": "109,158,276,384"
+                    },
+                    "to": {
+                        "startLines": "105,106,107,108",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "8716,8775,8824,8942",
+                        "endColumns": "58,48,117,107",
+                        "endOffsets": "8770,8819,8937,9045"
                     }
                 },
                 {

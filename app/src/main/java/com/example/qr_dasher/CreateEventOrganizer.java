@@ -57,7 +57,7 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
     // TO:DO change the default userID with the one in Cache
     int userID = 50505050;
-
+    // TO:DO also reflect this change in user class user append events created
 //    private int event_id;
 //    private String name;
 //    private String details;

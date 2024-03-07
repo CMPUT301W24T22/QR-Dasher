@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-38:12
 MERGED from [androidx.databinding:viewbinding:8.2.1] C:\Users\jaspr\.gradle\caches\transforms-3\4742c9a980a758876e13af438b2d8aaa\transformed\viewbinding-8.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jaspr\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:17:1-56:12
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\jaspr\.gradle\caches\transforms-3\e4fcf0d7f61a62c6f0e26a8eb7b4acc9\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:2:1-26:12
@@ -101,8 +101,8 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\jas
 	xmlns:android
 		ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:5:5-35:19
-INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:5:5-35:19
+ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:5:5-36:19
+INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:5:5-36:19
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jaspr\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:46:5-54:19
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jaspr\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:46:5-54:19
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\jaspr\.gradle\caches\transforms-3\e4fcf0d7f61a62c6f0e26a8eb7b4acc9\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:13:5-24:19
@@ -227,6 +227,10 @@ activity#com.example.qr_dasher.Organizer
 ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:34:9-47
 	android:name
 		ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:34:19-44
+activity#com.example.qr_dasher.ScanQR
+ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:35:9-43
+	android:name
+		ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:35:19-41
 uses-sdk
 INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml

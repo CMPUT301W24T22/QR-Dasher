@@ -10,20 +10,20 @@ public class Event {
     private ArrayList<User> attendee_list;
     private QRCode attendee_qr;
     private QRCode promotional_qr;
-    private User organizer;
+    private int userID;
     public Event(String name, ArrayList<User> attendee_list, User organizer){
         Random random = new Random();
         this.name = name;
         this.attendee_list = attendee_list;
         this.event_id = random.nextInt();
-        this.organizer = organizer;
+        //this.organizer = organizer;
     }
-    public User getOrganizer() {
-        return organizer;
-    }
-    public void setOrganizer(User organizer) {
-        this.organizer = organizer;
-    }
+//    public User getOrganizer() {
+//        return organizer;
+//    }
+//    public void setOrganizer(User organizer) {
+//        this.organizer = organizer;
+//    }
     public int getEvent_id() {
         return event_id;
     }
@@ -62,9 +62,9 @@ public class Event {
     }
     public void generateQRCode(String content, boolean promotional){
         if (promotional){
-            this.promotional_qr = new QRCode(this.event_id, content, this.organizer, true);
+            this.promotional_qr = new QRCode(this.event_id, content, this.userID, true);
         } else {
-            this.attendee_qr = new QRCode(this.event_id, content, this.organizer, false);
+            this.attendee_qr = new QRCode(this.event_id, content, this.userID, false);
         }
     }
     public void addAttendee(User attendee) {
@@ -82,4 +82,5 @@ public class Event {
         }
         attendee_list.remove(attendee);
     }
+
 }

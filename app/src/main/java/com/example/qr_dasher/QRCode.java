@@ -30,12 +30,12 @@ public class QRCode {
     private int event_id;
     private String content;
     private String QRImage;
-    private User organizer;
+    private int userID;
     private boolean promotional;
-    public QRCode (int event_id, String content, User organizer, boolean promotional){
+    public QRCode (int event_id, String content, int userID, boolean promotional){
         this.content = content;
         this.event_id = event_id;
-        this.organizer = organizer;
+        this.userID = userID;
         this.promotional = promotional;
 
         this.QRImage = createQRImage(content);
@@ -58,11 +58,11 @@ public class QRCode {
     public void setQrImage(String qrImage) {
         this.QRImage = qrImage;
     }
-    public User getOrganizer() {
-        return organizer;
+    public int getUserID() {
+        return this.userID;
     }
-    public void setOrganizer(User organizer) {
-        this.organizer = organizer;
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
     public boolean getQRType(){
         return this.promotional;

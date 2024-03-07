@@ -109,8 +109,10 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
         profile_picture = imageBitmap;
     }
     private void addUserToFirestore(User user) {
-        usersCollection.add(user)
-                .addOnSuccessListener(documentReference -> {
+        int userId = user.getUserId();
+        usersCollection.document(String.valueOf(userId))
+                .set(user)
+                .addOnSuccessListener(aVoid -> {
                     Toast.makeText(HomePage.this, "Upload Successful", Toast.LENGTH_SHORT).show();
                 })
                 .addOnFailureListener(e -> {

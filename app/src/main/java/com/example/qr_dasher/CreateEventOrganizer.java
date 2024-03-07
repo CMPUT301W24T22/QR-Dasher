@@ -50,28 +50,42 @@ import javax.annotation.Nullable;
 
 public class CreateEventOrganizer extends AppCompatActivity {
     public static final String EXTRA_QR_CODES = "extra_qr_codes";
-    ImageView qrimage;
-    Button generateQR;
-    Button displayQRcodes;
-    EditText inputText;
+    private ImageView qrImage, promotionalImage;
+    private Button generateQR, generatePromotionalQR, displayQRcodes;
+    private EditText eventName, eventDetails;
+
+    // TO:DO change the default userID with the one in Cache
+    int userID;
+
+//    private int event_id;
+//    private String name;
+//    private String details;
 
     // Firebase link
     private FirebaseFirestore db;
-    private CollectionReference generatedQRCodes;
+    private CollectionReference events;
+
+
+    //private CollectionReference generatedQRCodes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event_organizer);
-        qrimage = findViewById(R.id.qrCode); // image
+        qrImage = findViewById(R.id.qrCode); // image
         generateQR = findViewById(R.id.generateQR); // button
-        inputText = findViewById(R.id.inputText); // TextView
+        generatePromotionalQR = findViewById(R.id.generatePromotionalQR);
+        eventName = findViewById(R.id.eventName); // event Name
+        eventDetails = findViewById(R.id.details); // event Name
+
         displayQRcodes = findViewById(R.id.displayQRcodes);
+
         // Create Collection in Firebase
         FirebaseApp.initializeApp(this);
 
         db = FirebaseFirestore.getInstance();
 
-        generatedQRCodes = db.collection("generatedQRCodes");
+        events = db.collection("events");
+
 
         generateQR.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +94,7 @@ public class CreateEventOrganizer extends AppCompatActivity {
                     // to check if there is some text or not
                     String text = inputText.getText().toString();
                     Bitmap qrCode = createBitmap(text);
-                    qrimage.setImageBitmap(qrCode);
+                    qrImage.setImageBitmap(qrCode);
 
                     String qrCodeString = convertQRtoString(qrCode);
                     generatedQRCodes.addSnapshotListener(new EventListener<QuerySnapshot>() {

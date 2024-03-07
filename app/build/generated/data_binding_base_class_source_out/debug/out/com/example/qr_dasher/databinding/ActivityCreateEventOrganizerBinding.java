@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,24 +23,46 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button CreateEvent;
+
+  @NonNull
+  public final TextView CreateEventHeading;
+
+  @NonNull
+  public final EditText details;
+
+  @NonNull
   public final Button displayQRcodes;
+
+  @NonNull
+  public final EditText eventName;
+
+  @NonNull
+  public final Button generatePromotionalQR;
 
   @NonNull
   public final Button generateQR;
 
   @NonNull
-  public final EditText inputText;
+  public final ImageView promotionalQR;
 
   @NonNull
   public final ImageView qrCode;
 
   private ActivityCreateEventOrganizerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button displayQRcodes, @NonNull Button generateQR, @NonNull EditText inputText,
-      @NonNull ImageView qrCode) {
+      @NonNull Button CreateEvent, @NonNull TextView CreateEventHeading, @NonNull EditText details,
+      @NonNull Button displayQRcodes, @NonNull EditText eventName,
+      @NonNull Button generatePromotionalQR, @NonNull Button generateQR,
+      @NonNull ImageView promotionalQR, @NonNull ImageView qrCode) {
     this.rootView = rootView;
+    this.CreateEvent = CreateEvent;
+    this.CreateEventHeading = CreateEventHeading;
+    this.details = details;
     this.displayQRcodes = displayQRcodes;
+    this.eventName = eventName;
+    this.generatePromotionalQR = generatePromotionalQR;
     this.generateQR = generateQR;
-    this.inputText = inputText;
+    this.promotionalQR = promotionalQR;
     this.qrCode = qrCode;
   }
 
@@ -70,9 +93,39 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.CreateEvent;
+      Button CreateEvent = ViewBindings.findChildViewById(rootView, id);
+      if (CreateEvent == null) {
+        break missingId;
+      }
+
+      id = R.id.CreateEventHeading;
+      TextView CreateEventHeading = ViewBindings.findChildViewById(rootView, id);
+      if (CreateEventHeading == null) {
+        break missingId;
+      }
+
+      id = R.id.details;
+      EditText details = ViewBindings.findChildViewById(rootView, id);
+      if (details == null) {
+        break missingId;
+      }
+
       id = R.id.displayQRcodes;
       Button displayQRcodes = ViewBindings.findChildViewById(rootView, id);
       if (displayQRcodes == null) {
+        break missingId;
+      }
+
+      id = R.id.eventName;
+      EditText eventName = ViewBindings.findChildViewById(rootView, id);
+      if (eventName == null) {
+        break missingId;
+      }
+
+      id = R.id.generatePromotionalQR;
+      Button generatePromotionalQR = ViewBindings.findChildViewById(rootView, id);
+      if (generatePromotionalQR == null) {
         break missingId;
       }
 
@@ -82,9 +135,9 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.inputText;
-      EditText inputText = ViewBindings.findChildViewById(rootView, id);
-      if (inputText == null) {
+      id = R.id.promotionalQR;
+      ImageView promotionalQR = ViewBindings.findChildViewById(rootView, id);
+      if (promotionalQR == null) {
         break missingId;
       }
 
@@ -94,8 +147,9 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCreateEventOrganizerBinding((ConstraintLayout) rootView, displayQRcodes,
-          generateQR, inputText, qrCode);
+      return new ActivityCreateEventOrganizerBinding((ConstraintLayout) rootView, CreateEvent,
+          CreateEventHeading, details, displayQRcodes, eventName, generatePromotionalQR, generateQR,
+          promotionalQR, qrCode);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

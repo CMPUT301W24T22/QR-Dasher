@@ -1,42 +1,46 @@
 [
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/fragment_image_upload.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/fragment_image_upload.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\scan_qr.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\scan_qr.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/organizer.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/organizer.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\user_selection_page.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\user_selection_page.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/attendee.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/attendee.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\role_page.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\role_page.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/scan_qr.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/scan_qr.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\home_page.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\home_page.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/notifications.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/notifications.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\notifications.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\notifications.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/user_selection_page.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/user_selection_page.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\activity_create_event_organizer.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\activity_create_event_organizer.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/role_page.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/role_page.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\activity_reuse_qrcodes.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\activity_reuse_qrcodes.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/home_page.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/home_page.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\fragment_image_upload.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\fragment_image_upload.xml"
+    },
+    {
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\attendee.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\attendee.xml"
+    },
+    {
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\organizer.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\organizer.xml"
     },
     {
         "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/activity_create_event_organizer.xml",
         "source": "com.example.qr_dasher.app-main-54:/layout/activity_create_event_organizer.xml"
-    },
-    {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/activity_reuse_qrcodes.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/activity_reuse_qrcodes.xml"
     }
 ]

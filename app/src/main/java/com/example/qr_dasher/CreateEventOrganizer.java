@@ -24,6 +24,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 // zxing lib
 import com.google.firebase.FirebaseApp;
@@ -55,7 +56,7 @@ public class CreateEventOrganizer extends AppCompatActivity {
     private EditText eventName, eventDetails;
 
     // TO:DO change the default userID with the one in Cache
-    int userID;
+    int userID = 50505050;
 
 //    private int event_id;
 //    private String name;
@@ -63,7 +64,8 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
     // Firebase link
     private FirebaseFirestore db;
-    private CollectionReference events;
+    private CollectionReference eventsCollection;
+
 
 
     //private CollectionReference generatedQRCodes;
@@ -77,6 +79,7 @@ public class CreateEventOrganizer extends AppCompatActivity {
         eventName = findViewById(R.id.eventName); // event Name
         eventDetails = findViewById(R.id.details); // event Name
 
+
         displayQRcodes = findViewById(R.id.displayQRcodes);
 
         // Create Collection in Firebase
@@ -84,36 +87,53 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-        events = db.collection("events");
 
+        eventsCollection = db.collection("events");
 
-        generateQR.setOnClickListener(new View.OnClickListener() {
+        generateQR.setOnClickListener(new View.OnClickListener() { // generate QR based on the event id
+            // we will generate the event ID using the event.java
+
             @Override
             public void onClick(View v) {
-                if (!TextUtils.isEmpty(inputText.getText())){
+                Log.d("generateQR","pressed button");
+                //if (!TextUtils.isEmpty(eventName.getText()) && !TextUtils.isEmpty(eventDetails.getText())){
                     // to check if there is some text or not
-                    String text = inputText.getText().toString();
-                    Bitmap qrCode = createBitmap(text);
-                    qrImage.setImageBitmap(qrCode);
-
-                    String qrCodeString = convertQRtoString(qrCode);
-                    generatedQRCodes.addSnapshotListener(new EventListener<QuerySnapshot>() {
-                        @Override
-                        public void onEvent(@Nullable QuerySnapshot querySnapshots,
-                                            @Nullable FirebaseFirestoreException error) {
-                            if (error != null) {
-                                Log.e("Firestore", error.toString());
-                                return;
-                            }
-                            if (querySnapshots != null) {
-                                AddQRtoFirebase(qrCodeString,text);
-
-                            }
-                        }
-                    });
+                    String event_name = eventName.getText().toString();
+                    String event_details = eventDetails.getText().toString();
 
 
-                }
+                    // Create a new event
+                    Event event = new Event(event_name, event_details,  userID);
+                    // Generated event_id
+                    Log.d("Eventid", ""+event.getEvent_id());
+                    // Generating QR codes
+                    event.generateQRCode("" + event.getEvent_id(), true);
+                    event.generateQRCode("" + event.getEvent_id(), false);
+
+                    QRCode attendeeQR = event.getAttendee_qr();
+                    QRCode promotionalQR = event.getPromotional_qr();
+
+                    addEventToFirebase(event);
+
+
+
+//                    eventsCollection.addSnapshotListener(new EventListener<QuerySnapshot>() {
+//                        @Override
+//                        public void onEvent(@Nullable QuerySnapshot querySnapshots,
+//                                            @Nullable FirebaseFirestoreException error) {
+//                            if (error != null) {
+//                                Log.e("Firestore", error.toString());
+//                                return;
+//                            }
+//                            if (querySnapshots != null) {
+//                                AddQRtoFirebase(qrCodeString,text);
+//
+//                            }
+//                        }
+//                    });
+
+
+               // }
             }
         });
 
@@ -125,28 +145,34 @@ public class CreateEventOrganizer extends AppCompatActivity {
         });
 
     }
-    private Bitmap createBitmap(String text){
-        BitMatrix result = null;
-        try {
-            result = new MultiFormatWriter().encode(text, BarcodeFormat.QR_CODE, 300, 300, null);
-            // add the input text, format needed and the dimensions of the QR code
-        } catch (WriterException e){
-            e.printStackTrace();
-            return null;
-        }
-        int height = result.getHeight();
-        int width = result.getWidth();
 
-        int[] pixels = new int[width*height];
-        for(int x = 0; x<height; x++){
-            int offset = x * width;
-            for(int k = 0; k<width; k++){
-                pixels[offset + k] = result.get(k,x)?BLACK: WHITE;
-            }
-        }
-        Bitmap myBitmap = Bitmap.createBitmap(width,height,Bitmap.Config.ARGB_8888);
-        myBitmap.setPixels(pixels, 0, width,0,0,width,height);
-        return myBitmap;
+    private void addEventToFirebase(Event event) {
+//        eventsCollection.add(event)
+//                .addOnSuccessListener(documentReference -> {
+//                    Toast.makeText(CreateEventOrganizer.this, "Upload Successful", Toast.LENGTH_SHORT).show();
+//                })
+//                .addOnFailureListener(e -> {
+//                    Log.e("Firestore", e.getMessage()); // Log the error message
+//
+//                    Toast.makeText(CreateEventOrganizer.this, "Upload Failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+//                });
+
+        db.collection("eventsCollection")
+                .document(""+event.getEvent_id())
+                .set(event)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("QR", "Successfully uploaded to firestore");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("QR", "Couldn't be uploaded to firestore");
+                        e.printStackTrace();
+                    }
+                });
     }
 
     private String convertQRtoString(Bitmap qrCode){

@@ -11,12 +11,14 @@ public class Event {
     private QRCode attendee_qr;
     private QRCode promotional_qr;
     private int organizer;
-    public Event(String name, ArrayList<User> attendee_list, int userID){
+    public Event(String name, String details, int userID){
         Random random = new Random();
         this.name = name;
-        this.attendee_list = attendee_list;
+        this.details = details;
+        this.attendee_list = new ArrayList<>();
         this.event_id = random.nextInt();
         this.organizer = userID;
+
     }
 //    public User getOrganizer() {
 //        return organizer;

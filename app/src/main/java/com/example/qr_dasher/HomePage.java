@@ -1,6 +1,8 @@
 package com.example.qr_dasher;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +27,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
     private FirebaseFirestore db;
     private CollectionReference usersCollection;
     private Bitmap profile_picture;
+    private SharedPreferences app_cache;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,14 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
         // Initialize Firebase Firestore
         db = FirebaseFirestore.getInstance();
         usersCollection = db.collection("users");
+
+        app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
+
+        int userId = app_cache.getInt("UserID", -1);
+        if (userId != -1) {
+            startActivity(new Intent(HomePage.this, RolePage.class));
+            finish();
+        }
 
         nameEdit = findViewById(R.id.name_edit);
         emailEdit = findViewById(R.id.email_edit);
@@ -78,6 +89,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                 if (profile_picture != null){
                     user.setProfile_image(Picture.convertBitmaptoString(profile_picture));
                 }
+                saveUserToCache(user);
                 addUserToFirestore(user);
             }
         });
@@ -104,5 +116,11 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                 .addOnFailureListener(e -> {
                     Toast.makeText(HomePage.this, "Upload Failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
+    }
+
+    private void saveUserToCache(User user){
+        SharedPreferences.Editor editor = app_cache.edit();
+        editor.putInt("UserID", user.getUserId());
+        editor.apply();
     }
 }

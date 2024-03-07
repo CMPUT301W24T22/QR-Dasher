@@ -29,6 +29,7 @@ id displayQRcodes
 id edit_profile_button
 id email_edit
 id enable_disable_button
+id eventList
 id eventName
 id generatePromotionalQR
 id generateQR
@@ -46,12 +47,14 @@ id qr_button
 id reuseQRcodetext
 id scanned_events_text
 id select_image_button
+id selectedEvent
 id textView
 id upload_button
 id viewfinder_view
 id welcome_text
 layout activity_create_event_organizer
 layout activity_reuse_qrcodes
+layout adapter
 layout attendee
 layout fragment_image_upload
 layout home_page

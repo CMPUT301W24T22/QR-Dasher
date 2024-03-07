@@ -3386,6 +3386,7 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id eventList
 id eventName
 id exitUntilCollapsed
 id expand_activities_button
@@ -3619,6 +3620,7 @@ id search_voice_btn
 id select_dialog_listview
 id select_image_button
 id selected
+id selectedEvent
 id selection_type
 id sharedValueSet
 id sharedValueUnset
@@ -3866,6 +3868,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_create_event_organizer
 layout activity_reuse_qrcodes
+layout adapter
 layout attendee
 layout custom_dialog
 layout design_bottom_navigation_item

@@ -1,42 +1,55 @@
 package com.example.qr_dasher;
 
 import android.content.Intent;
-
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.journeyapps.barcodescanner.DecoratedBarcodeView;
-
-
 import android.widget.Toast;
 
-
+/**
+ * ScanQR activity facilitates scanning QR codes using the device's camera.
+ * It utilizes the IntentIntegrator library for integrating QR code scanning functionality.
+ */
 public class ScanQR extends AppCompatActivity {
+    /**
+     * Initializes the activity's UI components and sets up click listeners.
+     *
+     * @param savedInstanceState This activity's previously saved state, or null if it has no saved state.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Force portrait mode
-        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        // Start scanning when activity is created
         startScanning();
     }
 
+    /**
+     * Initiates the QR code scanning process using IntentIntegrator.
+     */
     private void startScanning() {
         IntentIntegrator integrator = new IntentIntegrator(this);
-        integrator.setPrompt("Scan a QR code");
-        integrator.setOrientationLocked(false);
-        integrator.initiateScan();
+        integrator.setPrompt("Scan a QR code"); // Set scanning prompt message
+        integrator.setOrientationLocked(false); // Allow orientation change during scanning
+        integrator.initiateScan(); // Initiate the scanning process
     }
+    /**
+     * Handles the result of the QR code scanning activity.
+     *
+     * @param requestCode The request code passed to startActivityForResult().
+     * @param resultCode  The result code returned by the child activity.
+     * @param data        The intent data returned by the child activity.
+     */
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        // Handle result of the QR code scanning activity
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() != null) {
@@ -58,5 +71,4 @@ public class ScanQR extends AppCompatActivity {
             }
         }
     }
-
 }

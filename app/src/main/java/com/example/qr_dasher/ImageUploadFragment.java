@@ -28,7 +28,7 @@ public class ImageUploadFragment extends DialogFragment {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private static final int REQUEST_IMAGE_PICK = 2;
 
-    private Button captureImageButton, selectImageButton;
+    private Button captureImageButton, selectImageButton, deleteImageButton;
     private Bitmap capturedImageBitmap;
     private ImageUploadListener imageUploadListener;
 
@@ -48,6 +48,7 @@ public class ImageUploadFragment extends DialogFragment {
 
         captureImageButton = view.findViewById(R.id.capture_image_button);
         selectImageButton = view.findViewById(R.id.select_image_button);
+        deleteImageButton = view.findViewById(R.id.delete_image_button);
 
         captureImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +63,20 @@ public class ImageUploadFragment extends DialogFragment {
                 dispatchSelectImageIntent();
             }
         });
+
+        deleteImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteImage();
+            }
+        });
+    }
+
+    private void deleteImage(){
+        capturedImageBitmap = null;
+        if (imageUploadListener != null) {
+            imageUploadListener.onImageUpload(null); // Passing null to indicate no image
+        }
     }
 
     private void dispatchTakePictureIntent() {

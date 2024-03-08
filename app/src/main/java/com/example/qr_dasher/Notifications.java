@@ -10,6 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Notifications extends AppCompatActivity {
     private Button notificationClearButton, enableDisableButton;
+    /**
+     * Initializes the activity's UI components and sets up click listeners.
+     *
+     * @param savedInstanceState This activity's previously saved state, or null if it has no saved state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -11,6 +11,11 @@ public class Event {
     private QRCode attendee_qr;
     private QRCode promotional_qr;
     private int organizer;
+
+    public Event(){
+
+    }
+    
     public Event(String name, String details, int userID){
         Random random = new Random();
         this.name = name;

@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -18,6 +19,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
@@ -44,6 +46,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -55,21 +59,18 @@ import javax.annotation.Nullable;
 public class CreateEventOrganizer extends AppCompatActivity {
     public static final String EXTRA_QR_CODES = "extra_qr_codes";
     private ImageView qrImage, promotionalImage;
-    private Button generateQR, generatePromotionalQR, displayQRcodes;
+    private Button generateQRandCreateEvent, generatePromotionalQR, displayQRcodes, downloadButton;
     private EditText eventName, eventDetails;
 
-    //int userID = 50505050;
+    private Bitmap generatedQRCode;
 
-//    private int event_id;
-//    private String name;
-//    private String details;
-
-    // Firebase link
     private FirebaseFirestore db;
     private CollectionReference eventsCollection;
     private SharedPreferences app_cache; // To get the userID
+    private static final int REQUEST_CODE_SAVE_IMAGE = 1001;
 
 
+    private Event event;
 
     //private CollectionReference generatedQRCodes;
     @Override
@@ -77,10 +78,12 @@ public class CreateEventOrganizer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event_organizer);
         qrImage = findViewById(R.id.qrCode); // image
-        generateQR = findViewById(R.id.generateQR); // button
+        promotionalImage = findViewById(R.id.promotionalQR);
+        generateQRandCreateEvent = findViewById(R.id.generateQRandCreateEvent); // button
         generatePromotionalQR = findViewById(R.id.generatePromotionalQR);
         eventName = findViewById(R.id.eventName); // event Name
         eventDetails = findViewById(R.id.details); // event Name
+        downloadButton = findViewById(R.id.downloadbutton);
 
 
         displayQRcodes = findViewById(R.id.displayQRcodes);
@@ -97,12 +100,12 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
         eventsCollection = db.collection("events");
 
-        generateQR.setOnClickListener(new View.OnClickListener() { // generate QR based on the event id
+        generateQRandCreateEvent.setOnClickListener(new View.OnClickListener() { // generate QR based on the event id
             // we will generate the event ID using the event.java
 
             @Override
             public void onClick(View v) {
-                Log.d("generateQR","pressed button");
+                Log.d("generateQRandCreateEvent","pressed button");
                 //if (!TextUtils.isEmpty(eventName.getText()) && !TextUtils.isEmpty(eventDetails.getText())){
                     // to check if there is some text or not
                     String event_name = eventName.getText().toString();
@@ -110,16 +113,20 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
 
                     // Create a new event
-                    Event event = new Event(event_name, event_details,  userId);
+                    event = new Event(event_name, event_details,  userId);
                     // Generated event_id
                     Log.d("Eventid", ""+event.getEvent_id());
                     // Generating QR codes
-                    event.generateQRCode("" + event.getEvent_id(), true);
-                    event.generateQRCode("" + event.getEvent_id(), false);
+                    event.generateQR("" + event.getEvent_id(), false);
+                    //event.generateQR("" + event.getEvent_id(), true);
+                    generatePromotionalQR.setVisibility(View.VISIBLE);
+                    downloadButton.setVisibility(View.VISIBLE);
 
-                    QRCode attendeeQR = event.getAttendee_qr();
-                    QRCode promotionalQR = event.getPromotional_qr();
-
+                // we need to get the QR code in bitmap to be able to display it
+                    String qrCodeString = event.getAttendee_qr().getQrImage();
+                    byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
+                    generatedQRCode = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                    qrImage.setImageBitmap(generatedQRCode);
                     // Adding the event to the user's class
                     AtomicReference<User> user = new AtomicReference<>();
 
@@ -140,18 +147,30 @@ public class CreateEventOrganizer extends AppCompatActivity {
                                 Log.d("Organizer", "Failed to retrieve User from Firestore");
                                 e.printStackTrace();
                             });
-
-
-
-
-
-
-
                     addEventToFirebase(event);
 
             }
         });
 
+        generatePromotionalQR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                event.generateQR("" + event.getEvent_id(), true);
+                String qrCodeString = event.getPromotional_qr().getQrImage();
+                byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
+                Bitmap qrCodeBitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                promotionalImage.setImageBitmap(qrCodeBitmap);
+            }
+        });
+
+        downloadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fileName = "qrcode.png";
+                MediaStore.Images.Media.insertImage(getContentResolver(), generatedQRCode, fileName, "Image saved from your app");
+                Toast.makeText(getApplicationContext(), "Image saved to Gallery", Toast.LENGTH_SHORT).show();
+            }
+        });
         displayQRcodes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,7 +178,9 @@ public class CreateEventOrganizer extends AppCompatActivity {
             }
         });
 
+
     }
+
     private void updateFirebaseUser(String userId, User user) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users")
@@ -173,16 +194,6 @@ public class CreateEventOrganizer extends AppCompatActivity {
     }
 
     private void addEventToFirebase(Event event) {
-//        eventsCollection.add(event)
-//                .addOnSuccessListener(documentReference -> {
-//                    Toast.makeText(CreateEventOrganizer.this, "Upload Successful", Toast.LENGTH_SHORT).show();
-//                })
-//                .addOnFailureListener(e -> {
-//                    Log.e("Firestore", e.getMessage()); // Log the error message
-//
-//                    Toast.makeText(CreateEventOrganizer.this, "Upload Failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-//                });
-
         db.collection("eventsCollection")
                 .document(""+event.getEvent_id())
                 .set(event)
@@ -238,7 +249,7 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
     public void getQRFromFirebase(){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("generatedQRCodes")
+        db.collection("events")
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
                     List<String> qrCodes = new ArrayList<>(); // list of qrCodes

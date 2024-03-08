@@ -3186,7 +3186,6 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id CreateEvent
 id CreateEventHeading
 id FUNCTION
 id FirstFragment
@@ -3361,6 +3360,7 @@ id disablePostScroll
 id disableScroll
 id disjoint
 id displayQRcodes
+id downloadbutton
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3410,7 +3410,7 @@ id fragment_container_view_tag
 id frost
 id fullscreen_header
 id generatePromotionalQR
-id generateQR
+id generateQRandCreateEvent
 id geolocation
 id ghost_view
 id ghost_view_holder
@@ -3693,6 +3693,8 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView2
+id textView3
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon

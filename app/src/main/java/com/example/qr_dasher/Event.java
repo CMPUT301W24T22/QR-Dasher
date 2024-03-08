@@ -62,7 +62,7 @@ public class Event {
     public void setPromotional_qr(QRCode promotional_qr) {
         this.promotional_qr = promotional_qr;
     }
-    public void generateQRCode(String content, boolean promotional){
+    public void generateQR(String content, boolean promotional){
         if (promotional){
             this.promotional_qr = new QRCode(this.event_id, content, this.organizer, true);
         } else {

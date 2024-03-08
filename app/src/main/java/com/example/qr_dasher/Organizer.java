@@ -64,52 +64,25 @@ public class Organizer extends AppCompatActivity {
 
     }
 
-//    private void retrieveEventsFromFirestore(int userId) {
-//        // Query Firestore for events
-//        Log.d("retrieveEventsFromFirestore","retrieval?");
-//        db.collection("eventsCollection")
-//                .whereEqualTo("userID",userId)
-//                .get()
-//                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//                    @Override
-//                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                        List<String> eventNames = new ArrayList<>();
-//                        // Iterate through the query results
-//                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-//                            // Extract event name from each document
-//                            String eventName = documentSnapshot.getString("name");
-//                            // Add event name to the list
-//                            eventNames.add(eventName);
-//                        }
-//                        // Display the list of event names in the ListView
-//                        displayEventList(eventNames);
-//                    }
-//                })
-//                .addOnFailureListener(new OnFailureListener() {
-//                    @Override
-//                    public void onFailure(@NonNull Exception e) {
-//                        // Handle failure to retrieve events
-//                        eventListView.setVisibility(View.GONE);
-//                        e.printStackTrace();
-//                    }
-//                });
-//    }
 private void retrieveEventsFromFirestore(int userId) {
     // Query Firestore for events
-            Log.d("retrieveEventsFromFirestore","retrieval?");
-            Log.d("retrieveEventsFromFirestore","retrieval?"+userId);
+            //Log.d("retrieveEventsFromFirestore","retrieval?");
+            //Log.d("retrieveEventsFromFirestore","retrieval?"+userId);
 
 
     db.collection("eventsCollection")
-            .whereEqualTo("userID",userId)
+            .whereEqualTo("attendee_qr.userID",userId)
             .get()
             .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+
                 @Override
+
                 public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                     List<String> eventNames = new ArrayList<>();
                     // Iterate through the query results
                     for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                        // Extract event name from each document
+
+                        String documentId = documentSnapshot.getId();
                         String eventName = documentSnapshot.getString("name");
                         // Add event name to the list
                         eventNames.add(eventName);

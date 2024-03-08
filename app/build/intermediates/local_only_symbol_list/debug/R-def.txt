@@ -8,7 +8,6 @@ drawable circle_shape
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable placeholder_image
-id CreateEvent
 id CreateEventHeading
 id FirstFragment
 id SecondFragment
@@ -26,6 +25,7 @@ id createEventButton
 id details
 id details_edit
 id displayQRcodes
+id downloadbutton
 id edit_profile_button
 id email_edit
 id enable_disable_button
@@ -33,7 +33,7 @@ id eventListView
 id eventName
 id eventNameTextView
 id generatePromotionalQR
-id generateQR
+id generateQRandCreateEvent
 id geolocation
 id image_upload
 id name_edit
@@ -57,6 +57,8 @@ id select_image_button
 id send_notifications_button
 id send_text
 id textView
+id textView2
+id textView3
 id upload_button
 id view
 id viewfinder_view

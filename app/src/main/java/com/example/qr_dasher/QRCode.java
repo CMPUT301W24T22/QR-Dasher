@@ -32,12 +32,12 @@ public class QRCode {
     private String QRImage;
     private int userID;
     private boolean promotional;
+
     public QRCode (int event_id, String content, int userID, boolean promotional){
         this.content = content;
         this.event_id = event_id;
         this.userID = userID;
         this.promotional = promotional;
-
         this.QRImage = createQRImage(content);
     }
     public int getEvent_id() {
@@ -52,8 +52,9 @@ public class QRCode {
         this.content = content;
     }
     public String getQrImage() {
-        return QRImage;
+        return this.QRImage;
     }
+
 
     public void setQrImage(String qrImage) {
         this.QRImage = qrImage;
@@ -71,7 +72,8 @@ public class QRCode {
         this.promotional = promotional;
     }
 
-    private String createQRImage(String text){
+
+    public String createQRImage(String text){
         BitMatrix result = null;
         try {
             result = new MultiFormatWriter().encode(text, BarcodeFormat.QR_CODE, 300, 300, null);
@@ -92,10 +94,12 @@ public class QRCode {
         }
         Bitmap myBitmap = Bitmap.createBitmap(width,height,Bitmap.Config.ARGB_8888);
         myBitmap.setPixels(pixels, 0, width,0,0,width,height);
-
         String qrImage = Picture.convertBitmaptoString(myBitmap);
         return qrImage;
+
+
     }
+
 
 
 }

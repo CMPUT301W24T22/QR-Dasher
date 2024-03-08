@@ -3185,7 +3185,6 @@ int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
 int id CTRL 0x7f080003
-int id CreateEvent 0x7f080004
 int id CreateEventHeading 0x7f080005
 int id FUNCTION 0x7f080006
 int id FirstFragment 0x7f080007
@@ -3360,6 +3359,7 @@ int id disablePostScroll 0x7f0800af
 int id disableScroll 0x7f0800b0
 int id disjoint 0x7f0800b1
 int id displayQRcodes 0x7f0800b2
+int id downloadbutton 0x7f080242
 int id dragAnticlockwise 0x7f0800b3
 int id dragClockwise 0x7f0800b4
 int id dragDown 0x7f0800b5
@@ -3409,7 +3409,7 @@ int id fragment_container_view_tag 0x7f0800e0
 int id frost 0x7f0800e1
 int id fullscreen_header 0x7f0800e2
 int id generatePromotionalQR 0x7f0800e3
-int id generateQR 0x7f0800e4
+int id generateQRandCreateEvent 0x7f080241
 int id geolocation 0x7f0800e5
 int id ghost_view 0x7f0800e6
 int id ghost_view_holder 0x7f0800e7
@@ -3692,6 +3692,8 @@ int id textSpacerNoTitle 0x7f0801fb
 int id textStart 0x7f0801fc
 int id textTop 0x7f0801fd
 int id textView 0x7f0801fe
+int id textView2 0x7f080243
+int id textView3 0x7f080244
 int id text_input_end_icon 0x7f0801ff
 int id text_input_error_icon 0x7f080200
 int id text_input_start_icon 0x7f080201

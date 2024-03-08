@@ -17,50 +17,69 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * Activity for attendees of an event. Allows attendees to view notifications, edit their profile,
+ * and scan a QR code to join an event.
+ */
 public class Attendee extends AppCompatActivity {
     private Button notificationButton, editProfileButton, qrCodeButton;
     private SharedPreferences app_cache;
+    /**
+     * Initializes the activity and sets up UI components and listeners.
+     *
+     * @param savedInstanceState Saved instance state bundle
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.attendee);
 
+        // Initialize SharedPreferences
         app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
+        // Initialize buttons
         notificationButton = findViewById(R.id.notification_button);
         editProfileButton = findViewById(R.id.edit_profile_button);
         qrCodeButton = findViewById(R.id.qr_button);
 
+        // Set OnClickListener for notificationButton
         notificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle attendee role selection
-                // For example, start a new activity for attendee tasks
+                // Start Notifications activity
                 Intent intent = new Intent(Attendee.this, Notifications.class);
                 startActivity(intent);
             }
         });
 
+        // Set OnClickListener for editProfileButton
         editProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Start EditProfile activity
                 Intent intent = new Intent(Attendee.this, EditProfile.class);
                 startActivity(intent);
             }
         });
 
+        // Set OnClickListener for qrCodeButton
         qrCodeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle attendee role selection
-                // For example, start a new activity for attendee tasks
+                // Start ScanQR activity for scanning QR code
                 Intent intent = new Intent(Attendee.this, ScanQR.class);
                 startActivityForResult(intent, 1);
             }
         });
-
-
     }
+    /**
+     * Handles the result of the QR code scanning activity.
+     *
+     * @param requestCode The request code passed to startActivityForResult()
+     * @param resultCode  The result code returned by the child activity
+     * @param data        The Intent containing the result data
+     */
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -79,7 +98,12 @@ public class Attendee extends AppCompatActivity {
         }
     }
 
-    private void updateFirebase(String event_id){
+    /**
+     * Update Firebase with scanned event ID.
+     *
+     * @param event_id The scanned event ID
+     */
+    private void updateFirebase(String event_id) {
         int userId = app_cache.getInt("UserID", -1);
         String eventID = event_id; // Assuming event_id is already the document ID
 
@@ -110,8 +134,7 @@ public class Attendee extends AppCompatActivity {
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
                         Event event = documentSnapshot.toObject(Event.class);
-                        Integer user_id = userId;
-                        event.addAttendee(user_id); // Add the user ID to the event's attendee list
+                        event.addAttendee(userId); // Add the user ID to the event's attendee list
                         updateFirebaseEvent(eventID, event); // Update the event in Firestore
                     } else {
                         Log.d("Attendee", "No event found with EventId: " + eventID);
@@ -123,7 +146,12 @@ public class Attendee extends AppCompatActivity {
                 });
     }
 
-
+    /**
+     * Update user document in Firebase.
+     *
+     * @param userId The user ID
+     * @param user   The User object to update
+     */
     private void updateFirebaseUser(String userId, User user) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users")
@@ -136,6 +164,12 @@ public class Attendee extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Update event document in Firebase.
+     *
+     * @param eventId The event ID
+     * @param event   The Event object to update
+     */
     private void updateFirebaseEvent(String eventId, Event event) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("eventsCollection")
@@ -147,5 +181,5 @@ public class Attendee extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
-
 }
+

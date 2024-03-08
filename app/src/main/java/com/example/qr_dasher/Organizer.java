@@ -29,11 +29,15 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Organizer extends AppCompatActivity {
     private Button CreateEventButton;
     private ListView eventListView;
     private FirebaseFirestore db;
+
+    private ArrayList<String> reuseQRCodes = new ArrayList<>();
+
 
     private SharedPreferences app_cache; // To get the userID
 
@@ -58,6 +62,8 @@ public class Organizer extends AppCompatActivity {
                 // Handle attendee role selection
                 // For example, start a new activity for attendee tasks
                 Intent intent = new Intent(Organizer.this, CreateEventOrganizer.class);
+                intent.putStringArrayListExtra("reuseQRCodes", reuseQRCodes);
+
                 startActivity(intent);
             }
         });
@@ -65,27 +71,28 @@ public class Organizer extends AppCompatActivity {
     }
 
 private void retrieveEventsFromFirestore(int userId) {
-    // Query Firestore for events
-            //Log.d("retrieveEventsFromFirestore","retrieval?");
-            //Log.d("retrieveEventsFromFirestore","retrieval?"+userId);
-
 
     db.collection("eventsCollection")
             .whereEqualTo("attendee_qr.userID",userId)
             .get()
             .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-
                 @Override
 
                 public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                    // need to store all events
                     List<String> eventNames = new ArrayList<>();
+                    List<Event> events = new ArrayList<>();
+
                     // Iterate through the query results
                     for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
 
                         String documentId = documentSnapshot.getId();
                         String eventName = documentSnapshot.getString("name");
+                        String qrCode = documentSnapshot.getString("attendee_qr.qrImage");
+
                         // Add event name to the list
-                        eventNames.add(eventName);
+                        //eventNames.add(eventName);
+                       // reuseQRCodes.add(qrCode);
                     }
                     // Display the list of event names in the ListView
                     displayEventList(eventNames);
@@ -100,6 +107,7 @@ private void retrieveEventsFromFirestore(int userId) {
                 }
             });
 }
+
     private void displayEventList(List<String> eventNames) {
         // Create an ArrayAdapter to display the event names
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, eventNames);

@@ -71,12 +71,16 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
 
     private Event event;
+    private List<String> reuseQRCodes;
 
     //private CollectionReference generatedQRCodes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event_organizer);
+        reuseQRCodes = getIntent().getStringArrayListExtra("reuseQRCodes");
+
+
         qrImage = findViewById(R.id.qrCode); // image
         promotionalImage = findViewById(R.id.promotionalQR);
         generateQRandCreateEvent = findViewById(R.id.generateQRandCreateEvent); // button

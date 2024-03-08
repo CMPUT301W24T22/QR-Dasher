@@ -1,19 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-xxxhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_attendee.xml.flat",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\attendee.xml"
     },
     {
-        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_activity_reuse_qrcodes.xml.flat",
-        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\activity_reuse_qrcodes.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\menu_menu_main.xml.flat",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_activity_reuse_qrcodes.xml.flat",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\activity_reuse_qrcodes.xml"
     },
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-mdpi_ic_launcher_round.webp.flat",

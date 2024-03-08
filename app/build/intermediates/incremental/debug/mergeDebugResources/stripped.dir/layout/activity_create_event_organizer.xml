@@ -68,28 +68,23 @@
         android:id="@+id/generateQRandCreateEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginBottom="16dp"
-        android:text="Generate QR code"
-        app:layout_constraintBottom_toTopOf="@+id/downloadbutton"
-        app:layout_constraintEnd_toStartOf="@+id/displayQRcodes"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="56dp"
+        android:text="Generate QR code and Create event"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/details" />
 
     <Button
         android:id="@+id/displayQRcodes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
-        android:text="Display all QR codes"
-        app:layout_constraintBottom_toTopOf="@+id/generatePromotionalQR"
+        android:layout_marginTop="8dp"
+        android:text="Reuse QR code"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details"
-        app:layout_constraintVertical_bias="0.898" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generateQRandCreateEvent"
+        app:layout_constraintVertical_bias="0.033" />
 
     <TextView
         android:id="@+id/CreateEventHeading"

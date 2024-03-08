@@ -1,64 +1,70 @@
+package com.example.qr_dasher;
+
+import static org.junit.Assert.*;
 import org.junit.Test;
 import java.util.List;
-import static org.junit.Assert.*;
 
 public class UserTest {
 
     @Test
-    public void testUserConstructor() {
-        String name = "John Doe";
-        String email = "johndoe@example.com";
-        boolean location = true;
+    public void testConstructorAndGetters() {
+        User user = new User("John Doe", "john@example.com", true);
 
-        User user = new User(name, email, location);
+        assertEquals("John Doe", user.getName());
+        assertEquals("john@example.com", user.getEmail());
+        assertTrue(user.getLocation());
+        assertNotNull(user.getEventsCreated());
+        assertNotNull(user.getEventsJoined());
+        assertEquals(0, user.getEventsCreated().size());
+        assertEquals(0, user.getEventsJoined().size());
+    }
 
-        assertNotNull(user);
-        assertEquals(name, user.getName());
-        assertEquals(email, user.getEmail());
-        assertEquals(location, user.getLocation());
-        assertNotNull(user.getUserId());
-        assertTrue(user.getEventsCreated().isEmpty());
-        assertTrue(user.getEventsJoined().isEmpty());
+    @Test(expected = IllegalArgumentException.class)
+    public void testInvalidEmail() {
+        new User("Jane Doe", "invalidemail", true);
     }
 
     @Test
-    public void testGettersAndSetters() {
-        User user = new User();
+    public void testSetters() {
+        User user = new User("Alice", "alice@example.com", false);
 
-        String name = "Jane Doe";
-        String email = "janedoe@example.com";
-        boolean location = false;
-        String details = "Details";
-        String profileImage = "profile_image_url";
+        user.setName("Bob");
+        assertEquals("Bob", user.getName());
 
-        user.setName(name);
-        user.setEmail(email);
-        user.setLocation(location);
-        user.setDetails(details);
-        user.setProfile_image(profileImage);
+        user.setEmail("bob@example.com");
+        assertEquals("bob@example.com", user.getEmail());
 
-        assertEquals(name, user.getName());
-        assertEquals(email, user.getEmail());
-        assertEquals(location, user.getLocation());
-        assertEquals(details, user.getDetails());
-        assertEquals(profileImage, user.getProfile_image());
-    }
+        user.setLocation(true);
+        assertTrue(user.getLocation());
 
-    @Test
-    public void testEventsJoinedAndCreated() {
-        User user = new User();
-        String qrCode1 = "QRCode1";
-        String qrCode2 = "QRCode2";
+        user.setProfile_image("profile.jpg");
+        assertEquals("profile.jpg", user.getProfile_image());
 
-        user.addEventsJoined(qrCode1);
-        user.addEventsCreated(qrCode2);
+        user.setDetails("Some details about Bob");
+        assertEquals("Some details about Bob", user.getDetails());
+
+        user.setUserId(123);
+        assertEquals(123, user.getUserId());
+
+        List<String> eventsCreated = user.getEventsCreated();
+        eventsCreated.add("event1");
+        assertEquals(1, user.getEventsCreated().size());
 
         List<String> eventsJoined = user.getEventsJoined();
-        List<String> eventsCreated = user.getEventsCreated();
+        eventsJoined.add("event2");
+        assertEquals(1, user.getEventsJoined().size());
+    }
 
-        assertEquals(1, eventsJoined.size());
-        assertEquals(1, eventsCreated.size());
-        assertTrue(eventsJoined.contains(qrCode1));
-        assertTrue(eventsCreated.contains(qrCode2));
+    @Test
+    public void testAddEvents() {
+        User user = new User("Alice", "alice@example.com", false);
+
+        user.addEventsCreated("event1");
+        assertEquals(1, user.getEventsCreated().size());
+        assertEquals("event1", user.getEventsCreated().get(0));
+
+        user.addEventsJoined("event2");
+        assertEquals(1, user.getEventsJoined().size());
+        assertEquals("event2", user.getEventsJoined().get(0));
     }
 }

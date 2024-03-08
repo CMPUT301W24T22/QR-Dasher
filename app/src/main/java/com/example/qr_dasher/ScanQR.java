@@ -1,31 +1,31 @@
 package com.example.qr_dasher;
 
 import android.content.Intent;
-
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
-
-
 import android.widget.Toast;
 
-
+/**
+ * This activity allows the user to scan a QR code.
+ */
 public class ScanQR extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Force portrait mode
-        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        
+        // Start the scanning process
         startScanning();
     }
 
+    /**
+     * Initiates the QR code scanning process.
+     */
     private void startScanning() {
         IntentIntegrator integrator = new IntentIntegrator(this);
         integrator.setPrompt("Scan a QR code");
@@ -37,6 +37,7 @@ public class ScanQR extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        // Parse the scanning result
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() != null) {
@@ -58,5 +59,4 @@ public class ScanQR extends AppCompatActivity {
             }
         }
     }
-
 }

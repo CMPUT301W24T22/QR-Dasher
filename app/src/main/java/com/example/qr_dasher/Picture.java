@@ -1,5 +1,8 @@
 package com.example.qr_dasher;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -7,9 +10,17 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.os.Environment;
 import android.util.Base64;
+import android.Manifest;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class Picture {
     private Bitmap image_bitmap;
@@ -115,5 +126,46 @@ public class Picture {
 
     public byte[] getImage_jpeg() {
         return image_jpeg;
+    }
+
+    // Method to save JPEG byte array to the local device
+    public static void saveJPEGLocally(Activity activity, byte[] jpeg, String fileName) throws IOException {
+        // Check if the permission to write to external storage is granted
+        if (ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission is not granted, request it
+            ActivityCompat.requestPermissions(activity,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    1); // You can use any unique request code
+            return; // Return without saving the image for now, user will be asked for permission
+        }
+
+        // Permission is granted, continue with saving the image
+        saveImage(jpeg, fileName);
+    }
+
+    // Method to handle saving the image when permission is granted
+    private static void saveImage(byte[] jpeg, String fileName) throws IOException {
+        // Check if external storage is available and not read-only
+        String state = Environment.getExternalStorageState();
+        if (!Environment.MEDIA_MOUNTED.equals(state)) {
+            throw new IOException("External storage is not mounted.");
+        }
+
+        // Create a directory for saving images (You can customize the directory path)
+        File directory = new File(Environment.getExternalStorageDirectory() + File.separator + "MyImages");
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+
+        // Create the file where the JPEG will be saved
+        File file = new File(directory, fileName + ".jpg");
+        FileOutputStream outputStream = new FileOutputStream(file);
+
+        try {
+            outputStream.write(jpeg);
+        } finally {
+            outputStream.close();
+        }
     }
 }

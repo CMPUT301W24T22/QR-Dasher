@@ -3386,7 +3386,9 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id eventListView
 id eventName
+id eventNameTextView
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3538,9 +3540,15 @@ id normal
 id north
 id notification_background
 id notification_button
+id notification_content
+id notification_heading
 id notification_main_column
 id notification_main_column_container
 id notification_text
+id notification_title
+id notification_title_text
+id notifyButton
+id notify_button
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3620,6 +3628,8 @@ id select_dialog_listview
 id select_image_button
 id selected
 id selection_type
+id send_notifications_button
+id send_text
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3715,6 +3725,7 @@ id up
 id upload_button
 id useLogo
 id vertical_only
+id view
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3883,6 +3894,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout event_details
 layout fragment_image_upload
 layout home_page
 layout m3_alert_dialog
@@ -3958,6 +3970,7 @@ layout scan_qr
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout send_notification
 layout support_simple_spinner_dropdown_item
 layout user_selection_page
 layout zxing_barcode_scanner

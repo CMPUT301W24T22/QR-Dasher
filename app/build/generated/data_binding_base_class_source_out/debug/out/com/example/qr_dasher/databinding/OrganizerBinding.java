@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,12 +25,16 @@ public final class OrganizerBinding implements ViewBinding {
   public final Button createEventButton;
 
   @NonNull
+  public final ListView eventListView;
+
+  @NonNull
   public final TextView textView;
 
   private OrganizerBinding(@NonNull ConstraintLayout rootView, @NonNull Button createEventButton,
-      @NonNull TextView textView) {
+      @NonNull ListView eventListView, @NonNull TextView textView) {
     this.rootView = rootView;
     this.createEventButton = createEventButton;
+    this.eventListView = eventListView;
     this.textView = textView;
   }
 
@@ -66,13 +71,20 @@ public final class OrganizerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.eventListView;
+      ListView eventListView = ViewBindings.findChildViewById(rootView, id);
+      if (eventListView == null) {
+        break missingId;
+      }
+
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
-      return new OrganizerBinding((ConstraintLayout) rootView, createEventButton, textView);
+      return new OrganizerBinding((ConstraintLayout) rootView, createEventButton, eventListView,
+          textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

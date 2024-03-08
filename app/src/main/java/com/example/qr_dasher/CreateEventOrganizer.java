@@ -5,7 +5,9 @@ package com.example.qr_dasher;
 import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -46,6 +48,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
 
 import javax.annotation.Nullable;
 
@@ -55,8 +58,7 @@ public class CreateEventOrganizer extends AppCompatActivity {
     private Button generateQR, generatePromotionalQR, displayQRcodes;
     private EditText eventName, eventDetails;
 
-    // TO:DO change the default userID with the one in Cache
-    int userID = 50505050;
+    //int userID = 50505050;
 
 //    private int event_id;
 //    private String name;
@@ -65,6 +67,7 @@ public class CreateEventOrganizer extends AppCompatActivity {
     // Firebase link
     private FirebaseFirestore db;
     private CollectionReference eventsCollection;
+    private SharedPreferences app_cache; // To get the userID
 
 
 
@@ -87,6 +90,10 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
+        app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
+        int userId = app_cache.getInt("UserID", -1);
+
+
 
         eventsCollection = db.collection("events");
 
@@ -103,7 +110,7 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
 
                     // Create a new event
-                    Event event = new Event(event_name, event_details,  userID);
+                    Event event = new Event(event_name, event_details,  userId);
                     // Generated event_id
                     Log.d("Eventid", ""+event.getEvent_id());
                     // Generating QR codes
@@ -113,27 +120,35 @@ public class CreateEventOrganizer extends AppCompatActivity {
                     QRCode attendeeQR = event.getAttendee_qr();
                     QRCode promotionalQR = event.getPromotional_qr();
 
+                    // Adding the event to the user's class
+                    AtomicReference<User> user = new AtomicReference<>();
+
+                    db.collection("users")
+                            .whereEqualTo("userId", userId)
+                            .get()
+                            .addOnSuccessListener(queryDocumentSnapshots -> {
+                                if (!queryDocumentSnapshots.isEmpty()) {
+                                    QueryDocumentSnapshot documentSnapshot = (QueryDocumentSnapshot) queryDocumentSnapshots.getDocuments().get(0);
+                                    user.set(documentSnapshot.toObject(User.class));
+                                    user.get().addEventsCreated(""+event.getEvent_id()); // Add the event ID to the user's eventsJoined list
+                                    updateFirebaseUser(documentSnapshot.getId(), user.get()); // Update the user in Firestore
+                                } else {
+                                    Log.d("Organizer", "No user found with UserId: " + userId);
+                                }
+                            })
+                            .addOnFailureListener(e -> {
+                                Log.d("Organizer", "Failed to retrieve User from Firestore");
+                                e.printStackTrace();
+                            });
+
+
+
+
+
+
+
                     addEventToFirebase(event);
 
-
-
-//                    eventsCollection.addSnapshotListener(new EventListener<QuerySnapshot>() {
-//                        @Override
-//                        public void onEvent(@Nullable QuerySnapshot querySnapshots,
-//                                            @Nullable FirebaseFirestoreException error) {
-//                            if (error != null) {
-//                                Log.e("Firestore", error.toString());
-//                                return;
-//                            }
-//                            if (querySnapshots != null) {
-//                                AddQRtoFirebase(qrCodeString,text);
-//
-//                            }
-//                        }
-//                    });
-
-
-               // }
             }
         });
 
@@ -144,6 +159,17 @@ public class CreateEventOrganizer extends AppCompatActivity {
             }
         });
 
+    }
+    private void updateFirebaseUser(String userId, User user) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users")
+                .document(userId)
+                .update("eventsCreated", user.getEventsCreated())
+                .addOnSuccessListener(aVoid -> Log.d("Organizer", "User updated successfully"))
+                .addOnFailureListener(e -> {
+                    Log.d("Organizer", "Failed to update user in Firestore");
+                    e.printStackTrace();
+                });
     }
 
     private void addEventToFirebase(Event event) {

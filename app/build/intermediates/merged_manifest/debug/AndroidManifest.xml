@@ -57,6 +57,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.QRDasher" >
         <activity
+            android:name="com.example.qr_dasher.SendNotifications"
+            android:exported="false" />
+        <activity
+            android:name="com.example.qr_dasher.EventDetails"
+            android:exported="false" />
+        <activity
             android:name="com.example.qr_dasher.CreateEventOrganizer"
             android:exported="false" />
         <activity

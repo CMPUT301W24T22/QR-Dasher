@@ -13,6 +13,12 @@
         android:theme="@style/Theme.QRDasher"
         tools:targetApi="31">
         <activity
+            android:name=".SendNotifications"
+            android:exported="false" />
+        <activity
+            android:name=".EventDetails"
+            android:exported="false" />
+        <activity
             android:name=".CreateEventOrganizer"
             android:exported="false" />
         <activity
@@ -32,7 +38,7 @@
         <activity android:name=".RolePage" />
         <activity android:name=".Attendee" />
         <activity android:name=".Organizer" />
-        <activity android:name=".ScanQR"/>
+        <activity android:name=".ScanQR" />
     </application>
 
 </manifest>

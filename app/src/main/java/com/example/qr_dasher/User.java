@@ -13,6 +13,9 @@ public class User {
     private String profile_image;
     private List<String> eventsCreated;
     private List<String> eventsJoined;
+    public User(){
+
+    }
     public User(String name, String email, boolean location){
         Random random = new Random();
         this.name = name;

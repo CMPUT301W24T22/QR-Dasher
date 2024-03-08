@@ -44,10 +44,8 @@ public class Attendee extends AppCompatActivity {
         editProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle attendee role selection
-                // For example, start a new activity for attendee tasks
-//                Intent intent = new Intent(AttendeeDashboard.this, AttendeeDashboard.class);
-//                startActivity(intent);
+                Intent intent = new Intent(Attendee.this, EditProfile.class);
+                startActivity(intent);
             }
         });
 
@@ -83,18 +81,19 @@ public class Attendee extends AppCompatActivity {
 
     private void updateFirebase(String event_id){
         int userId = app_cache.getInt("UserID", -1);
-        int eventID = Integer.parseInt(event_id);
-        AtomicReference<User> user = new AtomicReference<>();
+        String eventID = event_id; // Assuming event_id is already the document ID
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        // Update user document
         db.collection("users")
-                .whereEqualTo("userId", userId)
+                .document(String.valueOf(userId))
                 .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    if (!queryDocumentSnapshots.isEmpty()) {
-                        QueryDocumentSnapshot documentSnapshot = (QueryDocumentSnapshot) queryDocumentSnapshots.getDocuments().get(0);
-                        user.set(documentSnapshot.toObject(User.class));
-                        user.get().addEventsJoined(event_id); // Add the event ID to the user's eventsJoined list
-                        updateFirebaseUser(documentSnapshot.getId(), user.get()); // Update the user in Firestore
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        User user = documentSnapshot.toObject(User.class);
+                        user.addEventsJoined(eventID); // Add the event ID to the user's eventsJoined list
+                        updateFirebaseUser(String.valueOf(userId), user); // Update the user in Firestore
                     } else {
                         Log.d("Attendee", "No user found with UserId: " + userId);
                     }
@@ -103,17 +102,18 @@ public class Attendee extends AppCompatActivity {
                     Log.d("Attendee", "Failed to retrieve User from Firestore");
                     e.printStackTrace();
                 });
-        db.collection("events")
-                .whereEqualTo("event_id", eventID)
+
+        // Update event document
+        db.collection("eventsCollection")
+                .document(eventID)
                 .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    if (!queryDocumentSnapshots.isEmpty()) {
-                        QueryDocumentSnapshot documentSnapshot = (QueryDocumentSnapshot) queryDocumentSnapshots.getDocuments().get(0);
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
                         Event event = documentSnapshot.toObject(Event.class);
-                        event.addAttendee(user.get()); // Add the user ID to the event's attendee list
-                        updateFirebaseEvent(documentSnapshot.getId(), event); // Update the event in Firestore
+                        event.addAttendee(userId); // Add the user ID to the event's attendee list
+                        updateFirebaseEvent(eventID, event); // Update the event in Firestore
                     } else {
-                        Log.d("Attendee", "No event found with EventId: " + userId);
+                        Log.d("Attendee", "No event found with EventId: " + eventID);
                     }
                 })
                 .addOnFailureListener(e -> {
@@ -121,6 +121,7 @@ public class Attendee extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
+
 
     private void updateFirebaseUser(String userId, User user) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -136,7 +137,7 @@ public class Attendee extends AppCompatActivity {
 
     private void updateFirebaseEvent(String eventId, Event event) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("users")
+        db.collection("eventsCollection")
                 .document(eventId)
                 .update("attendee_list", event.getAttendee_list())
                 .addOnSuccessListener(aVoid -> Log.d("Attendee", "Event updated successfully"))

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,16 +22,34 @@ public final class EventDetailsBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ListView attendeeListView;
+
+  @NonNull
+  public final TextView attendees;
+
+  @NonNull
   public final TextView eventNameTextView;
+
+  @NonNull
+  public final Button eventPosterButton;
 
   @NonNull
   public final Button notifyButton;
 
+  @NonNull
+  public final Button qrCodeButton;
+
   private EventDetailsBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView eventNameTextView, @NonNull Button notifyButton) {
+      @NonNull ListView attendeeListView, @NonNull TextView attendees,
+      @NonNull TextView eventNameTextView, @NonNull Button eventPosterButton,
+      @NonNull Button notifyButton, @NonNull Button qrCodeButton) {
     this.rootView = rootView;
+    this.attendeeListView = attendeeListView;
+    this.attendees = attendees;
     this.eventNameTextView = eventNameTextView;
+    this.eventPosterButton = eventPosterButton;
     this.notifyButton = notifyButton;
+    this.qrCodeButton = qrCodeButton;
   }
 
   @Override
@@ -60,9 +79,27 @@ public final class EventDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.attendee_list_view;
+      ListView attendeeListView = ViewBindings.findChildViewById(rootView, id);
+      if (attendeeListView == null) {
+        break missingId;
+      }
+
+      id = R.id.attendees;
+      TextView attendees = ViewBindings.findChildViewById(rootView, id);
+      if (attendees == null) {
+        break missingId;
+      }
+
       id = R.id.eventNameTextView;
       TextView eventNameTextView = ViewBindings.findChildViewById(rootView, id);
       if (eventNameTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.event_poster_button;
+      Button eventPosterButton = ViewBindings.findChildViewById(rootView, id);
+      if (eventPosterButton == null) {
         break missingId;
       }
 
@@ -72,7 +109,14 @@ public final class EventDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new EventDetailsBinding((ConstraintLayout) rootView, eventNameTextView, notifyButton);
+      id = R.id.qr_code_button;
+      Button qrCodeButton = ViewBindings.findChildViewById(rootView, id);
+      if (qrCodeButton == null) {
+        break missingId;
+      }
+
+      return new EventDetailsBinding((ConstraintLayout) rootView, attendeeListView, attendees,
+          eventNameTextView, eventPosterButton, notifyButton, qrCodeButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

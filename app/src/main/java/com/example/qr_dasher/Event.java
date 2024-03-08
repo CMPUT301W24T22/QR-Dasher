@@ -7,7 +7,7 @@ public class Event {
     private int event_id;
     private String name;
     private String details;
-    private ArrayList<User> attendee_list;
+    private ArrayList<Integer> attendee_list;
     private QRCode attendee_qr;
     private QRCode promotional_qr;
     private int organizer;
@@ -20,7 +20,7 @@ public class Event {
         this.organizer = userID;
 
     }
-//    public User getOrganizer() {
+    //    public User getOrganizer() {
 //        return organizer;
 //    }
 //    public void setOrganizer(User organizer) {
@@ -38,12 +38,12 @@ public class Event {
     public void setDetails(String details) {
         this.details = details;
     }
-    public ArrayList<User> getAttendee_list() {
+    public ArrayList<Integer> getAttendee_list() {
         return attendee_list;
     }
-    public void setAttendee_list(ArrayList<User> attendee_list) {
-        this.attendee_list = attendee_list;
-    }
+//    public void setAttendee_list(ArrayList<User> attendee_list) {
+//        this.attendee_list = attendee_list;
+//    }
     public QRCode getAttendee_qr() {
         return attendee_qr;
     }
@@ -69,7 +69,7 @@ public class Event {
             this.attendee_qr = new QRCode(this.event_id, content, this.organizer, false);
         }
     }
-    public void addAttendee(User attendee) {
+    public void addAttendee(Integer attendee) {
         if (attendee == null) {
             throw new IllegalArgumentException("Attendee cannot be null.");
         }

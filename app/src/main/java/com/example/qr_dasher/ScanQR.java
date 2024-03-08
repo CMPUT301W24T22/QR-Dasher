@@ -37,14 +37,26 @@ public class ScanQR extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 1) { // Check if the result is from ScanQR activity
-            if (resultCode == RESULT_OK) {
-                String scannedText = data.getStringExtra("scannedText");
-                // Use scannedText as needed
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            if (result.getContents() != null) {
+                // Scanned text is available
+                String scannedText = result.getContents();
+
+                // Prepare the intent to pass back to the calling activity
+                Intent intent = new Intent();
+                intent.putExtra("scannedText", scannedText);
+
+                // Set the result code and pass the intent back to the calling activity
+                setResult(RESULT_OK, intent);
+                finish(); // Finish the activity
             } else {
                 // Handle case where scanning was canceled or failed
                 Toast.makeText(this, "Scanning failed or canceled", Toast.LENGTH_SHORT).show();
+                setResult(RESULT_CANCELED); // Set result canceled
+                finish(); // Finish the activity
             }
         }
     }
+
 }

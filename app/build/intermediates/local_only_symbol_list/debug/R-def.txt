@@ -15,7 +15,11 @@ id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id action_settings
 id admin_button
+id attendeeListView
 id attendee_button
+id attendee_list_view
+id attendees
+id back_button
 id barcode_scanner
 id cancel_button
 id capture_image_button
@@ -32,6 +36,7 @@ id enable_disable_button
 id eventListView
 id eventName
 id eventNameTextView
+id event_poster_button
 id generatePromotionalQR
 id generateQRandCreateEvent
 id geolocation
@@ -45,12 +50,12 @@ id notification_heading
 id notification_text
 id notification_title
 id notification_title_text
-id notifyButton
 id notify_button
 id organizer_button
 id promotionalQR
 id qrCode
 id qr_button
+id qr_code_button
 id reuseQRcodetext
 id scanned_events_text
 id select_image_button
@@ -66,9 +71,11 @@ id welcome_text
 layout activity_create_event_organizer
 layout activity_reuse_qrcodes
 layout attendee
+layout edit_profile
 layout event_details
 layout fragment_image_upload
 layout home_page
+layout mytextview
 layout notifications
 layout organizer
 layout role_page

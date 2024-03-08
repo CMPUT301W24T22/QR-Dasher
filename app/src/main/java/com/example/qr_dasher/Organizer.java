@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -38,6 +39,8 @@ public class Organizer extends AppCompatActivity {
 
     private ArrayList<String> reuseQRCodes = new ArrayList<>();
 
+    private List<String> eventNames;
+    private List<String> eventIds;
 
     private SharedPreferences app_cache; // To get the userID
 
@@ -70,47 +73,57 @@ public class Organizer extends AppCompatActivity {
 
     }
 
-private void retrieveEventsFromFirestore(int userId) {
-    // Query Firestore for events
+    private void retrieveEventsFromFirestore(int userId) {
+        // Query Firestore for events
+        eventNames = new ArrayList<>();
+        eventIds = new ArrayList<>();
 
+        db.collection("eventsCollection")
+                .whereEqualTo("attendee_qr.userID",userId)
 
-    db.collection("eventsCollection")
-            .whereEqualTo("attendee_qr.userID",userId)
-            .get()
-            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                @Override
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                        if (e != null) {
+                            // Handle errors
+                            eventListView.setVisibility(View.GONE);
+                            e.printStackTrace();
+                            return;
+                        }
 
-                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                    List<String> eventNames = new ArrayList<>();
-                    //List<String> reuseQRCodes = new ArrayList<>();
-                    // Iterate through the query results
-                    for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                        // Update the list with new data
+                        eventNames.clear();
+                        eventIds.clear();
 
-                        String documentId = documentSnapshot.getId();
-                        String eventName = documentSnapshot.getString("name");
-                        String qrCode = documentSnapshot.getString("attendee_qr.qrImage");
+                        // Iterate through the query results
+                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
 
-                        // Add event name to the list
-                        eventNames.add(eventName);
-                        reuseQRCodes.add(qrCode);
+                            String documentId = documentSnapshot.getId();
+                            String eventName = documentSnapshot.getString("name");
+                            String qrCode = documentSnapshot.getString("attendee_qr.qrImage");
+
+                            if (documentSnapshot.contains("event_id")) {
+                                Long eventIdLong = documentSnapshot.getLong("event_id");
+                                if (eventIdLong != null) {
+                                    String eventId = String.valueOf(eventIdLong);
+                                    //String eventId = String.valueOf(eventIdLong);
+                                    // Add event name and event_id to the lists
+                                    eventNames.add(eventName);
+                                    eventIds.add(eventId);
+                                }
+                            }
+                        }
+                        // Display the list of event names in the ListView
+                        displayEventList(eventNames,eventIds);
                     }
-                    // Display the list of event names in the ListView
-                    displayEventList(eventNames);
-                }
-            })
-            .addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    // Handle failure to retrieve events
-                    eventListView.setVisibility(View.GONE);
-                    e.printStackTrace();
-                }
-            });
-}
+                });
 
-    private void displayEventList(List<String> eventNames) {
+    }
+
+    private void displayEventList(List<String> eventNames, List<String> eventIds) {
         // Create an ArrayAdapter to display the event names
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, eventNames);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, eventNames);
+        adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         eventListView.setAdapter(adapter);
 
@@ -120,11 +133,16 @@ private void retrieveEventsFromFirestore(int userId) {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Get the clicked event name
                 String eventName = eventNames.get(position);
+                String eventId = eventIds.get(position);
+                //Integer eventId = Integer.parseInt(eventIdStr);
                 // Start new activity with the event name
                 Intent intent = new Intent(Organizer.this, EventDetails.class);
                 intent.putExtra("eventName", eventName);
+                intent.putExtra("event_id", eventId);
                 startActivity(intent);
             }
         });
+
+
     }
 }

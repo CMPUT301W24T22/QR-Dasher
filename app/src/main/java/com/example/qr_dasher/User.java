@@ -19,7 +19,7 @@ public class User {
     public User(String name, String email, boolean location){
         Random random = new Random();
         this.name = name;
-        if (str.contains("@") && str.contains(".com")){
+        if (email.contains("@") && email.contains(".com")){
             this.email = email;
         } else {
             throw new IllegalArgumentException("Invalid email");

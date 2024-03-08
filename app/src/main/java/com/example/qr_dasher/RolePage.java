@@ -5,10 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+/**
+ * RolePage activity presents role selection options to users.
+ * Users can choose between different roles such as Organizer, Attendee, and Admin.
+ * Clicking on the respective role button will navigate the user to the corresponding activity.
+ */
 public class RolePage extends Activity {
     private Button organizerButton, attendeeButton, adminButton;
-
+    /**
+     * Initializes the activity's UI components and sets up click listeners.
+     *
+     * @param savedInstanceState This activity's previously saved state, or null if it has no saved state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

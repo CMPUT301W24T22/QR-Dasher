@@ -14,9 +14,16 @@ import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 
 import android.widget.Toast;
 
-
+/**
+ * ScanQR activity facilitates scanning QR codes using the device's camera.
+ * It utilizes the IntentIntegrator library for integrating QR code scanning functionality.
+ */
 public class ScanQR extends AppCompatActivity {
-
+     /**
+     * Initializes the activity's UI components and sets up click listeners.
+     *
+     * @param savedInstanceState This activity's previously saved state, or null if it has no saved state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,14 +32,22 @@ public class ScanQR extends AppCompatActivity {
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         startScanning();
     }
-
+    /**
+     * Initiates the QR code scanning process using IntentIntegrator.
+     */
     private void startScanning() {
         IntentIntegrator integrator = new IntentIntegrator(this);
         integrator.setPrompt("Scan a QR code");
         integrator.setOrientationLocked(false);
         integrator.initiateScan();
     }
-
+    /**
+     * Handles the result of the QR code scanning activity.
+     *
+     * @param requestCode The request code passed to startActivityForResult().
+     * @param resultCode  The result code returned by the child activity.
+     * @param data        The intent data returned by the child activity.
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

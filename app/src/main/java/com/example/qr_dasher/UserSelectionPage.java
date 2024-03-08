@@ -5,7 +5,9 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/**
+ * Activity for user selection page where users can choose between attendee and organizer roles.
+ */
 public class UserSelectionPage extends AppCompatActivity {
 
     private Button attendeeButton, organizerButton;

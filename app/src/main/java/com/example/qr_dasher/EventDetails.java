@@ -26,10 +26,20 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * This class represents the Activity displaying details of a specific event.
+ * It retrieves the event details from Firestore and displays the list of attendees.
+ */
 public class EventDetails extends AppCompatActivity {
     private FirebaseFirestore db;
     private ListView attendeeListView;
+    /**
+     * Initializes the activity, sets up UI components and listeners,
+     * and retrieves event details from Firebase Firestore.
+     *
+     * @param savedInstanceState Saved instance state bundle
+     */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,7 +101,11 @@ public class EventDetails extends AppCompatActivity {
             }
         });
     }
-
+    /**
+     * Fetches the list of attendees for the given event ID from Firestore.
+     *
+     * @param eventId The ID of the event for which attendees need to be fetched.
+     */
     private void fetchAttendees(Integer eventId) {
         // Query Firestore for attendees
 
@@ -134,6 +148,11 @@ public class EventDetails extends AppCompatActivity {
                 });
 
     }
+    /**
+     * Displays the list of attendees in a ListView.
+     *
+     * @param attendeeList The list of attendees to display.
+     */
 
     private void displayAttendeeList(List<String> attendeeList) {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, attendeeList);

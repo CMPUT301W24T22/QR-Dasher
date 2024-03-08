@@ -16,10 +16,18 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.concurrent.atomic.AtomicReference;
-
+/**
+ * Activity for attendees of an event. Allows attendees to view notifications, edit their profile,
+ * and scan a QR code to join an event.
+ */
 public class Attendee extends AppCompatActivity {
     private Button notificationButton, editProfileButton, qrCodeButton;
     private SharedPreferences app_cache;
+    /**
+     * Initializes the activity and sets up UI components and listeners.
+     *
+     * @param savedInstanceState Saved instance state bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +69,13 @@ public class Attendee extends AppCompatActivity {
 
 
     }
+    /**
+     * Handles the result of the QR code scanning activity.
+     *
+     * @param requestCode The request code passed to startActivityForResult()
+     * @param resultCode  The result code returned by the child activity
+     * @param data        The Intent containing the result data
+     */
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -78,6 +93,11 @@ public class Attendee extends AppCompatActivity {
             }
         }
     }
+    /**
+     * Update Firebase with scanned event ID.
+     *
+     * @param event_id The scanned event ID
+     */
 
     private void updateFirebase(String event_id){
         int userId = app_cache.getInt("UserID", -1);
@@ -122,6 +142,12 @@ public class Attendee extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
+    /**
+     * Update user document in Firebase.
+     *
+     * @param userId The user ID
+     * @param user   The User object to update
+     */
 
 
     private void updateFirebaseUser(String userId, User user) {
@@ -135,7 +161,12 @@ public class Attendee extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
-
+    /**
+     * Update event document in Firebase.
+     *
+     * @param eventId The event ID
+     * @param event   The Event object to update
+     */
     private void updateFirebaseEvent(String eventId, Event event) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("eventsCollection")

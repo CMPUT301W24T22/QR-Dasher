@@ -22,25 +22,55 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
+/**
+ * A DialogFragment for uploading images from either the device's camera or gallery.
+ * Provides options to capture a new image or select an existing image.
+ */
 
 public class ImageUploadFragment extends DialogFragment {
-
+   /**
+    * Constant for requesting image capture.
+    */
     private static final int REQUEST_IMAGE_CAPTURE = 1;
+    /**
+     * Constant for requesting image selection from gallery.
+     */
     private static final int REQUEST_IMAGE_PICK = 2;
 
     private Button captureImageButton, selectImageButton, deleteImageButton;
     private Bitmap capturedImageBitmap;
     private ImageUploadListener imageUploadListener;
-
+    /**
+     * Interface for communicating image upload events to the hosting activity.
+     */
     public interface ImageUploadListener {
+        /**
+         * Callback method triggered when an image is uploaded.
+         *
+         * @param imageBitmap The uploaded image bitmap.
+         */
         void onImageUpload(Bitmap imageBitmap);
     }
+    /**
+     * Creates the view of the ImageUploadFragment.
+     *
+     * @param inflater           The LayoutInflater object that can be used to inflate any views in the fragment.
+     * @param container          The parent view that the fragment's UI should be attached to.
+     * @param savedInstanceState This fragment's previously saved state, or null if it has no saved state.
+     * @return The inflated view.
+     */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_image_upload, container, false);
     }
+    /**
+     * Initializes the view components and sets up click listeners.
+     *
+     * @param view               The view returned by onCreateView().
+     * @param savedInstanceState This fragment's previously saved state, or null if it has no saved state.
+     */
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -71,14 +101,18 @@ public class ImageUploadFragment extends DialogFragment {
             }
         });
     }
-
+    /**
+     * Deletes the currently selected image.
+     */
     private void deleteImage(){
         capturedImageBitmap = null;
         if (imageUploadListener != null) {
             imageUploadListener.onImageUpload(null); // Passing null to indicate no image
         }
     }
-
+    /**
+     * Initiates a request to capture an image using the device's camera.
+     */
     private void dispatchTakePictureIntent() {
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -96,6 +130,9 @@ public class ImageUploadFragment extends DialogFragment {
     private static final int REQUEST_CAMERA_PERMISSION = 101;
 
     // Start camera intent
+    /**
+     * Start camera intent
+     */
     private void startCameraIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(requireActivity().getPackageManager()) != null) {
@@ -104,6 +141,9 @@ public class ImageUploadFragment extends DialogFragment {
     }
 
     // Handle permission request result
+    /**
+     * Handle permission request result
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == REQUEST_CAMERA_PERMISSION) {
@@ -117,12 +157,21 @@ public class ImageUploadFragment extends DialogFragment {
         }
     }
 
-
+    /**
+     * Initiates a request to select an image from the device's gallery.
+     */
     private void dispatchSelectImageIntent() {
         Intent pickPhotoIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         pickPhotoIntent.setType("image/*");
         startActivityForResult(Intent.createChooser(pickPhotoIntent, "Select Picture"), REQUEST_IMAGE_PICK);
     }
+    /**
+     * Handles the result of image capture or selection.
+     *
+     * @param requestCode The request code passed to startActivityForResult().
+     * @param resultCode  The result code returned by the child activity.
+     * @param data        The intent data returned by the child activity.
+     */
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

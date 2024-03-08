@@ -44,6 +44,7 @@
         <activity android:name=".Attendee" />
         <activity android:name=".Organizer" />
         <activity android:name=".ScanQR" />
+        <activity android:name=".EventPoster" />
     </application>
 
 </manifest>

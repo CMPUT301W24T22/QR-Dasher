@@ -87,6 +87,7 @@
         <activity android:name="com.example.qr_dasher.Attendee" />
         <activity android:name="com.example.qr_dasher.Organizer" />
         <activity android:name="com.example.qr_dasher.ScanQR" />
+        <activity android:name="com.example.qr_dasher.EventPoster" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:clearTaskOnLaunch="true"

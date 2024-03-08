@@ -3314,6 +3314,7 @@ id chain2
 id chains
 id checkbox
 id checked
+id choose_image_button
 id chronometer
 id circle_center
 id clear_notifications_button
@@ -3346,6 +3347,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete_image_button
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3353,6 +3355,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detail_text
 id details
 id details_edit
 id dialog_button
@@ -3632,6 +3635,7 @@ id search_voice_btn
 id select_dialog_listview
 id select_image_button
 id selected
+id selected_image
 id selection_type
 id send_notifications_button
 id send_text
@@ -3713,6 +3717,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id title_text
 id toggle
 id top
 id topPanel
@@ -3903,6 +3908,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout edit_profile
 layout event_details
+layout event_poster
 layout fragment_image_upload
 layout home_page
 layout m3_alert_dialog
@@ -4066,6 +4072,7 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string image_description
 string item_view_role_description
 string library_zxingandroidembedded_author
 string library_zxingandroidembedded_authorWebsite

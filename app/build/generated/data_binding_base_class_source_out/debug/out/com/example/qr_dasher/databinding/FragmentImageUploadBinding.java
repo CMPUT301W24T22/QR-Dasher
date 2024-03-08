@@ -23,12 +23,17 @@ public final class FragmentImageUploadBinding implements ViewBinding {
   public final Button captureImageButton;
 
   @NonNull
+  public final Button deleteImageButton;
+
+  @NonNull
   public final Button selectImageButton;
 
   private FragmentImageUploadBinding(@NonNull LinearLayout rootView,
-      @NonNull Button captureImageButton, @NonNull Button selectImageButton) {
+      @NonNull Button captureImageButton, @NonNull Button deleteImageButton,
+      @NonNull Button selectImageButton) {
     this.rootView = rootView;
     this.captureImageButton = captureImageButton;
+    this.deleteImageButton = deleteImageButton;
     this.selectImageButton = selectImageButton;
   }
 
@@ -65,6 +70,12 @@ public final class FragmentImageUploadBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.delete_image_button;
+      Button deleteImageButton = ViewBindings.findChildViewById(rootView, id);
+      if (deleteImageButton == null) {
+        break missingId;
+      }
+
       id = R.id.select_image_button;
       Button selectImageButton = ViewBindings.findChildViewById(rootView, id);
       if (selectImageButton == null) {
@@ -72,7 +83,7 @@ public final class FragmentImageUploadBinding implements ViewBinding {
       }
 
       return new FragmentImageUploadBinding((LinearLayout) rootView, captureImageButton,
-          selectImageButton);
+          deleteImageButton, selectImageButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

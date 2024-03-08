@@ -77,12 +77,12 @@ public class EventDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Handle notification button click
-//                Intent intent = new Intent(EventDetails.this, SendNotification.class);
-//                startActivity(intent);
+                Intent intent = new Intent(EventDetails.this, EventPoster.class);
+                startActivity(intent);
             }
         });
 
-        posterUploadButton.setOnClickListener(new View.OnClickListener() {
+        qrButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Handle notification button click

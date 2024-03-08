@@ -23,9 +23,12 @@ id back_button
 id barcode_scanner
 id cancel_button
 id capture_image_button
+id choose_image_button
 id clear_notifications_button
 id container
 id createEventButton
+id delete_image_button
+id detail_text
 id details
 id details_edit
 id displayQRcodes
@@ -59,11 +62,13 @@ id qr_code_button
 id reuseQRcodetext
 id scanned_events_text
 id select_image_button
+id selected_image
 id send_notifications_button
 id send_text
 id textView
 id textView2
 id textView3
+id title_text
 id upload_button
 id view
 id viewfinder_view
@@ -73,6 +78,7 @@ layout activity_reuse_qrcodes
 layout attendee
 layout edit_profile
 layout event_details
+layout event_poster
 layout fragment_image_upload
 layout home_page
 layout mytextview
@@ -94,6 +100,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string image_description
 string lorem_ipsum
 string next
 string previous

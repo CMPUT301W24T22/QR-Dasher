@@ -17,7 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-
+/**
+ * This activity represents the home page where users can input their information and upload their profile picture.
+ * User data is stored locally in SharedPreferences and uploaded to Firestore upon submission.
+ */
 public class HomePage extends AppCompatActivity implements ImageUploadFragment.ImageUploadListener{
 
     private EditText nameEdit, emailEdit, detailsEdit;
@@ -28,6 +31,12 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
     private CollectionReference usersCollection;
     private Bitmap profile_picture;
     private SharedPreferences app_cache;
+    /**
+     * Initializes the activity, sets up UI components and listeners,
+     * and checks if the user is already logged in. If logged in, redirects to RolePage.
+     *
+     * @param savedInstanceState Saved instance state bundle
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +109,11 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
             }
         });
     }
-    // Callback method to receive the uploaded image bitmap from ImageUploadFragment
+    /**
+     * Callback method to receive the uploaded image bitmap from ImageUploadFragment.
+     *
+     * @param imageBitmap The bitmap of the uploaded image.
+     */
     @Override
     public void onImageUpload(Bitmap imageBitmap) {
         // Display the uploaded image in ImageView
@@ -119,7 +132,11 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                     Toast.makeText(HomePage.this, "Upload Failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
-
+    /**
+     * Saves the user data to SharedPreferences for local caching.
+     *
+     * @param user The User object containing user data.
+     */
     private void saveUserToCache(User user){
         SharedPreferences.Editor editor = app_cache.edit();
         editor.putInt("UserID", user.getUserId());

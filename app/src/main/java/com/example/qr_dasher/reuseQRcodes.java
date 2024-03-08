@@ -64,8 +64,14 @@ public class reuseQRcodes extends AppCompatActivity {
                         displayQRcodes(qrCodes);
                     }
                 })
-                .addOnFailureListener(e -> {
-                    // Handle failure
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Handle failure to retrieve qr codes
+                        LinearLayout container = findViewById(R.id.container);
+                        container.setVisibility(View.GONE);
+                        e.printStackTrace();
+                    }
                 });
     }
 

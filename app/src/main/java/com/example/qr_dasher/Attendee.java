@@ -17,63 +17,69 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * This activity represents an attendee's dashboard.
+ */
 public class Attendee extends AppCompatActivity {
     private Button notificationButton, editProfileButton, qrCodeButton;
     private SharedPreferences app_cache;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.attendee);
 
+        // Get reference to SharedPreferences for storing user data
         app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
+        // Initialize buttons
         notificationButton = findViewById(R.id.notification_button);
         editProfileButton = findViewById(R.id.edit_profile_button);
         qrCodeButton = findViewById(R.id.qr_button);
 
+        // Set onClickListener for notification button
         notificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle attendee role selection
-                // For example, start a new activity for attendee tasks
+                // Start Notifications activity
                 Intent intent = new Intent(Attendee.this, Notifications.class);
                 startActivity(intent);
             }
         });
 
+        // Set onClickListener for edit profile button
         editProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle attendee role selection
-                // For example, start a new activity for attendee tasks
+                // Start EditProfile activity
                 Intent intent = new Intent(Attendee.this, EditProfile.class);
                 startActivity(intent);
             }
         });
 
+        // Set onClickListener for QR code button
         qrCodeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle attendee role selection
-                // For example, start a new activity for attendee tasks
+                // Start ScanQR activity for scanning QR code
                 Intent intent = new Intent(Attendee.this, ScanQR.class);
                 startActivityForResult(intent, 1);
             }
         });
-
-
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 1) { // Check if the result is from ScanQR activity
+        // Check if the result is from ScanQR activity
+        if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
+                // Retrieve scanned text
                 String scannedText = data.getStringExtra("scannedText");
                 Toast.makeText(this, "Scanning successful " + scannedText, Toast.LENGTH_SHORT).show();
+                // Update Firebase with scanned event ID
                 updateFirebase(scannedText);
-                // Implement firestore check
             } else {
                 // Handle case where scanning was canceled or failed
                 Toast.makeText(this, "Scanning failed or canceled", Toast.LENGTH_SHORT).show();
@@ -81,11 +87,18 @@ public class Attendee extends AppCompatActivity {
         }
     }
 
-    private void updateFirebase(String event_id){
+    /**
+     * Updates Firebase with the scanned event ID and the attendee's information.
+     *
+     * @param event_id The ID of the scanned event.
+     */
+    private void updateFirebase(String event_id) {
         int userId = app_cache.getInt("UserID", -1);
         int eventID = Integer.parseInt(event_id);
         AtomicReference<User> user = new AtomicReference<>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        // Update user information in Firestore
         db.collection("users")
                 .whereEqualTo("userId", userId)
                 .get()
@@ -103,6 +116,8 @@ public class Attendee extends AppCompatActivity {
                     Log.d("Attendee", "Failed to retrieve User from Firestore");
                     e.printStackTrace();
                 });
+
+        // Update event information in Firestore
         db.collection("events")
                 .whereEqualTo("event_id", eventID)
                 .get()
@@ -122,6 +137,12 @@ public class Attendee extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Updates user information in Firebase.
+     *
+     * @param userId The ID of the user.
+     * @param user   The user object to be updated.
+     */
     private void updateFirebaseUser(String userId, User user) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users")
@@ -134,6 +155,12 @@ public class Attendee extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Updates event information in Firebase.
+     *
+     * @param eventId The ID of the event.
+     * @param event   The event object to be updated.
+     */
     private void updateFirebaseEvent(String eventId, Event event) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users")
@@ -145,5 +172,5 @@ public class Attendee extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
-
 }
+

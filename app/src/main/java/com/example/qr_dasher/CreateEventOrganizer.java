@@ -54,6 +54,10 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import javax.annotation.Nullable;
 
+/**
+ * Activity for creating events by organizers.
+ */
+
 public class CreateEventOrganizer extends AppCompatActivity {
     public static final String EXTRA_QR_CODES = "extra_qr_codes";
     private ImageView qrImage, promotionalImage;
@@ -69,6 +73,12 @@ public class CreateEventOrganizer extends AppCompatActivity {
 
     private Event event;
     private List<String> reuseQRCodes;
+    /**
+     * onCreate method is called when the activity is starting. It initializes the activity layout,
+     * retrieves necessary views from the layout, initializes Firebase Firestore, and sets up event listeners
+     * for buttons to handle user interactions.
+     * @param savedInstanceState A Bundle containing the activity's previously saved state, if available.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,6 +167,13 @@ public class CreateEventOrganizer extends AppCompatActivity {
             }
         });
     }
+    /**
+     * Updates the user data in Firebase Firestore with the latest event created by the organizer.
+     * This method is called after successfully generating a QR code for the event and adding the event
+     * to Firestore.
+     * @param userId The ID of the user whose data needs to be updated.
+     * @param user The User object containing the updated user data.
+     */
 
     private void updateFirebaseUser(String userId, User user) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -169,6 +186,11 @@ public class CreateEventOrganizer extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
+    /**
+     * Adds the newly created event to Firebase Firestore.
+     * This method is called after generating the QR code for the event and before updating the user data.
+     * @param event The Event object representing the newly created event.
+     */
 
     private void addEventToFirebase(Event event) {
         db.collection("eventsCollection")
@@ -180,6 +202,11 @@ public class CreateEventOrganizer extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
+    /**
+     * Retrieves QR codes for all events from Firebase Firestore.
+     * This method is called when the organizer wants to display QR codes for all events stored in Firestore.
+     * It retrieves the QR codes and starts a new activity to display them.
+     */
 
     public void getQRFromFirebase() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -201,7 +228,14 @@ public class CreateEventOrganizer extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
-
+    /**
+     * Handles the result of the activity launched to display QR codes for events.
+     * This method is called when the activity to display QR codes returns a result.
+     * It retrieves the selected QR code from the result and updates the QR code image view accordingly.
+     * @param requestCode The integer request code originally supplied to startActivityForResult().
+     * @param resultCode The integer result code returned by the child activity through its setResult().
+     * @param data An Intent, which can return result data to the caller (various data can be attached to Intent "extras").
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -228,6 +262,7 @@ public class CreateEventOrganizer extends AppCompatActivity {
 //        }
 //    }
 //
+
 
 
 

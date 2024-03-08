@@ -33,6 +33,10 @@ public class QRCode {
     private int userID;
     private boolean promotional;
 
+    public QRCode(){
+
+    }
+
     public QRCode (int event_id, String content, int userID, boolean promotional){
         this.content = content;
         this.event_id = event_id;

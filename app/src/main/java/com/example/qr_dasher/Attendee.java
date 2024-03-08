@@ -46,8 +46,8 @@ public class Attendee extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle attendee role selection
                 // For example, start a new activity for attendee tasks
-//                Intent intent = new Intent(AttendeeDashboard.this, AttendeeDashboard.class);
-//                startActivity(intent);
+                Intent intent = new Intent(Attendee.this, EditProfilePage.class);
+                startActivity(intent);
             }
         });
 

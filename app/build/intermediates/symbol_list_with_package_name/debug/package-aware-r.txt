@@ -3294,6 +3294,10 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id buttonPanel
+id button_cancel
+id button_ok
+id button_remove_picture
+id button_upload_picture
 id cache_measures
 id callMeasure
 id cancel_action
@@ -3377,6 +3381,9 @@ id east
 id edge
 id edit_profile_button
 id edit_query
+id edittext_email
+id edittext_homepage
+id edittext_name
 id elastic
 id email_edit
 id embed
@@ -3585,6 +3592,7 @@ id pin
 id position
 id postLayout
 id pressed
+id profile_image
 id progress_circular
 id progress_horizontal
 id promotionalQR
@@ -3878,6 +3886,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_create_event_organizer
+layout activity_edit_profile
 layout activity_reuse_qrcodes
 layout attendee
 layout custom_dialog

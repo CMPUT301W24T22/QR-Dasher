@@ -17,6 +17,10 @@ id action_settings
 id admin_button
 id attendee_button
 id barcode_scanner
+id button_cancel
+id button_ok
+id button_remove_picture
+id button_upload_picture
 id cancel_button
 id capture_image_button
 id clear_notifications_button
@@ -27,6 +31,9 @@ id details_edit
 id displayQRcodes
 id downloadbutton
 id edit_profile_button
+id edittext_email
+id edittext_homepage
+id edittext_name
 id email_edit
 id enable_disable_button
 id eventListView
@@ -48,6 +55,7 @@ id notification_title_text
 id notifyButton
 id notify_button
 id organizer_button
+id profile_image
 id promotionalQR
 id qrCode
 id qr_button
@@ -64,6 +72,7 @@ id view
 id viewfinder_view
 id welcome_text
 layout activity_create_event_organizer
+layout activity_edit_profile
 layout activity_reuse_qrcodes
 layout attendee
 layout event_details

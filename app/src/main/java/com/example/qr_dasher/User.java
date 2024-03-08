@@ -1,22 +1,36 @@
 package com.example.qr_dasher;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Represents a user of the application.
+ */
 public class User {
     private String name;
     private int UserId;
     private String email;
     private String details;
     private boolean location;
-
     private String profile_image;
     private List<String> eventsCreated;
     private List<String> eventsJoined;
-    public User(){
 
+    /**
+     * Default constructor for the User class.
+     */
+    public User() {
     }
-    public User(String name, String email, boolean location){
+
+    /**
+     * Constructor for the User class.
+     *
+     * @param name     The name of the user.
+     * @param email    The email address of the user.
+     * @param location The location of the user.
+     */
+    public User(String name, String email, boolean location) {
         Random random = new Random();
         this.name = name;
         this.email = email;
@@ -26,45 +40,71 @@ public class User {
         this.eventsJoined = new ArrayList<>();
     }
 
-    public String getName(){
+    // Getter and setter methods
+
+    public String getName() {
         return this.name;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return this.email;
     }
-    public String getDetails(){
+
+    public String getDetails() {
         return this.details;
     }
-    public boolean getLocation(){
+
+    public boolean getLocation() {
         return this.location;
     }
-    public int getUserId() { return UserId; }
-    public String getProfile_image() { return profile_image; }
-    public void setName(String Name){
+
+    public int getUserId() {
+        return UserId;
+    }
+
+    public String getProfile_image() {
+        return profile_image;
+    }
+
+    public void setName(String Name) {
         this.name = Name;
     }
-    public void setEmail(String email){
+
+    public void setEmail(String email) {
         this.email = email;
     }
-    public void setDetails(String details){
+
+    public void setDetails(String details) {
         this.details = details;
     }
-    public void setLocation(boolean location){
+
+    public void setLocation(boolean location) {
         this.location = location;
     }
-    public void setProfile_image(String profile_image) { this.profile_image = profile_image; }
-    public void setUserId(int userId) { UserId = userId; }
 
-    public void addEventsJoined(String qrCode){
+    public void setProfile_image(String profile_image) {
+        this.profile_image = profile_image;
+    }
+
+    public void setUserId(int userId) {
+        UserId = userId;
+    }
+
+    // Methods for managing events created and joined by the user
+
+    public void addEventsJoined(String qrCode) {
         this.eventsJoined.add(qrCode);
     }
-    public void addEventsCreated(String qrCode){
+
+    public void addEventsCreated(String qrCode) {
         this.eventsCreated.add(qrCode);
     }
-    public List<String> getEventsJoined(){
+
+    public List<String> getEventsJoined() {
         return this.eventsJoined;
     }
-    public List<String> getEventsCreated(){
+
+    public List<String> getEventsCreated() {
         return this.eventsCreated;
     }
 }

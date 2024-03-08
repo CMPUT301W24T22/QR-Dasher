@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -97,6 +98,7 @@ public class reuseQRcodes extends AppCompatActivity {
      *
      * @param qrCodes List of QR code strings
      */
+    // Inside displayQRcodes method, set onClickListener for each ImageView to select the QR code
     private void displayQRcodes(List<String> qrCodes) {
         LinearLayout container = findViewById(R.id.container);
 
@@ -106,6 +108,7 @@ public class reuseQRcodes extends AppCompatActivity {
                 // Decode the QR code string into a bitmap
                 byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
                 Bitmap qrCodeBitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+
                 // Create an ImageView to display the QR code bitmap
                 ImageView imageView = new ImageView(this);
                 imageView.setImageBitmap(qrCodeBitmap);
@@ -118,10 +121,24 @@ public class reuseQRcodes extends AppCompatActivity {
                 layoutParams.setMargins(0, 0, 0, 16);
                 imageView.setLayoutParams(layoutParams);
 
+                // Set onClickListener for selecting the QR code
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Pass the selected QR code back to the calling activity
+                        Intent intent = new Intent();
+                        intent.putExtra("selectedQRCode", qrCodeString);
+                        setResult(RESULT_OK, intent);
+                        finish(); // Finish the activity and return to the calling activity
+                    }
+                });
+
                 // Add the ImageView to the container layout
                 container.addView(imageView);
             }
         }
     }
+
 }
+
 

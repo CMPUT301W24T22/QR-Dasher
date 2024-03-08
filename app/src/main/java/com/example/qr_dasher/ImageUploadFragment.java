@@ -1,6 +1,7 @@
 package com.example.qr_dasher;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -13,8 +14,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+import android.Manifest;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 
 public class ImageUploadFragment extends DialogFragment {
@@ -22,7 +28,7 @@ public class ImageUploadFragment extends DialogFragment {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private static final int REQUEST_IMAGE_PICK = 2;
 
-    private Button captureImageButton, selectImageButton;
+    private Button captureImageButton, selectImageButton, deleteImageButton;
     private Bitmap capturedImageBitmap;
     private ImageUploadListener imageUploadListener;
 
@@ -42,6 +48,7 @@ public class ImageUploadFragment extends DialogFragment {
 
         captureImageButton = view.findViewById(R.id.capture_image_button);
         selectImageButton = view.findViewById(R.id.select_image_button);
+        deleteImageButton = view.findViewById(R.id.delete_image_button);
 
         captureImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,14 +63,60 @@ public class ImageUploadFragment extends DialogFragment {
                 dispatchSelectImageIntent();
             }
         });
+
+        deleteImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteImage();
+            }
+        });
+    }
+
+    private void deleteImage(){
+        capturedImageBitmap = null;
+        if (imageUploadListener != null) {
+            imageUploadListener.onImageUpload(null); // Passing null to indicate no image
+        }
     }
 
     private void dispatchTakePictureIntent() {
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission is not granted, request the permission
+            ActivityCompat.requestPermissions(requireActivity(),
+                    new String[]{Manifest.permission.CAMERA},
+                    REQUEST_CAMERA_PERMISSION);
+        } else {
+            // Permission is already granted, start the camera intent
+            startCameraIntent();
+        }
+    }
+
+    // Constant for camera permission request
+    private static final int REQUEST_CAMERA_PERMISSION = 101;
+
+    // Start camera intent
+    private void startCameraIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+        if (takePictureIntent.resolveActivity(requireActivity().getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
+
+    // Handle permission request result
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_CAMERA_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted, start the camera intent
+                startCameraIntent();
+            } else {
+                // Permission denied, show a message or handle accordingly
+                Toast.makeText(requireContext(), "Camera permission is required to capture images", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
 
     private void dispatchSelectImageIntent() {
         Intent pickPhotoIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);

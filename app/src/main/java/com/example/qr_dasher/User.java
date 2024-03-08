@@ -19,7 +19,11 @@ public class User {
     public User(String name, String email, boolean location){
         Random random = new Random();
         this.name = name;
-        this.email = email;
+        if (email.contains("@") && email.contains(".com")){
+            this.email = email;
+        } else {
+            throw new IllegalArgumentException("Invalid email");
+        }
         this.location = location;
         this.UserId = random.nextInt();
         this.eventsCreated = new ArrayList<>();

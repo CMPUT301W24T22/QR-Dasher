@@ -16,6 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+/**
+ * Activity for editing user profile information.
+ * Allows users to edit their profile details including name, email, details, and profile picture.
+ * The edited profile information is updated in Firebase Firestore.
+ */
 
 public class EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUploadListener{
 
@@ -27,6 +32,12 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
     private CollectionReference usersCollection;
     private Bitmap profile_picture;
     private SharedPreferences app_cache;
+    /**
+     * Initializes the activity, sets up UI components and listeners,
+     * and retrieves user data from Firebase Firestore.
+     *
+     * @param savedInstanceState Saved instance state bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +113,12 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
     }
 
     // Callback method to receive the uploaded image bitmap from ImageUploadFragment
+    /**
+     * Callback method to receive the uploaded image bitmap from ImageUploadFragment.
+     * Updates the profile picture ImageView and stores the image bitmap in the profile_picture variable.
+     *
+     * @param imageBitmap The uploaded image bitmap
+     */
     @Override
     public void onImageUpload(Bitmap imageBitmap) {
         // Display the uploaded image in ImageView
@@ -109,6 +126,12 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
         // Store the image bitmap in profile_picture variable
         profile_picture = imageBitmap;
     }
+      /**
+     * Retrieves user data from Firebase Firestore based on the provided user ID.
+     *
+     * @param userID   The user ID used to retrieve user data.
+     * @param callback The callback to handle the retrieved user data.
+     */
 
     public void retrieveUserFromFirebase(String userID, final FirebaseCallback callback) {
         // Retrieve the user document from Firestore using documentID (userID)
@@ -134,6 +157,12 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
                     callback.onCallback(null); // Notify callback with null user
                 });
     }
+     /**
+     * Updates user data on Firebase Firestore.
+     *
+     * @param user The User object containing updated user data.
+     */
+
 
     public void updateUserOnFirebase(User user){
         int userId = user.getUserId();
@@ -147,6 +176,11 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
                     Toast.makeText(EditProfile.this, "Failed to update user: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
+    /**
+     * Populates UI with retrieved user data.
+     *
+     * @param user The User object containing user data to be displayed in UI.
+     */
     // Method to populate UI with retrieved user data
     private void populateUIWithUserData(User user) {
         String profileImageString = user.getProfile_image();
@@ -168,7 +202,15 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
 
 
     // Define a callback interface
+     /**
+     * Callback interface for handling retrieved user data from Firebase.
+     */
     public interface FirebaseCallback {
+        /**
+         * Callback method to handle retrieved user data.
+         *
+         * @param user The retrieved User object, or null if user not found or retrieval failed.
+         */
         void onCallback(User user);
     }
 }

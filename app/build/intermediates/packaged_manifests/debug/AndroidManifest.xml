@@ -58,6 +58,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.QRDasher" >
         <activity
+            android:name="com.example.qr_dasher.EditProfile"
+            android:exported="false" />
+        <activity
             android:name="com.example.qr_dasher.SendNotification"
             android:exported="false" />
         <activity

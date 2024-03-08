@@ -3276,11 +3276,15 @@ id anticipate
 id arc
 id asConfigured
 id async
+id attendeeListView
 id attendee_button
+id attendee_list_view
+id attendees
 id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_button
 id barcode_scanner
 id barrier
 id baseline
@@ -3389,6 +3393,7 @@ id enterAlwaysCollapsed
 id eventListView
 id eventName
 id eventNameTextView
+id event_poster_button
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3547,7 +3552,6 @@ id notification_main_column_container
 id notification_text
 id notification_title
 id notification_title_text
-id notifyButton
 id notify_button
 id off
 id on
@@ -3590,6 +3594,7 @@ id progress_horizontal
 id promotionalQR
 id qrCode
 id qr_button
+id qr_code_button
 id radio
 id ratio
 id rectangles
@@ -3896,6 +3901,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout edit_profile
 layout event_details
 layout fragment_image_upload
 layout home_page
@@ -3950,6 +3956,7 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout mtrl_search_bar
 layout mtrl_search_view
+layout mytextview
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action

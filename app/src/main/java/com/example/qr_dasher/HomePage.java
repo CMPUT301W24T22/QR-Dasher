@@ -40,19 +40,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
 
         app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
-
-        // Deleting cache to test
-
-//        SharedPreferences.Editor editor = app_cache.edit();
-//        editor.clear(); // Clear all data
-//        editor.apply();
-
         int userId = app_cache.getInt("UserID", -1);
-        //int userId = -1;
-
-
-
-
         if (userId != -1) {
             startActivity(new Intent(HomePage.this, RolePage.class));
             finish();

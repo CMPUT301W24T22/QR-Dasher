@@ -3,16 +3,20 @@ package com.example.qr_dasher;
 import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.FirebaseApp;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.EventListener;
@@ -22,87 +26,79 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import javax.annotation.Nullable;
+import java.util.List;
 
 public class Organizer extends AppCompatActivity {
-    private ListView eventList;
-    private EventAdapter eventAdapter;
-    private ArrayList<Event> dataList;
-    private int selected_event;
-
     private Button CreateEventButton;
-
     private FirebaseFirestore db;
-    private CollectionReference events;
+    private LinearLayout eventButtonsLayout;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.organizer);
 
-        dataList = new ArrayList<>();
-
-        eventList = findViewById(R.id.eventList);
-
-        eventAdapter = new EventAdapter(this, dataList);
-        eventList.setAdapter(eventAdapter);
-
-
-        // Initialize Firebase Firestore
-        db = FirebaseFirestore.getInstance();
-        events = db.collection("events");
-
-
         CreateEventButton = findViewById(R.id.createEventButton);
+        eventButtonsLayout = findViewById(R.id.eventButtonsLayout);
+        //eventButtonsLayout = findViewById(R.id.eventButtonsLayout); // Add this line to get the LinearLayout from the XML layout
+
+        db = FirebaseFirestore.getInstance();
 
         CreateEventButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create new Event
+                // Handle attendee role selection
+                // For example, start a new activity for attendee tasks
                 Intent intent = new Intent(Organizer.this, CreateEventOrganizer.class);
                 startActivity(intent);
             }
         });
 
+        // Fetch events from Firestore and create buttons dynamically
+        fetchEvents();
+    }
 
+    private void fetchEvents() {
+        // Assuming user_id is known, replace it with the actual user_id value
+        Integer user_id = 50505050;
 
-        events.addSnapshotListener(new EventListener<QuerySnapshot>() {
-            @Override
-            public void onEvent(@Nullable QuerySnapshot querySnapshots,
-                                @Nullable FirebaseFirestoreException error) {
-                if (error != null) {
-                    Log.e("Firestore", error.toString());
-                    return;
-                }
-                if (querySnapshots != null) {
-                    dataList.clear();
-                    for (QueryDocumentSnapshot doc : querySnapshots) {
-                        String name = doc.getString("name");
-                        String details = doc.getString("details");
-                        String userId = doc.getString("userID");
-                        Log.d("Firestore", String.format("Event(%s, %s, %s) fetched", name,
-                                details,userId));
-                        int intValue = Integer.parseInt(userId);          //convert to integer
-                        dataList.add(new Event(name, details, intValue));
-                        eventAdapter.notifyDataSetChanged();
+        CollectionReference eventsCollection = db.collection("eventsCollection");
+
+        // Query events for the specific user_id
+        eventsCollection.whereEqualTo("attendee_qr.userID", user_id)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                            String eventName = document.getString("name");
+                            createEventButton(eventName);
+                        }
                     }
-                }
-            }
-        });
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Handle the failure to fetch events
+                    }
+                });
+    }
 
+    private void createEventButton(String eventName) {
+        // Create a new button for each event
+        Button eventButton = new Button(this);
+        eventButton.setText(eventName);
 
-        eventList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // Set OnClickListener for each button to handle click events
+        eventButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                selected_event = position;
-                Event selectedEvent = dataList.get(selected_event);
-                Intent intent = new Intent(Organizer.this, ManageEvent.class);   // need to change this to the arrow idk how
-                intent.putExtra("name", (CharSequence) selectedEvent);
-                //intent.putExtra("event", (CharSequence) clickedEvent);
-                startActivity(intent);
+            public void onClick(View v) {
+                // Handle the click event, e.g., navigate to event details activity
+                // You can implement this part based on your requirements
             }
         });
+
+        // Add the button to the LinearLayout
+        eventButtonsLayout.addView(eventButton);
     }
 }

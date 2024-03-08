@@ -24,12 +24,12 @@
         "source": "C:\\Users\\jaste\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\menu\\menu_main.xml"
     },
     {
-        "merged": "C:\\Users\\jaste\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\jaste\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\jaste\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_activity_reuse_qrcodes.xml.flat",
         "source": "C:\\Users\\jaste\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\activity_reuse_qrcodes.xml"
+    },
+    {
+        "merged": "C:\\Users\\jaste\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\jaste\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\jaste\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_adapter.xml.flat",

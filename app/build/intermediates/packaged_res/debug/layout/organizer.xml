@@ -19,6 +19,43 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.047" />
 
+    <LinearLayout
+        android:id="@+id/eventButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/createEventButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+        <!-- This LinearLayout will hold the dynamically created buttons -->
+    </LinearLayout>
+    <!--<ListView
+        android:id="@+id/event_list"
+        android:layout_width="408dp"
+        android:layout_height="462dp"
+        android:layout_weight="1"
+        android:dividerHeight="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/createEventButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="3dp"
+        tools:ignore="MissingConstraints">
+
+    </ListView>-->
+
+
+    <!--
+        <ListView
+            android:id="@+id/eventListView"
+            android:layout_width="413dp"
+            android:layout_height="478dp"
+            app:layout_constraintBottom_toTopOf="@+id/createEventButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />-->
+
+
 
     <!--<LinearLayout
         android:id="@+id/container"
@@ -35,7 +72,7 @@
 
 
 
-    <ListView
+    <!--<TextView
         android:id="@+id/eventList"
         android:layout_width="415dp"
         android:layout_height="405dp"
@@ -46,13 +83,32 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-3dp">
 
-    </ListView>
+    </TextView>-->
+
+    <!--<ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="413dp"
+        android:layout_height="472dp"
+        app:layout_constraintBottom_toTopOf="@+id/createEventButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:id="@+id/eventLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            &lt;!&ndash; Dynamically created buttons will be added here &ndash;&gt;
+
+        </LinearLayout>
+    </ScrollView>-->
 
 
     <Button
         android:id="@+id/createEventButton"
-        android:layout_width="143dp"
-        android:layout_height="52dp"
+        android:layout_width="162dp"
+        android:layout_height="57dp"
         android:text="Create Event"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

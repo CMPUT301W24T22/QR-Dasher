@@ -29,7 +29,7 @@ id displayQRcodes
 id edit_profile_button
 id email_edit
 id enable_disable_button
-id eventList
+id eventButtonsLayout
 id eventName
 id generatePromotionalQR
 id generateQR

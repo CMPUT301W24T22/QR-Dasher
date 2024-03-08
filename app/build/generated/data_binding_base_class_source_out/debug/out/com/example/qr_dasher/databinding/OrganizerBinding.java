@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,16 +25,16 @@ public final class OrganizerBinding implements ViewBinding {
   public final Button createEventButton;
 
   @NonNull
-  public final ListView eventList;
+  public final LinearLayout eventButtonsLayout;
 
   @NonNull
   public final TextView textView;
 
   private OrganizerBinding(@NonNull ConstraintLayout rootView, @NonNull Button createEventButton,
-      @NonNull ListView eventList, @NonNull TextView textView) {
+      @NonNull LinearLayout eventButtonsLayout, @NonNull TextView textView) {
     this.rootView = rootView;
     this.createEventButton = createEventButton;
-    this.eventList = eventList;
+    this.eventButtonsLayout = eventButtonsLayout;
     this.textView = textView;
   }
 
@@ -71,9 +71,9 @@ public final class OrganizerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.eventList;
-      ListView eventList = ViewBindings.findChildViewById(rootView, id);
-      if (eventList == null) {
+      id = R.id.eventButtonsLayout;
+      LinearLayout eventButtonsLayout = ViewBindings.findChildViewById(rootView, id);
+      if (eventButtonsLayout == null) {
         break missingId;
       }
 
@@ -83,8 +83,8 @@ public final class OrganizerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new OrganizerBinding((ConstraintLayout) rootView, createEventButton, eventList,
-          textView);
+      return new OrganizerBinding((ConstraintLayout) rootView, createEventButton,
+          eventButtonsLayout, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

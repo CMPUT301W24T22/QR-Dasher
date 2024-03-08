@@ -3386,7 +3386,7 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
-id eventList
+id eventButtonsLayout
 id eventName
 id exitUntilCollapsed
 id expand_activities_button

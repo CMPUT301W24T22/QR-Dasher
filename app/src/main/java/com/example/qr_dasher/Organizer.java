@@ -71,6 +71,8 @@ public class Organizer extends AppCompatActivity {
     }
 
 private void retrieveEventsFromFirestore(int userId) {
+    // Query Firestore for events
+
 
     db.collection("eventsCollection")
             .whereEqualTo("attendee_qr.userID",userId)
@@ -79,10 +81,8 @@ private void retrieveEventsFromFirestore(int userId) {
                 @Override
 
                 public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                    // need to store all events
                     List<String> eventNames = new ArrayList<>();
-                    List<Event> events = new ArrayList<>();
-
+                    //List<String> reuseQRCodes = new ArrayList<>();
                     // Iterate through the query results
                     for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
 
@@ -91,8 +91,8 @@ private void retrieveEventsFromFirestore(int userId) {
                         String qrCode = documentSnapshot.getString("attendee_qr.qrImage");
 
                         // Add event name to the list
-                        //eventNames.add(eventName);
-                       // reuseQRCodes.add(qrCode);
+                        eventNames.add(eventName);
+                        reuseQRCodes.add(qrCode);
                     }
                     // Display the list of event names in the ListView
                     displayEventList(eventNames);

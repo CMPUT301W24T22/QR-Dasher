@@ -31,6 +31,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+/**
+ * This activity represents the Organizer's interface where they can view and manage their events.
+ * It retrieves events associated with the logged-in organizer from Firestore and displays them in a ListView.
+ * The organizer can also create new events by clicking the "Create Event" button.
+ */
 
 public class Organizer extends AppCompatActivity {
     private Button CreateEventButton;
@@ -43,6 +48,11 @@ public class Organizer extends AppCompatActivity {
     private List<String> eventIds;
 
     private SharedPreferences app_cache; // To get the userID
+    /**
+     * Initializes the activity's UI components and sets up click listeners.
+     *
+     * @param savedInstanceState This activity's previously saved state, or null if it has no saved state.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +82,11 @@ public class Organizer extends AppCompatActivity {
         });
 
     }
+    /**
+     * Retrieves events associated with the organizer from Firestore.
+     *
+     * @param userId The ID of the organizer.
+     */
 
     private void retrieveEventsFromFirestore(int userId) {
         // Query Firestore for events
@@ -119,7 +134,12 @@ public class Organizer extends AppCompatActivity {
                 });
 
     }
-
+    /**
+     * Displays the list of events in the ListView.
+     *
+     * @param eventNames The list of event names.
+     * @param eventIds   The list of event IDs.
+     */
     private void displayEventList(List<String> eventNames, List<String> eventIds) {
         // Create an ArrayAdapter to display the event names
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, eventNames);

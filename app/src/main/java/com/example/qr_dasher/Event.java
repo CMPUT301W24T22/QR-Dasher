@@ -1,127 +1,63 @@
 package com.example.qr_dasher;
 
-import java.util.ArrayList;
-import java.util.NoSuchElementException;
-import java.util.Random;
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+import com.journeyapps.barcodescanner.DecoratedBarcodeView;
+import android.widget.Toast;
 
 /**
- * Represents an event in the application.
+ * This activity allows the user to scan a QR code.
  */
-public class Event {
-    private int event_id;
-    private String name;
-    private String details;
-    private ArrayList<User> attendee_list;
-    private QRCode attendee_qr;
-    private QRCode promotional_qr;
-    private int organizer;
+public class ScanQR extends AppCompatActivity {
 
-    /**
-     * Constructor for the Event class.
-     *
-     * @param name     The name of the event.
-     * @param details  The details of the event.
-     * @param userID   The ID of the organizer of the event.
-     */
-    public Event(String name, String details, int userID) {
-        Random random = new Random();
-        this.name = name;
-        this.details = details;
-        this.attendee_list = new ArrayList<>();
-        this.event_id = random.nextInt();
-        this.organizer = userID;
-    }
-
-    // Getter and setter methods
-
-    public int getEvent_id() {
-        return event_id;
-    }
-
-    public void setEvent_id(int event_id) {
-        this.event_id = event_id;
-    }
-
-    public String getDetails() {
-        return details;
-    }
-
-    public void setDetails(String details) {
-        this.details = details;
-    }
-
-    public ArrayList<User> getAttendee_list() {
-        return attendee_list;
-    }
-
-    public void setAttendee_list(ArrayList<User> attendee_list) {
-        this.attendee_list = attendee_list;
-    }
-
-    public QRCode getAttendee_qr() {
-        return attendee_qr;
-    }
-
-    public void setAttendee_qr(QRCode attendee_qr) {
-        this.attendee_qr = attendee_qr;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public QRCode getPromotional_qr() {
-        return promotional_qr;
-    }
-
-    public void setPromotional_qr(QRCode promotional_qr) {
-        this.promotional_qr = promotional_qr;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        // Start the scanning process
+        startScanning();
     }
 
     /**
-     * Generates a QR code for the event.
-     *
-     * @param content     The content to encode in the QR code.
-     * @param promotional Indicates whether the QR code is promotional or not.
+     * Initiates the QR code scanning process.
      */
-    public void generateQR(String content, boolean promotional) {
-        if (promotional) {
-            this.promotional_qr = new QRCode(this.event_id, content, this.organizer, true);
-        } else {
-            this.attendee_qr = new QRCode(this.event_id, content, this.organizer, false);
-        }
+    private void startScanning() {
+        IntentIntegrator integrator = new IntentIntegrator(this);
+        integrator.setPrompt("Scan a QR code");
+        integrator.setOrientationLocked(false);
+        integrator.initiateScan();
     }
 
-    /**
-     * Adds an attendee to the event.
-     *
-     * @param attendee The attendee to add.
-     * @throws IllegalArgumentException if the attendee is null or already exists in the attendee list.
-     */
-    public void addAttendee(User attendee) {
-        if (attendee == null) {
-            throw new IllegalArgumentException("Attendee cannot be null.");
-        }
-        if (attendee_list.contains(attendee)) {
-            throw new IllegalArgumentException("Attendee already exists in the attendee list.");
-        }
-        attendee_list.add(attendee);
-    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-    /**
-     * Removes an attendee from the event.
-     *
-     * @param attendee The attendee to remove.
-     * @throws NoSuchElementException if the attendee is not found in the attendee list.
-     */
-    public void removeAttendee(User attendee) {
-        if (!attendee_list.contains(attendee)) {
-            throw new NoSuchElementException("Attendee not found in the attendee list.");
+        // Parse the scanning result
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            if (result.getContents() != null) {
+                // Scanned text is available
+                String scannedText = result.getContents();
+
+                // Prepare the intent to pass back to the calling activity
+                Intent intent = new Intent();
+                intent.putExtra("scannedText", scannedText);
+
+                // Set the result code and pass the intent back to the calling activity
+                setResult(RESULT_OK, intent);
+                finish(); // Finish the activity
+            } else {
+                // Handle case where scanning was canceled or failed
+                Toast.makeText(this, "Scanning failed or canceled", Toast.LENGTH_SHORT).show();
+                setResult(RESULT_CANCELED); // Set result canceled
+                finish(); // Finish the activity
+            }
         }
-        attendee_list.remove(attendee);
     }
 }
+

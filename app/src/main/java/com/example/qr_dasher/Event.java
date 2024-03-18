@@ -1,4 +1,5 @@
 package com.example.qr_dasher;
+import java.sql.Timestamp;
 import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.ArrayList;
@@ -13,6 +14,9 @@ public class Event {
     private QRCode attendee_qr;
     private QRCode promotional_qr;
     private int organizer;
+
+    private DateTime dateTime;
+    private Timestamp timestamp;
 
     public Event(){
 
@@ -32,7 +36,8 @@ public class Event {
         this.attendee_list = new ArrayList<>();
         this.event_id = random.nextInt();
         this.organizer = userID;
-
+        //this.timestamp = timestamp;
+        //this.dateTime = dateTime;
     }
     //    public User getOrganizer() {
 //        return organizer;
@@ -171,5 +176,28 @@ public class Event {
         }
         attendee_list.remove(attendee);
     }
+    /**
+     * Gets the timestamp of the event.
+     *
+     * @return The timestamp of the event.
+     */
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+    /**
+     * Sets the details of the event.
+     *
+     * @param timestamp The timestamp to set.
+     */
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
 
+    public DateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(DateTime dateTime) {
+        this.dateTime = dateTime;
+    }
 }

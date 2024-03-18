@@ -3,6 +3,8 @@ package com.example.qr_dasher;
 import static android.graphics.Color.BLACK;
 import static android.graphics.Color.WHITE;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,12 +26,16 @@ import android.util.Log;
 import android.view.View;
 
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 // zxing lib
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.Timestamp;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -46,9 +52,14 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -57,21 +68,33 @@ import javax.annotation.Nullable;
  * Activity for creating events by organizers.
  */
 
-public class CreateEventOrganizer extends AppCompatActivity {
+public class CreateEventOrganizer extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     public static final String EXTRA_QR_CODES = "extra_qr_codes";
     private ImageView qrImage, promotionalImage;
-    private Button generateQRandCreateEvent, generatePromotionalQR, displayQRcodes, downloadButton;
+    private Button generateQRandCreateEvent, generatePromotionalQR, displayQRcodes, downloadButton, pickDateTime;
     private EditText eventName, eventDetails;
-
+    private TextView textDateTime;
     private Bitmap generatedQRCode;
 
     private FirebaseFirestore db;
     private CollectionReference eventsCollection;
     private SharedPreferences app_cache; // To get the userID
     private static final int REQUEST_CODE_REUSE_QR = 123;
-
     private Event event;
     private List<String> reuseQRCodes;
+    private DateTime dateTime;
+    private int day = 0;
+    private int month = 0;
+    private int year = 0;
+    private int hour = 0;
+    private int minute = 0;
+    private int savedDay = 0;
+    private int savedMonth = 0;
+    private int savedYear = 0;
+    private int savedHour = 0;
+    private int savedMinute = 0;
+
+
    /**
      * onCreate method is called when the activity is starting. It initializes the activity layout,
      * retrieves necessary views from the layout, initializes Firebase Firestore, and sets up event listeners
@@ -83,7 +106,8 @@ public class CreateEventOrganizer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event_organizer);
         reuseQRCodes = getIntent().getStringArrayListExtra("reuseQRCodes");
-
+        pickDateTime = findViewById(R.id.pickTime);
+        textDateTime = findViewById(R.id.textDateTime);
         qrImage = findViewById(R.id.qrCode); // image
         promotionalImage = findViewById(R.id.promotionalQR);
         generateQRandCreateEvent = findViewById(R.id.generateQRandCreateEvent); // button
@@ -99,13 +123,23 @@ public class CreateEventOrganizer extends AppCompatActivity {
         int userId = app_cache.getInt("UserID", -1);
         eventsCollection = db.collection("events");
 
+        pickDateTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // calling datepicker dialog
+                pickDate();
+            }
+        });
+
         generateQRandCreateEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String event_name = eventName.getText().toString();
                 String event_details = eventDetails.getText().toString();
-
+                dateTime = new DateTime(savedYear, savedMonth, savedDay, savedHour, savedMinute);
                 event = new Event(event_name, event_details, userId);
+                event.setDateTime(dateTime);
                 event.generateQR("" + event.getEvent_id(), false);
                 generatePromotionalQR.setVisibility(View.VISIBLE);
                 downloadButton.setVisibility(View.VISIBLE);
@@ -165,6 +199,52 @@ public class CreateEventOrganizer extends AppCompatActivity {
             }
         });
     }
+    private void pickDate(){
+        getDateTimeCalendar();
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                this,
+                year,
+                month,
+                day
+        );
+        datePickerDialog.show();
+    }
+    private void getDateTimeCalendar(){
+        Calendar cal = Calendar.getInstance();
+        day = cal.get(Calendar.DAY_OF_MONTH);
+        month = cal.get(Calendar.MONTH);
+        year = cal.get(Calendar.YEAR);
+        hour = cal.get(Calendar.HOUR);
+        minute = cal.get(Calendar.MINUTE);
+
+    }
+    @Override
+    public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+        savedDay = dayOfMonth;
+        savedMonth = month;
+        savedYear = year;
+        getDateTimeCalendar();
+
+        TimePickerDialog timePickerDialog = new TimePickerDialog(
+                this,
+                this,
+                hour,
+                minute,
+                true
+        );
+        timePickerDialog.show();
+    }
+    @Override
+    public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
+        savedHour = hourOfDay;
+        savedMinute = minute;
+        String s = String.format(Locale.US,"Date: %d-%d-%d\nTime: %d:%d"
+                , savedYear, savedMonth, savedDay, savedHour, savedMinute);
+        textDateTime.setText(s);
+
+    }
+
     /**
      * Updates the user data in Firebase Firestore with the latest event created by the organizer.
      * This method is called after successfully generating a QR code for the event and adding the event
@@ -246,18 +326,6 @@ public class CreateEventOrganizer extends AppCompatActivity {
         }
     }
 }
-
-//    private void displayQRcodes(List<String> qrCodes){
-//        for (String qrCodeString: qrCodes){
-//            // Converting it back to Bitmap from base 64
-//            byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
-//            Bitmap qrCodeBitmap  = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
-//            ImageView imageView = new ImageView(this);
-//            imageView.setImageBitmap(qrCodeBitmap);
-//            setContentView(imageView);
-//        }
-//    }
-//
 
 
 

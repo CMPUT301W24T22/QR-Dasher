@@ -26,6 +26,7 @@ id capture_image_button
 id clear_notifications_button
 id container
 id createEventButton
+id delete_image_button
 id details
 id details_edit
 id displayQRcodes
@@ -52,6 +53,7 @@ id notification_title
 id notification_title_text
 id notify_button
 id organizer_button
+id pickTime
 id promotionalQR
 id qrCode
 id qr_button
@@ -61,6 +63,7 @@ id scanned_events_text
 id select_image_button
 id send_notifications_button
 id send_text
+id textDateTime
 id textView
 id textView2
 id textView3

@@ -3346,6 +3346,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete_image_button
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3585,6 +3586,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id pickTime
 id pin
 id position
 id postLayout
@@ -3692,6 +3694,7 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id text
 id text2
+id textDateTime
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle

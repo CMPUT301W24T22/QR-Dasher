@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Notifications extends AppCompatActivity {
     private Button notificationClearButton, enableDisableButton;
+
     /**
      * Initializes the activity's UI components and sets up click listeners.
      *
@@ -37,3 +38,4 @@ public class Notifications extends AppCompatActivity {
             }
         });
     }
+}

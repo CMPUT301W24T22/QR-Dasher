@@ -21,6 +21,8 @@ id attendee_list_view
 id attendees
 id back_button
 id barcode_scanner
+id browseEventList
+id browseEvents
 id cancel_button
 id capture_image_button
 id clear_notifications_button
@@ -67,6 +69,7 @@ id textDateTime
 id textView
 id textView2
 id textView3
+id textView4
 id upload_button
 id view
 id viewfinder_view
@@ -74,6 +77,7 @@ id welcome_text
 layout activity_create_event_organizer
 layout activity_reuse_qrcodes
 layout attendee
+layout browse_events
 layout edit_profile
 layout event_details
 layout fragment_image_upload

@@ -3297,6 +3297,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browseEventList
+id browseEvents
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3703,6 +3705,7 @@ id textTop
 id textView
 id textView2
 id textView3
+id textView4
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3888,6 +3891,7 @@ layout abc_tooltip
 layout activity_create_event_organizer
 layout activity_reuse_qrcodes
 layout attendee
+layout browse_events
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

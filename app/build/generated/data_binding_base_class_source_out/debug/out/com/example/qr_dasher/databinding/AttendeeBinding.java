@@ -21,6 +21,9 @@ public final class AttendeeBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button browseEvents;
+
+  @NonNull
   public final Button editProfileButton;
 
   @NonNull
@@ -35,10 +38,12 @@ public final class AttendeeBinding implements ViewBinding {
   @NonNull
   public final TextView welcomeText;
 
-  private AttendeeBinding(@NonNull ConstraintLayout rootView, @NonNull Button editProfileButton,
-      @NonNull Button notificationButton, @NonNull Button qrButton,
-      @NonNull TextView scannedEventsText, @NonNull TextView welcomeText) {
+  private AttendeeBinding(@NonNull ConstraintLayout rootView, @NonNull Button browseEvents,
+      @NonNull Button editProfileButton, @NonNull Button notificationButton,
+      @NonNull Button qrButton, @NonNull TextView scannedEventsText,
+      @NonNull TextView welcomeText) {
     this.rootView = rootView;
+    this.browseEvents = browseEvents;
     this.editProfileButton = editProfileButton;
     this.notificationButton = notificationButton;
     this.qrButton = qrButton;
@@ -73,6 +78,12 @@ public final class AttendeeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.browseEvents;
+      Button browseEvents = ViewBindings.findChildViewById(rootView, id);
+      if (browseEvents == null) {
+        break missingId;
+      }
+
       id = R.id.edit_profile_button;
       Button editProfileButton = ViewBindings.findChildViewById(rootView, id);
       if (editProfileButton == null) {
@@ -103,8 +114,8 @@ public final class AttendeeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new AttendeeBinding((ConstraintLayout) rootView, editProfileButton, notificationButton,
-          qrButton, scannedEventsText, welcomeText);
+      return new AttendeeBinding((ConstraintLayout) rootView, browseEvents, editProfileButton,
+          notificationButton, qrButton, scannedEventsText, welcomeText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

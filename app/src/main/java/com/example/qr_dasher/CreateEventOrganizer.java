@@ -139,7 +139,16 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 String event_details = eventDetails.getText().toString();
                 dateTime = new DateTime(savedYear, savedMonth, savedDay, savedHour, savedMinute);
                 event = new Event(event_name, event_details, userId);
-                event.setDateTime(dateTime);
+                //event.setDateTime(dateTime);
+                //
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(savedYear, savedMonth, savedDay, savedHour, savedMinute);
+                Date eventDateTime = calendar.getTime();
+
+                Timestamp eventTimestamp = new Timestamp(eventDateTime);
+                event.setTimestamp(eventTimestamp);
+
+                //
                 event.generateQR("" + event.getEvent_id(), false);
                 generatePromotionalQR.setVisibility(View.VISIBLE);
                 downloadButton.setVisibility(View.VISIBLE);
@@ -215,7 +224,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         day = cal.get(Calendar.DAY_OF_MONTH);
         month = cal.get(Calendar.MONTH);
         year = cal.get(Calendar.YEAR);
-        hour = cal.get(Calendar.HOUR);
+        hour = cal.get(Calendar.HOUR_OF_DAY);
         minute = cal.get(Calendar.MINUTE);
 
     }

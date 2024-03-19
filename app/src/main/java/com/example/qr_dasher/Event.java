@@ -1,8 +1,10 @@
 package com.example.qr_dasher;
-import java.sql.Timestamp;
+import java.sql.Time;
 import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.ArrayList;
+import com.google.firebase.Timestamp;
+
 /**
  * Represents an event.
  */
@@ -11,10 +13,10 @@ public class Event {
     private String name;
     private String details;
     private ArrayList<Integer> attendee_list;
+    private ArrayList<Integer> signup_list;
     private QRCode attendee_qr;
     private QRCode promotional_qr;
     private int organizer;
-
     private DateTime dateTime;
     private Timestamp timestamp;
 
@@ -36,7 +38,8 @@ public class Event {
         this.attendee_list = new ArrayList<>();
         this.event_id = random.nextInt();
         this.organizer = userID;
-        //this.timestamp = timestamp;
+        this.signup_list = new ArrayList<>();
+
         //this.dateTime = dateTime;
     }
     //    public User getOrganizer() {
@@ -170,34 +173,73 @@ public class Event {
      * @param attendee The ID of the attendee to remove.
      * @throws NoSuchElementException if the attendee is not found in the list.
      */
-    public void removeAttendee(User attendee) {
+    public void removeAttendee(Integer attendee) {
         if (!attendee_list.contains(attendee)) {
             throw new NoSuchElementException("Attendee not found in the attendee list.");
         }
         attendee_list.remove(attendee);
     }
     /**
-     * Gets the timestamp of the event.
+     * Gets the list of attendees who signed up for the event.
      *
-     * @return The timestamp of the event.
+     * @return The list of attendees who signed up for the event.
      */
-    public Timestamp getTimestamp() {
-        return timestamp;
+    public ArrayList<Integer> getSignup_list() {
+        return signup_list;
+    }
+//    public void setAttendee_list(ArrayList<User> attendee_list) {
+//        this.attendee_list = attendee_list;
+//    }
+
+    /**
+     * Signs up an attendee for the event.
+     *
+     * @param attendee The ID of the attendee to add.
+     * @throws IllegalArgumentException if the attendee is null or already exists in the list.
+     */
+    public void addAttendeeSignup(Integer attendee) {
+        if (attendee == null) {
+            throw new IllegalArgumentException("Attendee cannot be null.");
+        }
+        if (attendee_list.contains(attendee)) {
+            throw new IllegalArgumentException("Attendee already exists in the attendee list.");
+        }
+        signup_list.add(attendee);
     }
     /**
-     * Sets the details of the event.
+     * Removes an attendee from the signup sheet for an event.
      *
-     * @param timestamp The timestamp to set.
+     * @param attendee The ID of the attendee to remove.
+     * @throws NoSuchElementException if the attendee is not found in the list.
      */
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
+    public void removeAttendeeSignup(Integer attendee) {
+        if (!attendee_list.contains(attendee)) {
+            throw new NoSuchElementException("Attendee not found in the attendee list.");
+        }
+        signup_list.remove(attendee);
     }
-
+    /**
+     * Gets the DateTime object of the event.
+     *
+     * @return DateTime of the event.
+     */
     public DateTime getDateTime() {
         return dateTime;
     }
-
+    /**
+     * Sets the DateTime object of the event.
+     *
+     * @param dateTime The dateTime of the event.
+     */
     public void setDateTime(DateTime dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
     }
 }

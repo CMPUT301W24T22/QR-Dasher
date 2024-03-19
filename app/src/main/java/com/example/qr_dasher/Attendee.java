@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * and scan a QR code to join an event.
  */
 public class Attendee extends AppCompatActivity {
-    private Button notificationButton, editProfileButton, qrCodeButton;
+    private Button notificationButton, editProfileButton, qrCodeButton, browseEvents;
     private SharedPreferences app_cache;
     /**
      * Initializes the activity and sets up UI components and listeners.
@@ -38,7 +38,14 @@ public class Attendee extends AppCompatActivity {
         notificationButton = findViewById(R.id.notification_button);
         editProfileButton = findViewById(R.id.edit_profile_button);
         qrCodeButton = findViewById(R.id.qr_button);
-
+        browseEvents = findViewById(R.id.browseEvents);
+        browseEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Attendee.this, BrowseEvents.class);
+                startActivity(intent);
+            }
+        });
         notificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

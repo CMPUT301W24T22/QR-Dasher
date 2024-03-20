@@ -32,6 +32,10 @@
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\fragment_image_upload.xml"
     },
     {
+        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/attendee.xml",
+        "source": "com.example.qr_dasher.app-main-54:/layout/attendee.xml"
+    },
+    {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\event_list_item.xml",
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\event_list_item.xml"
     },
@@ -62,9 +66,5 @@
     {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\scan_qr.xml",
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\scan_qr.xml"
-    },
-    {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/activity_create_event_organizer.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/activity_create_event_organizer.xml"
     }
 ]

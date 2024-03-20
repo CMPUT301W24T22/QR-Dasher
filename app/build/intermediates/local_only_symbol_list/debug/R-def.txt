@@ -29,6 +29,7 @@ id clear_notifications_button
 id container
 id createEventButton
 id delete_image_button
+id detail_text
 id details
 id details_edit
 id displayQRcodes
@@ -39,6 +40,7 @@ id enable_disable_button
 id eventListView
 id eventName
 id eventNameTextView
+id eventPosterImageView
 id event_poster_button
 id generatePromotionalQR
 id generateQRandCreateEvent
@@ -70,6 +72,7 @@ id textView
 id textView2
 id textView3
 id textView4
+id title_text
 id upload_button
 id view
 id viewfinder_view

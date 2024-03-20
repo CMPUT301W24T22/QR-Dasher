@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -28,13 +29,18 @@ public final class OrganizerBinding implements ViewBinding {
   public final ListView eventListView;
 
   @NonNull
+  public final ImageView eventPosterImageView;
+
+  @NonNull
   public final TextView textView;
 
   private OrganizerBinding(@NonNull ConstraintLayout rootView, @NonNull Button createEventButton,
-      @NonNull ListView eventListView, @NonNull TextView textView) {
+      @NonNull ListView eventListView, @NonNull ImageView eventPosterImageView,
+      @NonNull TextView textView) {
     this.rootView = rootView;
     this.createEventButton = createEventButton;
     this.eventListView = eventListView;
+    this.eventPosterImageView = eventPosterImageView;
     this.textView = textView;
   }
 
@@ -77,6 +83,12 @@ public final class OrganizerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.eventPosterImageView;
+      ImageView eventPosterImageView = ViewBindings.findChildViewById(rootView, id);
+      if (eventPosterImageView == null) {
+        break missingId;
+      }
+
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
@@ -84,7 +96,7 @@ public final class OrganizerBinding implements ViewBinding {
       }
 
       return new OrganizerBinding((ConstraintLayout) rootView, createEventButton, eventListView,
-          textView);
+          eventPosterImageView, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

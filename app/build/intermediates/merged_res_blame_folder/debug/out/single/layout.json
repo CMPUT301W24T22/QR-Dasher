@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/browse_events.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/browse_events.xml"
-    },
-    {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\user_selection_page.xml",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\user_selection_page.xml"
     },
@@ -40,16 +36,24 @@
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\send_notification.xml"
     },
     {
+        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/event_sign_up_page.xml",
+        "source": "com.example.qr_dasher.app-main-54:/layout/event_sign_up_page.xml"
+    },
+    {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\mytextview.xml",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\mytextview.xml"
+    },
+    {
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\event_sign_up_page.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\event_sign_up_page.xml"
     },
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\scan_qr.xml",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\scan_qr.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/attendee.xml",
-        "source": "com.example.qr_dasher.app-main-54:/layout/attendee.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\browse_events.xml",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\browse_events.xml"
     },
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-mergeDebugResources-51:\\layout\\activity_create_event_organizer.xml",

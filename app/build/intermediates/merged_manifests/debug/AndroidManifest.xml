@@ -58,6 +58,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.QRDasher" >
         <activity
+            android:name="com.example.qr_dasher.EventSignUpPage"
+            android:exported="false" />
+        <activity
             android:name="com.example.qr_dasher.BrowseEvents"
             android:exported="false" />
         <activity

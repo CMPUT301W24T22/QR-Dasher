@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_browse_events.xml.flat",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\browse_events.xml"
+    },
+    {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -8,20 +12,16 @@
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\attendee.xml"
     },
     {
-        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_activity_reuse_qrcodes.xml.flat",
-        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\activity_reuse_qrcodes.xml"
-    },
-    {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\menu_menu_main.xml.flat",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\menu\\menu_main.xml"
     },
     {
-        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_activity_reuse_qrcodes.xml.flat",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\activity_reuse_qrcodes.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_attendee.xml.flat",
-        "source": "com.example.qr_dasher.app-main-54:/layout/attendee.xml"
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\drawable_placeholder_image.xml.flat",
@@ -30,6 +30,10 @@
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_edit_profile.xml.flat",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\edit_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_event_sign_up_page.xml.flat",
+        "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\event_sign_up_page.xml"
     },
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_user_selection_page.xml.flat",
@@ -60,12 +64,12 @@
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\event_details.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_browse_events.xml.flat",
-        "source": "com.example.qr_dasher.app-main-54:/layout/browse_events.xml"
-    },
-    {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_notifications.xml.flat",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\notifications.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_event_sign_up_page.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/event_sign_up_page.xml"
     },
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_role_page.xml.flat",

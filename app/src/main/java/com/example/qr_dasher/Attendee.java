@@ -138,7 +138,8 @@ public class Attendee extends AppCompatActivity {
                     if (documentSnapshot.exists()) {
                         Event event = documentSnapshot.toObject(Event.class);
                         Integer user_id = userId;
-                        event.addAttendee(user_id); // Add the user ID to the event's attendee list
+                        String userId_str = String.valueOf(user_id);
+                        event.addAttendee(userId_str); // Add the user ID to the event's attendee list
                         updateFirebaseEvent(eventID, event); // Update the event in Firestore
                     } else {
                         Log.d("Attendee", "No event found with EventId: " + eventID);

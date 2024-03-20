@@ -38,6 +38,11 @@
           <theme>@style/Theme.QRDasher</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/event_sign_up_page.xml">
+        <config>
+          <theme>@style/Theme.QRDasher</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_image_upload.xml">
         <config>
           <theme>@style/Theme.QRDasher</theme>
@@ -75,16 +80,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1427c2b2-f62c-48e9-9bef-5a4ae1953c69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/BrowseEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/browse_events.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/EventSignUpPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/event_sign_up_page.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/Attendee.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/Attendee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/CreateEventOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/CreateEventOrganizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/BrowseEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/BrowseEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/attendee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/attendee.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,6 +192,9 @@
       <recent name="C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\java\com\example\qr_dasher" />
     </key>
     <key name="android.template.-1397312177">
+      <recent name="com.example.qr_dasher" />
+    </key>
+    <key name="android.template.343773834">
       <recent name="com.example.qr_dasher" />
     </key>
     <key name="android.template.2003083458">

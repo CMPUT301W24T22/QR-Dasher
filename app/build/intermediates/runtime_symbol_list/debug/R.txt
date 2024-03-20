@@ -3644,6 +3644,11 @@ int id shortcut 0x7f0801c8
 int id showCustom 0x7f0801c9
 int id showHome 0x7f0801ca
 int id showTitle 0x7f0801cb
+int id signUp_Details 0x7f08024e
+int id signUp_Name 0x7f08024f
+int id signUp_Time 0x7f080250
+int id signUp_poster 0x7f080251
+int id signup_button 0x7f080252
 int id sin 0x7f0801cc
 int id skipCollapsed 0x7f0801cd
 int id skipped 0x7f0801ce
@@ -3909,6 +3914,7 @@ int layout design_text_input_end_icon 0x7f0b002d
 int layout design_text_input_start_icon 0x7f0b002e
 int layout edit_profile 0x7f0b002f
 int layout event_details 0x7f0b0030
+int layout event_sign_up_page 0x7f0b0083
 int layout fragment_image_upload 0x7f0b0031
 int layout home_page 0x7f0b0032
 int layout m3_alert_dialog 0x7f0b0033

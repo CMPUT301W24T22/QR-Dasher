@@ -12,8 +12,8 @@ public class Event {
     private int event_id;
     private String name;
     private String details;
-    private ArrayList<Integer> attendee_list;
-    private ArrayList<Integer> signup_list;
+    private ArrayList<String> attendee_list;
+    private ArrayList<String> signup_list;
     private QRCode attendee_qr;
     private QRCode promotional_qr;
     private int organizer;
@@ -85,7 +85,7 @@ public class Event {
      *
      * @return The list of attendees.
      */
-    public ArrayList<Integer> getAttendee_list() {
+    public ArrayList<String> getAttendee_list() {
         return attendee_list;
     }
 //    public void setAttendee_list(ArrayList<User> attendee_list) {
@@ -158,7 +158,7 @@ public class Event {
      * @param attendee The ID of the attendee to add.
      * @throws IllegalArgumentException if the attendee is null or already exists in the list.
      */
-    public void addAttendee(Integer attendee) {
+    public void addAttendee(String attendee) {
         if (attendee == null) {
             throw new IllegalArgumentException("Attendee cannot be null.");
         }
@@ -173,7 +173,7 @@ public class Event {
      * @param attendee The ID of the attendee to remove.
      * @throws NoSuchElementException if the attendee is not found in the list.
      */
-    public void removeAttendee(Integer attendee) {
+    public void removeAttendee(String attendee) {
         if (!attendee_list.contains(attendee)) {
             throw new NoSuchElementException("Attendee not found in the attendee list.");
         }
@@ -184,7 +184,7 @@ public class Event {
      *
      * @return The list of attendees who signed up for the event.
      */
-    public ArrayList<Integer> getSignup_list() {
+    public ArrayList<String> getSignup_list() {
         return signup_list;
     }
 //    public void setAttendee_list(ArrayList<User> attendee_list) {
@@ -197,7 +197,7 @@ public class Event {
      * @param attendee The ID of the attendee to add.
      * @throws IllegalArgumentException if the attendee is null or already exists in the list.
      */
-    public void addAttendeeSignup(Integer attendee) {
+    public void addAttendeeSignup(String attendee) {
         if (attendee == null) {
             throw new IllegalArgumentException("Attendee cannot be null.");
         }

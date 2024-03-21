@@ -338,7 +338,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     private void saveEventPosterToFirestore(String encodedImage) {
         db.collection("eventsCollection")
                 .document("" + event.getEvent_id())
-                .update("eventPoster", encodedImage)
+                .update("Poster", encodedImage)
                 .addOnSuccessListener(aVoid -> Log.d("Event Poster", "Event poster saved to Firestore"))
                 .addOnFailureListener(e -> {
                     Log.d("Event Poster", "Failed to save event poster to Firestore");

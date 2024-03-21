@@ -48,9 +48,9 @@ public class EventDetails extends AppCompatActivity {
 
         // Get event name from intent extras
         String eventName = getIntent().getStringExtra("eventName");
-        String eventIDStr = getIntent().getStringExtra("event_id");
-        Log.d("EventDetails", "Received Event ID: " + eventIDStr);  // Add this line
-        int eventId = Integer.parseInt(eventIDStr);
+        int eventId = getIntent().getIntExtra("event_id", -1);
+//        Log.d("EventDetails", "Received Event ID: " + eventIDStr);  // Add this line
+//        int eventId = Integer.parseInt(eventIDStr);
         Log.d("EventDetails", "Received Event ID: " + eventId);  // Add this line
 
         //Integer eventId = Integer.valueOf(Objects.requireNonNull(getIntent().getStringExtra("event_id")));

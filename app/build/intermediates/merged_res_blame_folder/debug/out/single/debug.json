@@ -20,14 +20,6 @@
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_event_list_item.xml.flat",
-        "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\event_list_item.xml"
-    },
-    {
-        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_attendee.xml.flat",
-        "source": "com.example.qr_dasher.app-main-54:/layout/attendee.xml"
-    },
-    {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -46,6 +38,10 @@
     {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_organizer.xml.flat",
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\layout\\organizer.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_mytextview.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/mytextview.xml"
     },
     {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_scan_qr.xml.flat",

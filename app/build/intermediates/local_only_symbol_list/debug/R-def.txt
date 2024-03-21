@@ -15,7 +15,6 @@ id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id action_settings
 id admin_button
-id attendeeListView
 id attendee_button
 id attendee_list_view
 id attendees
@@ -45,6 +44,7 @@ id event_poster_button
 id generatePromotionalQR
 id generateQRandCreateEvent
 id geolocation
+id imageView
 id image_upload
 id name_edit
 id nav_graph

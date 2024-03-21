@@ -93,7 +93,8 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     private int savedYear = 0;
     private int savedHour = 0;
     private int savedMinute = 0;
-
+    private int eventId;
+    private int eventId_str;
 
    /**
      * onCreate method is called when the activity is starting. It initializes the activity layout,
@@ -139,6 +140,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 String event_details = eventDetails.getText().toString();
                 dateTime = new DateTime(savedYear, savedMonth, savedDay, savedHour, savedMinute);
                 event = new Event(event_name, event_details, userId);
+                eventId = event.getEvent_id();
                 //event.setDateTime(dateTime);
                 //
                 Calendar calendar = Calendar.getInstance();
@@ -189,6 +191,17 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
                 Bitmap qrCodeBitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
                 promotionalImage.setImageBitmap(qrCodeBitmap);
+
+                // Upload the promotional QR code to firebase
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                db.collection("eventsCollection")
+                        .document("" + eventId)
+                        .update("promotional_qr", event.getPromotional_qr())
+                        .addOnSuccessListener(aVoid -> Log.d("Organizer", "Event QR PROMOTIONAL AD successfully"))
+                        .addOnFailureListener(e -> {
+                            Log.d("Organizer", "Failed to update event in Firestore");
+                            e.printStackTrace();
+                        });
             }
         });
 
@@ -334,6 +347,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
             }
         }
     }
+
 }
 
 

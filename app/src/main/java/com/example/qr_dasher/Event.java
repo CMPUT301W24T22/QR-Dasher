@@ -147,7 +147,8 @@ public class Event {
      */
     public void generateQR(String content, boolean promotional){
         if (promotional){
-            this.promotional_qr = new QRCode(this.event_id, content, this.organizer, true);
+            String pcontent = "p" +content;
+            this.promotional_qr = new QRCode(this.event_id, pcontent, this.organizer, true);
         } else {
             this.attendee_qr = new QRCode(this.event_id, content, this.organizer, false);
         }

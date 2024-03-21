@@ -12,9 +12,11 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
+import java.util.Date;
 import java.util.concurrent.atomic.AtomicReference;
 /**
  * Activity for attendees of an event. Allows attendees to view notifications, edit their profile,
@@ -92,7 +94,18 @@ public class Attendee extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 String scannedText = data.getStringExtra("scannedText");
                 Toast.makeText(this, "Scanning successful " + scannedText, Toast.LENGTH_SHORT).show();
-                updateFirebase(scannedText);
+
+                // Determine if it is promotional or checkin QR
+                if (scannedText!=null) {
+                    if (scannedText.charAt(0) == 'p') {
+                        // Promotional QR
+                        displayEventSignUpPage(scannedText);
+                    } else {
+                        // Checkin QR
+                        updateFirebase(scannedText);
+                    }
+                }
+
                 // Implement firestore check
             } else {
                 // Handle case where scanning was canceled or failed
@@ -100,11 +113,53 @@ public class Attendee extends AppCompatActivity {
             }
         }
     }
-    /**
-     * Update Firebase with scanned event ID.
-     *
-     * @param event_id The scanned event ID
-     */
+
+
+    private void displayEventSignUpPage(String pQRcontent){
+        // Remove "p" and get the event info from firebase
+        // Start EventSignUpPage Activity
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        String eventIdPromo = pQRcontent.substring(1);
+        db.collection("eventsCollection")
+                .document(eventIdPromo)
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        Event event = documentSnapshot.toObject(Event.class);
+                        // Create bundle and start activity
+                        Bundle bundle = new Bundle();
+                        String eventName = event.getName();
+                        bundle.putString("eventName", eventName);
+
+                        String detail = event.getDetails();
+                        bundle.putString("eventDetail",detail);
+
+                        String eventId = String.valueOf(event.getEvent_id());
+                        bundle.putString("eventId", eventId);
+
+                        // Converting timeStamp to date to put in bundle
+                        Timestamp eventTimestamp = event.getTimestamp();
+                        Date date = eventTimestamp.toDate();
+                        bundle.putSerializable("timestamp",date);
+
+
+                        //Integer eventId = Integer.parseInt(eventIdStr);
+                        // Start new activity with the event name
+                        Intent intent = new Intent(Attendee.this, EventSignUpPage.class);
+                        //intent.putExtra("eventName", eventName);
+                        //intent.putExtra("event_id", eventId);
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                    } else {
+                        Log.d("Attendee", "No event found with EventId: ");
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    Log.d("Attendee", "Failed to retrieve Event from Firestore");
+                    e.printStackTrace();
+                });
+    }
+
 
     private void updateFirebase(String event_id){
         int userId = app_cache.getInt("UserID", -1);

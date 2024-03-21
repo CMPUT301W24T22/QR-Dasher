@@ -23,8 +23,6 @@ public class EventSignUpPage extends AppCompatActivity {
     private Button signup_button;
     private SharedPreferences app_cache;
     private String eventId;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

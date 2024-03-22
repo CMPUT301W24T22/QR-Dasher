@@ -157,8 +157,7 @@ public class BrowseEvents extends AppCompatActivity {
                 Date date = eventTimestamp.toDate();
                 bundle.putSerializable("timestamp",date);
 
-                String eventDetail = eventDetails.get(position);
-                bundle.putString("eventDetail",eventDetail);
+
 
                 //Integer eventId = Integer.parseInt(eventIdStr);
                 // Start new activity with the event name

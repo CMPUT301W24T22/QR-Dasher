@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-52:12
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-52:12
 MERGED from [androidx.databinding:viewbinding:8.2.1] C:\Users\jassi\.gradle\caches\transforms-3\4742c9a980a758876e13af438b2d8aaa\transformed\viewbinding-8.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jassi\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:17:1-56:12
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\jassi\.gradle\caches\transforms-3\e4fcf0d7f61a62c6f0e26a8eb7b4acc9\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:2:1-26:12
@@ -91,22 +91,22 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\jassi\.
 MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\jassi\.gradle\caches\transforms-3\527b2c1f18ee871a3bd1012f88120f00\transformed\grpc-android-1.57.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\jassi\.gradle\caches\transforms-3\19739a26a35a2cff6de8f800bc0b7fe6\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 	package
-		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:5:5-81
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:5:5-81
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:5:22-78
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:5:22-78
 application
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:7:5-50:19
-INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:7:5-50:19
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:7:5-50:19
+INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:7:5-50:19
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jassi\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:46:5-54:19
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jassi\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:46:5-54:19
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\jassi\.gradle\caches\transforms-3\e4fcf0d7f61a62c6f0e26a8eb7b4acc9\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:13:5-24:19
@@ -166,103 +166,103 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\jassi\.g
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\jassi\.gradle\caches\transforms-3\f10e0418fa266e1b553190c501ffff34\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\jassi\.gradle\caches\transforms-3\f10e0418fa266e1b553190c501ffff34\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
-		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\jassi\.gradle\caches\transforms-3\53bccc341858bb2a0ca40c69bceb7ca4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:12:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:10:9-54
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:10:9-54
 	android:roundIcon
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:13:9-54
 	tools:targetApi
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:16:9-29
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:16:9-29
 	android:icon
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:15:9-46
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:15:9-46
 	android:dataExtractionRules
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:9:9-65
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:9:9-65
 activity#com.example.qr_dasher.BrowseEvents
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:17:9-19:40
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:17:9-19:40
 	android:exported
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:19:13-37
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:18:13-41
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:18:13-41
 activity#com.example.qr_dasher.EditProfile
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:20:9-22:40
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:20:9-22:40
 	android:exported
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:22:13-37
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:22:13-37
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:21:13-40
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:21:13-40
 activity#com.example.qr_dasher.SendNotification
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:23:9-25:40
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:25:13-37
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:24:13-45
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:24:13-45
 activity#com.example.qr_dasher.EventDetails
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:26:9-28:40
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:26:9-28:40
 	android:exported
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:28:13-37
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:27:13-41
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:27:13-41
 activity#com.example.qr_dasher.CreateEventOrganizer
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:29:9-31:40
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:29:9-31:40
 	android:exported
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:31:13-37
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:30:13-49
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:30:13-49
 activity#com.example.qr_dasher.reuseQRcodes
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:32:9-34:40
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:34:13-37
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:33:13-41
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:33:13-41
 activity#com.example.qr_dasher.HomePage
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:35:9-45:20
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:35:9-45:20
 	android:label
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:38:13-45
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:38:13-45
 	android:exported
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:37:13-36
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:37:13-36
 	android:theme
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:39:13-50
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:39:13-50
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:36:13-37
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:36:13-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:40:13-44:29
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:40:13-44:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:41:17-69
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:41:25-66
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:41:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:43:17-77
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:43:17-77
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:43:27-74
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:43:27-74
 activity#com.example.qr_dasher.RolePage
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:9-46
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:9-46
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:19-43
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:19-43
 activity#com.example.qr_dasher.Attendee
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:9-46
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:9-46
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:19-43
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:19-43
 activity#com.example.qr_dasher.Organizer
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:48:9-47
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:48:9-47
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:48:19-44
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:48:19-44
 activity#com.example.qr_dasher.ScanQR
-ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:49:9-44
+ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:49:9-44
 	android:name
-		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:49:19-41
+		ADDED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:49:19-41
 uses-sdk
-INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:8.2.1] C:\Users\jassi\.gradle\caches\transforms-3\4742c9a980a758876e13af438b2d8aaa\transformed\viewbinding-8.2.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:8.2.1] C:\Users\jassi\.gradle\caches\transforms-3\4742c9a980a758876e13af438b2d8aaa\transformed\viewbinding-8.2.1\AndroidManifest.xml:5:5-44
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jassi\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:20:5-44
@@ -436,9 +436,9 @@ MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\jassi\.gradle\caches\transfor
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\jassi\.gradle\caches\transforms-3\19739a26a35a2cff6de8f800bc0b7fe6\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\jassi\.gradle\caches\transforms-3\19739a26a35a2cff6de8f800bc0b7fe6\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
-		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.CAMERA
 ADDED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jassi\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:22:5-65
 	android:name

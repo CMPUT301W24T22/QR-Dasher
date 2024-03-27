@@ -71,7 +71,7 @@ public class EventDetails extends AppCompatActivity {
 
         Button notifyButton = findViewById(R.id.notify_button);
         Button qrButton = findViewById(R.id.qr_code_button);
-        Button posterUploadButton = findViewById(R.id.event_poster_button);
+//        Button posterUploadButton = findViewById(R.id.event_poster_button);
 
         // Set OnClickListener for the notification button
         notifyButton.setOnClickListener(new View.OnClickListener() {
@@ -83,23 +83,14 @@ public class EventDetails extends AppCompatActivity {
             }
         });
 
-        posterUploadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle notification button click
-//                Intent intent = new Intent(EventDetails.this, SendNotification.class);
-//                startActivity(intent);
-            }
-        });
-
-        posterUploadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle notification button click
-//                Intent intent = new Intent(EventDetails.this, SendNotification.class);
-//                startActivity(intent);
-            }
-        });
+//        posterUploadButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Handle notification button click
+////                Intent intent = new Intent(EventDetails.this, SendNotification.class);
+////                startActivity(intent);
+//            }
+//        });
     }
     /**
      * Fetches the list of attendees for the given event ID from Firestore.

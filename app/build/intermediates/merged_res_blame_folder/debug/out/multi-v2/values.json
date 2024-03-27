@@ -23,6 +23,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\QR-Project\\QR-Dasher\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "2,1,4,9,6,7,5",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "65,17,175,395,307,346,240",
+                        "endLines": "2,1,4,44,6,7,5",
+                        "endColumns": "52,46,63,13,37,45,65",
+                        "endOffsets": "113,59,234,3570,340,387,301"
+                    },
+                    "to": {
+                        "startLines": "2015,2017,2057,2075,2219,2225,2233",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "133080,133216,138033,140033,158854,159694,160370",
+                        "endLines": "2015,2017,2057,2110,2219,2225,2233",
+                        "endColumns": "52,46,63,13,37,45,65",
+                        "endOffsets": "133128,133258,138092,143173,158887,159735,160431"
+                    }
+                },
+                {
                     "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\68328e5a7eed79ba18cff9740362fe14\\transformed\\activity-1.8.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -59,20 +78,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\src\\main\\res\\values\\dimens.xml",
+                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\QR-Project\\QR-Dasher\\app\\build\\generated\\res\\processDebugGoogleServices\\values\\values.xml",
                     "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "41",
-                        "endOffsets": "54"
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,137,241,350,470,562",
+                        "endColumns": "81,103,108,119,91,68",
+                        "endOffsets": "132,236,345,465,557,626"
                     },
                     "to": {
-                        "startLines": "1130",
-                        "startColumns": "4",
-                        "startOffsets": "67686",
-                        "endColumns": "41",
-                        "endOffsets": "67723"
+                        "startLines": "2058,2059,2060,2061,2062,2226",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "138097,138179,138283,138392,138512,159740",
+                        "endColumns": "81,103,108,119,91,68",
+                        "endOffsets": "138174,138278,138387,138507,138599,159804"
                     }
                 },
                 {
@@ -150,6 +169,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\QR-Project\\QR-Dasher\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "2,4,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "57,143,100",
+                        "endColumns": "41,46,41",
+                        "endOffsets": "94,185,137"
+                    },
+                    "to": {
+                        "startLines": "648,655,975",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "33134,33702,57486",
+                        "endColumns": "41,46,41",
+                        "endOffsets": "33171,33744,57523"
+                    }
+                },
+                {
                     "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\7169b28ddbd1aa3feda4a7ed62783e45\\transformed\\recyclerview-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
@@ -204,23 +240,6 @@
                         "endLines": "13776",
                         "endColumns": "24",
                         "endOffsets": "812747"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "2,4,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "57,143,100",
-                        "endColumns": "41,46,41",
-                        "endOffsets": "94,185,137"
-                    },
-                    "to": {
-                        "startLines": "648,655,975",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "33134,33702,57486",
-                        "endColumns": "41,46,41",
-                        "endOffsets": "33171,33744,57523"
                     }
                 },
                 {
@@ -279,7 +298,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\src\\main\\res\\values\\themes.xml",
+                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\QR-Project\\QR-Dasher\\app\\src\\main\\res\\values\\themes.xml",
                     "from": {
                         "startLines": "2,7",
                         "startColumns": "4,4",
@@ -355,42 +374,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\generated\\res\\processDebugGoogleServices\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,137,241,350,470,562",
-                        "endColumns": "81,103,108,119,91,68",
-                        "endOffsets": "132,236,345,465,557,626"
-                    },
-                    "to": {
-                        "startLines": "2058,2059,2060,2061,2062,2226",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "138097,138179,138283,138392,138512,159740",
-                        "endColumns": "81,103,108,119,91,68",
-                        "endOffsets": "138174,138278,138387,138507,138599,159804"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "2,1,4,9,6,7,5",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "65,17,175,395,307,346,240",
-                        "endLines": "2,1,4,44,6,7,5",
-                        "endColumns": "52,46,63,13,37,45,65",
-                        "endOffsets": "113,59,234,3570,340,387,301"
-                    },
-                    "to": {
-                        "startLines": "2015,2017,2057,2075,2219,2225,2233",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "133080,133216,138033,140033,158854,159694,160370",
-                        "endLines": "2015,2017,2057,2110,2219,2225,2233",
-                        "endColumns": "52,46,63,13,37,45,65",
-                        "endOffsets": "133128,133258,138092,143173,158887,159735,160431"
-                    }
-                },
-                {
                     "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\5f1e7dd2c040f96381fafae50372c419\\transformed\\drawerlayout-1.1.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5",
@@ -460,6 +443,23 @@
                         "endLines": "532,533,534,535,1829,9395,9406,13046,13058,13066",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "27000,27060,27112,27157,121919,650589,651024,785225,785665,785974"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\QR-Project\\QR-Dasher\\app\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "41",
+                        "endOffsets": "54"
+                    },
+                    "to": {
+                        "startLines": "1130",
+                        "startColumns": "4",
+                        "startOffsets": "67686",
+                        "endColumns": "41",
+                        "endOffsets": "67723"
                     }
                 },
                 {

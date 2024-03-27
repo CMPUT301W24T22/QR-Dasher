@@ -4,7 +4,7 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-50:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\src\\main\\res\\values-v23\\themes.xml",
+                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\QR-Project\\QR-Dasher\\app\\src\\main\\res\\values-v23\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

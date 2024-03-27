@@ -45,11 +45,11 @@ com.example.qr_dasher.app-startup-runtime-1.1.1-43 C:\Users\jassi\.gradle\caches
 com.example.qr_dasher.app-coordinatorlayout-1.1.0-44 C:\Users\jassi\.gradle\caches\transforms-3\f1c329ca95475d1a1f65710e5c8e5a10\transformed\coordinatorlayout-1.1.0\res
 com.example.qr_dasher.app-play-services-measurement-api-21.5.1-45 C:\Users\jassi\.gradle\caches\transforms-3\f32d2a0c2204e190b72dfef0805eb8b1\transformed\play-services-measurement-api-21.5.1\res
 com.example.qr_dasher.app-slidingpanelayout-1.2.0-46 C:\Users\jassi\.gradle\caches\transforms-3\f51ed482baaa38a4d942924e6f00e4c4\transformed\slidingpanelayout-1.2.0\res
-com.example.qr_dasher.app-pngs-47 C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\build\generated\res\pngs\debug
-com.example.qr_dasher.app-res-48 C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\build\generated\res\processDebugGoogleServices
-com.example.qr_dasher.app-resValues-49 C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\build\generated\res\resValues\debug
-com.example.qr_dasher.app-packageDebugResources-50 C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.qr_dasher.app-packageDebugResources-51 C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.qr_dasher.app-merged_res-52 C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\build\intermediates\merged_res\debug
-com.example.qr_dasher.app-debug-53 C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\debug\res
-com.example.qr_dasher.app-main-54 C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\res
+com.example.qr_dasher.app-pngs-47 C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\build\generated\res\pngs\debug
+com.example.qr_dasher.app-res-48 C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\build\generated\res\processDebugGoogleServices
+com.example.qr_dasher.app-resValues-49 C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\build\generated\res\resValues\debug
+com.example.qr_dasher.app-packageDebugResources-50 C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.qr_dasher.app-packageDebugResources-51 C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.qr_dasher.app-merged_res-52 C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\build\intermediates\merged_res\debug
+com.example.qr_dasher.app-debug-53 C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\debug\res
+com.example.qr_dasher.app-main-54 C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\res

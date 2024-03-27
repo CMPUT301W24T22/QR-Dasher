@@ -9,8 +9,8 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-11-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:5:5-81
-11-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:5:22-78
+11-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:5:5-81
+11-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:5:22-78
 12    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
 12-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jassi\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:22:5-65
 12-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jassi\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:22:22-62
@@ -86,97 +86,97 @@
 45-->[androidx.core:core:1.9.0] C:\Users\jassi\.gradle\caches\transforms-3\53bccc341858bb2a0ca40c69bceb7ca4\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 46
 47    <application
-47-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:7:5-50:19
+47-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:7:5-50:19
 48        android:allowBackup="true"
-48-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:8:9-35
+48-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:8:9-35
 49        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 49-->[androidx.core:core:1.9.0] C:\Users\jassi\.gradle\caches\transforms-3\53bccc341858bb2a0ca40c69bceb7ca4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 50        android:dataExtractionRules="@xml/data_extraction_rules"
-50-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:9:9-65
+50-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:9:9-65
 51        android:debuggable="true"
 52        android:extractNativeLibs="false"
 53        android:fullBackupContent="@xml/backup_rules"
-53-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:10:9-54
+53-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:10:9-54
 54        android:icon="@mipmap/ic_launcher"
-54-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:11:9-43
+54-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:11:9-43
 55        android:label="@string/app_name"
-55-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:12:9-41
+55-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:12:9-41
 56        android:roundIcon="@mipmap/ic_launcher_round"
-56-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:13:9-54
+56-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:13:9-54
 57        android:supportsRtl="true"
-57-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:14:9-35
+57-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:14:9-35
 58        android:testOnly="true"
 59        android:theme="@style/Theme.QRDasher" >
-59-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:15:9-46
+59-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:15:9-46
 60        <activity
-60-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:17:9-19:40
+60-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:17:9-19:40
 61            android:name="com.example.qr_dasher.BrowseEvents"
-61-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:18:13-41
+61-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:18:13-41
 62            android:exported="false" />
-62-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:19:13-37
+62-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:19:13-37
 63        <activity
-63-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:20:9-22:40
+63-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:20:9-22:40
 64            android:name="com.example.qr_dasher.EditProfile"
-64-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:21:13-40
+64-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:21:13-40
 65            android:exported="false" />
-65-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:22:13-37
+65-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:22:13-37
 66        <activity
-66-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:23:9-25:40
+66-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:23:9-25:40
 67            android:name="com.example.qr_dasher.SendNotification"
-67-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:24:13-45
+67-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:24:13-45
 68            android:exported="false" />
-68-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:25:13-37
+68-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:25:13-37
 69        <activity
-69-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:26:9-28:40
+69-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:26:9-28:40
 70            android:name="com.example.qr_dasher.EventDetails"
-70-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:27:13-41
+70-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:27:13-41
 71            android:exported="false" />
-71-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:28:13-37
+71-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:28:13-37
 72        <activity
-72-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:29:9-31:40
+72-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:29:9-31:40
 73            android:name="com.example.qr_dasher.CreateEventOrganizer"
-73-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:30:13-49
+73-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:30:13-49
 74            android:exported="false" />
-74-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:31:13-37
+74-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:31:13-37
 75        <activity
-75-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:32:9-34:40
+75-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:32:9-34:40
 76            android:name="com.example.qr_dasher.reuseQRcodes"
-76-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:33:13-41
+76-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:33:13-41
 77            android:exported="false" />
-77-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:34:13-37
+77-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:34:13-37
 78        <activity
-78-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:35:9-45:20
+78-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:35:9-45:20
 79            android:name="com.example.qr_dasher.HomePage"
-79-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:36:13-37
+79-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:36:13-37
 80            android:exported="true"
-80-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:37:13-36
+80-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:37:13-36
 81            android:label="@string/app_name"
-81-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:38:13-45
+81-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:38:13-45
 82            android:theme="@style/Theme.QRDasher" >
-82-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:39:13-50
+82-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:39:13-50
 83            <intent-filter>
-83-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:40:13-44:29
+83-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:40:13-44:29
 84                <action android:name="android.intent.action.MAIN" />
-84-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:41:17-69
-84-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:41:25-66
+84-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:41:17-69
+84-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:41:25-66
 85
 86                <category android:name="android.intent.category.LAUNCHER" />
-86-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:43:17-77
-86-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:43:27-74
+86-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:43:17-77
+86-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:43:27-74
 87            </intent-filter>
 88        </activity>
 89        <activity android:name="com.example.qr_dasher.RolePage" />
-89-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:9-46
-89-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:19-43
+89-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:9-46
+89-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:19-43
 90        <activity android:name="com.example.qr_dasher.Attendee" />
-90-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:9-46
-90-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:19-43
+90-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:9-46
+90-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:19-43
 91        <activity android:name="com.example.qr_dasher.Organizer" />
-91-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:48:9-47
-91-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:48:19-44
+91-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:48:9-47
+91-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:48:19-44
 92        <activity android:name="com.example.qr_dasher.ScanQR" />
-92-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:49:9-44
-92-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:49:19-41
+92-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:49:9-44
+92-->C:\Users\jassi\OneDrive\Documents\CMPUT 301\QR-Project\QR-Dasher\app\src\main\AndroidManifest.xml:49:19-41
 93        <activity
 93-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jassi\.gradle\caches\transforms-3\47c3ef0a24821c1b69d632ae6486a9ca\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:47:9-53:63
 94            android:name="com.journeyapps.barcodescanner.CaptureActivity"

@@ -45,8 +45,8 @@ public class Organizer extends AppCompatActivity {
     private ArrayList<String> reuseQRCodes = new ArrayList<>();
 
     private List<String> eventNames;
-    private List<String> eventIds;
-    private List<String> eventPostersBase64;
+    private List<Integer> eventIds;
+    private List<String> eventPosters;
 
     private SharedPreferences app_cache; // To get the userID
     /**
@@ -90,7 +90,7 @@ public class Organizer extends AppCompatActivity {
     private void retrieveEventsFromFirestore(int userId) {
         // Query Firestore for events
         eventNames = new ArrayList<>();
-        eventPostersBase64 = new ArrayList<>();
+        eventPosters = new ArrayList<>();
 
         db.collection("eventsCollection")
                 .whereEqualTo("attendee_qr.userID", userId)
@@ -103,17 +103,17 @@ public class Organizer extends AppCompatActivity {
                         }
 
                         eventNames.clear();
-                        eventPostersBase64.clear();
+                        eventPosters.clear();
 
                         for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                             String eventName = documentSnapshot.getString("name");
-                            String posterBase64 = documentSnapshot.getString("Poster");
+                            String eventPoster = documentSnapshot.getString("Poster");
 
                             eventNames.add(eventName);
-                            eventPostersBase64.add(posterBase64);
+                            eventPosters.add(eventPoster);
                         }
 
-                        displayEventList(eventNames, eventPostersBase64);
+                        displayEventList(eventNames, eventPosters);
                     }
                 });
 
@@ -126,7 +126,7 @@ public class Organizer extends AppCompatActivity {
      */
     private void displayEventList(List<String> eventNames, List<String> eventIds) {
         // Create an ArrayAdapter to display the event names
-        EventAdapter adapter = new EventAdapter(this, eventNames, eventPostersBase64);
+        EventAdapter adapter = new EventAdapter(this, eventNames, eventPosters);
         adapter.notifyDataSetChanged();
         eventListView.setAdapter(adapter);
 
@@ -136,12 +136,12 @@ public class Organizer extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Get the clicked event name
                 String eventName = eventNames.get(position);
-                String eventId = eventIds.get(position);
+//                String eventId = eventIds.get(position);
                 //Integer eventId = Integer.parseInt(eventIdStr);
                 // Start new activity with the event name
                 Intent intent = new Intent(Organizer.this, EventDetails.class);
                 intent.putExtra("eventName", eventName);
-                intent.putExtra("event_id", eventId);
+//                intent.putExtra("event_id", eventId);
                 startActivity(intent);
             }
         });

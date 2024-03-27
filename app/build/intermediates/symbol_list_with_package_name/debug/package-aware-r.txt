@@ -4065,6 +4065,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fcm_fallback_notification_channel_label
 string first_fragment_label
 string gcm_defaultSenderId
 string google_api_key

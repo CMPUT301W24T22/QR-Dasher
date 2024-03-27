@@ -79,6 +79,7 @@ public class EventDetails extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle notification button click
                 Intent intent = new Intent(EventDetails.this, SendNotification.class);
+                intent.putExtra("event_id", eventId); // Pass the event ID to SendNotification activity
                 startActivity(intent);
             }
         });

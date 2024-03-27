@@ -19,6 +19,7 @@ public class Event {
     private int organizer;
     private DateTime dateTime;
     private Timestamp timestamp;
+    private int maxAttendees;
 
     public Event(){
 
@@ -88,9 +89,9 @@ public class Event {
     public ArrayList<String> getAttendee_list() {
         return attendee_list;
     }
-//    public void setAttendee_list(ArrayList<User> attendee_list) {
-//        this.attendee_list = attendee_list;
-//    }
+   public void setAttendee_list(ArrayList<User> attendee_list) {
+       this.attendee_list = attendee_list;
+   }
      /**
      * Gets the attendee QR code.
      *

@@ -3179,6 +3179,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable placeholder_image
+drawable qrdasher
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3464,6 +3465,7 @@ id linear
 id listMode
 id list_item
 id locale
+id logo
 id ltr
 id m3_side_sheet
 id marquee
@@ -3913,6 +3915,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout display_notification
 layout edit_profile
 layout event_details
 layout event_sign_up_page
@@ -4003,6 +4006,7 @@ mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description
 raw firebase_common_keep
+raw keep_cronet_api
 raw zxing_beep
 string abc_action_bar_home_description
 string abc_action_bar_up_description

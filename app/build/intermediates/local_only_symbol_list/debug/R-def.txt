@@ -8,7 +8,6 @@ drawable circle_shape
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable placeholder_image
-id CreateEventHeading
 id FirstFragment
 id SecondFragment
 id action_FirstFragment_to_SecondFragment
@@ -44,6 +43,7 @@ id generatePromotionalQR
 id generateQRandCreateEvent
 id geolocation
 id image_upload
+id max_attendees
 id name_edit
 id nav_graph
 id next_button

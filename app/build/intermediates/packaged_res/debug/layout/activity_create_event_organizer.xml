@@ -11,23 +11,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="112dp"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toStartOf="@+id/promotionalQR"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CreateEventHeading" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/promotionalQR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="100dp"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CreateEventHeading" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/details"
@@ -85,16 +84,15 @@
         app:layout_constraintTop_toBottomOf="@+id/generateQRandCreateEvent"
         app:layout_constraintVertical_bias="0.033" />
 
-    <TextView
-        android:id="@+id/CreateEventHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:textSize="35dp"
-        android:text="Create event"
-        app:layout_constraintEnd_toEndOf="parent"
+    <EditText
+        android:id="@+id/max_attendees"
+        android:layout_width="135dp"
+        android:layout_height="56dp"
+        android:hint="Limit Attendees"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/displayQRcodes" />
 
     <Button
         android:id="@+id/downloadbutton"
@@ -112,11 +110,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="108dp"
         android:text="QR"
         app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qrCode" />
 
@@ -124,7 +122,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="76dp"
         android:text="Promotional QR"
         app:layout_constraintEnd_toEndOf="parent"
@@ -135,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="132dp"
         android:text="Pick Date and Time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/details" />

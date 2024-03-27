@@ -23,9 +23,6 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView CreateEventHeading;
-
-  @NonNull
   public final EditText details;
 
   @NonNull
@@ -42,6 +39,9 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
 
   @NonNull
   public final Button generateQRandCreateEvent;
+
+  @NonNull
+  public final EditText maxAttendees;
 
   @NonNull
   public final Button pickTime;
@@ -62,19 +62,19 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
   public final TextView textView3;
 
   private ActivityCreateEventOrganizerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView CreateEventHeading, @NonNull EditText details,
-      @NonNull Button displayQRcodes, @NonNull Button downloadbutton, @NonNull EditText eventName,
-      @NonNull Button generatePromotionalQR, @NonNull Button generateQRandCreateEvent,
+      @NonNull EditText details, @NonNull Button displayQRcodes, @NonNull Button downloadbutton,
+      @NonNull EditText eventName, @NonNull Button generatePromotionalQR,
+      @NonNull Button generateQRandCreateEvent, @NonNull EditText maxAttendees,
       @NonNull Button pickTime, @NonNull ImageView promotionalQR, @NonNull ImageView qrCode,
       @NonNull TextView textDateTime, @NonNull TextView textView2, @NonNull TextView textView3) {
     this.rootView = rootView;
-    this.CreateEventHeading = CreateEventHeading;
     this.details = details;
     this.displayQRcodes = displayQRcodes;
     this.downloadbutton = downloadbutton;
     this.eventName = eventName;
     this.generatePromotionalQR = generatePromotionalQR;
     this.generateQRandCreateEvent = generateQRandCreateEvent;
+    this.maxAttendees = maxAttendees;
     this.pickTime = pickTime;
     this.promotionalQR = promotionalQR;
     this.qrCode = qrCode;
@@ -110,12 +110,6 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.CreateEventHeading;
-      TextView CreateEventHeading = ViewBindings.findChildViewById(rootView, id);
-      if (CreateEventHeading == null) {
-        break missingId;
-      }
-
       id = R.id.details;
       EditText details = ViewBindings.findChildViewById(rootView, id);
       if (details == null) {
@@ -149,6 +143,12 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
       id = R.id.generateQRandCreateEvent;
       Button generateQRandCreateEvent = ViewBindings.findChildViewById(rootView, id);
       if (generateQRandCreateEvent == null) {
+        break missingId;
+      }
+
+      id = R.id.max_attendees;
+      EditText maxAttendees = ViewBindings.findChildViewById(rootView, id);
+      if (maxAttendees == null) {
         break missingId;
       }
 
@@ -188,10 +188,10 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCreateEventOrganizerBinding((ConstraintLayout) rootView,
-          CreateEventHeading, details, displayQRcodes, downloadbutton, eventName,
-          generatePromotionalQR, generateQRandCreateEvent, pickTime, promotionalQR, qrCode,
-          textDateTime, textView2, textView3);
+      return new ActivityCreateEventOrganizerBinding((ConstraintLayout) rootView, details,
+          displayQRcodes, downloadbutton, eventName, generatePromotionalQR,
+          generateQRandCreateEvent, maxAttendees, pickTime, promotionalQR, qrCode, textDateTime,
+          textView2, textView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

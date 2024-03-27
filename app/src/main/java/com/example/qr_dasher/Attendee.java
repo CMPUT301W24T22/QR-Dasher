@@ -16,7 +16,9 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 /**
  * Activity for attendees of an event. Allows attendees to view notifications, edit their profile,
@@ -192,10 +194,20 @@ public class Attendee extends AppCompatActivity {
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
                         Event event = documentSnapshot.toObject(Event.class);
-                        Integer user_id = userId;
-                        String userId_str = String.valueOf(user_id);
-                        event.addAttendee(userId_str); // Add the user ID to the event's attendee list
-                        updateFirebaseEvent(eventID, event); // Update the event in Firestore
+                        List<String> attendeeList = new ArrayList<>(event.getAttendee_list());
+                        int currentAttendeeCount = attendeeList.size();
+                        int maxAttendees = event.getMaxAttendees();
+
+                        if (currentAttendeeCount < maxAttendees) {
+                            // Add the attendee to the event's attendee list
+                            String userIdStr = String.valueOf(userId);
+                            attendeeList.add(userIdStr);
+                            event.setAttendee_list(new ArrayList<>(attendeeList));
+                            updateFirebaseEvent(eventID, event); // Update the event in Firestore
+                            Toast.makeText(Attendee.this, "Joined event successfully!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Attendee.this, "Event is full", Toast.LENGTH_SHORT).show();
+                        }
                     } else {
                         Log.d("Attendee", "No event found with EventId: " + eventID);
                     }

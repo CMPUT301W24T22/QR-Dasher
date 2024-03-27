@@ -15,6 +15,9 @@
         android:theme="@style/Theme.QRDasher"
         tools:targetApi="31">
         <activity
+            android:name=".EventSignUpPage"
+            android:exported="false" />
+        <activity
             android:name=".BrowseEvents"
             android:exported="false" />
         <activity

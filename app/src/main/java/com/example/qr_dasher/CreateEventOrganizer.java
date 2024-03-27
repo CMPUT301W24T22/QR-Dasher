@@ -71,7 +71,7 @@ import javax.annotation.Nullable;
 public class CreateEventOrganizer extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     public static final String EXTRA_QR_CODES = "extra_qr_codes";
     private ImageView qrImage, promotionalImage;
-    private Button generateQRandCreateEvent, generatePromotionalQR, displayQRcodes, downloadButton, pickDateTime;
+    private Button generateQR, createevent, generatePromotionalQR, displayQRcodes, downloadButton, pickDateTime;
     private EditText eventName, eventDetails;
     private TextView textDateTime;
     private Bitmap generatedQRCode;
@@ -111,7 +111,8 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         textDateTime = findViewById(R.id.textDateTime);
         qrImage = findViewById(R.id.qrCode); // image
         promotionalImage = findViewById(R.id.promotionalQR);
-        generateQRandCreateEvent = findViewById(R.id.generateQRandCreateEvent); // button
+        generateQR = findViewById(R.id.generateQR); // button
+        createevent = findViewById(R.id.createevent);
         generatePromotionalQR = findViewById(R.id.generatePromotionalQR);
         eventName = findViewById(R.id.eventName); // event Name
         eventDetails = findViewById(R.id.details); // event Name
@@ -132,7 +133,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
             }
         });
 
-        generateQRandCreateEvent.setOnClickListener(new View.OnClickListener() {
+        generateQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -160,6 +161,12 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 generatedQRCode = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
                 qrImage.setImageBitmap(generatedQRCode);
 
+            }
+        });
+        createevent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
                 AtomicReference<User> user = new AtomicReference<>();
                 db.collection("users")
                         .whereEqualTo("userId", userId)
@@ -180,8 +187,10 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                         });
 
                 addEventToFirebase(event);
+
             }
         });
+
 
         generatePromotionalQR.setOnClickListener(new View.OnClickListener() {
             @Override

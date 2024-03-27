@@ -61,6 +61,7 @@ id qrCode
 id qr_button
 id qr_code_button
 id reuseQRcodetext
+id scanned_events_listview
 id scanned_events_text
 id select_image_button
 id send_notifications_button
@@ -69,6 +70,8 @@ id signUp_Details
 id signUp_Name
 id signUp_Time
 id signUp_poster
+id signed_up_events_listview
+id signed_up_events_text
 id signup_button
 id textDateTime
 id textView

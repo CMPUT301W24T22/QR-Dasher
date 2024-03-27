@@ -3616,6 +3616,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scanned_events_listview
 id scanned_events_text
 id screen
 id scroll
@@ -3649,6 +3650,8 @@ id signUp_Details
 id signUp_Name
 id signUp_Time
 id signUp_poster
+id signed_up_events_listview
+id signed_up_events_text
 id signup_button
 id sin
 id skipCollapsed

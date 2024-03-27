@@ -6,4 +6,5 @@
     android:paddingLeft="12dp"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:textSize="25sp" />
+    android:textSize="25sp"
+    />

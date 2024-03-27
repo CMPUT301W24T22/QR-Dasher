@@ -43,6 +43,11 @@ public class EventSignUpPage extends AppCompatActivity {
             String eventDetail = extras.getString("eventDetail");
             eventId = extras.getString("eventId");
             Date date = (Date) extras.getSerializable("timestamp");
+            boolean signUpBool = extras.getBoolean("signUpBool",false);
+
+            if (!signUpBool){
+                signup_button.setVisibility(View.GONE);
+            }
 
             signUp_Name.setText(eventName);
             signUp_Details.setText(eventDetail);
@@ -61,13 +66,30 @@ public class EventSignUpPage extends AppCompatActivity {
         });
 
     }
+
     private void updateFirebase(String event_id){
 
         int userId = app_cache.getInt("UserID", -1);
         String eventID = event_id; // Assuming event_id is already the document ID
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-
+        // Update User Document
+        db.collection("users")
+                .document(String.valueOf(userId))
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        User user = documentSnapshot.toObject(User.class);
+                        user.addEventsSignedUp(eventID); // Add the event ID to the user's eventsJoined list
+                        updateFirebaseUser(String.valueOf(userId), user); // Update the user in Firestore
+                    } else {
+                        Log.d("Attendee", "No user found with UserId: " + userId);
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    Log.d("Attendee", "Failed to retrieve User from Firestore");
+                    e.printStackTrace();
+                });
         // Update event document
         db.collection("eventsCollection")
                 .document(eventID)
@@ -94,7 +116,7 @@ public class EventSignUpPage extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users")
                 .document(userId)
-                .update("eventsJoined", user.getEventsJoined())
+                .update("eventsSignedUp", user.getEventsSignedUp())
                 .addOnSuccessListener(aVoid -> Log.d("Attendee", "User updated successfully"))
                 .addOnFailureListener(e -> {
                     Log.d("Attendee", "Failed to update user in Firestore");

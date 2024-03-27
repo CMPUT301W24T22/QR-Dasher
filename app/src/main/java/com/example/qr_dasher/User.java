@@ -15,6 +15,7 @@ public class User {
     private String profile_image;
     private List<String> eventsCreated;
     private List<String> eventsJoined;
+    private List<String> eventsSignedUp;
     public User(){
 
     }
@@ -36,6 +37,7 @@ public class User {
         this.UserId = random.nextInt();
         this.eventsCreated = new ArrayList<>();
         this.eventsJoined = new ArrayList<>();
+        this.eventsSignedUp = new ArrayList<>();
     }
     /**
      * Get the name of the user.
@@ -158,4 +160,17 @@ public class User {
     public List<String> getEventsCreated(){
         return this.eventsCreated;
     }
+
+    public List<String> getEventsSignedUp() {
+        return eventsSignedUp;
+    }
+
+    public void setEventsSignedUp(List<String> eventsSignedUp) {
+        this.eventsSignedUp = eventsSignedUp;
+    }
+
+    public void addEventsSignedUp(String eventID){
+        this.eventsSignedUp.add(eventID);
+    }
+
 }

@@ -15,14 +15,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,56 +28,139 @@ import java.util.List;
  * This activity displays QR codes associated with the current user from Firestore.
  */
 public class reuseQRcodes extends AppCompatActivity {
+    public static final String EXTRA_QR_CODES = "extra_qr_codes";
+    Button cancelButton, scanqr;
+    private FirebaseFirestore db;
+    private SharedPreferences app_cache;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_reuse_qrcodes);
 
-        // Force portrait mode
-        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        startScanning();
+        // Initialize Firestore and SharedPreferences
+        db = FirebaseFirestore.getInstance();
+        app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
+
+        // Initialize UI components
+        cancelButton = findViewById(R.id.cancel_button);
+        scanqr = findViewById(R.id.scanqr);
+
+        // Set click listener for cancel button
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        scanqr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startScan();
+            }
+        });
+
+        // Fetch and display QR codes associated with the user
+        fetchQRcodes();
     }
+    private void startScan() {
+        Intent intent = new Intent(this, ScanQR.class);
+        startActivityForResult(intent, 1); // Request code 1
+    }
+
+
     /**
-     * Initiates the QR code scanning process using IntentIntegrator.
+     * Fetches QR codes associated with the current user from Firestore.
      */
-    private void startScanning() {
-        IntentIntegrator integrator = new IntentIntegrator(this);
-        integrator.setPrompt("Scan a QR code");
-        integrator.setOrientationLocked(false);
-        integrator.initiateScan();
+
+    private void fetchQRcodes() {
+        // Get the user ID from SharedPreferences
+        int userId = app_cache.getInt("UserID", -1);
+
+        // Query Firestore for QR codes associated with the user
+        db.collection("eventsCollection")
+                .whereEqualTo("attendee_qr.userID", userId)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    if (!queryDocumentSnapshots.isEmpty()) {
+                        List<String> qrCodes = new ArrayList<>();
+                        // Iterate through the query results
+                        for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                            // Get the QR code string from the document
+                            String qrCodeString = document.getString("attendee_qr.qrImage");
+                            if (qrCodeString != null) {
+                                qrCodes.add(qrCodeString);
+                            }
+                        }
+                        // Display the fetched QR codes
+                        displayQRcodes(qrCodes);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Handle failure to retrieve QR codes
+                        LinearLayout container = findViewById(R.id.container);
+                        container.setVisibility(View.GONE);
+                        e.printStackTrace();
+                    }
+                });
     }
+
     /**
-     * Handles the result of the QR code scanning activity.
+     * Displays QR codes in the UI.
      *
-     * @param requestCode The request code passed to startActivityForResult().
-     * @param resultCode  The result code returned by the child activity.
-     * @param data        The intent data returned by the child activity.
+     * @param qrCodes List of QR code strings
      */
+    // Inside displayQRcodes method, set onClickListener for each ImageView to select the QR code
+    private void displayQRcodes(List<String> qrCodes) {
+        LinearLayout container = findViewById(R.id.container);
+
+        // Iterate through the list of QR code strings
+        for (String qrCodeString : qrCodes) {
+            if (qrCodeString != null) {
+                // Decode the QR code string into a bitmap
+                byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
+                Bitmap qrCodeBitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+
+                // Create an ImageView to display the QR code bitmap
+                ImageView imageView = new ImageView(this);
+                imageView.setImageBitmap(qrCodeBitmap);
+
+                // Set layout parameters for the ImageView
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                );
+                layoutParams.setMargins(0, 0, 0, 16);
+                imageView.setLayoutParams(layoutParams);
+
+                // Set onClickListener for selecting the QR code
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Pass the selected QR code back to the calling activity
+                        Intent intent = new Intent();
+                        intent.putExtra("selectedQRCode", qrCodeString);
+                        setResult(RESULT_OK, intent);
+                        finish(); // Finish the activity and return to the calling activity
+                    }
+                });
+
+                // Add the ImageView to the container layout
+                container.addView(imageView);
+            }
+        }
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null) {
-            if (result.getContents() != null) {
-                // Scanned text is available
-                String scannedText = result.getContents();
-
-                // Prepare the intent to pass back to the calling activity
-                Intent intent = new Intent();
-                intent.putExtra("scannedText", scannedText);
-
-                // Set the result code and pass the intent back to the calling activity
-                setResult(RESULT_OK, intent);
-                finish(); // Finish the activity
-            } else {
-                // Handle case where scanning was canceled or failed
-                Toast.makeText(this, "Scanning failed or canceled", Toast.LENGTH_SHORT).show();
-                setResult(RESULT_CANCELED); // Set result canceled
-                finish(); // Finish the activity
-            }
+        if (requestCode == 1 && resultCode == RESULT_OK && data != null) {
+            String scannedText = data.getStringExtra("scannedText");
+            // Handle the scanned text as required
         }
     }
-
 
 }
 

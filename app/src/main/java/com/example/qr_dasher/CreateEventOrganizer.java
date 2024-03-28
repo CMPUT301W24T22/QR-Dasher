@@ -82,6 +82,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     private SharedPreferences app_cache; // To get the userID
     private static final int REQUEST_CODE_REUSE_QR = 123;
     private Event event;
+    private int eventId;
     private List<String> reuseQRCodes;
     private DateTime dateTime;
     private int day = 0;
@@ -192,6 +193,18 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
                 Bitmap qrCodeBitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
                 promotionalImage.setImageBitmap(qrCodeBitmap);
+
+                // Upload the promotional QR code to firebase
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                db.collection("eventsCollection")
+                        .document("" + eventId)
+                        .update("promotional_qr", event.getPromotional_qr())
+                        .addOnSuccessListener(aVoid -> Log.d("Organizer", "Event QR PROMOTIONAL AD successfully"))
+                        .addOnFailureListener(e -> {
+                            Log.d("Organizer", "Failed to update event in Firestore");
+                            e.printStackTrace();
+                        });
+
             }
         });
 

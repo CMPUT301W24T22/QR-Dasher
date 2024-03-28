@@ -96,7 +96,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     private int savedMinute = 0;
     private static final int PICK_IMAGE_REQUEST = 1;
 
-   /**
+    /**
      * onCreate method is called when the activity is starting. It initializes the activity layout,
      * retrieves necessary views from the layout, initializes Firebase Firestore, and sets up event listeners
      * for buttons to handle user interactions.
@@ -383,6 +383,5 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
 
     }
 }
-
 
 

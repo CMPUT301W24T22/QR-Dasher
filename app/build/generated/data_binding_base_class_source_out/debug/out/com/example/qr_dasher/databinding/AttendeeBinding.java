@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,21 +34,34 @@ public final class AttendeeBinding implements ViewBinding {
   public final Button qrButton;
 
   @NonNull
+  public final ListView scannedEventsListview;
+
+  @NonNull
   public final TextView scannedEventsText;
+
+  @NonNull
+  public final ListView signedUpEventsListview;
+
+  @NonNull
+  public final TextView signedUpEventsText;
 
   @NonNull
   public final TextView welcomeText;
 
   private AttendeeBinding(@NonNull ConstraintLayout rootView, @NonNull Button browseEvents,
       @NonNull Button editProfileButton, @NonNull Button notificationButton,
-      @NonNull Button qrButton, @NonNull TextView scannedEventsText,
-      @NonNull TextView welcomeText) {
+      @NonNull Button qrButton, @NonNull ListView scannedEventsListview,
+      @NonNull TextView scannedEventsText, @NonNull ListView signedUpEventsListview,
+      @NonNull TextView signedUpEventsText, @NonNull TextView welcomeText) {
     this.rootView = rootView;
     this.browseEvents = browseEvents;
     this.editProfileButton = editProfileButton;
     this.notificationButton = notificationButton;
     this.qrButton = qrButton;
+    this.scannedEventsListview = scannedEventsListview;
     this.scannedEventsText = scannedEventsText;
+    this.signedUpEventsListview = signedUpEventsListview;
+    this.signedUpEventsText = signedUpEventsText;
     this.welcomeText = welcomeText;
   }
 
@@ -102,9 +116,27 @@ public final class AttendeeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.scanned_events_listview;
+      ListView scannedEventsListview = ViewBindings.findChildViewById(rootView, id);
+      if (scannedEventsListview == null) {
+        break missingId;
+      }
+
       id = R.id.scanned_events_text;
       TextView scannedEventsText = ViewBindings.findChildViewById(rootView, id);
       if (scannedEventsText == null) {
+        break missingId;
+      }
+
+      id = R.id.signed_up_events_listview;
+      ListView signedUpEventsListview = ViewBindings.findChildViewById(rootView, id);
+      if (signedUpEventsListview == null) {
+        break missingId;
+      }
+
+      id = R.id.signed_up_events_text;
+      TextView signedUpEventsText = ViewBindings.findChildViewById(rootView, id);
+      if (signedUpEventsText == null) {
         break missingId;
       }
 
@@ -115,7 +147,8 @@ public final class AttendeeBinding implements ViewBinding {
       }
 
       return new AttendeeBinding((ConstraintLayout) rootView, browseEvents, editProfileButton,
-          notificationButton, qrButton, scannedEventsText, welcomeText);
+          notificationButton, qrButton, scannedEventsListview, scannedEventsText,
+          signedUpEventsListview, signedUpEventsText, welcomeText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

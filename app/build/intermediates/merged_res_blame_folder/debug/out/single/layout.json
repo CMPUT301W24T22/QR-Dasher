@@ -16,6 +16,10 @@
         "source": "com.example.qr_dasher.app-main-54:/layout/role_page.xml"
     },
     {
+        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/event_sign_up_page.xml",
+        "source": "com.example.qr_dasher.app-main-54:/layout/event_sign_up_page.xml"
+    },
+    {
         "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/edit_profile.xml",
         "source": "com.example.qr_dasher.app-main-54:/layout/edit_profile.xml"
     },

@@ -3618,6 +3618,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scanned_events_listview
 id scanned_events_text
 id screen
 id scroll
@@ -3647,6 +3648,13 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signUp_Details
+id signUp_Name
+id signUp_Time
+id signUp_poster
+id signed_up_events_listview
+id signed_up_events_text
+id signup_button
 id sin
 id skipCollapsed
 id skipped
@@ -3913,6 +3921,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout edit_profile
 layout event_details
+layout event_sign_up_page
 layout fragment_image_upload
 layout home_page
 layout m3_alert_dialog

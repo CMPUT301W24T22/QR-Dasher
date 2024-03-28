@@ -4,7 +4,11 @@
             "outputFile": "com.example.qr_dasher.test.app-merged_res-5:/values-v18_values-v18.arsc.flat",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\7d5c733e0e783ae1c35f34178a9fff7a\\transformed\\core-1.5.0\\res\\values-v18\\values.xml",
+=======
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\7d5c733e0e783ae1c35f34178a9fff7a\\transformed\\core-1.5.0\\res\\values-v18\\values.xml",
+>>>>>>> dc80a55be10b5f4e981ed6af7bb1b97e121506cc
                     "from": {
                         "startLines": "4,12",
                         "startColumns": "0,0",
@@ -28,7 +32,11 @@
             "outputFile": "com.example.qr_dasher.test.app-merged_res-5:/values-v21_values-v21.arsc.flat",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\7d5c733e0e783ae1c35f34178a9fff7a\\transformed\\core-1.5.0\\res\\values-v21\\values.xml",
+=======
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\7d5c733e0e783ae1c35f34178a9fff7a\\transformed\\core-1.5.0\\res\\values-v21\\values.xml",
+>>>>>>> dc80a55be10b5f4e981ed6af7bb1b97e121506cc
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",
@@ -52,7 +60,11 @@
             "outputFile": "com.example.qr_dasher.test.app-merged_res-5:/values-v28_values-v28.arsc.flat",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\7d5c733e0e783ae1c35f34178a9fff7a\\transformed\\core-1.5.0\\res\\values-v28\\values.xml",
+=======
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\7d5c733e0e783ae1c35f34178a9fff7a\\transformed\\core-1.5.0\\res\\values-v28\\values.xml",
+>>>>>>> dc80a55be10b5f4e981ed6af7bb1b97e121506cc
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",
@@ -76,7 +88,11 @@
             "outputFile": "com.example.qr_dasher.test.app-merged_res-5:/values_values.arsc.flat",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\7d5c733e0e783ae1c35f34178a9fff7a\\transformed\\core-1.5.0\\res\\values\\values.xml",
+=======
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\7d5c733e0e783ae1c35f34178a9fff7a\\transformed\\core-1.5.0\\res\\values\\values.xml",
+>>>>>>> dc80a55be10b5f4e981ed6af7bb1b97e121506cc
                     "from": {
                         "startLines": "4,11",
                         "startColumns": "0,0",

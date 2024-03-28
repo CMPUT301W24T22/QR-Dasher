@@ -27,6 +27,8 @@ import java.util.Date;
 
 import java.util.ArrayList;
 import java.util.List;
+import android.os.Bundle;
+
 
 public class BrowseEvents extends AppCompatActivity {
 
@@ -34,6 +36,8 @@ public class BrowseEvents extends AppCompatActivity {
     private FirebaseFirestore db;
     private List<String> eventNames;
     private List<String> eventIds;
+    private List<String> eventDetails;
+    private List<Timestamp> eventTimestamps;
 
     private SharedPreferences app_cache;
     @Override
@@ -49,6 +53,13 @@ public class BrowseEvents extends AppCompatActivity {
         int userId = app_cache.getInt("UserID", -1);
         retrieveEventsFromFirestore(userId);
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Refresh data when the activity is resumed
+        int userId = app_cache.getInt("UserID", -1);  // Retrieve UserID again
+        retrieveEventsFromFirestore(userId);
+    }
 
     private void retrieveEventsFromFirestore(int userId) {
         // We only want to retrieve the events (1) which will take place in future
@@ -56,6 +67,9 @@ public class BrowseEvents extends AppCompatActivity {
 
         eventNames = new ArrayList<>();
         eventIds = new ArrayList<>();
+        eventDetails = new ArrayList<>();
+        eventTimestamps = new ArrayList<>();
+
 
         // Getting the present date
         Date currentTime = new Date();
@@ -81,6 +95,8 @@ public class BrowseEvents extends AppCompatActivity {
                         // Update the list with new data
                         eventNames.clear();
                         eventIds.clear();
+                        eventDetails.clear();
+                        eventTimestamps.clear();
 
                         // Iterate through the query results
                         for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
@@ -92,11 +108,16 @@ public class BrowseEvents extends AppCompatActivity {
                                 if (eventIdLong != null) {
                                     // removing events where the user has signed up/ checked in
                                     String eventId = String.valueOf(eventIdLong);
+                                    String eventDetail = documentSnapshot.getString("details");
+                                    Timestamp eventTime = documentSnapshot.getTimestamp("timestamp");
                                     List<String> attendeeList = (List<String>) documentSnapshot.get("attendee_list");
                                     List<String> signupList = (List<String>) documentSnapshot.get("signup_list");
                                     if ((attendeeList == null  || !attendeeList.contains(userid_str)) && (signupList == null|| !signupList.contains(userid_str))){
                                         eventNames.add(eventName);
                                         eventIds.add(eventId);
+                                        eventDetails.add(eventDetail);
+                                        eventTimestamps.add(eventTime);
+                                        // TO-DO: for poster get the poster in an array then put it in the bundle
                                     }
                                 }
                             }
@@ -115,20 +136,39 @@ public class BrowseEvents extends AppCompatActivity {
         browseEventList.setAdapter(adapter);
 
         // Set item click listener
-//        browseEventList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                // Get the clicked event name
-//                String eventName = eventNames.get(position);
-//                String eventId = eventIds.get(position);
-//                //Integer eventId = Integer.parseInt(eventIdStr);
-//                // Start new activity with the event name
-//                Intent intent = new Intent(Organizer.this, EventDetails.class);
-//                intent.putExtra("eventName", eventName);
-//                intent.putExtra("event_id", eventId);
-//                startActivity(intent);
-//            }
-//        });
+        browseEventList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Get the clicked event name
+                // Create a bundle with all the required data needed for the sign up page
+                Bundle bundle = new Bundle();
+
+                String eventName = eventNames.get(position);
+                bundle.putString("eventName", eventName);
+
+                String detail = eventDetails.get(position);
+                bundle.putString("eventDetail",detail);
+
+                String eventId = eventIds.get(position);
+                bundle.putString("eventId", eventId);
+
+                // Converting timeStamp to date to put in bundle
+                Timestamp eventTimestamp = eventTimestamps.get(position);
+                Date date = eventTimestamp.toDate();
+                bundle.putSerializable("timestamp",date);
+
+                Boolean signUpBool = true;
+                bundle.putBoolean("signUpBool",signUpBool);
+
+                //Integer eventId = Integer.parseInt(eventIdStr);
+                // Start new activity with the event name
+                Intent intent = new Intent(BrowseEvents.this, EventSignUpPage.class);
+                //intent.putExtra("eventName", eventName);
+                //intent.putExtra("event_id", eventId);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
 
     }

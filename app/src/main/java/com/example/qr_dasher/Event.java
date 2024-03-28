@@ -1,4 +1,6 @@
 package com.example.qr_dasher;
+import android.widget.ImageView;
+
 import java.sql.Time;
 import java.util.NoSuchElementException;
 import java.util.Random;
@@ -19,6 +21,7 @@ public class Event {
     private int organizer;
     private DateTime dateTime;
     private Timestamp timestamp;
+    private String event_poster;
 
     public Event(){
 
@@ -242,5 +245,23 @@ public class Event {
 
     public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
+    }
+
+    /**
+     * Gets the event poster.
+     *
+     * @return The event poster ImageView.
+     */
+    public String getEventPoster() {
+        return event_poster;
+    }
+
+    /**
+     * Sets the event poster.
+     *
+     * @param event_poster The event poster ImageView to set.
+     */
+    public void setEventPoster(String event_poster) {
+        this.event_poster = event_poster;
     }
 }

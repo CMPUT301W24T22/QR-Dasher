@@ -3276,7 +3276,6 @@ id anticipate
 id arc
 id asConfigured
 id async
-id attendeeListView
 id attendee_button
 id attendee_list_view
 id attendees
@@ -3356,6 +3355,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detail_text
 id details
 id details_edit
 id dialog_button
@@ -3396,6 +3396,7 @@ id enterAlwaysCollapsed
 id eventListView
 id eventName
 id eventNameTextView
+id eventPosterImageView
 id event_poster_button
 id exitUntilCollapsed
 id expand_activities_button
@@ -3441,6 +3442,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id image_upload
 id immediateStop
 id included
@@ -3727,6 +3729,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id title_text
 id toggle
 id top
 id topPanel

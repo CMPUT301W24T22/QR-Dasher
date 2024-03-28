@@ -26,6 +26,9 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
   public final TextView CreateEventHeading;
 
   @NonNull
+  public final TextView detailText;
+
+  @NonNull
   public final EditText details;
 
   @NonNull
@@ -36,6 +39,12 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
 
   @NonNull
   public final EditText eventName;
+
+  @NonNull
+  public final Button eventPosterButton;
+
+  @NonNull
+  public final ImageView eventPosterImageView;
 
   @NonNull
   public final Button generatePromotionalQR;
@@ -61,18 +70,26 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
   @NonNull
   public final TextView textView3;
 
+  @NonNull
+  public final TextView titleText;
+
   private ActivityCreateEventOrganizerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView CreateEventHeading, @NonNull EditText details,
+      @NonNull TextView CreateEventHeading, @NonNull TextView detailText, @NonNull EditText details,
       @NonNull Button displayQRcodes, @NonNull Button downloadbutton, @NonNull EditText eventName,
+      @NonNull Button eventPosterButton, @NonNull ImageView eventPosterImageView,
       @NonNull Button generatePromotionalQR, @NonNull Button generateQRandCreateEvent,
       @NonNull Button pickTime, @NonNull ImageView promotionalQR, @NonNull ImageView qrCode,
-      @NonNull TextView textDateTime, @NonNull TextView textView2, @NonNull TextView textView3) {
+      @NonNull TextView textDateTime, @NonNull TextView textView2, @NonNull TextView textView3,
+      @NonNull TextView titleText) {
     this.rootView = rootView;
     this.CreateEventHeading = CreateEventHeading;
+    this.detailText = detailText;
     this.details = details;
     this.displayQRcodes = displayQRcodes;
     this.downloadbutton = downloadbutton;
     this.eventName = eventName;
+    this.eventPosterButton = eventPosterButton;
+    this.eventPosterImageView = eventPosterImageView;
     this.generatePromotionalQR = generatePromotionalQR;
     this.generateQRandCreateEvent = generateQRandCreateEvent;
     this.pickTime = pickTime;
@@ -81,6 +98,7 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
     this.textDateTime = textDateTime;
     this.textView2 = textView2;
     this.textView3 = textView3;
+    this.titleText = titleText;
   }
 
   @Override
@@ -116,6 +134,12 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.detail_text;
+      TextView detailText = ViewBindings.findChildViewById(rootView, id);
+      if (detailText == null) {
+        break missingId;
+      }
+
       id = R.id.details;
       EditText details = ViewBindings.findChildViewById(rootView, id);
       if (details == null) {
@@ -137,6 +161,18 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
       id = R.id.eventName;
       EditText eventName = ViewBindings.findChildViewById(rootView, id);
       if (eventName == null) {
+        break missingId;
+      }
+
+      id = R.id.event_poster_button;
+      Button eventPosterButton = ViewBindings.findChildViewById(rootView, id);
+      if (eventPosterButton == null) {
+        break missingId;
+      }
+
+      id = R.id.eventPosterImageView;
+      ImageView eventPosterImageView = ViewBindings.findChildViewById(rootView, id);
+      if (eventPosterImageView == null) {
         break missingId;
       }
 
@@ -188,10 +224,16 @@ public final class ActivityCreateEventOrganizerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.title_text;
+      TextView titleText = ViewBindings.findChildViewById(rootView, id);
+      if (titleText == null) {
+        break missingId;
+      }
+
       return new ActivityCreateEventOrganizerBinding((ConstraintLayout) rootView,
-          CreateEventHeading, details, displayQRcodes, downloadbutton, eventName,
-          generatePromotionalQR, generateQRandCreateEvent, pickTime, promotionalQR, qrCode,
-          textDateTime, textView2, textView3);
+          CreateEventHeading, detailText, details, displayQRcodes, downloadbutton, eventName,
+          eventPosterButton, eventPosterImageView, generatePromotionalQR, generateQRandCreateEvent,
+          pickTime, promotionalQR, qrCode, textDateTime, textView2, textView3, titleText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

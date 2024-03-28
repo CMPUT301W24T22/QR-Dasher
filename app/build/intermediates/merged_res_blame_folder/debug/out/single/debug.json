@@ -20,6 +20,10 @@
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_attendee.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/attendee.xml"
+    },
+    {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_event_details.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/event_details.xml"
     },
     {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\layout_organizer.xml.flat",
@@ -74,10 +82,6 @@
     {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-54:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_activity_create_event_organizer.xml.flat",
-        "source": "com.example.qr_dasher.app-main-54:/layout/activity_create_event_organizer.xml"
     },
     {
         "merged": "C:\\Users\\jassi\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-52:\\drawable_ic_launcher_background.xml.flat",

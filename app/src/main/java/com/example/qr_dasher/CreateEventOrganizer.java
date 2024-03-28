@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -71,7 +72,7 @@ import javax.annotation.Nullable;
 public class CreateEventOrganizer extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     public static final String EXTRA_QR_CODES = "extra_qr_codes";
     private ImageView qrImage, promotionalImage;
-    private Button generateQRandCreateEvent, generatePromotionalQR, displayQRcodes, downloadButton, pickDateTime;
+    private Button generateQRandCreateEvent, generatePromotionalQR, displayQRcodes, downloadButton, pickDateTime, eventPosterButton;
     private EditText eventName, eventDetails;
     private TextView textDateTime;
     private Bitmap generatedQRCode;
@@ -81,6 +82,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     private SharedPreferences app_cache; // To get the userID
     private static final int REQUEST_CODE_REUSE_QR = 123;
     private Event event;
+    private int eventId;
     private List<String> reuseQRCodes;
     private DateTime dateTime;
     private int day = 0;
@@ -93,10 +95,9 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     private int savedYear = 0;
     private int savedHour = 0;
     private int savedMinute = 0;
-    private int eventId;
-    private int eventId_str;
+    private static final int PICK_IMAGE_REQUEST = 1;
 
-   /**
+    /**
      * onCreate method is called when the activity is starting. It initializes the activity layout,
      * retrieves necessary views from the layout, initializes Firebase Firestore, and sets up event listeners
      * for buttons to handle user interactions.
@@ -117,6 +118,8 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         eventDetails = findViewById(R.id.details); // event Name
         downloadButton = findViewById(R.id.downloadbutton);
         displayQRcodes = findViewById(R.id.displayQRcodes);
+        eventPosterButton = findViewById(R.id.event_poster_button);
+
 
         FirebaseApp.initializeApp(this);
         db = FirebaseFirestore.getInstance();
@@ -140,7 +143,6 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 String event_details = eventDetails.getText().toString();
                 dateTime = new DateTime(savedYear, savedMonth, savedDay, savedHour, savedMinute);
                 event = new Event(event_name, event_details, userId);
-                eventId = event.getEvent_id();
                 //event.setDateTime(dateTime);
                 //
                 Calendar calendar = Calendar.getInstance();
@@ -202,6 +204,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                             Log.d("Organizer", "Failed to update event in Firestore");
                             e.printStackTrace();
                         });
+
             }
         });
 
@@ -220,6 +223,15 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 getQRFromFirebase();
             }
         });
+
+        eventPosterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent, PICK_IMAGE_REQUEST);
+            }
+        });
+
     }
     private void pickDate(){
         getDateTimeCalendar();
@@ -301,6 +313,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                     e.printStackTrace();
                 });
     }
+
     /**
      * Retrieves QR codes for all events from Firebase Firestore.
      * This method is called when the organizer wants to display QR codes for all events stored in Firestore.
@@ -326,6 +339,25 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                     e.printStackTrace();
                 });
     }
+
+    private String bitmapToBase64(Bitmap bitmap) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+        byte[] byteArray = byteArrayOutputStream.toByteArray();
+        return Base64.encodeToString(byteArray, Base64.DEFAULT);
+    }
+
+    // Method to save event poster to Firestore
+    private void saveEventPosterToFirestore(String encodedImage) {
+        db.collection("eventsCollection")
+                .document("" + event.getEvent_id())
+                .update("Poster", encodedImage)
+                .addOnSuccessListener(aVoid -> Log.d("Event Poster", "Event poster saved to Firestore"))
+                .addOnFailureListener(e -> {
+                    Log.d("Event Poster", "Failed to save event poster to Firestore");
+                    e.printStackTrace();
+                });
+    }
     /**
      * Handles the result of the activity launched to display QR codes for events.
      * This method is called when the activity to display QR codes returns a result.
@@ -346,9 +378,23 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 qrImage.setImageBitmap(selectedQRBitmap);
             }
         }
+
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            Uri selectedImageUri = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImageUri);
+                // Resize bitmap if needed to avoid large image storage
+                Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 500, 500, false);
+                // Convert bitmap to Base64 string
+                String encodedImage = bitmapToBase64(resizedBitmap);
+                // Save the image to Firestore for the specific event
+                saveEventPosterToFirestore(encodedImage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
-
 }
-
 
 

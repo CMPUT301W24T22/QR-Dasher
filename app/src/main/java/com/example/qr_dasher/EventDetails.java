@@ -48,9 +48,9 @@ public class EventDetails extends AppCompatActivity {
 
         // Get event name from intent extras
         String eventName = getIntent().getStringExtra("eventName");
-        String eventIDStr = getIntent().getStringExtra("event_id");
-        Log.d("EventDetails", "Received Event ID: " + eventIDStr);  // Add this line
-        int eventId = Integer.parseInt(eventIDStr);
+        int eventId = getIntent().getIntExtra("event_id", -1);
+//        Log.d("EventDetails", "Received Event ID: " + eventIDStr);  // Add this line
+//        int eventId = Integer.parseInt(eventIDStr);
         Log.d("EventDetails", "Received Event ID: " + eventId);  // Add this line
 
         //Integer eventId = Integer.valueOf(Objects.requireNonNull(getIntent().getStringExtra("event_id")));
@@ -71,7 +71,7 @@ public class EventDetails extends AppCompatActivity {
 
         Button notifyButton = findViewById(R.id.notify_button);
         Button qrButton = findViewById(R.id.qr_code_button);
-        Button posterUploadButton = findViewById(R.id.event_poster_button);
+//        Button posterUploadButton = findViewById(R.id.event_poster_button);
 
         // Set OnClickListener for the notification button
         notifyButton.setOnClickListener(new View.OnClickListener() {
@@ -83,23 +83,14 @@ public class EventDetails extends AppCompatActivity {
             }
         });
 
-        posterUploadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle notification button click
-//                Intent intent = new Intent(EventDetails.this, SendNotification.class);
-//                startActivity(intent);
-            }
-        });
-
-        posterUploadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle notification button click
-//                Intent intent = new Intent(EventDetails.this, SendNotification.class);
-//                startActivity(intent);
-            }
-        });
+//        posterUploadButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Handle notification button click
+////                Intent intent = new Intent(EventDetails.this, SendNotification.class);
+////                startActivity(intent);
+//            }
+//        });
     }
     /**
      * Fetches the list of attendees for the given event ID from Firestore.

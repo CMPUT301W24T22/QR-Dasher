@@ -3276,9 +3276,9 @@ id anticipate
 id arc
 id asConfigured
 id async
-id attendeeListView
 id attendee_button
 id attendee_list_view
+id attendee_text_signups
 id attendees
 id auto
 id autoComplete
@@ -3653,6 +3653,7 @@ id signUp_poster
 id signed_up_events_listview
 id signed_up_events_text
 id signup_button
+id signup_listview
 id sin
 id skipCollapsed
 id skipped

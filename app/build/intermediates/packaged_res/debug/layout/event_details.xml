@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textAppearance="?android:textAppearanceLarge"
-        android:textSize="38sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -23,29 +23,25 @@
         android:id="@+id/attendees"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="16dp"
         android:text="Attendees"
         android:textAppearance="?android:textAppearanceLarge"
-        android:textSize="27sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/attendeeListView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventNameTextView"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <ListView
         android:id="@+id/attendee_list_view"
         android:layout_width="403dp"
-        android:layout_height="386dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="8dp"
         android:dividerHeight="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/notify_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventNameTextView"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintTop_toBottomOf="@+id/attendees" />
 
     <Button
         android:id="@+id/qr_code_button"
@@ -56,7 +52,9 @@
         app:layout_constraintBottom_toTopOf="@+id/event_poster_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendee_text_signups"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/event_poster_button"
@@ -73,11 +71,33 @@
         android:id="@+id/notify_button"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="4dp"
         android:text="Manage Notifications"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/attendee_text_signups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="236dp"
+        android:text="Sign Ups"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendees" />
+
+    <ListView
+        android:id="@+id/signup_listview"
+        android:layout_width="409dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendee_text_signups" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

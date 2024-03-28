@@ -15,9 +15,9 @@ id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id action_settings
 id admin_button
-id attendeeListView
 id attendee_button
 id attendee_list_view
+id attendee_text_signups
 id attendees
 id back_button
 id barcode_scanner
@@ -73,6 +73,7 @@ id signUp_poster
 id signed_up_events_listview
 id signed_up_events_text
 id signup_button
+id signup_listview
 id textDateTime
 id textView
 id textView2

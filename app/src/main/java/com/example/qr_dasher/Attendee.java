@@ -41,7 +41,6 @@ public class Attendee extends AppCompatActivity {
     private List<String> scannedEventNames, scannedEventIds, scannedEventDetails, scannedEventPoster;
     private List<String> signedEventNames, signedEventIds, signedEventDetails, signedEventPoster;
     private List<Timestamp> scannedEventTimestamps, signedEventTimestamps;
-
     private SharedPreferences app_cache;
     /**
      * Initializes the activity and sets up UI components and listeners.
@@ -114,6 +113,7 @@ public class Attendee extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == 1) { // Check if the result is from ScanQR activity
+            Log.d("Scan","scan");
             if (resultCode == RESULT_OK) {
                 String scannedText = data.getStringExtra("scannedText");
                 Toast.makeText(this, "Scanning successful " + scannedText, Toast.LENGTH_SHORT).show();
@@ -122,14 +122,14 @@ public class Attendee extends AppCompatActivity {
                 if (scannedText!=null) {
                     if (scannedText.charAt(0) == 'p') {
                         // Promotional QR
+                        Log.d("QR Scanning", "Promotional Detected");
                         displayEventSignUpPage(scannedText);
                     } else {
                         // Checkin QR
+                        Log.d("QR Scanning", "Checkin Detected");
                         updateFirebase(scannedText);
                     }
                 }
-
-                // Implement firestore check
             } else {
                 // Handle case where scanning was canceled or failed
                 Toast.makeText(this, "Scanning failed or canceled", Toast.LENGTH_SHORT).show();
@@ -151,6 +151,8 @@ public class Attendee extends AppCompatActivity {
         // Start EventSignUpPage Activity
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         String eventIdPromo = pQRcontent.substring(1);
+        Log.d("pQRcontent",pQRcontent);
+        Log.d("p without p ", eventIdPromo);
         db.collection("eventsCollection")
                 .document(eventIdPromo)
                 .get()
@@ -168,13 +170,15 @@ public class Attendee extends AppCompatActivity {
                         String eventId = String.valueOf(event.getEvent_id());
                         bundle.putString("eventId", eventId);
 
+                        boolean signUpBool = true;
+                        bundle.putBoolean("signUpBool",signUpBool);
+
                         // Converting timeStamp to date to put in bundle
                         Timestamp eventTimestamp = event.getTimestamp();
                         Date date = eventTimestamp.toDate();
                         bundle.putSerializable("timestamp",date);
 
-                        boolean signUpBool = true;
-                        bundle.putBoolean("signUpBool",signUpBool);
+
                         //Integer eventId = Integer.parseInt(eventIdStr);
                         // Start new activity with the event name
                         Intent intent = new Intent(Attendee.this, EventSignUpPage.class);

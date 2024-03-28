@@ -43,8 +43,8 @@ public class Organizer extends AppCompatActivity {
 
     private ArrayList<String> reuseQRCodes = new ArrayList<>();
 
-    private List<String> eventNames;
-    private List<String> eventIds;
+    private List<String> eventNames,eventIds;
+    private  List<List<String>> attendeeLists, signupLists;
 
     private SharedPreferences app_cache; // To get the userID
     /**
@@ -89,6 +89,8 @@ public class Organizer extends AppCompatActivity {
         // Query Firestore for events
         eventNames = new ArrayList<>();
         eventIds = new ArrayList<>();
+        attendeeLists= new ArrayList<>();
+        signupLists = new ArrayList<>();
 
         db.collection("eventsCollection")
                 .whereEqualTo("attendee_qr.userID",userId)
@@ -106,6 +108,8 @@ public class Organizer extends AppCompatActivity {
                         // Update the list with new data
                         eventNames.clear();
                         eventIds.clear();
+                        attendeeLists.clear();
+                        signupLists.clear();
 
                         // Iterate through the query results
                         for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
@@ -113,6 +117,10 @@ public class Organizer extends AppCompatActivity {
                             String documentId = documentSnapshot.getId();
                             String eventName = documentSnapshot.getString("name");
                             String qrCode = documentSnapshot.getString("attendee_qr.qrImage");
+
+                            List<String> attendeeList = (List<String>) documentSnapshot.get("attendee_list");
+                            List<String> signupList = (List<String>) documentSnapshot.get("signup_list");
+
 
                             if (documentSnapshot.contains("event_id")) {
                                 Long eventIdLong = documentSnapshot.getLong("event_id");
@@ -122,7 +130,16 @@ public class Organizer extends AppCompatActivity {
                                     // Add event name and event_id to the lists
                                     eventNames.add(eventName);
                                     eventIds.add(eventId);
-                                }
+                                    attendeeLists.add(attendeeList);
+                                    signupLists.add(signupList);}
+
+//                                    if (attendeeListObj instanceof List<?>) {
+//                                        List<String> attendeeList = (List<String>) attendeeListObj;
+//                                    if (signupListObj instanceof List<?>) {
+//                                        List<String> signupList = (List<String>) signupListObj;
+//                                        signupLists.add(signupList);}
+
+
                             }
                         }
                         // Display the list of event names in the ListView
@@ -151,12 +168,25 @@ public class Organizer extends AppCompatActivity {
                 // Get the clicked event name
                 String eventName = eventNames.get(position);
                 String eventId = eventIds.get(position);
+                List<String> attendeeList = attendeeLists.get(position);
+                List<String> signupList = signupLists.get(position);
+
+
                 //Integer eventId = Integer.parseInt(eventIdStr);
                 // Start new activity with the event name
                 Intent intent = new Intent(Organizer.this, EventDetails.class);
                 intent.putExtra("eventName", eventName);
                 intent.putExtra("event_id", eventId);
-                startActivity(intent);
+                Log.d("Debug", "Attendee List before adding to intent: " + attendeeList);
+                Log.d("Debug", "Signup List before adding to intent: " + signupList);
+                if (attendeeList!= null){
+                    intent.putStringArrayListExtra("attendee_list",(ArrayList<String>) attendeeList);
+                }
+                if (signupList!= null){
+                intent.putStringArrayListExtra("signup_list", (ArrayList<String>) signupList);}
+                //Log.d("Debug", "Attendee List after adding to intent: " + attendeeList);
+                //Log.d("Debug", "Signup List after adding to intent: " + signupList);
+               startActivity(intent);
             }
         });
 

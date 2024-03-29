@@ -97,6 +97,7 @@ layout home_page
 layout mytextview
 layout notifications
 layout organizer
+layout organizer_listview
 layout role_page
 layout scan_qr
 layout send_notification

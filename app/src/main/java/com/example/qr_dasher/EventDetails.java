@@ -17,12 +17,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -146,7 +142,7 @@ public class EventDetails extends AppCompatActivity {
      */
 
     private void displayAttendeeList(List<String> attendeeList) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, attendeeList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.organizer_listview, attendeeList);
         attendeeListView.setAdapter(adapter);
     }
 }

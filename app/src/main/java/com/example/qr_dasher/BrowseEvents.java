@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -21,13 +20,11 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.Timestamp;
 
-import java.util.Collections;
 import java.util.Date;
 
 
 import java.util.ArrayList;
 import java.util.List;
-import android.os.Bundle;
 
 
 public class BrowseEvents extends AppCompatActivity {

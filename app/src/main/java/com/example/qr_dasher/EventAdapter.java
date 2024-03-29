@@ -30,7 +30,7 @@ public class EventAdapter extends ArrayAdapter<String> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View itemView = convertView;
         if (itemView == null) {
-            itemView = LayoutInflater.from(getContext()).inflate(R.layout.mytextview, parent, false);
+            itemView = LayoutInflater.from(getContext()).inflate(R.layout.organizer_listview, parent, false);
         }
 
         TextView eventNameTextView = itemView.findViewById(R.id.textView); // Update to use correct TextView ID

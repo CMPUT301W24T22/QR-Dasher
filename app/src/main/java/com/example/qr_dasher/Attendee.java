@@ -30,13 +30,13 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
+
 /**
  * Activity for attendees of an event. Allows attendees to view notifications, edit their profile,
  * and scan a QR code to join an event.
  */
 public class Attendee extends AppCompatActivity {
-    private Button notificationButton, editProfileButton, qrCodeButton, browseEvents;
+    private Button notificationButton, editProfileButton, qrCodeButton, browseEventsButton;
     private ListView scannedEvents, signedUpevents;
     private List<String> scannedEventNames, scannedEventIds, scannedEventDetails, scannedEventPoster;
     private List<String> signedEventNames, signedEventIds, signedEventDetails, signedEventPoster;
@@ -61,10 +61,11 @@ public class Attendee extends AppCompatActivity {
         notificationButton = findViewById(R.id.notification_button);
         editProfileButton = findViewById(R.id.edit_profile_button);
         qrCodeButton = findViewById(R.id.qr_button);
-        browseEvents = findViewById(R.id.browseEvents);
+        browseEventsButton = findViewById(R.id.browseEvents);
         scannedEvents = findViewById(R.id.scanned_events_listview);
         signedUpevents = findViewById(R.id.signed_up_events_listview);
-        browseEvents.setOnClickListener(new View.OnClickListener() {
+
+        browseEventsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Attendee.this, BrowseEvents.class);

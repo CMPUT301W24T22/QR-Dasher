@@ -179,10 +179,10 @@ public class Organizer extends AppCompatActivity {
                     intent.putStringArrayListExtra("attendee_list",(ArrayList<String>) attendeeList);
                 }
                 if (signupList!= null){
-                intent.putStringArrayListExtra("signup_list", (ArrayList<String>) signupList);}
+                    intent.putStringArrayListExtra("signup_list", (ArrayList<String>) signupList);}
                 //Log.d("Debug", "Attendee List after adding to intent: " + attendeeList);
                 //Log.d("Debug", "Signup List after adding to intent: " + signupList);
-               startActivity(intent);
+                startActivity(intent);
 //                intent.putExtra("event_id", eventId);
 
             }

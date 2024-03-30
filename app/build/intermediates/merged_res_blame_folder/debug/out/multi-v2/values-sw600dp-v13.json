@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-50:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-52:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\8166a589a35a035bd9dd7b19086e549d\\transformed\\appcompat-1.6.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\8166a589a35a035bd9dd7b19086e549d\\transformed\\appcompat-1.6.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\cc2d12b829148758ed6b3b42347dadc2\\transformed\\material-1.11.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\cc2d12b829148758ed6b3b42347dadc2\\transformed\\material-1.11.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",

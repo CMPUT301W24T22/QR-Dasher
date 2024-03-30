@@ -23,28 +23,25 @@
         android:id="@+id/attendees"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:text="Attendees"
         android:textAppearance="?android:textAppearanceLarge"
-        android:textSize="27sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/attendee_list_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventNameTextView"
-        app:layout_constraintVertical_bias="0.555"
         tools:ignore="MissingConstraints" />
 
     <ListView
         android:id="@+id/attendee_list_view"
         android:layout_width="409dp"
-        android:layout_height="441dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="12dp"
         android:dividerHeight="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/qr_code_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventNameTextView"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintTop_toBottomOf="@+id/attendees" />
 
     <Button
         android:id="@+id/qr_code_button"
@@ -71,5 +68,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/attendee_text_signups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:text="Sign Ups"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendees" />
+
+    <ListView
+        android:id="@+id/signup_listview"
+        android:layout_width="409dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendee_text_signups" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,10 @@
         "source": "com.example.qr_dasher.app-main-54:/layout/event_details.xml"
     },
     {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_mytextview_nopicture.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/mytextview_nopicture.xml"
+    },
+    {
         "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "com.example.qr_dasher.app-main-54:/mipmap-hdpi/ic_launcher.webp"
     },

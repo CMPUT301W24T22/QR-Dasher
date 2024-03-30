@@ -11,8 +11,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -33,6 +38,10 @@ import java.util.List;
 public class EventDetails extends AppCompatActivity {
     private FirebaseFirestore db;
     private ListView attendeeListView;
+    private ListView signupListView;
+    private List<String> attendeeListUserNames,  attendeeListDetails, attendeeListEmails;
+    private List<String> signUpListListUserNames,signUpListListDetails, signUpListListEmails;
+    private List<Integer>attendeeListUserIds, signUpListListUserIds;
     /**
      * Initializes the activity, sets up UI components and listeners,
      * and retrieves event details from Firebase Firestore.
@@ -47,13 +56,32 @@ public class EventDetails extends AppCompatActivity {
         setContentView(R.layout.event_details);
 
         // Get event name from intent extras
-        String eventName = getIntent().getStringExtra("eventName");
-        int eventId = getIntent().getIntExtra("event_id", -1);
-//        Log.d("EventDetails", "Received Event ID: " + eventIDStr);  // Add this line
-//        int eventId = Integer.parseInt(eventIDStr);
-        Log.d("EventDetails", "Received Event ID: " + eventId);  // Add this line
+//<<<<<<< HEAD
+        Intent intent = getIntent();
+        String eventName = intent.getStringExtra("eventName");
+        String eventIDStr = intent.getStringExtra("event_id");
+        List<String> attendeeList = intent.getStringArrayListExtra("attendee_list");
+        List<String> signupList = intent.getStringArrayListExtra("signup_list");
+//=======
+//        String eventName = getIntent().getStringExtra("eventName");
+//        int eventId = getIntent().getIntExtra("event_id", -1);
+////        Log.d("EventDetails", "Received Event ID: " + eventIDStr);  // Add this line
+////        int eventId = Integer.parseInt(eventIDStr);
+//        Log.d("EventDetails", "Received Event ID: " + eventId);  // Add this line
+//>>>>>>> b6106ded29a92da06cc5909b3112849e43cc94e2
 
-        //Integer eventId = Integer.valueOf(Objects.requireNonNull(getIntent().getStringExtra("event_id")));
+
+        if (attendeeList != null) {
+            Log.d("ListSize", "Attendee List Size: " + attendeeList.size());
+        } else {
+            Log.d("ListSize", "Attendee List is null");
+        }
+
+        if (signupList != null) {
+            Log.d("ListSize", "Signup List Size: " + signupList.size());
+        } else {
+            Log.d("ListSize", "Signup List is null");
+        }
 
         TextView eventNameTextView = findViewById(R.id.eventNameTextView);
 
@@ -61,14 +89,14 @@ public class EventDetails extends AppCompatActivity {
         eventNameTextView.setText(eventName);
 
         attendeeListView = findViewById(R.id.attendee_list_view);
+        signupListView = findViewById(R.id.signup_listview);
+
         db = FirebaseFirestore.getInstance();
 
         // Set the event name to the TextView
         eventNameTextView.setText(eventName);
 
-        // Fetch the attendee list for the selected event
-        fetchAttendees(eventId);
-
+        getUserDetailsFromFirebase(attendeeList,signupList);
         Button notifyButton = findViewById(R.id.notify_button);
         Button qrButton = findViewById(R.id.qr_code_button);
 //        Button posterUploadButton = findViewById(R.id.event_poster_button);
@@ -93,60 +121,152 @@ public class EventDetails extends AppCompatActivity {
 //        });
     }
     /**
-     * Fetches the list of attendees for the given event ID from Firestore.
-     *
-     * @param eventId The ID of the event for which attendees need to be fetched.
-     */
-    private void fetchAttendees(Integer eventId) {
-        // Query Firestore for attendees
-
-
-        db.collection("eventsCollection")
-                .whereEqualTo("event_id",eventId)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        if (!queryDocumentSnapshots.isEmpty()) {
-                            QueryDocumentSnapshot documentSnapshot = (QueryDocumentSnapshot) queryDocumentSnapshots.getDocuments().get(0);
-
-                            List<String> attendeeList = (List<String>) documentSnapshot.get("attendee_list");
-                            displayAttendeeList(attendeeList);
-                        } else{
-                            Toast.makeText(EventDetails.this, "Event details not found!", Toast.LENGTH_SHORT).show();
-                        }
-                        List<String> attendeeList = new ArrayList<>();
-                        // Iterate through the query results
-                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-
-
-                            List<String> attendees = (List<String>) documentSnapshot.get("attendee_list");   //"attendee_list is the user Id "
-                            if (attendees != null) {
-                                attendeeList.addAll(attendees);
-                            }
-
-                        }
-                        // Display the list of attendees in the event
-                        displayAttendeeList(attendeeList);
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        e.printStackTrace();
-                    }
-                });
-
-    }
-    /**
      * Displays the list of attendees in a ListView.
      *
      * @param attendeeList The list of attendees to display.
      */
 
-    private void displayAttendeeList(List<String> attendeeList) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, attendeeList);
+//    private void displayAttendeesAndSignups(List<String> attendeeList,List<String> signUpList ) {
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, attendeeList);
+//        attendeeListView.setAdapter(adapter);
+//        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, R.layout.mytextview, signUpList);
+//        signupListView.setAdapter(adapter2);
+//    }
+    private void getUserDetailsFromFirebase(List<String> attendeeList, List<String> signUpList){
+       // Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
+        db = FirebaseFirestore.getInstance();
+        attendeeListUserNames = new ArrayList<>();
+        attendeeListUserIds = new ArrayList<>();
+        attendeeListDetails= new ArrayList<>();
+        attendeeListEmails = new ArrayList<>();
+
+        signUpListListUserNames = new ArrayList<>();
+        signUpListListUserIds = new ArrayList<>();
+        signUpListListDetails= new ArrayList<>();
+        signUpListListEmails = new ArrayList<>();
+
+        if (attendeeList!=null&&!attendeeList.isEmpty()) {
+
+            List<Integer> attendeeListInt = new ArrayList<>();
+            for (String str : attendeeList) {
+                attendeeListInt.add(Integer.parseInt(str));
+            }
+
+
+
+            // Attendee List
+            db.collection("users")
+                    .whereIn("userId", attendeeListInt)
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                            Log.d("Firestore", "Data retrieval successful");
+
+                            // Clear the lists before updating with new data
+                            attendeeListUserNames.clear();
+                            attendeeListUserIds.clear();
+                            attendeeListDetails.clear();
+                            attendeeListEmails.clear();
+
+
+                            // Iterate through the query results
+                            for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                                Integer userId = documentSnapshot.getLong("userId").intValue();
+                                String userName = documentSnapshot.getString("name");
+                                String userEmail = documentSnapshot.getString("email");
+                                String userDetail = documentSnapshot.getString("details");
+
+                                // Add user details to respective lists
+                                attendeeListUserNames.add(userName);
+                                attendeeListUserIds.add(userId);
+                                attendeeListDetails.add(userDetail);
+                                attendeeListEmails.add(userEmail);
+
+                            }
+                            if (attendeeListUserNames != null) {
+                                displayAttendee(attendeeListUserNames);
+                            }
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Handle any errors
+                            e.printStackTrace();
+                        }
+                    });
+        }
+        if (signUpList!=null&&!signUpList.isEmpty()) {
+            List<Integer> signUpListInt = new ArrayList<>();
+            for (String str : signUpList) {
+                signUpListInt.add(Integer.parseInt(str));
+            }
+
+
+            // for sign up list
+            db.collection("users")
+                    .whereIn("userId", signUpListInt)
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                            Log.d("Firestore", "Data retrieval successful");
+
+                            // Clear the lists before updating with new data
+                            signUpListListUserNames.clear();
+                            signUpListListUserIds.clear();
+                            signUpListListDetails.clear();
+                            signUpListListEmails.clear();
+
+                            // Iterate through the query results
+                            for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                                Integer userId = documentSnapshot.getLong("userId").intValue();
+                                String userName = documentSnapshot.getString("name");
+                                String userEmail = documentSnapshot.getString("email");
+                                String userDetail = documentSnapshot.getString("details");
+
+                                // Add user details to respective lists
+                                signUpListListUserNames.add(userName);
+                                signUpListListUserIds.add(userId);
+                                signUpListListDetails.add(userDetail);
+                                signUpListListEmails.add(userEmail);
+
+                            }
+                            if (signUpListListUserNames != null) {
+                                displaySignup(signUpListListUserNames);
+                            }
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Handle any errors
+                            e.printStackTrace();
+                        }
+                    });
+        }
+
+    }
+    private void displayAttendee(List<String> attendeeList) {
+        Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
+
+        // Create an ArrayAdapter to display the event names
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, attendeeList);
+        adapter.notifyDataSetChanged();
+        // Set the adapter to the ListView
         attendeeListView.setAdapter(adapter);
+    }
+    private void displaySignup(List<String> signUplist) {
+
+        // Create an ArrayAdapter to display the event names
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, signUplist);
+        adapter.notifyDataSetChanged();
+        // Set the adapter to the ListView
+        signupListView.setAdapter(adapter);
     }
 }

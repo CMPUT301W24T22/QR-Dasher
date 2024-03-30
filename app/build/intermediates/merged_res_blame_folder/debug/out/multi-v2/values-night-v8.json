@@ -4,7 +4,7 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-50:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jassi\\OneDrive\\Documents\\CMPUT 301\\QR-Project\\QR-Dasher\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\cc2d12b829148758ed6b3b42347dadc2\\transformed\\material-1.11.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\cc2d12b829148758ed6b3b42347dadc2\\transformed\\material-1.11.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\8166a589a35a035bd9dd7b19086e549d\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\8166a589a35a035bd9dd7b19086e549d\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

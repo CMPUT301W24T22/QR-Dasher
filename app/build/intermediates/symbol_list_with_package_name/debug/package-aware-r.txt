@@ -3278,6 +3278,7 @@ id asConfigured
 id async
 id attendee_button
 id attendee_list_view
+id attendee_text_signups
 id attendees
 id auto
 id autoComplete
@@ -3655,6 +3656,7 @@ id signUp_poster
 id signed_up_events_listview
 id signed_up_events_text
 id signup_button
+id signup_listview
 id sin
 id skipCollapsed
 id skipped
@@ -3976,6 +3978,7 @@ layout mtrl_picker_text_input_date_range
 layout mtrl_search_bar
 layout mtrl_search_view
 layout mytextview
+layout mytextview_nopicture
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action

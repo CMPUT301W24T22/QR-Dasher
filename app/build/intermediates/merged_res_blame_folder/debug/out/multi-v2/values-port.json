@@ -4,7 +4,7 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-50:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jassi\\.gradle\\caches\\transforms-3\\8166a589a35a035bd9dd7b19086e549d\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\8166a589a35a035bd9dd7b19086e549d\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

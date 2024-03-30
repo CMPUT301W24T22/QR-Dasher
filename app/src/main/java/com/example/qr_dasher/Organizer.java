@@ -37,14 +37,16 @@ import java.util.Map;
  * The organizer can also create new events by clicking the "Create Event" button.
  */
 public class Organizer extends AppCompatActivity {
+    private static final String TAG = "OrganizerActivity";
     private Button CreateEventButton;
     private ListView eventListView;
     private FirebaseFirestore db;
 
     private ArrayList<String> reuseQRCodes = new ArrayList<>();
 
-    private List<String> eventNames,eventIds;
+    private List<String> eventNames,eventIds,eventPosters;
     private  List<List<String>> attendeeLists, signupLists;
+
 
     private SharedPreferences app_cache; // To get the userID
     /**
@@ -91,32 +93,29 @@ public class Organizer extends AppCompatActivity {
         eventIds = new ArrayList<>();
         attendeeLists= new ArrayList<>();
         signupLists = new ArrayList<>();
+        eventPosters = new ArrayList<>();
+
 
         db.collection("eventsCollection")
-                .whereEqualTo("attendee_qr.userID",userId)
-
+                .whereEqualTo("attendee_qr.userID", userId)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
                         if (e != null) {
-                            // Handle errors
-                            eventListView.setVisibility(View.GONE);
-                            e.printStackTrace();
+                            Log.w(TAG, "Listen failed.", e);
                             return;
                         }
 
-                        // Update the list with new data
                         eventNames.clear();
                         eventIds.clear();
                         attendeeLists.clear();
                         signupLists.clear();
+                        eventPosters.clear();
 
-                        // Iterate through the query results
+
                         for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-
-                            String documentId = documentSnapshot.getId();
                             String eventName = documentSnapshot.getString("name");
-                            String qrCode = documentSnapshot.getString("attendee_qr.qrImage");
+                            String eventPoster = documentSnapshot.getString("Poster");
 
                             List<String> attendeeList = (List<String>) documentSnapshot.get("attendee_list");
                             List<String> signupList = (List<String>) documentSnapshot.get("signup_list");
@@ -126,24 +125,21 @@ public class Organizer extends AppCompatActivity {
                                 Long eventIdLong = documentSnapshot.getLong("event_id");
                                 if (eventIdLong != null) {
                                     String eventId = String.valueOf(eventIdLong);
-                                    //String eventId = String.valueOf(eventIdLong);
                                     // Add event name and event_id to the lists
                                     eventNames.add(eventName);
                                     eventIds.add(eventId);
                                     attendeeLists.add(attendeeList);
-                                    signupLists.add(signupList);}
+                                    signupLists.add(signupList);
+                                    eventPosters.add(eventPoster);}
 
-//                                    if (attendeeListObj instanceof List<?>) {
-//                                        List<String> attendeeList = (List<String>) attendeeListObj;
-//                                    if (signupListObj instanceof List<?>) {
-//                                        List<String> signupList = (List<String>) signupListObj;
-//                                        signupLists.add(signupList);}
 
 
                             }
+                            //eventNames.add(eventName);
+                            //eventPosters.add(eventPoster);
                         }
-                        // Display the list of event names in the ListView
-                        displayEventList(eventNames,eventIds);
+
+                        displayEventList(eventNames, eventPosters);
                     }
                 });
 
@@ -156,9 +152,8 @@ public class Organizer extends AppCompatActivity {
      */
     private void displayEventList(List<String> eventNames, List<String> eventIds) {
         // Create an ArrayAdapter to display the event names
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, eventNames);
+        EventAdapter adapter = new EventAdapter(this, eventNames, eventPosters);
         adapter.notifyDataSetChanged();
-        // Set the adapter to the ListView
         eventListView.setAdapter(adapter);
 
         // Set item click listener
@@ -171,7 +166,8 @@ public class Organizer extends AppCompatActivity {
                 List<String> attendeeList = attendeeLists.get(position);
                 List<String> signupList = signupLists.get(position);
 
-
+                // TO:DO fix this comment
+//                String eventId = eventIds.get(position);
                 //Integer eventId = Integer.parseInt(eventIdStr);
                 // Start new activity with the event name
                 Intent intent = new Intent(Organizer.this, EventDetails.class);
@@ -187,9 +183,10 @@ public class Organizer extends AppCompatActivity {
                 //Log.d("Debug", "Attendee List after adding to intent: " + attendeeList);
                 //Log.d("Debug", "Signup List after adding to intent: " + signupList);
                startActivity(intent);
+//                intent.putExtra("event_id", eventId);
+
             }
         });
-
 
     }
 }

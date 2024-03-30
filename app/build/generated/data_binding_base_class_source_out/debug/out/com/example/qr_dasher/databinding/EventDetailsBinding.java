@@ -34,9 +34,6 @@ public final class EventDetailsBinding implements ViewBinding {
   public final TextView eventNameTextView;
 
   @NonNull
-  public final Button eventPosterButton;
-
-  @NonNull
   public final Button notifyButton;
 
   @NonNull
@@ -48,14 +45,13 @@ public final class EventDetailsBinding implements ViewBinding {
   private EventDetailsBinding(@NonNull ConstraintLayout rootView,
       @NonNull ListView attendeeListView, @NonNull TextView attendeeTextSignups,
       @NonNull TextView attendees, @NonNull TextView eventNameTextView,
-      @NonNull Button eventPosterButton, @NonNull Button notifyButton, @NonNull Button qrCodeButton,
+      @NonNull Button notifyButton, @NonNull Button qrCodeButton,
       @NonNull ListView signupListview) {
     this.rootView = rootView;
     this.attendeeListView = attendeeListView;
     this.attendeeTextSignups = attendeeTextSignups;
     this.attendees = attendees;
     this.eventNameTextView = eventNameTextView;
-    this.eventPosterButton = eventPosterButton;
     this.notifyButton = notifyButton;
     this.qrCodeButton = qrCodeButton;
     this.signupListview = signupListview;
@@ -112,12 +108,6 @@ public final class EventDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.event_poster_button;
-      Button eventPosterButton = ViewBindings.findChildViewById(rootView, id);
-      if (eventPosterButton == null) {
-        break missingId;
-      }
-
       id = R.id.notify_button;
       Button notifyButton = ViewBindings.findChildViewById(rootView, id);
       if (notifyButton == null) {
@@ -137,8 +127,8 @@ public final class EventDetailsBinding implements ViewBinding {
       }
 
       return new EventDetailsBinding((ConstraintLayout) rootView, attendeeListView,
-          attendeeTextSignups, attendees, eventNameTextView, eventPosterButton, notifyButton,
-          qrCodeButton, signupListview);
+          attendeeTextSignups, attendees, eventNameTextView, notifyButton, qrCodeButton,
+          signupListview);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

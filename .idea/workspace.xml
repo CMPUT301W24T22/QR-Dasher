@@ -8,11 +8,6 @@
       <config />
     </shared>
     <layouts>
-      <layout url="file://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-34/data/res/layout/simple_list_item_1.xml">
-        <config>
-          <theme>@style/Theme.QRDasher</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_event_organizer.xml">
         <config>
           <theme>@style/Theme.QRDasher</theme>
@@ -58,11 +53,6 @@
           <theme>@style/Theme.QRDasher</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/listview_white_text.xml">
-        <config>
-          <theme>@style/Theme.QRDasher</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/mytextview.xml">
         <config>
           <theme>@style/Theme.QRDasher</theme>
@@ -90,6 +80,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1427c2b2-f62c-48e9-9bef-5a4ae1953c69" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -272,6 +263,10 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/EventDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/EventDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/Organizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/event_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/event_details.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/CreateEventOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/qr_dasher/CreateEventOrganizer.java" afterDir="false" />
+>>>>>>> b6106ded29a92da06cc5909b3112849e43cc94e2
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +276,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[emulator-5554]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\jassi\.android\avd\Pixel_7_API_27.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -328,13 +323,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="layoutResourceFile" />
         <option value="UML Sequence" />
         <option value="Class" />
-        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
@@ -356,7 +356,7 @@
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;jaspreet2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;jassidak&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/jaspr/OneDrive/Documents/University/Third year computing science/CMPUT301/QRdasher&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,

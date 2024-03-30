@@ -40,6 +40,10 @@
         "source": "com.example.qr_dasher.app-main-54:/layout/send_notification.xml"
     },
     {
+        "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/mytextview_nopicture.xml",
+        "source": "com.example.qr_dasher.app-main-54:/layout/mytextview_nopicture.xml"
+    },
+    {
         "merged": "com.example.qr_dasher.app-mergeDebugResources-51:/layout/scan_qr.xml",
         "source": "com.example.qr_dasher.app-main-54:/layout/scan_qr.xml"
     },

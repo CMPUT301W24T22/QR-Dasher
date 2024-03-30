@@ -442,12 +442,12 @@ public class Attendee extends AppCompatActivity {
 
     private void displayEventList(List<String> scannedEventNames, List<String> signedEventNames) {
         // Create an ArrayAdapter to display the event names
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, scannedEventNames);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, scannedEventNames);
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         scannedEvents.setAdapter(adapter);
 
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, R.layout.mytextview, signedEventNames);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, signedEventNames);
         adapter2.notifyDataSetChanged();
         // Set the adapter to the ListView
         signedUpevents.setAdapter(adapter2);

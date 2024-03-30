@@ -56,11 +56,19 @@ public class EventDetails extends AppCompatActivity {
         setContentView(R.layout.event_details);
 
         // Get event name from intent extras
+//<<<<<<< HEAD
         Intent intent = getIntent();
         String eventName = intent.getStringExtra("eventName");
         String eventIDStr = intent.getStringExtra("event_id");
         List<String> attendeeList = intent.getStringArrayListExtra("attendee_list");
         List<String> signupList = intent.getStringArrayListExtra("signup_list");
+//=======
+//        String eventName = getIntent().getStringExtra("eventName");
+//        int eventId = getIntent().getIntExtra("event_id", -1);
+////        Log.d("EventDetails", "Received Event ID: " + eventIDStr);  // Add this line
+////        int eventId = Integer.parseInt(eventIDStr);
+//        Log.d("EventDetails", "Received Event ID: " + eventId);  // Add this line
+//>>>>>>> b6106ded29a92da06cc5909b3112849e43cc94e2
 
 
         if (attendeeList != null) {
@@ -91,7 +99,7 @@ public class EventDetails extends AppCompatActivity {
         getUserDetailsFromFirebase(attendeeList,signupList);
         Button notifyButton = findViewById(R.id.notify_button);
         Button qrButton = findViewById(R.id.qr_code_button);
-        Button posterUploadButton = findViewById(R.id.event_poster_button);
+//        Button posterUploadButton = findViewById(R.id.event_poster_button);
 
         // Set OnClickListener for the notification button
         notifyButton.setOnClickListener(new View.OnClickListener() {
@@ -103,23 +111,14 @@ public class EventDetails extends AppCompatActivity {
             }
         });
 
-        posterUploadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle notification button click
-//                Intent intent = new Intent(EventDetails.this, SendNotification.class);
-//                startActivity(intent);
-            }
-        });
-
-        posterUploadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle notification button click
-//                Intent intent = new Intent(EventDetails.this, SendNotification.class);
-//                startActivity(intent);
-            }
-        });
+//        posterUploadButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Handle notification button click
+////                Intent intent = new Intent(EventDetails.this, SendNotification.class);
+////                startActivity(intent);
+//            }
+//        });
     }
     /**
      * Displays the list of attendees in a ListView.
@@ -257,7 +256,7 @@ public class EventDetails extends AppCompatActivity {
         Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
 
         // Create an ArrayAdapter to display the event names
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, attendeeList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, attendeeList);
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         attendeeListView.setAdapter(adapter);
@@ -265,7 +264,7 @@ public class EventDetails extends AppCompatActivity {
     private void displaySignup(List<String> signUplist) {
 
         // Create an ArrayAdapter to display the event names
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, signUplist);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, signUplist);
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         signupListView.setAdapter(adapter);

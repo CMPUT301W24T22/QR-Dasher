@@ -130,7 +130,7 @@ public class BrowseEvents extends AppCompatActivity {
     }
     private void displayEventList(List<String> eventNames, List<String> eventIds) {
         // Create an ArrayAdapter to display the event names
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, eventNames);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, eventNames);
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         browseEventList.setAdapter(adapter);

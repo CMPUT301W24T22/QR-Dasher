@@ -63,6 +63,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import javax.annotation.Nullable;
 /**
@@ -96,6 +98,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     private int savedHour = 0;
     private int savedMinute = 0;
     private static final int PICK_IMAGE_REQUEST = 1;
+    private boolean twoQRcodes = false;
 
     /**
      * onCreate method is called when the activity is starting. It initializes the activity layout,
@@ -143,6 +146,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 String event_details = eventDetails.getText().toString();
                 dateTime = new DateTime(savedYear, savedMonth, savedDay, savedHour, savedMinute);
                 event = new Event(event_name, event_details, userId);
+                eventId = event.getEvent_id();
                 //event.setDateTime(dateTime);
                 //
                 Calendar calendar = Calendar.getInstance();
@@ -200,11 +204,15 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 db.collection("eventsCollection")
                         .document("" + eventId)
                         .update("promotional_qr", event.getPromotional_qr())
-                        .addOnSuccessListener(aVoid -> Log.d("Organizer", "Event QR PROMOTIONAL AD successfully"))
+                        .addOnSuccessListener(aVoid ->{
+                            Log.d("Organizer", "Event QR PROMOTIONAL ADDED successfully");
+                        })
                         .addOnFailureListener(e -> {
-                            Log.d("Organizer", "Failed to update event in Firestore");
+                            Log.d("Organizer", "Failed to update event in Firestore"+ eventId);
                             e.printStackTrace();
                         });
+                twoQRcodes = true;
+
 
             }
         });
@@ -218,10 +226,18 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
 //                Toast.makeText(getApplicationContext(), "Image saved to Gallery", Toast.LENGTH_SHORT).show();
 
                 // New Code: Share button
-                Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                shareIntent.setType("image/*");
-                shareIntent.putExtra(Intent.EXTRA_STREAM, bitmapToUri(generatedQRCode));
-                startActivity(Intent.createChooser(shareIntent, "Share via"));
+              //  Intent shareIntent = new Intent(Intent.ACTION_SEND);
+               // shareIntent.setType("image/*");
+               // shareIntent.putExtra(Intent.EXTRA_STREAM, bitmapToUri(generatedQRCode));
+               // startActivity(Intent.createChooser(shareIntent, "Share via"));
+                if (!twoQRcodes){
+                ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, event.getName());
+                fragment.showFragment(getSupportFragmentManager());}
+                else {
+                    ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, pgeneratedQRCode,event.getName());
+                    fragment.showFragment(getSupportFragmentManager());
+                }
+
             }
 
         });
@@ -243,12 +259,12 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         });
 
     }
-    private Uri bitmapToUri(Bitmap bitmap) {
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-        String path = MediaStore.Images.Media.insertImage(getContentResolver(), bitmap, event.getName(), null);
-        return Uri.parse(path);
-    }
+//    private Uri bitmapToUri(Bitmap bitmap) {
+//        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+//        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+//        String path = MediaStore.Images.Media.insertImage(getContentResolver(), bitmap, event.getName(), null);
+//        return Uri.parse(path);
+//    }
     private void pickDate(){
         getDateTimeCalendar();
         DatePickerDialog datePickerDialog = new DatePickerDialog(

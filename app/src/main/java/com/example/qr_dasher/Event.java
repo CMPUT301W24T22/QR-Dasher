@@ -264,4 +264,12 @@ public class Event {
     public void setEventPoster(String event_poster) {
         this.event_poster = event_poster;
     }
+
+    public int getOrganizer() {
+        return organizer;
+    }
+
+    public void setOrganizer(int organizer) {
+        this.organizer = organizer;
+    }
 }

@@ -11,13 +11,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.DocumentReference;
+
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -25,9 +24,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
+D:
+D
 import java.util.ArrayList;
 import java.util.List;
 
@@ -101,12 +99,47 @@ public class EventDetails extends AppCompatActivity {
         Button qrButton = findViewById(R.id.qr_code_button);
 //        Button posterUploadButton = findViewById(R.id.event_poster_button);
 
+
+        ArrayList<String> tokensList= new ArrayList<>();                       // tokens
+        for(String userId: attendeeList){
+            // Get the document reference for the user with this userId
+            DocumentReference userRef = db.collection("users").document(userId);
+
+            // Retrieve the token from Firestore for this user
+            userRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        DocumentSnapshot document = task.getResult();
+                        if (document.exists()) {
+                            // Get the token field from the document
+                            String token = document.getString("token");
+                            // Add the token to tokensList
+                            Log.d("SendNotification", "token : " + token); // Log the attendee list
+
+                            if (token != null) {
+                                tokensList.add(token);
+                            }
+                        } else {
+                            Log.d("HomePage", "No such document");
+                        }
+                    } else {
+                        Log.d("HomePage", "get failed with ", task.getException());
+                    }
+                }
+            });
+        }
+
+
         // Set OnClickListener for the notification button
         notifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle notification button click
                 Intent intent = new Intent(EventDetails.this, SendNotification.class);
+                          // Pass the event ID to SendNotification activity
+                intent.putExtra("event_id", eventIDStr);
+                         // Pass the attendee list as an extra to the SendNotification activity
+                intent.putStringArrayListExtra("tokensList", (ArrayList<String>) tokensList);
                 startActivity(intent);
             }
         });

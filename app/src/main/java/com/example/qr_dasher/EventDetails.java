@@ -24,8 +24,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-D:
-D
+
 import java.util.ArrayList;
 import java.util.List;
 

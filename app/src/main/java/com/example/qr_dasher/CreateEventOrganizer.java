@@ -73,7 +73,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     public static final String EXTRA_QR_CODES = "extra_qr_codes";
     private ImageView qrImage, promotionalImage;
     private Button generateQRandCreateEvent, generatePromotionalQR, displayQRcodes, downloadButton, pickDateTime, eventPosterButton;
-    private EditText eventName, eventDetails;
+    private EditText eventName, eventDetails,maxAttendees;
     private TextView textDateTime;
     private Bitmap generatedQRCode;
 
@@ -119,6 +119,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         downloadButton = findViewById(R.id.downloadbutton);
         displayQRcodes = findViewById(R.id.displayQRcodes);
         eventPosterButton = findViewById(R.id.event_poster_button);
+        maxAttendees = findViewById(R.id.max_attendees);
 
 
         FirebaseApp.initializeApp(this);
@@ -141,8 +142,21 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
 
                 String event_name = eventName.getText().toString();
                 String event_details = eventDetails.getText().toString();
+                String maxAttendeesString = maxAttendees.getText().toString();
+
+                if (TextUtils.isEmpty(event_name) || (TextUtils.isEmpty(event_details)) || TextUtils.isEmpty(maxAttendeesString)){
+                    Toast.makeText(CreateEventOrganizer.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (!TextUtils.isDigitsOnly(maxAttendeesString)) {
+                    Toast.makeText(CreateEventOrganizer.this, "Maximum attendees must be a number", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                int maxAttendees = Integer.parseInt(maxAttendeesString);
+
                 dateTime = new DateTime(savedYear, savedMonth, savedDay, savedHour, savedMinute);
-                event = new Event(event_name, event_details, userId);
+                event = new Event(event_name, event_details, userId, maxAttendees);
                 //event.setDateTime(dateTime);
                 //
                 Calendar calendar = Calendar.getInstance();

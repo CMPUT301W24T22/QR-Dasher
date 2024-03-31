@@ -6,6 +6,30 @@
     android:layout_height="match_parent">
 
 
+    <TextView
+        android:id="@+id/textDateTime"
+        android:layout_width="77dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/pickTime"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details" />
+
+    <EditText
+        android:id="@+id/max_attendees"
+        android:layout_width="77dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:hint="Max att."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/pickTime"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details" />
+
     <ImageView
         android:id="@+id/qrCode"
         android:layout_width="wrap_content"
@@ -71,8 +95,8 @@
 
     <EditText
         android:id="@+id/details"
-        android:layout_width="356dp"
-        android:layout_height="98dp"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
         android:layout_marginTop="44dp"
         android:hint="Enter Details"
         app:layout_constraintEnd_toEndOf="parent"
@@ -175,18 +199,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/details" />
 
-    <TextView
-        android:id="@+id/textDateTime"
-        android:layout_width="117dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="20dp"
-        android:text=""
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/pickTime"
-        app:layout_constraintHorizontal_bias="0.346"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details" />
-
     <Button
         android:id="@+id/event_poster_button"
         android:layout_width="311dp"
@@ -205,13 +217,12 @@
         android:id="@+id/eventPosterImageView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp" />
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 

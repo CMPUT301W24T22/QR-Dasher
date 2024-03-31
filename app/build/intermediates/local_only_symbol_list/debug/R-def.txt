@@ -47,6 +47,7 @@ id generateQRandCreateEvent
 id geolocation
 id imageView
 id image_upload
+id max_attendees
 id name_edit
 id nav_graph
 id next_button

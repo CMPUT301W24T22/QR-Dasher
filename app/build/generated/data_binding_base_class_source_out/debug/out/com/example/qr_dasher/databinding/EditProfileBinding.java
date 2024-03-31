@@ -32,6 +32,9 @@ public final class EditProfileBinding implements ViewBinding {
   public final EditText emailEdit;
 
   @NonNull
+  public final Button generateProfileButton;
+
+  @NonNull
   public final CheckBox geolocation;
 
   @NonNull
@@ -47,13 +50,15 @@ public final class EditProfileBinding implements ViewBinding {
   public final Button uploadButton;
 
   private EditProfileBinding(@NonNull LinearLayout rootView, @NonNull Button backButton,
-      @NonNull EditText detailsEdit, @NonNull EditText emailEdit, @NonNull CheckBox geolocation,
+      @NonNull EditText detailsEdit, @NonNull EditText emailEdit,
+      @NonNull Button generateProfileButton, @NonNull CheckBox geolocation,
       @NonNull ImageView imageUpload, @NonNull EditText nameEdit, @NonNull Button selectImageButton,
       @NonNull Button uploadButton) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.detailsEdit = detailsEdit;
     this.emailEdit = emailEdit;
+    this.generateProfileButton = generateProfileButton;
     this.geolocation = geolocation;
     this.imageUpload = imageUpload;
     this.nameEdit = nameEdit;
@@ -106,6 +111,12 @@ public final class EditProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.generate_profile_button;
+      Button generateProfileButton = ViewBindings.findChildViewById(rootView, id);
+      if (generateProfileButton == null) {
+        break missingId;
+      }
+
       id = R.id.geolocation;
       CheckBox geolocation = ViewBindings.findChildViewById(rootView, id);
       if (geolocation == null) {
@@ -137,7 +148,8 @@ public final class EditProfileBinding implements ViewBinding {
       }
 
       return new EditProfileBinding((LinearLayout) rootView, backButton, detailsEdit, emailEdit,
-          geolocation, imageUpload, nameEdit, selectImageButton, uploadButton);
+          generateProfileButton, geolocation, imageUpload, nameEdit, selectImageButton,
+          uploadButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

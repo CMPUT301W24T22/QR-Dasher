@@ -1,6 +1,7 @@
 package com.example.qr_dasher;
 
 import android.content.Intent;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -8,26 +9,25 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
+
+import org.osmdroid.api.IMapController;
+import org.osmdroid.events.MapEventsReceiver;
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.MapEventsOverlay;
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,10 +36,15 @@ import java.util.List;
  * It retrieves the event details from Firestore and displays the list of attendees.
  */
 public class EventDetails extends AppCompatActivity {
+    private Event event;
+    private MapView mapView;
     private FirebaseFirestore db;
     private ListView attendeeListView;
     private ListView signupListView;
-    private List<String> attendeeListUserNames,  attendeeListDetails, attendeeListEmails;
+    private List<String> attendeeListUserNames;
+    private List<String> attendeeListDetails;
+    private List<String> attendeeListEmails;
+    private List<com.google.firebase.firestore.GeoPoint> attendeeListlocations;
     private List<String> signUpListListUserNames,signUpListListDetails, signUpListListEmails;
     private List<Integer>attendeeListUserIds, signUpListListUserIds;
     /**
@@ -87,7 +92,7 @@ public class EventDetails extends AppCompatActivity {
 
         // Set the event name to the TextView
         eventNameTextView.setText(eventName);
-
+        mapView = findViewById(R.id.mapView);
         attendeeListView = findViewById(R.id.attendee_list_view);
         signupListView = findViewById(R.id.signup_listview);
 
@@ -97,6 +102,7 @@ public class EventDetails extends AppCompatActivity {
         eventNameTextView.setText(eventName);
 
         getUserDetailsFromFirebase(attendeeList,signupList);
+        setUpMap();
         Button notifyButton = findViewById(R.id.notify_button);
         Button qrButton = findViewById(R.id.qr_code_button);
 //        Button posterUploadButton = findViewById(R.id.event_poster_button);
@@ -110,6 +116,7 @@ public class EventDetails extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 //        posterUploadButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -139,6 +146,7 @@ public class EventDetails extends AppCompatActivity {
         attendeeListUserIds = new ArrayList<>();
         attendeeListDetails= new ArrayList<>();
         attendeeListEmails = new ArrayList<>();
+        attendeeListlocations = new ArrayList<com.google.firebase.firestore.GeoPoint>();
 
         signUpListListUserNames = new ArrayList<>();
         signUpListListUserIds = new ArrayList<>();
@@ -169,6 +177,7 @@ public class EventDetails extends AppCompatActivity {
                             attendeeListUserIds.clear();
                             attendeeListDetails.clear();
                             attendeeListEmails.clear();
+                            attendeeListlocations.clear();
 
 
                             // Iterate through the query results
@@ -177,12 +186,14 @@ public class EventDetails extends AppCompatActivity {
                                 String userName = documentSnapshot.getString("name");
                                 String userEmail = documentSnapshot.getString("email");
                                 String userDetail = documentSnapshot.getString("details");
+                                com.google.firebase.firestore.GeoPoint userlocation = documentSnapshot.getGeoPoint("geopoint");
 
                                 // Add user details to respective lists
                                 attendeeListUserNames.add(userName);
                                 attendeeListUserIds.add(userId);
                                 attendeeListDetails.add(userDetail);
                                 attendeeListEmails.add(userEmail);
+                                attendeeListlocations.add(userlocation);
 
                             }
                             if (attendeeListUserNames != null) {
@@ -268,5 +279,30 @@ public class EventDetails extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         signupListView.setAdapter(adapter);
+    }
+    private void setUpMap() {
+        // Initialize mapView
+        mapView = findViewById(R.id.mapView); // Correct the ID here
+
+        mapView.setTileSource(TileSourceFactory.MAPNIK);
+        mapView.setTilesScaledToDpi(true);
+        mapView.getLocalVisibleRect(new Rect());
+        IMapController controller = mapView.getController();
+        controller.setZoom(3);
+
+        mapView.getOverlays().add(new MapEventsOverlay(new MapEventsReceiver() {
+            @Override
+            public boolean singleTapConfirmedHelper(GeoPoint p) {
+                Intent mapIntent = new Intent(EventDetails.this, MapActivity.class);
+                mapIntent.putExtra("event", String.valueOf(event));
+                startActivity(mapIntent);
+                return false;
+            }
+
+            @Override
+            public boolean longPressHelper(GeoPoint p) {
+                return false;
+            }
+        }));
     }
 }

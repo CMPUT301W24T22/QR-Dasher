@@ -1,5 +1,6 @@
 package com.example.qr_dasher;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,11 +12,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.content.pm.PackageManager;
+import android.location.Location;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
@@ -26,11 +32,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.GeoPoint;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
 /**
  * Activity for attendees of an event. Allows attendees to view notifications, edit their profile,
  * and scan a QR code to join an event.
@@ -42,6 +48,9 @@ public class Attendee extends AppCompatActivity {
     private List<String> signedEventNames, signedEventIds, signedEventDetails, signedEventPoster;
     private List<Timestamp> scannedEventTimestamps, signedEventTimestamps;
     private SharedPreferences app_cache;
+    private GeoPoint geoPoint;
+    private FusedLocationProviderClient fusedLocationClient;
+    private final int REQUEST_PERMISSIONS_REQUEST_CODE = 1;
     /**
      * Initializes the activity and sets up UI components and listeners.
      *
@@ -54,7 +63,7 @@ public class Attendee extends AppCompatActivity {
         app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
         int userId = app_cache.getInt("UserID", -1);
-
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         getCheckedSignedEvents(userId);
 
         notificationButton = findViewById(R.id.notification_button);
@@ -212,6 +221,7 @@ public class Attendee extends AppCompatActivity {
                         User user = documentSnapshot.toObject(User.class);
                         user.addEventsJoined(eventID); // Add the event ID to the user's eventsJoined list
                         updateFirebaseUser(String.valueOf(userId), user); // Update the user in Firestore
+                        checkAndGetLocation(String.valueOf(userId), user);
                     } else {
                         Log.d("Attendee", "No user found with UserId: " + userId);
                     }
@@ -532,5 +542,73 @@ public class Attendee extends AppCompatActivity {
             }
         });
 
+    }
+    private void checkAndGetLocation(String userId, User user) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users")
+                .document(userId)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            Boolean geoTrackingEnabled = documentSnapshot.getBoolean("location");
+                            if (Boolean.TRUE.equals(geoTrackingEnabled)) {
+                                getLocation(userId);
+                            }
+                        } else {
+                            Log.d("Attendee", "User document does not exist for ID: " + userId);
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Handle failure, such as printing the stack trace
+                        Log.e("Attendee", "Error getting user document for ID: " + userId, e);
+                    }
+                });
+    }
+    private void getLocation(String docID) {
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSIONS_REQUEST_CODE);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_PERMISSIONS_REQUEST_CODE);
+            return;
+        }
+        fusedLocationClient.getLastLocation()
+                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        if (location != null) {
+                            // Logic to handle location object
+                            double latitude = location.getLatitude();
+                            double longitude = location.getLongitude();
+                            Log.d("DEBUG", String.format("onLocationChanged: %f %f", latitude, longitude));
+                            geoPoint = new GeoPoint(latitude, longitude);
+                            addLocation(docID);
+                        } else {
+                            Log.d("DEBUG", String.format("onLocationChanged: can't really get a emulator location"));
+                            Toast.makeText(Attendee.this, "Could not get Location", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+    private void addLocation(String docID) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users").document(docID)
+                .update("geoPoint", geoPoint)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("Attendee", "GeoPoint added successfully");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("Attendee", "Failed to add GeoPoint: " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                });
     }
 }

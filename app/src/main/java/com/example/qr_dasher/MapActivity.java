@@ -92,7 +92,7 @@ public class MapActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                     if (task.isSuccessful()) {
                         for (QueryDocumentSnapshot document : task.getResult()) {
-                            GeoPoint geoPoint = convertFirebaseGeoPoint(document.getGeoPoint("location"));
+                            GeoPoint geoPoint = convertFirebaseGeoPoint(document.getGeoPoint("geoPoint"));
                             if (geoPoint != null) {
                                 Marker marker = new Marker(map);
                                 marker.setPosition(geoPoint);

@@ -16,6 +16,8 @@ public class User {
     private List<String> eventsCreated;
     private List<String> eventsJoined;
     private List<String> eventsSignedUp;
+
+    private String token;
     public User(){
 
     }
@@ -38,6 +40,7 @@ public class User {
         this.eventsCreated = new ArrayList<>();
         this.eventsJoined = new ArrayList<>();
         this.eventsSignedUp = new ArrayList<>();
+        this.token = token;
     }
     /**
      * Get the name of the user.
@@ -171,6 +174,15 @@ public class User {
 
     public void addEventsSignedUp(String eventID){
         this.eventsSignedUp.add(eventID);
+    }
+
+
+    public void settoken(String token) {
+        this.token = token;
+    }
+
+    public String getToken() {
+        return token;
     }
 
 }

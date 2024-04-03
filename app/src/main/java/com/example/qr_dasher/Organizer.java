@@ -139,7 +139,7 @@ public class Organizer extends AppCompatActivity {
                             //eventPosters.add(eventPoster);
                         }
 
-                        displayEventList(eventNames, eventPosters);
+                        displayEventList(eventNames, eventIds);
                     }
                 });
 

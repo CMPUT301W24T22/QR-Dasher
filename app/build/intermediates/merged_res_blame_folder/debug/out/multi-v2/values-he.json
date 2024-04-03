@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-50:/values-he/values-he.xml",
+            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-52:/values-he/values-he.xml",
             "map": [
                 {
-                    "source": "/Users/rishabh2.7/.gradle/caches/transforms-3/47c3ef0a24821c1b69d632ae6486a9ca/transformed/zxing-android-embedded-4.2.0/res/values-he/values-he.xml",
+                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\ac4712aad8e1e7cf8ab17cb9bdc650a0\\transformed\\zxing-android-embedded-4.2.0\\res\\values-he\\values-he.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

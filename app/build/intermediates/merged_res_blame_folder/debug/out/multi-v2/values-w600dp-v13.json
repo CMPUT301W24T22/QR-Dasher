@@ -4,11 +4,7 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-52:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-<<<<<<< HEAD
                     "source": "D:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
-=======
-                    "source": "/Users/rishabh2.7/QR-Dasher/app/src/main/res/values-w600dp/dimens.xml",
->>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

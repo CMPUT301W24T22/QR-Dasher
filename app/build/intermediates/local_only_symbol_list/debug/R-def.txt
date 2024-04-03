@@ -50,11 +50,8 @@ id generate_profile_button
 id geolocation
 id imageView
 id image_upload
-<<<<<<< HEAD
 id logo
-=======
 id max_attendees
->>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
 id name_edit
 id nav_graph
 id next_button

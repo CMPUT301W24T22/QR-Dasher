@@ -4,11 +4,7 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-52:/values-v26/values-v26.xml",
             "map": [
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\9f9686aa69ef96e09752468c17c9646c\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
-=======
-                    "source": "/Users/rishabh2.7/.gradle/caches/transforms-3/8166a589a35a035bd9dd7b19086e549d/transformed/appcompat-1.6.1/res/values-v26/values-v26.xml",
->>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

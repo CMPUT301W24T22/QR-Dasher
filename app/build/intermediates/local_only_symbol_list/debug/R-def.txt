@@ -106,7 +106,6 @@ layout organizer
 layout role_page
 layout scan_qr
 layout send_notification
-layout user_selection_page
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round

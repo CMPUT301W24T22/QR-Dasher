@@ -4005,7 +4005,6 @@ int layout select_dialog_multichoice_material 0x7f0b007e
 int layout select_dialog_singlechoice_material 0x7f0b007f
 int layout send_notification 0x7f0b0080
 int layout support_simple_spinner_dropdown_item 0x7f0b0081
-int layout user_selection_page 0x7f0b0082
 int layout zxing_barcode_scanner 0x7f0b0083
 int layout zxing_capture 0x7f0b0084
 int menu menu_main 0x7f0d0000

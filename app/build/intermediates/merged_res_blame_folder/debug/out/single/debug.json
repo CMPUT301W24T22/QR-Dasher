@@ -24,6 +24,10 @@
         "source": "com.example.qr_dasher.app-main-56:/layout/role_page.xml"
     },
     {
+        "merged": "com.example.qr_dasher.app-merged_res-54:/layout_fragment_share_qr.xml.flat",
+        "source": "com.example.qr_dasher.app-main-56:/layout/fragment_share_qr.xml"
+    },
+    {
         "merged": "com.example.qr_dasher.app-merged_res-54:/drawable_placeholder_image.xml.flat",
         "source": "com.example.qr_dasher.app-main-56:/drawable/placeholder_image.xml"
     },

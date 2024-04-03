@@ -53,19 +53,13 @@ public class EventDetails extends AppCompatActivity {
         setContentView(R.layout.event_details);
 
         // Get event name from intent extras
-//<<<<<<< HEAD
+
         Intent intent = getIntent();
         String eventName = intent.getStringExtra("eventName");
         String eventIDStr = intent.getStringExtra("event_id");
         List<String> attendeeList = intent.getStringArrayListExtra("attendee_list");
         List<String> signupList = intent.getStringArrayListExtra("signup_list");
-//=======
-//        String eventName = getIntent().getStringExtra("eventName");
-//        int eventId = getIntent().getIntExtra("event_id", -1);
-////        Log.d("EventDetails", "Received Event ID: " + eventIDStr);  // Add this line
-////        int eventId = Integer.parseInt(eventIDStr);
-//        Log.d("EventDetails", "Received Event ID: " + eventId);  // Add this line
-//>>>>>>> b6106ded29a92da06cc5909b3112849e43cc94e2
+
 
 
         if (attendeeList != null) {

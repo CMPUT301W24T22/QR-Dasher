@@ -60,6 +60,10 @@
         "source": "com.example.qr_dasher.app-main-56:/layout/event_details.xml"
     },
     {
+        "merged": "com.example.qr_dasher.app-mergeDebugResources-53:/layout/fragment_share_qr.xml",
+        "source": "com.example.qr_dasher.app-main-56:/layout/fragment_share_qr.xml"
+    },
+    {
         "merged": "com.example.qr_dasher.app-mergeDebugResources-53:/layout/send_notification.xml",
         "source": "com.example.qr_dasher.app-main-56:/layout/send_notification.xml"
     },

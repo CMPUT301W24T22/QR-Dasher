@@ -72,6 +72,8 @@ id scanned_events_text
 id select_image_button
 id send_notifications_button
 id send_text
+id share_qr
+id share_qr_promotional
 id signUp_Details
 id signUp_Name
 id signUp_Time
@@ -100,6 +102,7 @@ layout edit_profile
 layout event_details
 layout event_sign_up_page
 layout fragment_image_upload
+layout fragment_share_qr
 layout home_page
 layout mytextview
 layout mytextview_nopicture
@@ -121,6 +124,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string lorem_ipsum
 string next
 string previous

@@ -3421,6 +3421,7 @@ id frost
 id fullscreen_header
 id generatePromotionalQR
 id generateQRandCreateEvent
+id generate_profile_button
 id geolocation
 id ghost_view
 id ghost_view_holder
@@ -3494,6 +3495,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id max_attendees
 id media_actions
 id message
 id middle

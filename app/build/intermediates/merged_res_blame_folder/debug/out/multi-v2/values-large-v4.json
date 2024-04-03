@@ -4,7 +4,11 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-52:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\9f9686aa69ef96e09752468c17c9646c\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+=======
+                    "source": "/Users/rishabh2.7/.gradle/caches/transforms-3/8166a589a35a035bd9dd7b19086e549d/transformed/appcompat-1.6.1/res/values-large-v4/values-large-v4.xml",
+>>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +18,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\b1029ccf0bc7f6f35122ecfaa52567bc\\transformed\\material-1.11.0\\res\\values-large-v4\\values-large-v4.xml",
+=======
+                    "source": "/Users/rishabh2.7/.gradle/caches/transforms-3/cc2d12b829148758ed6b3b42347dadc2/transformed/material-1.11.0/res/values-large-v4/values-large-v4.xml",
+>>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

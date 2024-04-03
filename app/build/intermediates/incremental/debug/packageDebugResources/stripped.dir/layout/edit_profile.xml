@@ -9,6 +9,15 @@
     android:orientation="vertical"
     android:gravity="center">
 
+<<<<<<< HEAD
+=======
+    <Button
+        android:id="@+id/generate_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Profile Picture" />
+
+>>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -48,7 +48,11 @@
     <string msgid="7215213145546190223" name="common_google_play_services_install_title">Descărcați serviciile Google Play</string>
     <string name="common_google_play_services_notification_channel_name">Disponibilitatea serviciilor Google Play</string>
     <string name="common_google_play_services_notification_ticker">Eroare a serviciilor Google Play</string>
+<<<<<<< HEAD
     <string name="common_google_play_services_unknown_issue">%1$s întâmpină probleme privind serviciile Google Play. Încearcă din nou.</string>
+=======
+    <string name="common_google_play_services_unknown_issue">%1$s întâmpină probleme privind serviciile Google Play. Încercați din nou.</string>
+>>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
     <string name="common_google_play_services_unsupported_text">%1$s nu va rula fără serviciile Google Play, care nu sunt acceptate de dispozitivul dvs.</string>
     <string msgid="6556509956452265614" name="common_google_play_services_update_button">Actualizați</string>
     <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s nu va rula decât dacă actualizați serviciile Google Play.</string>
@@ -58,12 +62,17 @@
     <string name="common_open_on_phone">Deschideți pe telefon</string>
     <string name="common_signin_button_text">Conectați-vă</string>
     <string name="common_signin_button_text_long">Conectați-vă cu Google</string>
+<<<<<<< HEAD
     <string msgid="3260749812566568062" name="copy_toast_msg">"Linkul a fost copiat în clipboard"</string>
     <string name="error_icon_content_description">Eroare</string>
     <string name="exposed_dropdown_menu_content_description">Afișați meniul drop-down</string>
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Copiați linkul"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Deschideți în browser"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Trimiteți linkul"</string>
+=======
+    <string name="error_icon_content_description">Eroare</string>
+    <string name="exposed_dropdown_menu_content_description">Afișați meniul drop-down</string>
+>>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
     <string name="icon_content_description">Pictogramă de dialog</string>
     <string name="item_view_role_description">Filă</string>
     <string name="material_clock_toggle_content_description">Selectați ora</string>

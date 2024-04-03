@@ -23,6 +23,8 @@ public class Event {
     private Timestamp timestamp;
     private String event_poster;
 
+    private int maxAttendees;
+
     public Event(){
 
     }
@@ -33,7 +35,8 @@ public class Event {
      * @param details  Details about the event.
      * @param userID   The ID of the organizer.
      */
-    
+
+
     public Event(String name, String details, int userID){
         Random random = new Random();
         this.name = name;
@@ -42,9 +45,23 @@ public class Event {
         this.event_id = random.nextInt();
         this.organizer = userID;
         this.signup_list = new ArrayList<>();
+        this.maxAttendees = -1;
 
         //this.dateTime = dateTime;
     }
+    public Event(String name, String details, int userID,int maxAttendees){
+        Random random = new Random();
+        this.name = name;
+        this.details = details;
+        this.attendee_list = new ArrayList<>();
+        this.event_id = random.nextInt();
+        this.organizer = userID;
+        this.signup_list = new ArrayList<>();
+        this.maxAttendees = maxAttendees;
+
+        //this.dateTime = dateTime;
+    }
+
     //    public User getOrganizer() {
 //        return organizer;
 //    }
@@ -91,9 +108,9 @@ public class Event {
     public ArrayList<String> getAttendee_list() {
         return attendee_list;
     }
-//    public void setAttendee_list(ArrayList<User> attendee_list) {
-//        this.attendee_list = attendee_list;
-//    }
+    public void setAttendee_list(ArrayList<String> attendee_list) {
+        this.attendee_list = attendee_list;
+    }
      /**
      * Gets the attendee QR code.
      *
@@ -265,6 +282,12 @@ public class Event {
         this.event_poster = event_poster;
     }
 
+    public int getMaxAttendees() {
+        return maxAttendees;
+    }
+
+    public void setMaxAttendees(int maxAttendees) {
+        this.maxAttendees = maxAttendees;}
     public int getOrganizer() {
         return organizer;
     }

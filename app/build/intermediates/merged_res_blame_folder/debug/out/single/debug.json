@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "merged": "com.example.qr_dasher.app-merged_res-54:/layout_fragment_image_upload.xml.flat",
         "source": "com.example.qr_dasher.app-main-56:/layout/fragment_image_upload.xml"
     },
@@ -70,12 +71,89 @@
     {
         "merged": "com.example.qr_dasher.app-merged_res-54:/drawable_ic_launcher_foreground.xml.flat",
         "source": "com.example.qr_dasher.app-main-56:/drawable/ic_launcher_foreground.xml"
+=======
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_fragment_share_qr.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/fragment_share_qr.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/navigation_nav_graph.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_fragment_image_upload.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/fragment_image_upload.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_attendee.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/attendee.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_event_details.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/event_details.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_mytextview_nopicture.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/mytextview_nopicture.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_mytextview.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/mytextview.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_scan_qr.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/scan_qr.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_edit_profile.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/edit_profile.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/drawable_placeholder_image.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/drawable/placeholder_image.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/xml_backup_rules.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_browse_events.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/browse_events.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-anydpi-v26/ic_launcher.xml"
+>>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
     },
     {
         "merged": "com.example.qr_dasher.app-merged_res-54:/mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "com.example.qr_dasher.app-main-56:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
+<<<<<<< HEAD
         "merged": "com.example.qr_dasher.app-merged_res-54:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "com.example.qr_dasher.app-main-56:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
@@ -158,5 +236,77 @@
     {
         "merged": "com.example.qr_dasher.app-merged_res-54:/mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "com.example.qr_dasher.app-main-56:/mipmap-xxxhdpi/ic_launcher.webp"
+=======
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_event_sign_up_page.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/event_sign_up_page.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_user_selection_page.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/user_selection_page.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/drawable_circle_shape.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/drawable/circle_shape.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_organizer.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/organizer.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_notifications.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/notifications.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_send_notification.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/send_notification.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_role_page.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/role_page.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/menu_menu_main.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/menu/menu_main.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.qr_dasher.app-main-54:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_home_page.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/home_page.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-52:/layout_activity_reuse_qrcodes.xml.flat",
+        "source": "com.example.qr_dasher.app-main-54:/layout/activity_reuse_qrcodes.xml"
+>>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
     }
 ]

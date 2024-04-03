@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -26,4 +27,34 @@
         android:layout_height="wrap_content"
         android:text="Attendee"/>
 
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".UserSelectionPage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Role"
+        android:textSize="40dp"
+        android:padding="20dp" />
+
+    <Button
+        android:id="@+id/organizer_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Organizer"/>
+
+    <Button
+        android:id="@+id/attendee_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendee"/>
+
+>>>>>>> c7830018d2ce4d3d726365e178839eda33b01710
 </LinearLayout>

@@ -85,7 +85,7 @@ public class MapActivity extends AppCompatActivity {
     private void populateMapWithMarkers() {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     db.collection("users")
-            .whereArrayContains("eventsJoined", event.getEvent_id())
+            .whereArrayContains("eventsJoined", String.valueOf(event.getEvent_id()))
             .get()
             .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override

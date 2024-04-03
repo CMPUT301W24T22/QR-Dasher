@@ -35,7 +35,20 @@ public class Event {
      * @param details  Details about the event.
      * @param userID   The ID of the organizer.
      */
-    
+
+
+    public Event(String name, String details, int userID){
+        Random random = new Random();
+        this.name = name;
+        this.details = details;
+        this.attendee_list = new ArrayList<>();
+        this.event_id = random.nextInt();
+        this.organizer = userID;
+        this.signup_list = new ArrayList<>();
+        this.maxAttendees = -1;
+
+        //this.dateTime = dateTime;
+    }
     public Event(String name, String details, int userID,int maxAttendees){
         Random random = new Random();
         this.name = name;
@@ -48,6 +61,7 @@ public class Event {
 
         //this.dateTime = dateTime;
     }
+
     //    public User getOrganizer() {
 //        return organizer;
 //    }
@@ -273,6 +287,12 @@ public class Event {
     }
 
     public void setMaxAttendees(int maxAttendees) {
-        this.maxAttendees = maxAttendees;
+        this.maxAttendees = maxAttendees;}
+    public int getOrganizer() {
+        return organizer;
+    }
+
+    public void setOrganizer(int organizer) {
+        this.organizer = organizer;
     }
 }

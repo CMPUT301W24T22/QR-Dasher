@@ -233,7 +233,7 @@ public class Attendee extends AppCompatActivity {
                         int currentAttendeeCount = attendeeList.size();
                         int maxAttendees = event.getMaxAttendees();
 
-                        if (currentAttendeeCount < maxAttendees) {
+                        if ((currentAttendeeCount < maxAttendees) || (maxAttendees==-1)) {
                             // Add the attendee to the event's attendee list
                             String userIdStr = String.valueOf(userId);
                             attendeeList.add(userIdStr);

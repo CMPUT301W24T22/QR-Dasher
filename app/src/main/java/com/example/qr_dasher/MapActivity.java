@@ -83,28 +83,30 @@ public class MapActivity extends AppCompatActivity {
     }
 
     private void populateMapWithMarkers() {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("users")
-                .whereEqualTo("eventID", event.getEvent_id())
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                GeoPoint geoPoint = convertFirebaseGeoPoint(document.getGeoPoint("location"));
-                                if (geoPoint != null) {
-                                    Marker marker = new Marker(map);
-                                    marker.setPosition(geoPoint);
-                                    marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-                                    marker.setTitle("Location");
-                                    map.getOverlays().add(marker);
-                                }
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    db.collection("users")
+            .whereArrayContains("eventsJoined", event.getEvent_id())
+            .get()
+            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            GeoPoint geoPoint = convertFirebaseGeoPoint(document.getGeoPoint("location"));
+                            if (geoPoint != null) {
+                                Marker marker = new Marker(map);
+                                marker.setPosition(geoPoint);
+                                marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+                                marker.setTitle("Location");
+                                map.getOverlays().add(marker);
                             }
                         }
                     }
-                });
+                }
+            });
     }
+
+
 
     private static GeoPoint convertFirebaseGeoPoint(com.google.firebase.firestore.GeoPoint firebaseGeoPoint) {
         if (firebaseGeoPoint != null) {

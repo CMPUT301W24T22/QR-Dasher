@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -13,10 +14,15 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.messaging.FirebaseMessaging;
+
 /**
  * This activity represents the home page where users can input their information and upload their profile picture.
  * User data is stored locally in SharedPreferences and uploaded to Firestore upon submission.
@@ -92,14 +98,43 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
 
                 // Create a User object
                 User user = new User(name, email, location);
-                if (details != null){
-                    user.setDetails(details);
-                }
-                if (profile_picture != null){
-                    user.setProfile_image(Picture.convertBitmaptoString(profile_picture));
-                }
-                saveUserToCache(user);
-                addUserToFirestore(user);
+
+                // tokens used for notifications
+                FirebaseMessaging.getInstance().getToken()
+                        .addOnCompleteListener(task -> {
+                            if (!task.isSuccessful()) {
+                                Log.w("tag","Couldn't retrieve FCM token",task.getException());
+                                return;
+                            }
+                            String token = task.getResult();
+                            Log.d("Token", token);
+                            user.settoken(token);
+
+                            if (details != null){
+                                user.setDetails(details);
+                            }
+                            if (profile_picture != null){
+                                user.setProfile_image(Picture.convertBitmaptoString(profile_picture));
+                            }
+                            saveUserToCache(user);
+                            addUserToFirestore(user);
+                        });
+
+
+
+               /* FirebaseMessaging.getInstance().getToken()
+                        .addOnCompleteListener(new OnCompleteListener<String>() {
+                            @Override
+                            public void onComplete(@NonNull Task<String> task) {
+                                if (task.isSuccessful()) {
+                                    // Get new FCM registration token
+                                    String token = task.getResult();
+                                    user.settoken(token);
+                                }
+                            }
+                        });*/
+
+
             }
         });
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +144,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
             }
         });
     }
+
     // Callback method to receive the uploaded image bitmap from ImageUploadFragment
     /**
      * Callback method to receive the uploaded image bitmap from ImageUploadFragment.

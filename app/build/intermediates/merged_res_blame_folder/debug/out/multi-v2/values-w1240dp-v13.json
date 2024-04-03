@@ -4,7 +4,7 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-50:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "/Users/rishabh2.7/QR-Dasher/app/src/main/res/values-w1240dp/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

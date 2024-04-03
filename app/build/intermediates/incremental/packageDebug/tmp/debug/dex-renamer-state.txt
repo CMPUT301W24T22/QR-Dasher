@@ -1,10 +1,10 @@
-#Sun Mar 31 04:56:21 MDT 2024
-base.0=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.3=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
-base.4=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.5=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+#Wed Apr 03 14:12:16 MDT 2024
+base.0=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
+base.3=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
+base.4=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.5=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeExtDexDebug/classes3.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=2/classes.dex

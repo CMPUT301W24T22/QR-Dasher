@@ -28,17 +28,13 @@ import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 import android.os.Bundle;
-
-
 public class BrowseEvents extends AppCompatActivity {
-
     private ListView browseEventList;
     private FirebaseFirestore db;
     private List<String> eventNames;
     private List<String> eventIds;
     private List<String> eventDetails;
     private List<Timestamp> eventTimestamps;
-
     private SharedPreferences app_cache;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +65,6 @@ public class BrowseEvents extends AppCompatActivity {
         eventIds = new ArrayList<>();
         eventDetails = new ArrayList<>();
         eventTimestamps = new ArrayList<>();
-
-
         // Getting the present date
         Date currentTime = new Date();
         Timestamp currentTimestamp = new Timestamp(currentTime);
@@ -159,7 +153,6 @@ public class BrowseEvents extends AppCompatActivity {
 
                 Boolean signUpBool = true;
                 bundle.putBoolean("signUpBool",signUpBool);
-
                 //Integer eventId = Integer.parseInt(eventIdStr);
                 // Start new activity with the event name
                 Intent intent = new Intent(BrowseEvents.this, EventSignUpPage.class);

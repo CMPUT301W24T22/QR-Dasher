@@ -221,7 +221,35 @@ public class Attendee extends AppCompatActivity {
                         User user = documentSnapshot.toObject(User.class);
                         user.addEventsJoined(eventID); // Add the event ID to the user's eventsJoined list
                         updateFirebaseUser(String.valueOf(userId), user); // Update the user in Firestore
-                        checkAndGetLocation(String.valueOf(userId), user);
+                        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSIONS_REQUEST_CODE);
+                            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_PERMISSIONS_REQUEST_CODE);
+                            return;
+                        }
+
+                        fusedLocationClient.getLastLocation()
+                                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                                    @Override
+                                    public void onSuccess(Location location) {
+                                        if (location != null) {
+                                            // Logic to handle location object
+                                            double latitude = location.getLatitude();
+                                            double longitude = location.getLongitude();
+                                            Toast.makeText(Attendee.this, String.format("Retrieved location: Latitude - %f, Longitude - %f", latitude, longitude), Toast.LENGTH_SHORT).show();
+
+                                            geoPoint = new GeoPoint(latitude, longitude);
+                                            Toast.makeText(Attendee.this, "GeoPoint set: " + geoPoint.getLatitude() + ", " + geoPoint.getLongitude(), Toast.LENGTH_SHORT).show();
+
+                                            user.setGeoPoint(geoPoint);
+
+                                            Toast.makeText(Attendee.this, "Calling addLocation", Toast.LENGTH_SHORT).show();
+                                            addLocation(userId, user);
+                                        } else {
+                                            // Location is null, could not get location
+                                            Toast.makeText(Attendee.this, "Location is null. Could not get Location", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
                     } else {
                         Log.d("Attendee", "No user found with UserId: " + userId);
                     }
@@ -543,60 +571,27 @@ public class Attendee extends AppCompatActivity {
         });
 
     }
-    private void checkAndGetLocation(String userId, User user) {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("users")
-                .document(userId)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        if (documentSnapshot.exists()) {
-                            Boolean geoTrackingEnabled = documentSnapshot.getBoolean("location");
-                            if (Boolean.TRUE.equals(geoTrackingEnabled)) {
-                                getLocation(userId);
-                            }
-                        } else {
-                            Log.d("Attendee", "User document does not exist for ID: " + userId);
-                        }
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        // Handle failure, such as printing the stack trace
-                        Log.e("Attendee", "Error getting user document for ID: " + userId, e);
-                    }
-                });
-    }
-    private void getLocation(String docID) {
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_PERMISSIONS_REQUEST_CODE);
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_PERMISSIONS_REQUEST_CODE);
-            return;
+
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_PERMISSIONS_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Location permission granted
+                Toast.makeText(this, "Location permission granted", Toast.LENGTH_SHORT).show();
+            }
         }
-        fusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        if (location != null) {
-                            // Logic to handle location object
-                            double latitude = location.getLatitude();
-                            double longitude = location.getLongitude();
-                            Log.d("DEBUG", String.format("onLocationChanged: %f %f", latitude, longitude));
-                            geoPoint = new GeoPoint(latitude, longitude);
-                            addLocation(docID);
-                        } else {
-                            Log.d("DEBUG", String.format("onLocationChanged: can't really get a emulator location"));
-                            Toast.makeText(Attendee.this, "Could not get Location", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
     }
-    private void addLocation(String docID) {
+
+
+
+    private void addLocation(Integer docID, User user) {
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("users").document(docID)
-                .update("geoPoint", geoPoint)
+        db.collection("users").document(String.valueOf(docID))
+                .update("geoPoint", user.getGeoPoint())
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

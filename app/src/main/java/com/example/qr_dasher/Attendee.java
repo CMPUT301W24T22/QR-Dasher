@@ -241,8 +241,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                     boolean locationEnabled = false; // default value
                     if (documentSnapshot.exists()) {
                         locationEnabled = documentSnapshot.getBoolean("location");
-                        if (locationEnabled) {
-                            getlocation();
+                        if (!locationEnabled) {
                             Toast.makeText(Attendee.this, "Location feature is not enabled for this user.", Toast.LENGTH_SHORT).show();
                         }
                     } else {

@@ -1,6 +1,8 @@
 package com.example.qr_dasher;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,6 +28,13 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 
+import org.osmdroid.api.IMapController;
+import org.osmdroid.events.MapEventsReceiver;
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.MapEventsOverlay;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,9 +43,11 @@ import java.util.List;
  * It retrieves the event details from Firestore and displays the list of attendees.
  */
 public class EventDetails extends AppCompatActivity {
+    private MapView mapView;
     private FirebaseFirestore db;
     private ListView attendeeListView;
     private ListView signupListView;
+    private String eventIDstr;
     private List<String> attendeeListUserNames,  attendeeListDetails, attendeeListEmails;
     private List<String> signUpListListUserNames,signUpListListDetails, signUpListListEmails;
     private List<Integer>attendeeListUserIds, signUpListListUserIds;
@@ -56,7 +68,8 @@ public class EventDetails extends AppCompatActivity {
 
         Intent intent = getIntent();
         String eventName = intent.getStringExtra("eventName");
-        String eventIDStr = intent.getStringExtra("event_id");
+        eventIDstr = intent.getStringExtra("event_id");
+        Toast.makeText(getApplicationContext(), "Event ID: " + eventIDstr, Toast.LENGTH_SHORT).show();
         List<String> attendeeList = intent.getStringArrayListExtra("attendee_list");
         List<String> signupList = intent.getStringArrayListExtra("signup_list");
 
@@ -79,6 +92,7 @@ public class EventDetails extends AppCompatActivity {
         // Set the event name to the TextView
         eventNameTextView.setText(eventName);
 
+        mapView = findViewById(R.id.mapView);
         attendeeListView = findViewById(R.id.attendee_list_view);
         signupListView = findViewById(R.id.signup_listview);
 
@@ -86,6 +100,7 @@ public class EventDetails extends AppCompatActivity {
 
         // Set the event name to the TextView
         eventNameTextView.setText(eventName);
+        setUpMap();
 
         getUserDetailsFromFirebase(attendeeList,signupList);
         Button notifyButton = findViewById(R.id.notify_button);
@@ -124,18 +139,21 @@ public class EventDetails extends AppCompatActivity {
         }
 
 
+
+
         // Set OnClickListener for the notification button
         notifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EventDetails.this, SendNotification.class);
                           // Pass the event ID to SendNotification activity
-                intent.putExtra("event_id", eventIDStr);
+                intent.putExtra("event_id", eventIDstr);
                          // Pass the attendee list as an extra to the SendNotification activity
                 intent.putStringArrayListExtra("tokensList", (ArrayList<String>) tokensList);
                 startActivity(intent);
             }
         });
+
 
 //        posterUploadButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -294,5 +312,29 @@ public class EventDetails extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         signupListView.setAdapter(adapter);
+    }
+    private void setUpMap() {
+        mapView.setTileSource(TileSourceFactory.MAPNIK);
+        mapView.setTilesScaledToDpi(true);
+        mapView.getLocalVisibleRect(new Rect());
+        IMapController controller = mapView.getController();
+        controller.setZoom(3);
+
+        // Set up map events receiver for single tap
+        mapView.getOverlays().add(new MapEventsOverlay(new MapEventsReceiver() {
+            @Override
+            public boolean singleTapConfirmedHelper(GeoPoint p) {
+                // Launch MapsActivity when map is tapped
+                Intent mapIntent = new Intent(EventDetails.this, MapsActivity.class);
+                mapIntent.putExtra("eventIDstr", eventIDstr);
+                startActivity(mapIntent);
+                return false;
+            }
+
+            @Override
+            public boolean longPressHelper(GeoPoint p) {
+                return false;
+            }
+        }));
     }
 }

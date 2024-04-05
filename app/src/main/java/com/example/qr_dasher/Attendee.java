@@ -1,8 +1,14 @@
 package com.example.qr_dasher;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.location.Location;
+import android.location.LocationProvider;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +21,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -24,6 +32,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FieldPath;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.GeoPoint;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -35,13 +44,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * Activity for attendees of an event. Allows attendees to view notifications, edit their profile,
  * and scan a QR code to join an event.
  */
-public class Attendee extends AppCompatActivity {
+public class Attendee extends AppCompatActivity implements LocationListener {
     private Button notificationButton, editProfileButton, qrCodeButton, browseEvents;
     private ListView scannedEvents, signedUpevents;
     private List<String> scannedEventNames, scannedEventIds, scannedEventDetails, scannedEventPoster;
     private List<String> signedEventNames, signedEventIds, signedEventDetails, signedEventPoster;
     private List<Timestamp> scannedEventTimestamps, signedEventTimestamps;
     private SharedPreferences app_cache;
+    private GeoPoint geoPoint;
+    private LocationManager locationManager;
+    private double latitude;
+    private double longitude;
+    private static final int REQUEST_PERMISSIONS_REQUEST_CODE = 1;
+
     /**
      * Initializes the activity and sets up UI components and listeners.
      *
@@ -54,6 +69,18 @@ public class Attendee extends AppCompatActivity {
         app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
         int userId = app_cache.getInt("UserID", -1);
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        requestLocationPermissions();
+        // Check if permissions are granted and request location updates
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            // Permissions are granted, request location updates
+            requestLocationUpdates();
+        } else {
+            // Permissions are not granted, show a toast message
+            Toast.makeText(this, "Location permissions are not granted", Toast.LENGTH_SHORT).show();
+            // You can handle this according to your app's logic, such as requesting permissions again or displaying a message to the user
+        }
 
         getCheckedSignedEvents(userId);
 
@@ -95,11 +122,26 @@ public class Attendee extends AppCompatActivity {
                 // For example, start a new activity for attendee tasks
                 Intent intent = new Intent(Attendee.this, ScanQR.class);
                 startActivityForResult(intent, 1);
+                // get the latest checked and signed events
+                getCheckedSignedEvents(userId);
             }
         });
 
 
     }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        // Unregister location listener to avoid memory leaks
+        locationManager.removeUpdates((LocationListener) this);
+    }
+
+    @Override
+    public void onLocationChanged(@NonNull Location location) {
+        // Update geoPoint with the latest location
+        geoPoint = new GeoPoint(location.getLatitude(), location.getLongitude());
+    }
+
     /**
      * Handles the result of the QR code scanning activity.
      *
@@ -111,15 +153,19 @@ public class Attendee extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
+        int userId = app_cache.getInt("UserID", -1);
+
+        getCheckedSignedEvents(userId);
         if (requestCode == 1) { // Check if the result is from ScanQR activity
-            Log.d("Scan","scan");
+            Log.d("Scan", "scan");
             if (resultCode == RESULT_OK) {
                 String scannedText = data.getStringExtra("scannedText");
                 Toast.makeText(this, "Scanning successful " + scannedText, Toast.LENGTH_SHORT).show();
 
                 // Determine if it is promotional or checkin QR
-                if (scannedText!=null) {
+                if (scannedText != null) {
                     if (scannedText.charAt(0) == 'p') {
                         // Promotional QR
                         Log.d("QR Scanning", "Promotional Detected");
@@ -137,6 +183,7 @@ public class Attendee extends AppCompatActivity {
         }
 
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -146,12 +193,101 @@ public class Attendee extends AppCompatActivity {
     }
 
 
-    private void displayEventSignUpPage(String pQRcontent){
+    private void getlocation() {
+        int userId = app_cache.getInt("UserID", -1);
+        Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        if (lastKnownLocation != null) {
+            // Logic to handle location object
+            double latitude = lastKnownLocation.getLatitude();
+            double longitude = lastKnownLocation.getLongitude();
+            Toast.makeText(Attendee.this, String.format("Retrieved location: Latitude - %f, Longitude - %f", latitude, longitude), Toast.LENGTH_SHORT).show();
+
+            geoPoint = new GeoPoint(latitude, longitude);
+            Toast.makeText(Attendee.this, "GeoPoint set: " + geoPoint.getLatitude() + ", " + geoPoint.getLongitude(), Toast.LENGTH_SHORT).show();
+
+            Toast.makeText(Attendee.this, "Calling addLocation", Toast.LENGTH_SHORT).show();
+            addLocation(userId, geoPoint);
+
+        }
+    }
+
+    private void requestLocationUpdates() {
+        // Check if location manager is not null
+        if (locationManager != null) {
+            // Request location updates for all available providers
+            for (String provider : locationManager.getProviders(true)) {
+                locationManager.requestLocationUpdates(provider, 1000L, (float) 0, (LocationListener) this);
+            }
+        } else {
+            Toast.makeText(this, "Location manager is null", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    private void requestLocationPermissions() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_PERMISSIONS_REQUEST_CODE);
+
+        }
+    }
+
+
+    private void checkLocation(String docId, LocationCheckCallback callback) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users").document(docId)
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    boolean locationEnabled = false; // default value
+                    if (documentSnapshot.exists()) {
+                        locationEnabled = documentSnapshot.getBoolean("location");
+                        if (!locationEnabled) {
+                            Toast.makeText(Attendee.this, "Location feature is not enabled for this user.", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        // User document doesn't exist
+                        Toast.makeText(Attendee.this, "User document not found in Firestore.", Toast.LENGTH_SHORT).show();
+                    }
+                    // Invoke the callback with the boolean value
+                    callback.onLocationChecked(locationEnabled);
+                })
+                .addOnFailureListener(e -> {
+                    // Error fetching user document
+                    Toast.makeText(Attendee.this, "Failed to fetch user document: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    // Invoke the callback with a default value (false) indicating failure
+                    callback.onLocationChecked(false);
+                });
+    }
+
+
+
+    private void addLocation(Integer userId, GeoPoint geoPoint) {
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users").document(String.valueOf(userId))
+                .update("geoPoint", geoPoint)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("Attendee", "GeoPoint added successfully");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("Attendee", "Failed to add GeoPoint: " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                });
+    }
+
+
+    private void displayEventSignUpPage(String pQRcontent) {
         // Remove "p" and get the event info from firebase
         // Start EventSignUpPage Activity
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         String eventIdPromo = pQRcontent.substring(1);
-        Log.d("pQRcontent",pQRcontent);
+        Log.d("pQRcontent", pQRcontent);
         Log.d("p without p ", eventIdPromo);
         db.collection("eventsCollection")
                 .document(eventIdPromo)
@@ -165,20 +301,20 @@ public class Attendee extends AppCompatActivity {
                         bundle.putString("eventName", eventName);
 
                         String detail = event.getDetails();
-                        bundle.putString("eventDetail",detail);
+                        bundle.putString("eventDetail", detail);
 
                         String eventId = String.valueOf(event.getEvent_id());
                         bundle.putString("eventId", eventId);
 
                         boolean signUpBool = true;
-                        bundle.putBoolean("signUpBool",signUpBool);
+                        bundle.putBoolean("signUpBool", signUpBool);
 
                         // TODO  /////////////////////////////////
 
                         // Converting timeStamp to date to put in bundle
                         Timestamp eventTimestamp = event.getTimestamp();
                         Date date = eventTimestamp.toDate();
-                        bundle.putSerializable("timestamp",date);
+                        bundle.putSerializable("timestamp", date);
 
 
                         //Integer eventId = Integer.parseInt(eventIdStr);
@@ -199,7 +335,7 @@ public class Attendee extends AppCompatActivity {
     }
 
 
-    private void updateFirebase(String event_id){
+    private void updateFirebase(String event_id) {
         int userId = app_cache.getInt("UserID", -1);
         String eventID = event_id; // Assuming event_id is already the document ID
 
@@ -214,6 +350,8 @@ public class Attendee extends AppCompatActivity {
                         User user = documentSnapshot.toObject(User.class);
                         user.addEventsJoined(eventID); // Add the event ID to the user's eventsJoined list
                         updateFirebaseUser(String.valueOf(userId), user); // Update the user in Firestore
+
+
                     } else {
                         Log.d("Attendee", "No user found with UserId: " + userId);
                     }
@@ -235,13 +373,30 @@ public class Attendee extends AppCompatActivity {
                         int currentAttendeeCount = attendeeList.size();
                         int maxAttendees = event.getMaxAttendees();
 
-                        if ((currentAttendeeCount < maxAttendees) || (maxAttendees==-1)) {
+                        if ((currentAttendeeCount < maxAttendees) || (maxAttendees == -1)) {
                             // Add the attendee to the event's attendee list
                             String userIdStr = String.valueOf(userId);
                             attendeeList.add(userIdStr);
                             event.setAttendee_list(new ArrayList<>(attendeeList));
                             updateFirebaseEvent(eventID, event); // Update the event in Firestore
                             Toast.makeText(Attendee.this, "Joined event successfully!", Toast.LENGTH_SHORT).show();
+
+                            checkLocation(userIdStr, new LocationCheckCallback() {
+                                @Override
+                                public void onLocationChecked(boolean locationEnabled) {
+                                    // Use the boolean value here
+                                    if (locationEnabled) {
+                                        getlocation();
+                                    } else {
+                                        Toast.makeText(Attendee.this, "Cannot add location", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+
+
+
+
+
                         } else {
                             Toast.makeText(Attendee.this, "Event is full", Toast.LENGTH_SHORT).show();
                         }
@@ -254,6 +409,7 @@ public class Attendee extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
+
     /**
      * Update user document in Firebase.
      *
@@ -273,6 +429,7 @@ public class Attendee extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
+
     /**
      * Update event document in Firebase.
      *
@@ -323,7 +480,8 @@ public class Attendee extends AppCompatActivity {
                     }
                 });
     }
-    private void getEventDetails(List<String> checkedInEvents,List<String> eventsSignedUp) {
+
+    private void getEventDetails(List<String> checkedInEvents, List<String> eventsSignedUp) {
         // Once we have the event ids, we can get the other details
         // Getting the current date > dealing with only new events
 
@@ -477,7 +635,7 @@ public class Attendee extends AppCompatActivity {
                 bundle.putString("eventName", eventName);
 
                 String detail = scannedEventDetails.get(position);
-                bundle.putString("eventDetail",detail);
+                bundle.putString("eventDetail", detail);
 
                 String eventId = scannedEventIds.get(position);
                 bundle.putString("eventId", eventId);
@@ -485,14 +643,14 @@ public class Attendee extends AppCompatActivity {
                 // Converting timeStamp to date to put in bundle
                 Timestamp eventTimestamp = scannedEventTimestamps.get(position);
                 Date date = eventTimestamp.toDate();
-                bundle.putSerializable("timestamp",date);
+                bundle.putSerializable("timestamp", date);
 
 //                if (signedEventPoster != null &&!scannedEventPoster.get(position).isEmpty()) {
 //                    String eventPoster = scannedEventPoster.get(position);
 //                    bundle.putString("Poster",eventPoster);
 //                }
                 boolean signUpBool = false;
-                bundle.putBoolean("signUpBool",signUpBool);
+                bundle.putBoolean("signUpBool", signUpBool);
 
                 // TODO ////////////////////////
                 boolean checkAnnounce = true;
@@ -520,7 +678,7 @@ public class Attendee extends AppCompatActivity {
                 bundle.putString("eventName", eventName);
 
                 String detail = signedEventDetails.get(position);
-                bundle.putString("eventDetail",detail);
+                bundle.putString("eventDetail", detail);
 
                 String eventId = signedEventIds.get(position);
                 bundle.putString("eventId", eventId);
@@ -528,10 +686,10 @@ public class Attendee extends AppCompatActivity {
                 // Converting timeStamp to date to put in bundle
                 Timestamp eventTimestamp = signedEventTimestamps.get(position);
                 Date date = eventTimestamp.toDate();
-                bundle.putSerializable("timestamp",date);
+                bundle.putSerializable("timestamp", date);
 
                 boolean signUpBool = false;
-                bundle.putBoolean("signUpBool",signUpBool);
+                bundle.putBoolean("signUpBool", signUpBool);
 
                 //TODO  ///////////////////////////
                 boolean checkAnnounce = true;
@@ -553,5 +711,8 @@ public class Attendee extends AppCompatActivity {
             }
         });
 
+    }
+    interface LocationCheckCallback {
+        void onLocationChecked(boolean locationEnabled);
     }
 }

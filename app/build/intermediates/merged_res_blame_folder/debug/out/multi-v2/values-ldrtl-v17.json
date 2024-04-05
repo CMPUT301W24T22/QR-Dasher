@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-52:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-54:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\b1029ccf0bc7f6f35122ecfaa52567bc\\transformed\\material-1.11.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\725e24c93ab4967c856ab85386d50074\\transformed\\material-1.11.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

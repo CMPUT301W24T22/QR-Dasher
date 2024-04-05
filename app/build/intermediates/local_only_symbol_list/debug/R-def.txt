@@ -57,6 +57,9 @@ id geolocation
 id imageView
 id image_upload
 id logo
+id map
+id mapCard
+id mapView
 id max_attendees
 id name_edit
 id nav_graph
@@ -103,6 +106,7 @@ id view
 id viewfinder_view
 id welcome_text
 layout activity_create_event_organizer
+layout activity_map
 layout activity_reuse_qrcodes
 layout attendee
 layout browse_events
@@ -122,7 +126,6 @@ layout role_page
 layout scan_qr
 layout send_announcement
 layout send_notification
-layout user_selection_page
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -141,6 +144,7 @@ string next
 string previous
 string project_id
 string second_fragment_label
+string title_activity_maps
 style Base.Theme.QRDasher
 style Theme.QRDasher
 xml backup_rules

@@ -95,6 +95,8 @@ public class Attendee extends AppCompatActivity {
                 // For example, start a new activity for attendee tasks
                 Intent intent = new Intent(Attendee.this, ScanQR.class);
                 startActivityForResult(intent, 1);
+                // get the latest checked and signed events
+                getCheckedSignedEvents(userId);
             }
         });
 
@@ -111,7 +113,11 @@ public class Attendee extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
 
+        int userId = app_cache.getInt("UserID", -1);
+
+        getCheckedSignedEvents(userId);
         if (requestCode == 1) { // Check if the result is from ScanQR activity
             Log.d("Scan","scan");
             if (resultCode == RESULT_OK) {

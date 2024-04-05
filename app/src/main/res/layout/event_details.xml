@@ -43,31 +43,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/attendees" />
 
+
     <Button
         android:id="@+id/qr_code_button"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:background="@color/black"
         android:text="Manage QR Code"
         app:layout_constraintBottom_toTopOf="@+id/notify_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_listview"
+        app:layout_constraintVertical_bias="0.233" />
 
     <Button
         android:id="@+id/notify_button"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/black"
         android:text="Manage Notifications"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/announcement_button"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="Send an Announcement"
+        app:layout_constraintBottom_toTopOf="@+id/notify_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qr_code_button" />
 
     <TextView
         android:id="@+id/attendee_text_signups"
@@ -84,8 +96,8 @@
 
     <ListView
         android:id="@+id/signup_listview"
-        android:layout_width="409dp"
-        android:layout_height="220dp"
+        android:layout_width="411dp"
+        android:layout_height="195dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

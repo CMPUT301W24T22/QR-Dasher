@@ -3277,6 +3277,11 @@ int id always 0x7f080055
 int id androidx_window_activity_scope 0x7f080056
 int id animateToEnd 0x7f080057
 int id animateToStart 0x7f080058
+int id announcement_button 0x7f080265
+int id announcement_listview 0x7f08026b
+int id announcement_title 0x7f080266
+int id announcment_text 0x7f08026c
+int id announcment_title_text 0x7f080267
 int id antiClockwise 0x7f080059
 int id anticipate 0x7f08005a
 int id arc 0x7f08005b
@@ -3325,6 +3330,7 @@ int id center_vertical 0x7f080085
 int id chain 0x7f080086
 int id chain2 0x7f080087
 int id chains 0x7f080088
+int id check_announcement 0x7f08026a
 int id checkbox 0x7f080089
 int id checked 0x7f08008a
 int id chronometer 0x7f08008b
@@ -3655,6 +3661,7 @@ int id select_dialog_listview 0x7f0801cf
 int id select_image_button 0x7f0801d0
 int id selected 0x7f0801d1
 int id selection_type 0x7f0801d2
+int id send_announcement_button 0x7f080268
 int id send_notifications_button 0x7f0801d3
 int id send_text 0x7f0801d4
 int id share_qr 0x7f0801d5
@@ -3923,6 +3930,7 @@ int layout attendee 0x7f0b001e
 int layout browse_events 0x7f0b001f
 int layout browser_actions_context_menu_page 0x7f0b0020
 int layout browser_actions_context_menu_row 0x7f0b0021
+int layout check_announcements 0x7f0b008a
 int layout custom_dialog 0x7f0b0022
 int layout design_bottom_navigation_item 0x7f0b0023
 int layout design_bottom_sheet_dialog 0x7f0b0024
@@ -4021,6 +4029,7 @@ int layout scan_qr 0x7f0b0080
 int layout select_dialog_item_material 0x7f0b0081
 int layout select_dialog_multichoice_material 0x7f0b0082
 int layout select_dialog_singlechoice_material 0x7f0b0083
+int layout send_announcement 0x7f0b0089
 int layout send_notification 0x7f0b0084
 int layout support_simple_spinner_dropdown_item 0x7f0b0085
 int layout user_selection_page 0x7f0b0086

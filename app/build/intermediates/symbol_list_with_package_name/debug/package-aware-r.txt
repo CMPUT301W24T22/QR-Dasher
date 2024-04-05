@@ -3278,6 +3278,11 @@ id always
 id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
+id announcement_button
+id announcement_listview
+id announcement_title
+id announcment_text
+id announcment_title_text
 id antiClockwise
 id anticipate
 id arc
@@ -3326,6 +3331,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id check_announcement
 id checkbox
 id checked
 id chronometer
@@ -3656,6 +3662,7 @@ id select_dialog_listview
 id select_image_button
 id selected
 id selection_type
+id send_announcement_button
 id send_notifications_button
 id send_text
 id share_qr
@@ -3924,6 +3931,7 @@ layout attendee
 layout browse_events
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
+layout check_announcements
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4022,6 +4030,7 @@ layout scan_qr
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout send_announcement
 layout send_notification
 layout support_simple_spinner_dropdown_item
 layout user_selection_page

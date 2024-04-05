@@ -22,6 +22,9 @@ public final class EventDetailsBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button announcementButton;
+
+  @NonNull
   public final ListView attendeeListView;
 
   @NonNull
@@ -43,11 +46,12 @@ public final class EventDetailsBinding implements ViewBinding {
   public final ListView signupListview;
 
   private EventDetailsBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ListView attendeeListView, @NonNull TextView attendeeTextSignups,
-      @NonNull TextView attendees, @NonNull TextView eventNameTextView,
-      @NonNull Button notifyButton, @NonNull Button qrCodeButton,
-      @NonNull ListView signupListview) {
+      @NonNull Button announcementButton, @NonNull ListView attendeeListView,
+      @NonNull TextView attendeeTextSignups, @NonNull TextView attendees,
+      @NonNull TextView eventNameTextView, @NonNull Button notifyButton,
+      @NonNull Button qrCodeButton, @NonNull ListView signupListview) {
     this.rootView = rootView;
+    this.announcementButton = announcementButton;
     this.attendeeListView = attendeeListView;
     this.attendeeTextSignups = attendeeTextSignups;
     this.attendees = attendees;
@@ -84,6 +88,12 @@ public final class EventDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.announcement_button;
+      Button announcementButton = ViewBindings.findChildViewById(rootView, id);
+      if (announcementButton == null) {
+        break missingId;
+      }
+
       id = R.id.attendee_list_view;
       ListView attendeeListView = ViewBindings.findChildViewById(rootView, id);
       if (attendeeListView == null) {
@@ -126,9 +136,9 @@ public final class EventDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new EventDetailsBinding((ConstraintLayout) rootView, attendeeListView,
-          attendeeTextSignups, attendees, eventNameTextView, notifyButton, qrCodeButton,
-          signupListview);
+      return new EventDetailsBinding((ConstraintLayout) rootView, announcementButton,
+          attendeeListView, attendeeTextSignups, attendees, eventNameTextView, notifyButton,
+          qrCodeButton, signupListview);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

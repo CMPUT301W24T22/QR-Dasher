@@ -37,6 +37,12 @@
             android:name=".SendNotification"
             android:exported="false" />
         <activity
+            android:name=".SendAnnouncement"
+            android:exported="false" />
+        <activity
+            android:name=".CheckAnnouncements"
+            android:exported="false" />
+        <activity
             android:name=".EventDetails"
             android:exported="false" />
         <activity

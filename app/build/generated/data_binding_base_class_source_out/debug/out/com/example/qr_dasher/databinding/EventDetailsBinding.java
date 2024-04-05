@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -16,6 +17,7 @@ import com.example.qr_dasher.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
+import org.osmdroid.views.MapView;
 
 public final class EventDetailsBinding implements ViewBinding {
   @NonNull
@@ -34,6 +36,12 @@ public final class EventDetailsBinding implements ViewBinding {
   public final TextView eventNameTextView;
 
   @NonNull
+  public final CardView mapCard;
+
+  @NonNull
+  public final MapView mapView;
+
+  @NonNull
   public final Button notifyButton;
 
   @NonNull
@@ -44,14 +52,16 @@ public final class EventDetailsBinding implements ViewBinding {
 
   private EventDetailsBinding(@NonNull ConstraintLayout rootView,
       @NonNull ListView attendeeListView, @NonNull TextView attendeeTextSignups,
-      @NonNull TextView attendees, @NonNull TextView eventNameTextView,
-      @NonNull Button notifyButton, @NonNull Button qrCodeButton,
+      @NonNull TextView attendees, @NonNull TextView eventNameTextView, @NonNull CardView mapCard,
+      @NonNull MapView mapView, @NonNull Button notifyButton, @NonNull Button qrCodeButton,
       @NonNull ListView signupListview) {
     this.rootView = rootView;
     this.attendeeListView = attendeeListView;
     this.attendeeTextSignups = attendeeTextSignups;
     this.attendees = attendees;
     this.eventNameTextView = eventNameTextView;
+    this.mapCard = mapCard;
+    this.mapView = mapView;
     this.notifyButton = notifyButton;
     this.qrCodeButton = qrCodeButton;
     this.signupListview = signupListview;
@@ -108,6 +118,18 @@ public final class EventDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.mapCard;
+      CardView mapCard = ViewBindings.findChildViewById(rootView, id);
+      if (mapCard == null) {
+        break missingId;
+      }
+
+      id = R.id.mapView;
+      MapView mapView = ViewBindings.findChildViewById(rootView, id);
+      if (mapView == null) {
+        break missingId;
+      }
+
       id = R.id.notify_button;
       Button notifyButton = ViewBindings.findChildViewById(rootView, id);
       if (notifyButton == null) {
@@ -127,8 +149,8 @@ public final class EventDetailsBinding implements ViewBinding {
       }
 
       return new EventDetailsBinding((ConstraintLayout) rootView, attendeeListView,
-          attendeeTextSignups, attendees, eventNameTextView, notifyButton, qrCodeButton,
-          signupListview);
+          attendeeTextSignups, attendees, eventNameTextView, mapCard, mapView, notifyButton,
+          qrCodeButton, signupListview);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

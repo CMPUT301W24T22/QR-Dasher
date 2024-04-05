@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-52:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.example.qr_dasher.app-mergeDebugResources-54:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\9f9686aa69ef96e09752468c17c9646c\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\e051a5ed7ee8d1d036c0319145b5fdd2\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

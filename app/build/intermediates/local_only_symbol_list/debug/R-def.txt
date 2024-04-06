@@ -16,6 +16,7 @@ id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id action_settings
 id admin_button
+id attendeeCount
 id attendee_button
 id attendee_list_view
 id attendee_text_signups

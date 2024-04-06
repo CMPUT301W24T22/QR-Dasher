@@ -3333,6 +3333,7 @@ id anticipate
 id arc
 id asConfigured
 id async
+id attendeeCount
 id attendee_button
 id attendee_list_view
 id attendee_text_signups

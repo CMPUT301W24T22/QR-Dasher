@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -20,6 +21,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -51,6 +54,17 @@ public class EventDetails extends AppCompatActivity {
     private List<String> attendeeListUserNames,  attendeeListDetails, attendeeListEmails;
     private List<String> signUpListListUserNames,signUpListListDetails, signUpListListEmails;
     private List<Integer>attendeeListUserIds, signUpListListUserIds;
+
+    private TextView attendeeCountTextView;
+
+    private static final int MILESTONE_ONE = 5;
+    private static final int MILESTONE_TWO = 10;
+    private static final int MILESTONE_THREE = 15;
+
+    private boolean isMilestoneOneReached = false;
+    private boolean isMilestoneTwoReached = false;
+    private boolean isMilestoneThreeReached = false;
+
     /**
      * Initializes the activity, sets up UI components and listeners,
      * and retrieves event details from Firebase Firestore.
@@ -95,6 +109,7 @@ public class EventDetails extends AppCompatActivity {
         mapView = findViewById(R.id.mapView);
         attendeeListView = findViewById(R.id.attendee_list_view);
         signupListView = findViewById(R.id.signup_listview);
+        attendeeCountTextView = findViewById(R.id.attendeeCount);
 
         db = FirebaseFirestore.getInstance();
 
@@ -176,70 +191,68 @@ public class EventDetails extends AppCompatActivity {
 //        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, R.layout.mytextview, signUpList);
 //        signupListView.setAdapter(adapter2);
 //    }
-    private void getUserDetailsFromFirebase(List<String> attendeeList, List<String> signUpList){
-       // Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
+    private void getUserDetailsFromFirebase(List<String> attendeeList, List<String> signUpList) {
         db = FirebaseFirestore.getInstance();
+
+        // Initialize lists
         attendeeListUserNames = new ArrayList<>();
         attendeeListUserIds = new ArrayList<>();
-        attendeeListDetails= new ArrayList<>();
+        attendeeListDetails = new ArrayList<>();
         attendeeListEmails = new ArrayList<>();
-
         signUpListListUserNames = new ArrayList<>();
         signUpListListUserIds = new ArrayList<>();
-        signUpListListDetails= new ArrayList<>();
+        signUpListListDetails = new ArrayList<>();
         signUpListListEmails = new ArrayList<>();
 
-        if (attendeeList!=null&&!attendeeList.isEmpty()) {
-
+        if (attendeeList != null && !attendeeList.isEmpty()) {
             List<Integer> attendeeListInt = new ArrayList<>();
             for (String str : attendeeList) {
                 attendeeListInt.add(Integer.parseInt(str));
             }
 
-
-
-            // Attendee List
+            // Attendee List - Real-time Listener
             db.collection("users")
                     .whereIn("userId", attendeeListInt)
-                    .get()
-                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    .addSnapshotListener(new EventListener<QuerySnapshot>() {
                         @Override
-                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-
-                            Log.d("Firestore", "Data retrieval successful");
-
-                            // Clear the lists before updating with new data
-                            attendeeListUserNames.clear();
-                            attendeeListUserIds.clear();
-                            attendeeListDetails.clear();
-                            attendeeListEmails.clear();
-
-
-                            // Iterate through the query results
-                            for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                                Integer userId = documentSnapshot.getLong("userId").intValue();
-                                String userName = documentSnapshot.getString("name");
-                                String userEmail = documentSnapshot.getString("email");
-                                String userDetail = documentSnapshot.getString("details");
-
-                                // Add user details to respective lists
-                                attendeeListUserNames.add(userName);
-                                attendeeListUserIds.add(userId);
-                                attendeeListDetails.add(userDetail);
-                                attendeeListEmails.add(userEmail);
-
+                        public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots,
+                                            @Nullable FirebaseFirestoreException e) {
+                            if (e != null) {
+                                Log.e("EventDetails", "Firestore listen failed.", e);
+                                return;
                             }
-                            if (attendeeListUserNames != null) {
-                                displayAttendee(attendeeListUserNames);
-                            }
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
 
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            // Handle any errors
-                            e.printStackTrace();
+                            if (queryDocumentSnapshots != null) {
+                                // Clear lists before updating with new data
+                                attendeeListUserNames.clear();
+                                attendeeListUserIds.clear();
+                                attendeeListDetails.clear();
+                                attendeeListEmails.clear();
+
+                                // Iterate through query results
+                                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                                    Integer userId = documentSnapshot.getLong("userId").intValue();
+                                    String userName = documentSnapshot.getString("name");
+                                    String userEmail = documentSnapshot.getString("email");
+                                    String userDetail = documentSnapshot.getString("details");
+
+                                    // Add user details to respective lists
+                                    attendeeListUserNames.add(userName);
+                                    attendeeListUserIds.add(userId);
+                                    attendeeListDetails.add(userDetail);
+                                    attendeeListEmails.add(userEmail);
+                                }
+
+                                updateAttendeeCount(attendeeListUserNames.size());
+
+                                // Display attendees
+                                if (attendeeListUserNames.size() > 0) {
+                                    displayAttendee(attendeeListUserNames);
+                                }
+
+                                // Check and update milestones
+                                checkAndUpdateMilestones(attendeeListUserNames.size());
+                            }
                         }
                     });
         }
@@ -296,6 +309,9 @@ public class EventDetails extends AppCompatActivity {
         }
 
     }
+    private void updateAttendeeCount(int count) {
+        attendeeCountTextView.setText("Attendees: " + count);
+    }
     private void displayAttendee(List<String> attendeeList) {
         Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
 
@@ -336,5 +352,24 @@ public class EventDetails extends AppCompatActivity {
                 return false;
             }
         }));
+    }
+
+    private void checkAndUpdateMilestones(int attendeeCount) {
+        if (attendeeCount >= MILESTONE_ONE && !isMilestoneOneReached) {
+            showMilestoneAlert(MILESTONE_ONE);
+            isMilestoneOneReached = true;
+        }
+        if (attendeeCount >= MILESTONE_TWO && !isMilestoneTwoReached) {
+            showMilestoneAlert(MILESTONE_TWO);
+            isMilestoneTwoReached = true;
+        }
+        if (attendeeCount >= MILESTONE_THREE && !isMilestoneThreeReached) {
+            showMilestoneAlert(MILESTONE_THREE);
+            isMilestoneThreeReached = true;
+        }
+    }
+    private void showMilestoneAlert(int milestone) {
+        String message = "Milestone reached: Over " + milestone + " attendees!";
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 }

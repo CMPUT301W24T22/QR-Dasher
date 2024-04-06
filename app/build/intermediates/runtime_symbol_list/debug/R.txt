@@ -3332,6 +3332,7 @@ int id anticipate 0x7f08005a
 int id arc 0x7f08005b
 int id asConfigured 0x7f08005c
 int id async 0x7f08005d
+int id attendeeCount 0x7f080270
 int id attendee_button 0x7f08005e
 int id attendee_list_view 0x7f08005f
 int id attendee_text_signups 0x7f080060

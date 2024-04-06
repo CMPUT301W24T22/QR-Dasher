@@ -24,6 +24,9 @@ public final class EventDetailsBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView attendeeCount;
+
+  @NonNull
   public final ListView attendeeListView;
 
   @NonNull
@@ -50,12 +53,13 @@ public final class EventDetailsBinding implements ViewBinding {
   @NonNull
   public final ListView signupListview;
 
-  private EventDetailsBinding(@NonNull ConstraintLayout rootView,
+  private EventDetailsBinding(@NonNull ConstraintLayout rootView, @NonNull TextView attendeeCount,
       @NonNull ListView attendeeListView, @NonNull TextView attendeeTextSignups,
       @NonNull TextView attendees, @NonNull TextView eventNameTextView, @NonNull CardView mapCard,
       @NonNull MapView mapView, @NonNull Button notifyButton, @NonNull Button qrCodeButton,
       @NonNull ListView signupListview) {
     this.rootView = rootView;
+    this.attendeeCount = attendeeCount;
     this.attendeeListView = attendeeListView;
     this.attendeeTextSignups = attendeeTextSignups;
     this.attendees = attendees;
@@ -94,6 +98,12 @@ public final class EventDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.attendeeCount;
+      TextView attendeeCount = ViewBindings.findChildViewById(rootView, id);
+      if (attendeeCount == null) {
+        break missingId;
+      }
+
       id = R.id.attendee_list_view;
       ListView attendeeListView = ViewBindings.findChildViewById(rootView, id);
       if (attendeeListView == null) {
@@ -148,7 +158,7 @@ public final class EventDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new EventDetailsBinding((ConstraintLayout) rootView, attendeeListView,
+      return new EventDetailsBinding((ConstraintLayout) rootView, attendeeCount, attendeeListView,
           attendeeTextSignups, attendees, eventNameTextView, mapCard, mapView, notifyButton,
           qrCodeButton, signupListview);
     }

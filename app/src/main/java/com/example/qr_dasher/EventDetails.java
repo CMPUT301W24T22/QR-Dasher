@@ -48,7 +48,7 @@ public class EventDetails extends AppCompatActivity {
     private ListView attendeeListView;
     private ListView signupListView;
     private String eventIDstr;
-    private List<String> attendeeListUserNames,  attendeeListDetails, attendeeListEmails;
+    private List<String> attendeeListUserNames,  attendeeListDetails, attendeeListEmails, attendeeScanCounts;
     private List<String> signUpListListUserNames,signUpListListDetails, signUpListListEmails;
     private List<Integer>attendeeListUserIds, signUpListListUserIds;
     /**
@@ -168,15 +168,6 @@ public class EventDetails extends AppCompatActivity {
             }
         });
 
-
-//        posterUploadButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Handle notification button click
-////                Intent intent = new Intent(EventDetails.this, SendNotification.class);
-////                startActivity(intent);
-//            }
-//        });
     }
     /**
      * Displays the list of attendees in a ListView.
@@ -197,6 +188,7 @@ public class EventDetails extends AppCompatActivity {
         attendeeListUserIds = new ArrayList<>();
         attendeeListDetails= new ArrayList<>();
         attendeeListEmails = new ArrayList<>();
+        attendeeScanCounts = new ArrayList<>();
 
         signUpListListUserNames = new ArrayList<>();
         signUpListListUserIds = new ArrayList<>();
@@ -209,7 +201,6 @@ public class EventDetails extends AppCompatActivity {
             for (String str : attendeeList) {
                 attendeeListInt.add(Integer.parseInt(str));
             }
-
 
 
             // Attendee List
@@ -227,6 +218,7 @@ public class EventDetails extends AppCompatActivity {
                             attendeeListUserIds.clear();
                             attendeeListDetails.clear();
                             attendeeListEmails.clear();
+                            attendeeScanCounts.clear();
 
 
                             // Iterate through the query results
@@ -235,12 +227,23 @@ public class EventDetails extends AppCompatActivity {
                                 String userName = documentSnapshot.getString("name");
                                 String userEmail = documentSnapshot.getString("email");
                                 String userDetail = documentSnapshot.getString("details");
+                                List<String> eventsJoined = (List<String>) documentSnapshot.get("eventsJoined");
+
+                                int scanCount = 0;
+                                if (eventsJoined != null) {
+                                    for (String eventId : eventsJoined) {
+                                        if (eventId.equals(eventIDstr)) {
+                                            scanCount++;
+                                        }
+                                    }
+                                }
 
                                 // Add user details to respective lists
                                 attendeeListUserNames.add(userName);
                                 attendeeListUserIds.add(userId);
                                 attendeeListDetails.add(userDetail);
                                 attendeeListEmails.add(userEmail);
+                                attendeeScanCounts.add(String.valueOf(scanCount));
 
                             }
                             if (attendeeListUserNames != null) {
@@ -313,9 +316,24 @@ public class EventDetails extends AppCompatActivity {
     private void displayAttendee(List<String> attendeeList) {
         Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
 
-        // Create an ArrayAdapter to display the event names
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, attendeeList);
+        List<String> combinedList = new ArrayList<>();
+
+        // Iterate through each item in the attendeeList and combine it with the corresponding scan count
+        for (int i = 0; i < attendeeList.size(); i++) {
+            String eventName = attendeeList.get(i);
+            int scanCount = Integer.parseInt(attendeeScanCounts.get(i));
+
+            // Concatenate the event name and scan count into a single string
+            String combinedString = eventName + " (Scan Count: " + scanCount + ")";
+
+            // Add the combined string to the list
+            combinedList.add(combinedString);
+        }
+
+        // Create ArrayAdapter with the combined list
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, combinedList);
         adapter.notifyDataSetChanged();
+
         // Set the adapter to the ListView
         attendeeListView.setAdapter(adapter);
     }

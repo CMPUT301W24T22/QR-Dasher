@@ -105,6 +105,7 @@ public class EventDetails extends AppCompatActivity {
         getUserDetailsFromFirebase(attendeeList,signupList);
         Button notifyButton = findViewById(R.id.notify_button);
         Button qrButton = findViewById(R.id.qr_code_button);
+        Button announcementButton = findViewById(R.id.announcement_button);
 //        Button posterUploadButton = findViewById(R.id.event_poster_button);
 
 
@@ -150,6 +151,19 @@ public class EventDetails extends AppCompatActivity {
                 intent.putExtra("event_id", eventIDstr);
                          // Pass the attendee list as an extra to the SendNotification activity
                 intent.putStringArrayListExtra("tokensList", (ArrayList<String>) tokensList);
+                startActivity(intent);
+            }
+        });
+
+
+        
+        // Set OnClickListener for the Announcement button
+        announcementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventDetails.this, SendAnnouncement.class);
+                // Pass the event ID to SendNotification activity
+                intent.putExtra("event_id", eventIDstr);
                 startActivity(intent);
             }
         });

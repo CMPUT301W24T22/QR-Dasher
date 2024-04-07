@@ -98,6 +98,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     private int savedHour = 0;
     private int savedMinute = 0;
     private static final int PICK_IMAGE_REQUEST = 1;
+    private static final int SCAN_QR_REQUEST_CODE = 2;
     private boolean twoQRcodes = false;
 
     /**

@@ -424,7 +424,7 @@ public class EventDetails extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         signupListView.setAdapter(adapter);
-        attendeeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        signupListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 

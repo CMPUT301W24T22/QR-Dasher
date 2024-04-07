@@ -39,8 +39,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -433,12 +435,16 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                         Event event = documentSnapshot.toObject(Event.class);
                         assert event != null;
                         List<String> attendeeList = new ArrayList<>(event.getAttendee_list());
-                        int currentAttendeeCount = attendeeList.size();
+                        // Use a Set to count unique attendees
+                        Set<String> uniqueAttendees = new HashSet<>(attendeeList);
+                        int uniqueAttendeeCount = uniqueAttendees.size();
                         int maxAttendees = event.getMaxAttendees();
 
-                        if ((currentAttendeeCount < maxAttendees) || (maxAttendees == -1)) {
+                        String userIdStr = String.valueOf(userId);
+
+                        if ((uniqueAttendeeCount < maxAttendees) || (maxAttendees == -1)) {
                             // Add the attendee to the event's attendee list
-                            String userIdStr = String.valueOf(userId);
+
                             attendeeList.add(userIdStr);
                             event.setAttendee_list(new ArrayList<>(attendeeList));
                             updateFirebaseEvent(eventID, event); // Update the event in Firestore
@@ -455,10 +461,6 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                                     }
                                 }
                             });
-
-
-
-
 
                         } else {
                             Toast.makeText(Attendee.this, "Event is full", Toast.LENGTH_SHORT).show();

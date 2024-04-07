@@ -2,6 +2,7 @@ package com.example.qr_dasher;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,9 +21,10 @@ import java.text.SimpleDateFormat;
 
 public class EventSignUpPage extends AppCompatActivity {
     private TextView signUp_Name, signUp_Details, signUp_Time;
-    private Button signup_button;
+    private Button signup_button, announcement_button;
     private SharedPreferences app_cache;
     private String eventId;
+    @SuppressLint("MissingInflatedId")          // TODO    ///////////////////
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,8 @@ public class EventSignUpPage extends AppCompatActivity {
         signUp_Details = findViewById(R.id.signUp_Details);
         signUp_Time = findViewById(R.id.signUp_Time);
 
+        announcement_button = findViewById(R.id.check_announcement);
+
         if (extras != null) {
             // Extract data from the bundle
             String eventName = extras.getString("eventName");
@@ -44,9 +48,15 @@ public class EventSignUpPage extends AppCompatActivity {
             eventId = extras.getString("eventId");
             Date date = (Date) extras.getSerializable("timestamp");
             boolean signUpBool = extras.getBoolean("signUpBool",false);
+            boolean checkAnnounce = extras.getBoolean("checkAnnounce",false);
+
 
             if (!signUpBool){
                 signup_button.setVisibility(View.GONE);
+            }
+
+            if (!checkAnnounce){
+                announcement_button.setVisibility(View.GONE);
             }
 
             signUp_Name.setText(eventName);
@@ -62,6 +72,19 @@ public class EventSignUpPage extends AppCompatActivity {
 
                 updateFirebase(eventId);
                 finish();
+            }
+        });
+
+        announcement_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventSignUpPage.this, CheckAnnouncements.class);
+                Log.d("EventSignUpPage", "Event ID 1  : " + eventId);
+
+                intent.putExtra ("event_id", eventId);
+                Log.d("EventSignUpPage", "Event ID 2 : " + eventId);
+
+                startActivity(intent);
             }
         });
 

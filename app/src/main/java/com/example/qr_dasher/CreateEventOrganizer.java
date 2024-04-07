@@ -440,7 +440,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImageUri);
                 // Resize bitmap if needed to avoid large image storage
-                Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 500, 500, false);
+                Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 200, 200, false);
                 // Convert bitmap to Base64 string
                 String encodedImage = bitmapToBase64(resizedBitmap);
                 // Save the image to Firestore for the specific event

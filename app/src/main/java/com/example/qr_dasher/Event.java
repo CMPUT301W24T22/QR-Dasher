@@ -58,16 +58,8 @@ public class Event {
         this.organizer = userID;
         this.signup_list = new ArrayList<>();
         this.maxAttendees = maxAttendees;
-
-        //this.dateTime = dateTime;
     }
-
-    //    public User getOrganizer() {
-//        return organizer;
-//    }
-//    public void setOrganizer(User organizer) {
-//        this.organizer = organizer;
-//    }
+    
     /**
      * Gets the event ID.
      *
@@ -295,4 +287,6 @@ public class Event {
     public void setOrganizer(int organizer) {
         this.organizer = organizer;
     }
+
+
 }

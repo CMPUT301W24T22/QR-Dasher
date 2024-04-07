@@ -89,7 +89,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.QRDasher" >
-
+        <activity
+            android:name="com.example.qr_dasher.manageQRcode"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 

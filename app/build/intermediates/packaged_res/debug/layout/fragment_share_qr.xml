@@ -20,6 +20,12 @@
         android:text="Share Promotional QR code"
         android:visibility="gone"/>
 
+    <Button
+        android:id="@+id/generatePromoQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Promotional QR code"
+        android:visibility="gone"/>
 
 
 </LinearLayout>

@@ -166,6 +166,9 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
                 // Determine if it is promotional or checkin QR
                 if (scannedText != null) {
+                    // check if reusue String (alt_text)
+
+
                     if (scannedText.charAt(0) == 'p') {
                         // Promotional QR
                         Log.d("QR Scanning", "Promotional Detected");

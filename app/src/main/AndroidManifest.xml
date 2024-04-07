@@ -18,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRDasher"
         tools:targetApi="31">
+
         <activity
             android:name=".AdminEventList"
             android:exported="false" />
@@ -30,9 +31,7 @@
         <activity
             android:name=".AdminEventPage"
             android:exported="false" />
-        <activity
-            android:name=".AdminActivity"
-            android:exported="false" />
+        <activity android:name=".AdminActivity" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 

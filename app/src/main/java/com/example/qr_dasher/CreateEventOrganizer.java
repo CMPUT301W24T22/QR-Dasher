@@ -157,8 +157,8 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                     if (!TextUtils.isDigitsOnly(maxAttendeesString)) {
                         Toast.makeText(CreateEventOrganizer.this, "Maximum attendees must be a number", Toast.LENGTH_SHORT).show();
                         return;
-                        }
-                int maxAttendees = Integer.parseInt(maxAttendeesString);
+                    }
+                    int maxAttendees = Integer.parseInt(maxAttendeesString);
                     event = new Event(event_name, event_details, userId, maxAttendees);
                 }
                 else{
@@ -244,19 +244,10 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Old download button code:
-//                String fileName = "qrcode.png";
-//                   MediaStore.Images.Media.insertImage(getContentResolver(), generatedQRCode, fileName, "Image saved from your app");
-//                Toast.makeText(getApplicationContext(), "Image saved to Gallery", Toast.LENGTH_SHORT).show();
 
-                // New Code: Share button
-              //  Intent shareIntent = new Intent(Intent.ACTION_SEND);
-               // shareIntent.setType("image/*");
-               // shareIntent.putExtra(Intent.EXTRA_STREAM, bitmapToUri(generatedQRCode));
-               // startActivity(Intent.createChooser(shareIntent, "Share via"));
                 if (!twoQRcodes){
-                ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, event.getName());
-                fragment.showFragment(getSupportFragmentManager());}
+                    ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, event.getName());
+                    fragment.showFragment(getSupportFragmentManager());}
                 else {
                     ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, pgeneratedQRCode,event.getName());
                     fragment.showFragment(getSupportFragmentManager());
@@ -267,12 +258,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         });
 
 
-        displayQRcodes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getQRFromFirebase();
-            }
-        });
+
 
         eventPosterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -283,7 +269,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         });
 
     }
-//    private Uri bitmapToUri(Bitmap bitmap) {
+    //    private Uri bitmapToUri(Bitmap bitmap) {
 //        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
 //        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
 //        String path = MediaStore.Images.Media.insertImage(getContentResolver(), bitmap, event.getName(), null);
@@ -375,26 +361,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
      * This method is called when the organizer wants to display QR codes for all events stored in Firestore.
      * It retrieves the QR codes and starts a new activity to display them.
      */
-    public void getQRFromFirebase() {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("events")
-                .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    List<String> qrCodes = new ArrayList<>();
-                    for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                        Map<String, Object> qrCodeData = documentSnapshot.getData();
-                        String qrCodeString = (String) qrCodeData.get("image");
-                        qrCodes.add(qrCodeString);
-                    }
-                    Intent intent = new Intent(CreateEventOrganizer.this, reuseQRcodes.class);
-                    intent.putStringArrayListExtra(EXTRA_QR_CODES, (ArrayList<String>) qrCodes);
-                    startActivityForResult(intent, REQUEST_CODE_REUSE_QR);
-                })
-                .addOnFailureListener(e -> {
-                    Log.d("QR", "Failed to retrieve QR codes from Firestore");
-                    e.printStackTrace();
-                });
-    }
+
 
     private String bitmapToBase64(Bitmap bitmap) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -452,5 +419,4 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
 
     }
 }
-
 

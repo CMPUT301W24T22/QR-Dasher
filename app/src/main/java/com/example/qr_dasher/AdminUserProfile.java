@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -55,6 +56,16 @@ public class AdminUserProfile extends AppCompatActivity {
         String selectedUserID = getIntent().getStringExtra("userID");
         // Set userID text
         userID.setText(selectedUserID);
+        // also get the role of the user: organizer or admin
+        String role = getIntent().getStringExtra("role");
+        if (role != null && role.equals("organizer")){
+            deleteUserButton.setVisibility(View.GONE);
+            deleteProfilePictureButton.setVisibility(View.GONE);
+            geolocationCheckBox.setVisibility(View.GONE);
+            signedUpEvents.setVisibility(View.GONE);
+            attendedEvents.setVisibility(View.GONE);
+            createdEvents.setVisibility(View.GONE);
+        }
         retrieveUserFromFirebase(selectedUserID, new AdminUserProfile.FirebaseCallback() {
             @Override
             public void onCallback(User user) {

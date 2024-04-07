@@ -149,8 +149,8 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
 
                 String maxAttendeesString = maxAttendees.getText().toString();
 
-
-                if (TextUtils.isEmpty(event_name) || (TextUtils.isEmpty(event_details))){
+                String textDateTimeString = textDateTime.getText().toString();
+                if (TextUtils.isEmpty(event_name) || (TextUtils.isEmpty(event_details)) ||TextUtils.isEmpty(textDateTimeString) ){
                     Toast.makeText(CreateEventOrganizer.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -204,6 +204,22 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                             } else {
                                 Log.d("Organizer", "No user found with UserId: " + userId);
                             }
+                            downloadButton.setVisibility(View.VISIBLE);
+                            displayQRcodes.setVisibility(View.VISIBLE);
+                            eventPosterButton.setVisibility(View.VISIBLE);
+                            generatePromotionalQR.setVisibility(View.VISIBLE);
+                            pickDateTime.setVisibility(View.GONE);
+                            generateQRandCreateEvent.setVisibility(View.GONE);
+                            eventName.setEnabled(false);
+                            eventDetails.setEnabled(false);
+                            maxAttendees.setEnabled(false);
+                            eventName.setFocusable(false);
+                            eventDetails.setFocusable(false);
+                            maxAttendees.setFocusable(false);
+                            eventName.setFocusableInTouchMode(false);
+                            eventDetails.setFocusableInTouchMode(false);
+                            maxAttendees.setFocusableInTouchMode(false);
+
                         })
                         .addOnFailureListener(e -> {
                             Log.d("Organizer", "Failed to retrieve User from Firestore");
@@ -211,6 +227,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                         });
 
                 addEventToFirebase(event);
+
             }
         });
 
@@ -231,13 +248,14 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                         .update("promotional_qr", event.getPromotional_qr())
                         .addOnSuccessListener(aVoid ->{
                             Log.d("Organizer", "Event QR PROMOTIONAL ADDED successfully");
+                            generatePromotionalQR.setEnabled(false);
+
                         })
                         .addOnFailureListener(e -> {
                             Log.d("Organizer", "Failed to update event in Firestore"+ eventId);
                             e.printStackTrace();
                         });
                 twoQRcodes = true;
-
 
             }
         });
@@ -264,6 +282,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                 Intent intent = new Intent(CreateEventOrganizer.this, ScanQR.class);
                 startActivityForResult(intent, SCAN_QR_REQUEST_CODE);
             }
+
         });
 
 

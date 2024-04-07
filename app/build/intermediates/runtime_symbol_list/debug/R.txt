@@ -3678,6 +3678,7 @@ int id postLayout 0x7f0801b3
 int id pressed 0x7f0801b4
 int id progress_circular 0x7f0801b5
 int id progress_horizontal 0x7f0801b6
+int id promoQRbutton 0x7f080278
 int id promotionalQR 0x7f0801b7
 int id qrCode 0x7f0801b8
 int id qr_button 0x7f0801b9

@@ -171,16 +171,18 @@ public class Organizer extends AppCompatActivity {
                 Map<String, Object> attendeeQr = attendeeQrMap.get(position);
                 String qrImage = (String) attendeeQr.get("qrImage");
                 String qrContent =(String) attendeeQr.get("content");
-//                int qrUserId = (int) attendeeQr.get("userID");
-//                int qrEventId = (int) attendeeQr.get("event_id");
+                Long qrUserIdLong = (Long) attendeeQr.get("userID");
+                Long qrEventIdLong = (Long) attendeeQr.get("event_id");
 
                 Intent intent = new Intent(Organizer.this, EventDetails.class);
                 intent.putExtra("eventName", eventName);
                 intent.putExtra("event_id", eventId);
                 intent.putExtra("qrImage",qrImage);
                 intent.putExtra("qrContent", qrContent);
-//                intent.putExtra("userID",qrUserId);
-//                intent.putExtra("eventId",qrEventId );
+                intent.putExtra("userID",qrUserIdLong);
+                intent.putExtra("eventId",qrEventIdLong );
+                Log.d("MainActivity", "qrUserid before putExtra: " + qrUserIdLong);
+                Log.d("MainActivity", "qrEventId before putExtra: " + qrEventIdLong);
                 //Log.d("Debug", "Attendee List before adding to intent: " + attendeeList);
                 //Log.d("Debug", "Signup List before adding to intent: " + signupList);
                 if (attendeeList!= null){

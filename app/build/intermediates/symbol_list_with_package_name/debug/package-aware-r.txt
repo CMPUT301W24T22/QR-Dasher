@@ -3679,6 +3679,7 @@ id postLayout
 id pressed
 id progress_circular
 id progress_horizontal
+id promoQRbutton
 id promotionalQR
 id qrCode
 id qr_button

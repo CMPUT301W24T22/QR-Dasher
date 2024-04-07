@@ -74,6 +74,7 @@ id notification_title_text
 id notify_button
 id organizer_button
 id pickTime
+id promoQRbutton
 id promotionalQR
 id qrCode
 id qr_button

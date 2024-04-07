@@ -258,12 +258,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         });
 
 
-        displayQRcodes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getQRFromFirebase();
-            }
-        });
+
 
         eventPosterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -366,26 +361,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
      * This method is called when the organizer wants to display QR codes for all events stored in Firestore.
      * It retrieves the QR codes and starts a new activity to display them.
      */
-    public void getQRFromFirebase() {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("events")
-                .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    List<String> qrCodes = new ArrayList<>();
-                    for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                        Map<String, Object> qrCodeData = documentSnapshot.getData();
-                        String qrCodeString = (String) qrCodeData.get("image");
-                        qrCodes.add(qrCodeString);
-                    }
-                    Intent intent = new Intent(CreateEventOrganizer.this, reuseQRcodes.class);
-                    intent.putStringArrayListExtra(EXTRA_QR_CODES, (ArrayList<String>) qrCodes);
-                    startActivityForResult(intent, REQUEST_CODE_REUSE_QR);
-                })
-                .addOnFailureListener(e -> {
-                    Log.d("QR", "Failed to retrieve QR codes from Firestore");
-                    e.printStackTrace();
-                });
-    }
+
 
     private String bitmapToBase64(Bitmap bitmap) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();

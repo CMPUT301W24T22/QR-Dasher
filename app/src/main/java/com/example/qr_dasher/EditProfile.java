@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.GeoPoint;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
     private SharedPreferences app_cache;
     private List<String> createdEvents, signedUpEvents, joinedEvents;
     private String token;
+    private GeoPoint geoPoint;
     /**
      * Initializes the activity, sets up UI components and listeners,
      * and retrieves user data from Firebase Firestore.
@@ -64,6 +66,8 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
         signedUpEvents = new ArrayList<String>();
         joinedEvents = new ArrayList<String>();
         token = new String();
+
+
 
         app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
         int userId = app_cache.getInt("UserID", -1);
@@ -152,6 +156,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
                 user.setEventsJoined(joinedEvents);
                 user.setEventsSignedUp(signedUpEvents);
                 user.setToken(token);
+                user.setGeoPoint(geoPoint);
 
                 updateUserOnFirebase(user);
 
@@ -204,6 +209,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
                         user.setUserId(Integer.parseInt(userID));
                         createdEvents = (List<String>) user.getEventsCreated();
                         signedUpEvents = (List<String>) user.getEventsSignedUp();
+                        geoPoint = user.getGeoPoint();
                         joinedEvents = (List<String>) user.getEventsJoined();
                         token = user.getToken();
                         // Invoke the callback with the retrieved user object
@@ -306,6 +312,3 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
 
         return bitmap;
     }
-
-
-}

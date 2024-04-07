@@ -2,8 +2,11 @@ package com.example.qr_dasher;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -51,6 +54,8 @@ public class EventDetails extends AppCompatActivity {
     private List<String> attendeeListUserNames,  attendeeListDetails, attendeeListEmails;
     private List<String> signUpListListUserNames,signUpListListDetails, signUpListListEmails;
     private List<Integer>attendeeListUserIds, signUpListListUserIds;
+    private Bitmap AttendeeQRCode, PromotionalQRcode;
+    private String eventName;
     /**
      * Initializes the activity, sets up UI components and listeners,
      * and retrieves event details from Firebase Firestore.
@@ -67,12 +72,19 @@ public class EventDetails extends AppCompatActivity {
         // Get event name from intent extras
 
         Intent intent = getIntent();
-        String eventName = intent.getStringExtra("eventName");
+        eventName = intent.getStringExtra("eventName");
         eventIDstr = intent.getStringExtra("event_id");
         Toast.makeText(getApplicationContext(), "Event ID: " + eventIDstr, Toast.LENGTH_SHORT).show();
         List<String> attendeeList = intent.getStringArrayListExtra("attendee_list");
         List<String> signupList = intent.getStringArrayListExtra("signup_list");
+        String attendeeQr = intent.getStringExtra("qrImage");
+        String qrContent = intent.getStringExtra("qrContent");
+        int qrUserid = intent.getIntExtra("userID",0);
+        int qrEventId= intent.getIntExtra("eventId",0 );
 
+        // Converting the string to bitmap
+        byte[] imageBytes = Base64.decode(attendeeQr, Base64.DEFAULT);
+        AttendeeQRCode = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
 
 
         if (attendeeList != null) {
@@ -168,7 +180,22 @@ public class EventDetails extends AppCompatActivity {
             }
         });
 
+        qrButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                if (!twoQRcodes){
+                    ShareQRFragment fragment = ShareQRFragment.newInstance(AttendeeQRCode,eventName);
+                    fragment.showFragment(getSupportFragmentManager());
 
+//                    ShareQRFragment fragment = ShareQRFragment.newInstance(AttendeeQRCode, eventName,qrEventId,qrContent,qrUserid,true);
+//                    fragment.showFragment(getSupportFragmentManager());
+                    //ShareQRFragment newInstance(Bitmap qrCodeBitmap1,String eventName, int eventID, String content, int userID) {
+//                else {
+                   //     ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, pgeneratedQRCode,event.getName());
+//                    fragment.showFragment(getSupportFragmentManager());
+//                }
+            }
+        });
 //        posterUploadButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

@@ -244,16 +244,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Old download button code:
-//                String fileName = "qrcode.png";
-//                   MediaStore.Images.Media.insertImage(getContentResolver(), generatedQRCode, fileName, "Image saved from your app");
-//                Toast.makeText(getApplicationContext(), "Image saved to Gallery", Toast.LENGTH_SHORT).show();
 
-                // New Code: Share button
-                //  Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                // shareIntent.setType("image/*");
-                // shareIntent.putExtra(Intent.EXTRA_STREAM, bitmapToUri(generatedQRCode));
-                // startActivity(Intent.createChooser(shareIntent, "Share via"));
                 if (!twoQRcodes){
                     ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, event.getName());
                     fragment.showFragment(getSupportFragmentManager());}

@@ -3492,6 +3492,7 @@ id forever
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id generatePromoQR
 id generatePromotionalQR
 id generateQRandCreateEvent
 id generate_profile_button

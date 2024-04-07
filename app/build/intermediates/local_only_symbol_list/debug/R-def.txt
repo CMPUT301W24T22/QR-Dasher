@@ -50,6 +50,7 @@ id eventName
 id eventNameTextView
 id eventPosterImageView
 id event_poster_button
+id generatePromoQR
 id generatePromotionalQR
 id generateQRandCreateEvent
 id generate_profile_button

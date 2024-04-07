@@ -44,10 +44,6 @@
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-58:\\menu\\menu_main.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-merged_res-56:/layout_event_details.xml.flat",
-        "source": "com.example.qr_dasher.app-main-58:/layout/event_details.xml"
-    },
-    {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-56:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-58:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -98,6 +94,10 @@
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-56:\\layout_fragment_image_upload.xml.flat",
         "source": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-main-58:\\layout\\fragment_image_upload.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-56:/layout_fragment_share_qr.xml.flat",
+        "source": "com.example.qr_dasher.app-main-58:/layout/fragment_share_qr.xml"
     },
     {
         "merged": "C:\\Users\\jaspr\\.gradle\\daemon\\8.2\\com.example.qr_dasher.app-merged_res-56:\\layout_activity_reuse_qrcodes.xml.flat",

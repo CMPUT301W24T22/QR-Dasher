@@ -3491,6 +3491,7 @@ int id forever 0x7f0800f9
 int id fragment_container_view_tag 0x7f0800fa
 int id frost 0x7f0800fb
 int id fullscreen_header 0x7f0800fc
+int id generatePromoQR 0x7f080277
 int id generatePromotionalQR 0x7f0800fd
 int id generateQRandCreateEvent 0x7f0800fe
 int id generate_profile_button 0x7f0800ff

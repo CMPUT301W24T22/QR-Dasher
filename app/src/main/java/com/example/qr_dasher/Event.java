@@ -49,7 +49,7 @@ public class Event {
         this.signup_list = new ArrayList<>();
         this.maxAttendees = -1;
         this.announcements = new ArrayList<>();
-
+        
         //this.dateTime = dateTime;
     }
     public Event(String name, String details, int userID,int maxAttendees){
@@ -62,7 +62,7 @@ public class Event {
         this.signup_list = new ArrayList<>();
         this.maxAttendees = maxAttendees;
         this.announcements = new ArrayList<>();
-
+        
         //this.dateTime = dateTime;
     }
 
@@ -307,9 +307,23 @@ public class Event {
      */
     public ArrayList<String> getAnnouncements() {
         return announcements;
+    public void setSignup_list(ArrayList<String> signup_list) {
+        this.signup_list = signup_list;
     }
-
+        
     public void setAnnouncements(ArrayList<String> announcements) {
         this.announcements = announcements;
+    }
+
+    public void removeUserFromEvent(String userID) {
+        // Remove user from attendee_list
+        if (attendee_list.contains(userID)) {
+            attendee_list.remove(userID);
+        }
+
+        // Remove user from signup_list
+        if (signup_list.contains(userID)) {
+            signup_list.remove(userID);
+        }
     }
 }

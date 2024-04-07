@@ -11,16 +11,16 @@ public class User {
     private String email;
     private String details;
     private boolean location;
-
     private String profile_image;
     private List<String> eventsCreated;
     private List<String> eventsJoined;
     private List<String> eventsSignedUp;
-
     private String token;
+
     public User(){
 
     }
+
     /**
      * Constructor for the User class.
      * @param name The name of the user.
@@ -30,7 +30,7 @@ public class User {
     public User(String name, String email, boolean location){
         Random random = new Random();
         this.name = name;
-        if (email.contains("@") && email.contains(".com")){
+        if (email.contains("@")){
             this.email = email;
         } else {
             throw new IllegalArgumentException("Invalid email");
@@ -41,6 +41,25 @@ public class User {
         this.eventsJoined = new ArrayList<>();
         this.eventsSignedUp = new ArrayList<>();
         this.token = token;
+    }
+    public static User createGuest(){
+        User user = new User();
+        Random random = new Random();
+
+        List<String> eventsCreated = new ArrayList<>();
+        List<String> eventsJoined = new ArrayList<>();
+        List<String> eventsSignedUp = new ArrayList<>();
+        String token = new String();
+
+        user.setUserId(random.nextInt());
+        user.setName("guest_" + String.valueOf(user.getUserId()));
+        user.setLocation(true);
+        user.setToken(token);
+        user.setEventsJoined(eventsJoined);
+        user.setEventsCreated(eventsCreated);
+        user.setEventsSignedUp(eventsSignedUp);
+
+        return user;
     }
     /**
      * Get the name of the user.
@@ -163,26 +182,32 @@ public class User {
     public List<String> getEventsCreated(){
         return this.eventsCreated;
     }
-
     public List<String> getEventsSignedUp() {
         return eventsSignedUp;
     }
-
-    public void setEventsSignedUp(List<String> eventsSignedUp) {
-        this.eventsSignedUp = eventsSignedUp;
-    }
-
+    public void setEventsSignedUp(List<String> eventsSignedUp) { this.eventsSignedUp = eventsSignedUp; }
     public void addEventsSignedUp(String eventID){
         this.eventsSignedUp.add(eventID);
     }
-
-
-    public void settoken(String token) {
+    public void setEventsCreated(List<String> eventsCreated) {
+        this.eventsCreated = eventsCreated;
+    }
+    public void setEventsJoined(List<String> eventsJoined) {
+        this.eventsJoined = eventsJoined;
+    }
+    public void setToken(String token) {
         this.token = token;
     }
-
     public String getToken() {
         return token;
     }
-
+    public void removeEventCreated(String qrCode) {
+        this.eventsCreated.remove(qrCode);
+    }
+    public void removeEventSignedUp(String eventID) {
+        this.eventsSignedUp.remove(eventID);
+    }
+    public void removeEventJoined(String qrCode) {
+        this.eventsJoined.remove(qrCode);
+    }
 }

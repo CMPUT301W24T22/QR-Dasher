@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/signUp_Details"
         app:layout_constraintVertical_bias="0.159" />
 
-
+    
     <Button
         android:id="@+id/check_announcement"
         style="@android:style/Widget.Material.Light.Button"

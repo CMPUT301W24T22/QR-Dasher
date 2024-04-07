@@ -17,11 +17,11 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class EventAdapter extends ArrayAdapter<String> {
-    private static final String TAG = "EventAdapter";
+public class ListAdapter extends ArrayAdapter<String> {
+    private static final String TAG = "ListAdapter";
     private List<String> eventPostersBase64; // List of Base64 strings representing images
 
-    public EventAdapter(Context context, List<String> eventNames, List<String> eventPostersBase64) {
+    public ListAdapter(Context context, List<String> eventNames, List<String> eventPostersBase64) {
         super(context, 0, eventNames);
         this.eventPostersBase64 = eventPostersBase64;
     }

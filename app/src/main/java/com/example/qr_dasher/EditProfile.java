@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.GeoPoint;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,7 @@ public class
 
 
 
-EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUploadListener{
+EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUploadListener {
 
     private EditText nameEdit, emailEdit, detailsEdit;
     private CheckBox geolocationCheckBox;
@@ -45,6 +46,8 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
     private SharedPreferences app_cache;
     private List<String> createdEvents, signedUpEvents, joinedEvents;
     private String token;
+    private GeoPoint geoPoint;
+
     /**
      * Initializes the activity, sets up UI components and listeners,
      * and retrieves user data from Firebase Firestore.
@@ -65,6 +68,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
         joinedEvents = new ArrayList<String>();
         token = new String();
 
+
         app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
         int userId = app_cache.getInt("UserID", -1);
         boolean guest = app_cache.getBoolean("Guest", false);
@@ -77,7 +81,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
         selectImageButton = findViewById(R.id.select_image_button);
         uploadButton = findViewById(R.id.upload_button);
 
-        if(guest == false) {
+        if (guest == false) {
             retrieveUserFromFirebase(String.valueOf(userId), new FirebaseCallback() {
                 @Override
                 public void onCallback(User user) {
@@ -130,7 +134,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
                 String details = detailsEdit.getText().toString().trim();
                 boolean location = geolocationCheckBox.isChecked();
 
-                if(guest){
+                if (guest) {
                     if (name.isEmpty() || email.isEmpty()) {
                         // Display toast message
                         Toast.makeText(EditProfile.this, "Enter at least name and email", Toast.LENGTH_SHORT).show();
@@ -145,13 +149,14 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
                 User user = new User(name, email, location);
                 user.setUserId(userId);
                 user.setDetails(details);
-                if (profile_picture != null){
+                if (profile_picture != null) {
                     user.setProfile_image(Picture.convertBitmaptoString(profile_picture));
                 }
                 user.setEventsCreated(createdEvents);
                 user.setEventsJoined(joinedEvents);
                 user.setEventsSignedUp(signedUpEvents);
                 user.setToken(token);
+                user.setGeoPoint(geoPoint);
 
                 updateUserOnFirebase(user);
 
@@ -172,6 +177,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
     }
 
     // Callback method to receive the uploaded image bitmap from ImageUploadFragment
+
     /**
      * Callback method to receive the uploaded image bitmap from ImageUploadFragment.
      * Updates the profile picture ImageView and stores the image bitmap in the profile_picture variable.
@@ -185,7 +191,8 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
         // Store the image bitmap in profile_picture variable
         profile_picture = imageBitmap;
     }
-      /**
+
+    /**
      * Retrieves user data from Firebase Firestore based on the provided user ID.
      *
      * @param userID   The user ID used to retrieve user data.
@@ -204,6 +211,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
                         user.setUserId(Integer.parseInt(userID));
                         createdEvents = (List<String>) user.getEventsCreated();
                         signedUpEvents = (List<String>) user.getEventsSignedUp();
+                        geoPoint = user.getGeoPoint();
                         joinedEvents = (List<String>) user.getEventsJoined();
                         token = user.getToken();
                         // Invoke the callback with the retrieved user object
@@ -220,14 +228,15 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
                     callback.onCallback(null); // Notify callback with null user
                 });
     }
-     /**
+
+    /**
      * Updates user data on Firebase Firestore.
      *
      * @param user The User object containing updated user data.
      */
 
 
-    public void updateUserOnFirebase(User user){
+    public void updateUserOnFirebase(User user) {
         int userId = user.getUserId();
 
         usersCollection.document(String.valueOf(userId))
@@ -239,6 +248,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
                     Toast.makeText(EditProfile.this, "Failed to update user: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
+
     /**
      * Populates UI with retrieved user data.
      *
@@ -265,7 +275,8 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
 
 
     // Define a callback interface
-     /**
+
+    /**
      * Callback interface for handling retrieved user data from Firebase.
      */
     public interface FirebaseCallback {
@@ -306,6 +317,4 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
 
         return bitmap;
     }
-
-
 }

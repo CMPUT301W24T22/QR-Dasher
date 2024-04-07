@@ -311,9 +311,9 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
                         boolean signUpBool = true;
                         bundle.putBoolean("signUpBool", signUpBool);
-
-                        // TODO  /////////////////////////////////
-
+                        
+                        // TODO /////////////////////////////////
+                        
                         // Converting timeStamp to date to put in bundle
                         Timestamp eventTimestamp = event.getTimestamp();
                         Date date = eventTimestamp.toDate();
@@ -658,8 +658,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 // TODO ////////////////////////
                 boolean checkAnnounce = true;
                 bundle.putBoolean("checkAnnounce",checkAnnounce);
-
-
+                
                 //Integer eventId = Integer.parseInt(eventIdStr);
                 // Start new activity with the event name
                 Intent intent = new Intent(Attendee.this, EventSignUpPage.class);
@@ -694,10 +693,11 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 boolean signUpBool = false;
                 bundle.putBoolean("signUpBool", signUpBool);
 
+                
                 //TODO  ///////////////////////////
                 boolean checkAnnounce = true;
                 bundle.putBoolean("checkAnnounce",checkAnnounce);
-
+                
 //                if (signedEventPoster != null && !signedEventPoster.get(position).isEmpty()) {
 //                    String eventPoster = signedEventPoster.get(position);
 //                    bundle.putString("Poster",eventPoster);

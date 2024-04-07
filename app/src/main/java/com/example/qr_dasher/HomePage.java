@@ -14,11 +14,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -33,7 +30,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
     private EditText nameEdit, emailEdit, detailsEdit;
     private CheckBox geolocationCheckBox;
     private ImageView imageUpload;
-    private Button selectImageButton, uploadButton, nextButton;
+    private Button selectImageButton, uploadButton, skipButton;
     private FirebaseFirestore db;
     private CollectionReference usersCollection;
     private Bitmap profile_picture;
@@ -68,7 +65,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
         imageUpload = findViewById(R.id.image_upload);
         selectImageButton = findViewById(R.id.select_image_button);
         uploadButton = findViewById(R.id.upload_button);
-        nextButton = findViewById(R.id.next_button);
+        skipButton = findViewById(R.id.next_button);
 
 
         selectImageButton.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +105,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                             }
                             String token = task.getResult();
                             Log.d("Token", token);
-                            user.settoken(token);
+                            user.setToken(token);
 
                             if (details != null){
                                 user.setDetails(details);
@@ -116,31 +113,21 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                             if (profile_picture != null){
                                 user.setProfile_image(Picture.convertBitmaptoString(profile_picture));
                             }
-                            saveUserToCache(user);
+                            saveUserToCache(user, false);
                             addUserToFirestore(user);
                         });
-
-
-
-               /* FirebaseMessaging.getInstance().getToken()
-                        .addOnCompleteListener(new OnCompleteListener<String>() {
-                            @Override
-                            public void onComplete(@NonNull Task<String> task) {
-                                if (task.isSuccessful()) {
-                                    // Get new FCM registration token
-                                    String token = task.getResult();
-                                    user.settoken(token);
-                                }
-                            }
-                        });*/
-
-
+                startActivity(new Intent(HomePage.this, RolePage.class));
+                finish();
             }
         });
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                User guest = User.createGuest();
+                saveUserToCache(guest, true);
+                addUserToFirestore(guest);
                 startActivity(new Intent(HomePage.this, RolePage.class));
+                finish();
             }
         });
     }
@@ -180,9 +167,14 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
      * @param user The User object containing user data.
      */
 
-    private void saveUserToCache(User user){
+    private void saveUserToCache(User user, boolean guest){
         SharedPreferences.Editor editor = app_cache.edit();
         editor.putInt("UserID", user.getUserId());
+        if(guest == true){
+            editor.putBoolean("Guest", true);
+        } else {
+            editor.putBoolean("Guest", false);
+        }
         editor.apply();
     }
 }

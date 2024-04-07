@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -21,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentReference;
 
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -39,6 +41,7 @@ import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.MapEventsOverlay;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -124,9 +127,9 @@ public class EventDetails extends AppCompatActivity {
 
         getUserDetailsFromFirebase(attendeeList,signupList);
         Button notifyButton = findViewById(R.id.notify_button);
-        Button announcementButton = findViewById(R.id.announcement_button);
         Button qrButton = findViewById(R.id.qr_code_button);
         generatePromoQRbutton = findViewById(R.id.promoQRbutton);
+        Button announcementButton = findViewById(R.id.announcement_button);
 //        Button posterUploadButton = findViewById(R.id.event_poster_button);
         if (!twoQRcodes){
             generatePromoQRbutton.setVisibility(View.VISIBLE);
@@ -206,7 +209,7 @@ public class EventDetails extends AppCompatActivity {
 
 
 
-
+        
         // Set OnClickListener for the Announcement button
         announcementButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -242,12 +245,6 @@ public class EventDetails extends AppCompatActivity {
     }
 
 
-//    private void displayAttendeesAndSignups(List<String> attendeeList,List<String> signUpList ) {
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, attendeeList);
-//        attendeeListView.setAdapter(adapter);
-//        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, R.layout.mytextview, signUpList);
-//        signupListView.setAdapter(adapter2);
-//    }
     private void retrievePromotionalQR(String eventId) {
         db = FirebaseFirestore.getInstance();
 
@@ -406,6 +403,19 @@ public class EventDetails extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         attendeeListView.setAdapter(adapter);
+
+        attendeeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int userid = attendeeListUserIds.get(position);
+                Intent intent = new Intent(EventDetails.this, AdminUserProfile.class);
+                intent.putExtra("userID",""+userid);
+                intent.putExtra("role","organizer");
+                startActivity(intent);
+
+            }
+        });
+
     }
     private void displaySignup(List<String> signUplist) {
 
@@ -414,6 +424,17 @@ public class EventDetails extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         signupListView.setAdapter(adapter);
+        attendeeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                int userid = signUpListListUserIds.get(position);
+                Intent intent = new Intent(EventDetails.this, AdminUserProfile.class);
+                intent.putExtra("userID",""+userid);
+                intent.putExtra("role","organizer");
+                startActivity(intent);
+            }
+        });
     }
     private void setUpMap() {
         mapView.setTileSource(TileSourceFactory.MAPNIK);

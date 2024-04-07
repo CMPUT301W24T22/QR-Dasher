@@ -38,7 +38,6 @@ public class EventSignUpPage extends AppCompatActivity {
         signUp_Name = findViewById(R.id.signUp_Name);
         signUp_Details = findViewById(R.id.signUp_Details);
         signUp_Time = findViewById(R.id.signUp_Time);
-
         announcement_button = findViewById(R.id.check_announcement);
 
         if (extras != null) {
@@ -50,11 +49,9 @@ public class EventSignUpPage extends AppCompatActivity {
             boolean signUpBool = extras.getBoolean("signUpBool",false);
             boolean checkAnnounce = extras.getBoolean("checkAnnounce",false);
 
-
             if (!signUpBool){
                 signup_button.setVisibility(View.GONE);
             }
-
             if (!checkAnnounce){
                 announcement_button.setVisibility(View.GONE);
             }

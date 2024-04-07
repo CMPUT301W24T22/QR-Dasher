@@ -90,8 +90,18 @@
         android:testOnly="true"
         android:theme="@style/Theme.QRDasher" >
         <activity
-            android:name="com.example.qr_dasher.manageQRcode"
+            android:name="com.example.qr_dasher.AdminEventList"
             android:exported="false" />
+        <activity
+            android:name="com.example.qr_dasher.AdminUserProfile"
+            android:exported="false" />
+        <activity
+            android:name="com.example.qr_dasher.AdminUserList"
+            android:exported="false" />
+        <activity
+            android:name="com.example.qr_dasher.AdminEventPage"
+            android:exported="false" />
+        <activity android:name="com.example.qr_dasher.AdminActivity" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 

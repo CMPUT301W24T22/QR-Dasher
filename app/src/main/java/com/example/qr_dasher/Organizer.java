@@ -32,6 +32,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 /**
  * This activity represents the Organizer's interface where they can view and manage their events.
  * It retrieves events associated with the logged-in organizer from Firestore and displays them in a ListView.
@@ -155,7 +156,7 @@ public class Organizer extends AppCompatActivity {
      */
     private void displayEventList(List<String> eventNames, List<String> eventIds) {
         // Create an ArrayAdapter to display the event names
-        EventAdapter adapter = new EventAdapter(this, eventNames, eventPosters);
+        ListAdapter adapter = new ListAdapter(this, eventNames, eventPosters);
         adapter.notifyDataSetChanged();
         eventListView.setAdapter(adapter);
 

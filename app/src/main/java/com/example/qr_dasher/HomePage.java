@@ -93,31 +93,35 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                     return;
                 }
 
-                // Create a User object
-                User user = new User(name, email, location);
+                try {
+                    // Create a User object
+                    User user = new User(name, email, location);
 
-                // tokens used for notifications
-                FirebaseMessaging.getInstance().getToken()
-                        .addOnCompleteListener(task -> {
-                            if (!task.isSuccessful()) {
-                                Log.w("tag","Couldn't retrieve FCM token",task.getException());
-                                return;
-                            }
-                            String token = task.getResult();
-                            Log.d("Token", token);
-                            user.setToken(token);
+                    // tokens used for notifications
+                    FirebaseMessaging.getInstance().getToken()
+                            .addOnCompleteListener(task -> {
+                                if (!task.isSuccessful()) {
+                                    Log.w("tag","Couldn't retrieve FCM token",task.getException());
+                                    return;
+                                }
+                                String token = task.getResult();
+                                Log.d("Token", token);
+                                user.setToken(token);
 
-                            if (details != null){
-                                user.setDetails(details);
-                            }
-                            if (profile_picture != null){
-                                user.setProfile_image(Picture.convertBitmaptoString(profile_picture));
-                            }
-                            saveUserToCache(user, false);
-                            addUserToFirestore(user);
-                        });
-                startActivity(new Intent(HomePage.this, RolePage.class));
-                finish();
+                                if (details != null){
+                                    user.setDetails(details);
+                                }
+                                if (profile_picture != null){
+                                    user.setProfile_image(Picture.convertBitmaptoString(profile_picture));
+                                }
+                                saveUserToCache(user, false);
+                                addUserToFirestore(user);
+                            });
+                    startActivity(new Intent(HomePage.this, RolePage.class));
+                    finish();
+                } catch (IllegalArgumentException e) {
+                    Toast.makeText(HomePage.this, "Invalid email address", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         skipButton.setOnClickListener(new View.OnClickListener() {

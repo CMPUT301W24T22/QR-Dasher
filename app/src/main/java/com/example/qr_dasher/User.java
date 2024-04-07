@@ -34,7 +34,7 @@ public class User {
     public User(String name, String email, boolean location){
         Random random = new Random();
         this.name = name;
-        if (email.contains("@")){
+        if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             this.email = email;
         } else {
             throw new IllegalArgumentException("Invalid email");

@@ -130,6 +130,12 @@
             android:name="com.example.qr_dasher.SendNotification"
             android:exported="false" />
         <activity
+            android:name="com.example.qr_dasher.SendAnnouncement"
+            android:exported="false" />
+        <activity
+            android:name="com.example.qr_dasher.CheckAnnouncements"
+            android:exported="false" />
+        <activity
             android:name="com.example.qr_dasher.EventDetails"
             android:exported="false" />
         <activity

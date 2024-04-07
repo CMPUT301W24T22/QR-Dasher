@@ -44,6 +44,10 @@
         "source": "com.example.qr_dasher.app-main-58:/layout/mytextview.xml"
     },
     {
+        "merged": "com.example.qr_dasher.app-mergeDebugResources-55:/layout/check_announcements.xml",
+        "source": "com.example.qr_dasher.app-main-58:/layout/check_announcements.xml"
+    },
+    {
         "merged": "com.example.qr_dasher.app-mergeDebugResources-55:/layout/notifications.xml",
         "source": "com.example.qr_dasher.app-main-58:/layout/notifications.xml"
     },
@@ -70,6 +74,10 @@
     {
         "merged": "com.example.qr_dasher.app-mergeDebugResources-55:/layout/activity_reuse_qrcodes.xml",
         "source": "com.example.qr_dasher.app-main-58:/layout/activity_reuse_qrcodes.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-mergeDebugResources-55:/layout/send_announcement.xml",
+        "source": "com.example.qr_dasher.app-main-58:/layout/send_announcement.xml"
     },
     {
         "merged": "com.example.qr_dasher.app-mergeDebugResources-55:/layout/send_notification.xml",

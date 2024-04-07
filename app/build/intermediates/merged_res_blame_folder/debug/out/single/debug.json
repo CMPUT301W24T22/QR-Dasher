@@ -4,6 +4,10 @@
         "source": "com.example.qr_dasher.app-main-58:/layout/attendee.xml"
     },
     {
+        "merged": "com.example.qr_dasher.app-merged_res-56:/layout_check_announcements.xml.flat",
+        "source": "com.example.qr_dasher.app-main-58:/layout/check_announcements.xml"
+    },
+    {
         "merged": "com.example.qr_dasher.app-merged_res-56:/layout_notifications.xml.flat",
         "source": "com.example.qr_dasher.app-main-58:/layout/notifications.xml"
     },
@@ -58,6 +62,10 @@
     {
         "merged": "com.example.qr_dasher.app-merged_res-56:/layout_scan_qr.xml.flat",
         "source": "com.example.qr_dasher.app-main-58:/layout/scan_qr.xml"
+    },
+    {
+        "merged": "com.example.qr_dasher.app-merged_res-56:/layout_send_announcement.xml.flat",
+        "source": "com.example.qr_dasher.app-main-58:/layout/send_announcement.xml"
     },
     {
         "merged": "com.example.qr_dasher.app-merged_res-56:/mipmap-xhdpi_ic_launcher.webp.flat",

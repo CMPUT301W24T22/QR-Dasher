@@ -16,6 +16,11 @@ id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id action_settings
 id admin_button
+id announcement_button
+id announcement_listview
+id announcement_title
+id announcment_text
+id announcment_title_text
 id attendee_button
 id attendee_list_view
 id attendee_text_signups
@@ -26,6 +31,7 @@ id browseEventList
 id browseEvents
 id cancel_button
 id capture_image_button
+id check_announcement
 id clear_notifications_button
 id container
 id content
@@ -75,6 +81,7 @@ id reuseQRcodetext
 id scanned_events_listview
 id scanned_events_text
 id select_image_button
+id send_announcement_button
 id send_notifications_button
 id send_text
 id share_qr
@@ -103,6 +110,7 @@ layout activity_map
 layout activity_reuse_qrcodes
 layout attendee
 layout browse_events
+layout check_announcements
 layout display_notification
 layout edit_profile
 layout event_details
@@ -116,6 +124,7 @@ layout notifications
 layout organizer
 layout role_page
 layout scan_qr
+layout send_announcement
 layout send_notification
 menu menu_main
 mipmap ic_launcher

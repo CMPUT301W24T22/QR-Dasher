@@ -256,6 +256,14 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
             }
 
         });
+        displayQRcodes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Launch the ScanQR activity
+                Intent intent = new Intent(CreateEventOrganizer.this, ScanQR.class);
+                startActivityForResult(intent, SCAN_QR_REQUEST_CODE);
+            }
+        });
 
 
 
@@ -393,29 +401,42 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == REQUEST_CODE_REUSE_QR && resultCode == RESULT_OK) {
-            String selectedQRCode = data.getStringExtra("selectedQRCode");
-            if (selectedQRCode != null) {
-                byte[] imageBytes = Base64.decode(selectedQRCode, Base64.DEFAULT);
-                Bitmap selectedQRBitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
-                qrImage.setImageBitmap(selectedQRBitmap);
+        if (requestCode == SCAN_QR_REQUEST_CODE) { // Assuming 2 is the request code for QR code scanning
+            if (resultCode == RESULT_OK && data != null) {
+                String scannedText = data.getStringExtra("scannedText");
+                if (scannedText != null) {
+                    // Generate QR code based on scanned text
+                    event.generateQR(scannedText, false);
+                    String qrCodeString = event.getAttendee_qr().getQrImage();
+                    byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
+                    generatedQRCode = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                    qrImage.setImageBitmap(generatedQRCode);
+                    addEventToFirebase(event);
+                } else {
+                    // Handle case where scanned text is null
+                    Toast.makeText(this, "Failed to get scanned text", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                // Handle case where QR code scanning was canceled or failed
+                Toast.makeText(this, "QR code scanning canceled or failed", Toast.LENGTH_SHORT).show();
             }
         }
-
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             Uri selectedImageUri = data.getData();
             try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImageUri);
-                // Resize bitmap if needed to avoid large image storage
-                Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 200, 200, false);
-                // Convert bitmap to Base64 string
-                String encodedImage = bitmapToBase64(resizedBitmap);
-                // Save the image to Firestore for the specific event
-                saveEventPosterToFirestore(encodedImage);
-            } catch (IOException e) {
-                e.printStackTrace();
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImageUri);
+                    // Resize bitmap if needed to avoid large image storage
+                    Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 200, 200, false);
+                    // Convert bitmap to Base64 string
+                    String encodedImage = bitmapToBase64(resizedBitmap);
+                    // Save the image to Firestore for the specific event
+                    saveEventPosterToFirestore(encodedImage);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-        }
+
+
 
     }
 }

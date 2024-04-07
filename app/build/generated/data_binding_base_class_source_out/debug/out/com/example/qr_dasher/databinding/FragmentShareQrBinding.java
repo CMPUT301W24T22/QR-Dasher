@@ -20,14 +20,18 @@ public final class FragmentShareQrBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final Button generatePromoQR;
+
+  @NonNull
   public final Button shareQr;
 
   @NonNull
   public final Button shareQrPromotional;
 
-  private FragmentShareQrBinding(@NonNull LinearLayout rootView, @NonNull Button shareQr,
-      @NonNull Button shareQrPromotional) {
+  private FragmentShareQrBinding(@NonNull LinearLayout rootView, @NonNull Button generatePromoQR,
+      @NonNull Button shareQr, @NonNull Button shareQrPromotional) {
     this.rootView = rootView;
+    this.generatePromoQR = generatePromoQR;
     this.shareQr = shareQr;
     this.shareQrPromotional = shareQrPromotional;
   }
@@ -59,6 +63,12 @@ public final class FragmentShareQrBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.generatePromoQR;
+      Button generatePromoQR = ViewBindings.findChildViewById(rootView, id);
+      if (generatePromoQR == null) {
+        break missingId;
+      }
+
       id = R.id.share_qr;
       Button shareQr = ViewBindings.findChildViewById(rootView, id);
       if (shareQr == null) {
@@ -71,7 +81,8 @@ public final class FragmentShareQrBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentShareQrBinding((LinearLayout) rootView, shareQr, shareQrPromotional);
+      return new FragmentShareQrBinding((LinearLayout) rootView, generatePromoQR, shareQr,
+          shareQrPromotional);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

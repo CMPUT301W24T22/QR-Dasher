@@ -2,10 +2,14 @@ package com.example.qr_dasher;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -19,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentReference;
 
 import com.google.firebase.firestore.EventListener;
@@ -39,7 +44,9 @@ import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.MapEventsOverlay;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * This class represents the Activity displaying details of a specific event.
@@ -55,6 +62,7 @@ public class EventDetails extends AppCompatActivity {
     private List<String> signUpListListUserNames,signUpListListDetails, signUpListListEmails;
     private List<Integer>attendeeListUserIds, signUpListListUserIds;
 
+
     private TextView attendeeCountTextView;
 
     private static final int MILESTONE_ONE = 5;
@@ -64,6 +72,11 @@ public class EventDetails extends AppCompatActivity {
     private boolean isMilestoneOneReached = false;
     private boolean isMilestoneTwoReached = false;
     private boolean isMilestoneThreeReached = false;
+
+    private Bitmap AttendeeQRCode, PromotionalQRcode;
+    private String eventName, promotionalQRString;
+    private Boolean twoQRcodes = false;
+    private Button generatePromoQRbutton;
 
     /**
      * Initializes the activity, sets up UI components and listeners,
@@ -81,12 +94,24 @@ public class EventDetails extends AppCompatActivity {
         // Get event name from intent extras
 
         Intent intent = getIntent();
-        String eventName = intent.getStringExtra("eventName");
+        eventName = intent.getStringExtra("eventName");
         eventIDstr = intent.getStringExtra("event_id");
         Toast.makeText(getApplicationContext(), "Event ID: " + eventIDstr, Toast.LENGTH_SHORT).show();
         List<String> attendeeList = intent.getStringArrayListExtra("attendee_list");
         List<String> signupList = intent.getStringArrayListExtra("signup_list");
+        String attendeeQr = intent.getStringExtra("qrImage");
+        String qrContent = intent.getStringExtra("qrContent");
+        Long qrUserid = intent.getLongExtra("userID",0);
+        Long qrEventId= intent.getLongExtra("eventId",0 );
+        Log.d("TargetActivity", "Received qrUserid: " + qrUserid);
+        Log.d("TargetActivity", "Received qrEventId: " + qrEventId);
 
+
+        // Converting the string to bitmap
+        byte[] imageBytes = Base64.decode(attendeeQr, Base64.DEFAULT);
+        AttendeeQRCode = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+
+        retrievePromotionalQR( ""+qrEventId);
 
 
         if (attendeeList != null) {
@@ -120,8 +145,14 @@ public class EventDetails extends AppCompatActivity {
         getUserDetailsFromFirebase(attendeeList,signupList);
         Button notifyButton = findViewById(R.id.notify_button);
         Button qrButton = findViewById(R.id.qr_code_button);
+        generatePromoQRbutton = findViewById(R.id.promoQRbutton);
+        Button announcementButton = findViewById(R.id.announcement_button);
 //        Button posterUploadButton = findViewById(R.id.event_poster_button);
-
+        if (!twoQRcodes){
+            generatePromoQRbutton.setVisibility(View.VISIBLE);
+        } else{
+            generatePromoQRbutton.setVisibility(View.INVISIBLE);
+        }
 
         ArrayList<String> tokensList= new ArrayList<>();                       // tokens
         for(String userId: attendeeList){
@@ -152,7 +183,28 @@ public class EventDetails extends AppCompatActivity {
                 }
             });
         }
-
+        generatePromoQRbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //QRCode (int event_id, String content, int userID, boolean promotional)
+                QRCode promotionalQRcode = new QRCode(qrEventId.intValue(),"p"+qrContent, qrUserid.intValue(),true);
+                db.collection("eventsCollection")
+                        .document("" + eventIDstr)
+                        .update("promotional_qr", promotionalQRcode)
+                        .addOnSuccessListener(aVoid ->{
+                            Log.d("EventDetails", "Event QR PROMOTIONAL ADDED successfully");
+                        })
+                        .addOnFailureListener(e -> {
+                            Log.d("Organizer", "Failed to update event in Firestore"+ eventIDstr);
+                            e.printStackTrace();
+                        });
+                promotionalQRString = promotionalQRcode.getQrImage();
+                twoQRcodes = true;
+                byte[] imageBytes = Base64.decode(promotionalQRString, Base64.DEFAULT);
+                PromotionalQRcode = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                generatePromoQRbutton.setVisibility(View.GONE);
+            }
+        });
 
 
 
@@ -169,7 +221,32 @@ public class EventDetails extends AppCompatActivity {
             }
         });
 
+        // if promotional qr does not exist:
 
+        // Set OnClickListener for the Announcement button
+        announcementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventDetails.this, SendAnnouncement.class);
+                // Pass the event ID to SendNotification activity
+                intent.putExtra("event_id", eventIDstr);
+                startActivity(intent);
+            }
+        });
+
+        qrButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!twoQRcodes){
+                    ShareQRFragment fragment = ShareQRFragment.newInstance(AttendeeQRCode,eventName);
+                    fragment.showFragment(getSupportFragmentManager());}
+
+                else {
+                    ShareQRFragment fragment = ShareQRFragment.newInstance(AttendeeQRCode, PromotionalQRcode,eventName);
+                    fragment.showFragment(getSupportFragmentManager());
+                }
+            }
+        });
 //        posterUploadButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -179,11 +256,7 @@ public class EventDetails extends AppCompatActivity {
 //            }
 //        });
     }
-    /**
-     * Displays the list of attendees in a ListView.
-     *
-     * @param attendeeList The list of attendees to display.
-     */
+
 
 //    private void displayAttendeesAndSignups(List<String> attendeeList,List<String> signUpList ) {
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview, attendeeList);
@@ -191,7 +264,41 @@ public class EventDetails extends AppCompatActivity {
 //        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, R.layout.mytextview, signUpList);
 //        signupListView.setAdapter(adapter2);
 //    }
-    private void getUserDetailsFromFirebase(List<String> attendeeList, List<String> signUpList) {
+
+
+    private void retrievePromotionalQR(String eventId) {
+        db = FirebaseFirestore.getInstance();
+
+        db.collection("eventsCollection")
+                .document(""+eventId)
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        Log.d("Firestore", "DocumentSnapshot data: " + documentSnapshot.getData());
+                        if (documentSnapshot.contains("promotional_qr") && documentSnapshot.get("promotional_qr") instanceof Map) {
+                            // Assign the promotional_qr map to the global variable
+                            Map<String, Object> promotionalQrMap = (Map<String, Object>) documentSnapshot.get("promotional_qr");
+                            promotionalQRString = (String) promotionalQrMap.get("qrImage");
+                            twoQRcodes = true;
+                            byte[] imageBytes = Base64.decode(promotionalQRString, Base64.DEFAULT);
+                            PromotionalQRcode = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                            generatePromoQRbutton.setVisibility(View.GONE);
+
+                            // Handle further operations with promotionalQrMap if needed
+                        } else {
+                            Log.d("PromotionalQR", "No promotional QR found");
+                            twoQRcodes = false;
+                        }}
+
+                })
+                .addOnFailureListener(e -> {
+                    Log.d("PromotionalQR", "Failed to retrieve promotional QR");
+                    e.printStackTrace();
+                });
+    }
+    private void getUserDetailsFromFirebase(List<String> attendeeList, List<String> signUpList){
+       // Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
+
         db = FirebaseFirestore.getInstance();
 
         // Initialize lists
@@ -320,6 +427,19 @@ public class EventDetails extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         attendeeListView.setAdapter(adapter);
+
+        attendeeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int userid = attendeeListUserIds.get(position);
+                Intent intent = new Intent(EventDetails.this, AdminUserProfile.class);
+                intent.putExtra("userID",""+userid);
+                intent.putExtra("role","organizer");
+                startActivity(intent);
+
+            }
+        });
+
     }
     private void displaySignup(List<String> signUplist) {
 
@@ -328,6 +448,17 @@ public class EventDetails extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         signupListView.setAdapter(adapter);
+        attendeeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                int userid = signUpListListUserIds.get(position);
+                Intent intent = new Intent(EventDetails.this, AdminUserProfile.class);
+                intent.putExtra("userID",""+userid);
+                intent.putExtra("role","organizer");
+                startActivity(intent);
+            }
+        });
     }
     private void setUpMap() {
         mapView.setTileSource(TileSourceFactory.MAPNIK);
@@ -373,3 +504,4 @@ public class EventDetails extends AppCompatActivity {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 }
+

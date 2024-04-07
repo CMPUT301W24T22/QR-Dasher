@@ -19,6 +19,19 @@
         android:theme="@style/Theme.QRDasher"
         tools:targetApi="31">
 
+        <activity
+            android:name=".AdminEventList"
+            android:exported="false" />
+        <activity
+            android:name=".AdminUserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".AdminUserList"
+            android:exported="false" />
+        <activity
+            android:name=".AdminEventPage"
+            android:exported="false" />
+        <activity android:name=".AdminActivity" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -57,6 +70,12 @@
             android:exported="false" />
         <activity
             android:name=".SendNotification"
+            android:exported="false" />
+        <activity
+            android:name=".SendAnnouncement"
+            android:exported="false" />
+        <activity
+            android:name=".CheckAnnouncements"
             android:exported="false" />
         <activity
             android:name=".EventDetails"

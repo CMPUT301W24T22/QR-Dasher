@@ -142,5 +142,4 @@ public class ShareQRFragment extends DialogFragment {
         show(fragmentManager, "ShareQRFragment");
     }
 
-    }
-
+}

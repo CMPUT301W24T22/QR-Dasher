@@ -1,6 +1,2 @@
 #- File Locator -
-<<<<<<< HEAD
-listingFile=../../../outputs/apk/androidTest/debug/output-metadata.json
-=======
 listingFile=../../apk/androidTest/debug/output-metadata.json
->>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d

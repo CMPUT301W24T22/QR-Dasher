@@ -18,6 +18,7 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jaste\.g
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\jaste\.gradle\caches\transforms-3\57d1500c400131156db40972bab21db8\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\jaste\.gradle\caches\transforms-3\e051a5ed7ee8d1d036c0319145b5fdd2\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\jaste\.gradle\caches\transforms-3\cb9107a5c171154133f51e50654a9680\transformed\play-services-maps-18.2.0\AndroidManifest.xml:17:1-44:12
+MERGED from [androidx.test:rules:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\4fae37654d0c3595be2b92b65e44c5ed\transformed\rules-1.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\jaste\.gradle\caches\transforms-3\70e1c4ab8acd3687064ed53c2559b0f1\transformed\firebase-messaging-23.4.1\AndroidManifest.xml:17:1-66:12
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\jaste\.gradle\caches\transforms-3\8d17e58e555c9fc09f28bfb047c6f33e\transformed\firebase-auth-22.3.1\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\jaste\.gradle\caches\transforms-3\dfec4cd31e86657b27cf0c3d8da6dd5a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:15:1-39:12
@@ -94,6 +95,10 @@ MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\ja
 MERGED from [androidx.core:core:1.9.0] C:\Users\jaste\.gradle\caches\transforms-3\e87f05d1e34e391f433e196eeb88e8b5\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\jaste\.gradle\caches\transforms-3\7292c2284eddd390d4a0d59b2db71033\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\jaste\.gradle\caches\transforms-3\2e589140b80facb6e2b5152549c0d1b5\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:17:1-32:12
+MERGED from [androidx.test.services:storage:1.4.2] C:\Users\jaste\.gradle\caches\transforms-3\afb3ccb1ce0579d0b8c4f8724943470d\transformed\storage-1.4.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.test:monitor:1.6.0] C:\Users\jaste\.gradle\caches\transforms-3\8a6af7f12b9ec587ce29e2b00f0ea9eb\transformed\monitor-1.6.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.test:annotation:1.0.1] C:\Users\jaste\.gradle\caches\transforms-3\8bd769dcdc7d55add960b5237ac44338\transformed\annotation-1.0.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\jaste\.gradle\caches\transforms-3\b920843157429ef62d036ed7a03cf59e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\jaste\.gradle\caches\transforms-3\c98675f0e858abda33564fb6ce4d4d82\transformed\firebase-components-17.1.5\AndroidManifest.xml:15:1-20:12
 MERGED from [com.google.android.datatransport:transport-api:3.1.0] C:\Users\jaste\.gradle\caches\transforms-3\3a1442827f2888d72eb55820b1f6600b\transformed\transport-api-3.1.0\AndroidManifest.xml:15:1-20:12
@@ -241,6 +246,8 @@ MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\jast
 MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\jaste\.gradle\caches\transforms-3\d54c9b41dae1829294e43ca4332cb06d\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.core:core:1.9.0] C:\Users\jaste\.gradle\caches\transforms-3\e87f05d1e34e391f433e196eeb88e8b5\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.9.0] C:\Users\jaste\.gradle\caches\transforms-3\e87f05d1e34e391f433e196eeb88e8b5\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:30:5-20
+MERGED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:30:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\jaste\.gradle\caches\transforms-3\b93bd2a1643136a33cb86025bd0e74fa\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\jaste\.gradle\caches\transforms-3\b93bd2a1643136a33cb86025bd0e74fa\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\jaste\.gradle\caches\transforms-3\e80091ddd1d047b7186e5f58bf520363\transformed\profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
@@ -457,6 +464,8 @@ MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\jaste\.gradle\caches\t
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\jaste\.gradle\caches\transforms-3\e051a5ed7ee8d1d036c0319145b5fdd2\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\jaste\.gradle\caches\transforms-3\cb9107a5c171154133f51e50654a9680\transformed\play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\jaste\.gradle\caches\transforms-3\cb9107a5c171154133f51e50654a9680\transformed\play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.test:rules:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\4fae37654d0c3595be2b92b65e44c5ed\transformed\rules-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:rules:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\4fae37654d0c3595be2b92b65e44c5ed\transformed\rules-1.5.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\jaste\.gradle\caches\transforms-3\70e1c4ab8acd3687064ed53c2559b0f1\transformed\firebase-messaging-23.4.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\jaste\.gradle\caches\transforms-3\70e1c4ab8acd3687064ed53c2559b0f1\transformed\firebase-messaging-23.4.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\jaste\.gradle\caches\transforms-3\8d17e58e555c9fc09f28bfb047c6f33e\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
@@ -609,6 +618,14 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\jaste\.gradle\
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\jaste\.gradle\caches\transforms-3\7292c2284eddd390d4a0d59b2db71033\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\jaste\.gradle\caches\transforms-3\2e589140b80facb6e2b5152549c0d1b5\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\jaste\.gradle\caches\transforms-3\2e589140b80facb6e2b5152549c0d1b5\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test.services:storage:1.4.2] C:\Users\jaste\.gradle\caches\transforms-3\afb3ccb1ce0579d0b8c4f8724943470d\transformed\storage-1.4.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test.services:storage:1.4.2] C:\Users\jaste\.gradle\caches\transforms-3\afb3ccb1ce0579d0b8c4f8724943470d\transformed\storage-1.4.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:monitor:1.6.0] C:\Users\jaste\.gradle\caches\transforms-3\8a6af7f12b9ec587ce29e2b00f0ea9eb\transformed\monitor-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:monitor:1.6.0] C:\Users\jaste\.gradle\caches\transforms-3\8a6af7f12b9ec587ce29e2b00f0ea9eb\transformed\monitor-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:annotation:1.0.1] C:\Users\jaste\.gradle\caches\transforms-3\8bd769dcdc7d55add960b5237ac44338\transformed\annotation-1.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test:annotation:1.0.1] C:\Users\jaste\.gradle\caches\transforms-3\8bd769dcdc7d55add960b5237ac44338\transformed\annotation-1.0.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\jaste\.gradle\caches\transforms-3\b920843157429ef62d036ed7a03cf59e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\jaste\.gradle\caches\transforms-3\b920843157429ef62d036ed7a03cf59e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\jaste\.gradle\caches\transforms-3\c98675f0e858abda33564fb6ce4d4d82\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
@@ -779,6 +796,8 @@ ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\jaste\.gr
 		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\jaste\.gradle\caches\transforms-3\cb9107a5c171154133f51e50654a9680\transformed\play-services-maps-18.2.0\AndroidManifest.xml:28:9-32
 queries
 ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\jaste\.gradle\caches\transforms-3\cb9107a5c171154133f51e50654a9680\transformed\play-services-maps-18.2.0\AndroidManifest.xml:30:5-34:15
+MERGED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:24:5-28:15
+MERGED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:24:5-28:15
 package#com.google.android.apps.maps
 ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\jaste\.gradle\caches\transforms-3\cb9107a5c171154133f51e50654a9680\transformed\play-services-maps-18.2.0\AndroidManifest.xml:33:9-64
 	android:name
@@ -1173,6 +1192,18 @@ uses-permission#com.example.qr_dasher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.9.0] C:\Users\jaste\.gradle\caches\transforms-3\e87f05d1e34e391f433e196eeb88e8b5\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.9.0] C:\Users\jaste\.gradle\caches\transforms-3\e87f05d1e34e391f433e196eeb88e8b5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+package#androidx.test.orchestrator
+ADDED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:25:9-62
+	android:name
+		ADDED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:25:18-59
+package#androidx.test.services
+ADDED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:26:9-58
+	android:name
+		ADDED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:26:18-55
+package#com.google.android.apps.common.testing.services
+ADDED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:27:9-83
+	android:name
+		ADDED from [androidx.test:runner:1.5.0] C:\Users\jaste\.gradle\caches\transforms-3\9f116f4aa869f02478c9b428c1447546\transformed\runner-1.5.0\AndroidManifest.xml:27:18-80
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\jaste\.gradle\caches\transforms-3\e80091ddd1d047b7186e5f58bf520363\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
 	android:value

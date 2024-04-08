@@ -1,0 +1,406 @@
+04-08 13:36:20.852 20294 20330 I TestRunner: started: joinEvent(com.example.qr_dasher.eventIntentTests)
+04-08 13:36:20.966 20294 20330 I UiAutomation: Initialized for user 0 on display 0
+04-08 13:36:21.245  1619  2545 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+04-08 13:36:21.552  1619  1822 I AiAiEcho: Predicting[0]:
+04-08 13:36:21.556  1619  1822 I AiAiEcho: EchoTargets:
+04-08 13:36:21.556  1619  1822 I AiAiEcho: Filtered by AiAi flag check:
+04-08 13:36:21.557  1619  1822 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+04-08 13:36:21.568 20294 20333 V UiAutomation: Init UiAutomation@f90feee[id=1, displayId=0, flags=0]
+04-08 13:36:21.635  1619  1822 I AiAiEcho: Predicting[0]:
+04-08 13:36:21.635  1619  1822 I AiAiEcho: EchoTargets:
+04-08 13:36:21.635  1619  1822 I AiAiEcho: Filtered by AiAi flag check:
+04-08 13:36:21.639  1619  1822 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+04-08 13:36:21.642  1619  1822 I AiAiEcho: Predicting[0]:
+04-08 13:36:21.643  1619  1822 I AiAiEcho: EchoTargets:
+04-08 13:36:21.643  1619  1822 I AiAiEcho: Filtered by AiAi flag check:
+04-08 13:36:21.646  1619  1822 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+04-08 13:36:21.665  1619  1822 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0 (types=[])
+04-08 13:36:21.674  1619  1822 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+04-08 13:36:21.682  1619  1822 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+04-08 13:36:21.707 20294 20330 I GrantPermissionCallable: Permission: android.permission.ACCESS_COARSE_LOCATION is already granted!
+04-08 13:36:21.714 20294 20330 I GrantPermissionCallable: Permission: android.permission.ACCESS_FINE_LOCATION is already granted!
+04-08 13:36:21.793 20294 20328 W ample.qr_dasher: Verification of void com.google.android.gms.common.internal.BaseGmsClient.<init>(android.content.Context, android.os.Handler, com.google.android.gms.common.internal.GmsClientSupervisor, com.google.android.gms.common.GoogleApiAvailabilityLight, int, com.google.android.gms.common.internal.BaseGmsClient$BaseConnectionCallbacks, com.google.android.gms.common.internal.BaseGmsClient$BaseOnConnectionFailedListener) took 238.330ms (369.24 bytecodes/s) (2976B approximate peak alloc)
+04-08 13:36:22.057 19444 19500 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+04-08 13:36:22.059  9236  9236 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+04-08 13:36:22.060  9236  9236 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+04-08 13:36:22.073 20294 20330 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+04-08 13:36:22.132  7180  7212 I A       : NGA disabled due to not being eligible.
+04-08 13:36:22.234   818   818 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+04-08 13:36:22.256   818   818 D SsMediaDataProvider: Forwarding Smartspace updates []
+04-08 13:36:22.529   416   416 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+04-08 13:36:22.616   818   872 D SplashScreenView: Build android.window.SplashScreenView{96a6b7b V.E...... ......ID 0,0-0,0}
+04-08 13:36:22.616   818   872 D SplashScreenView: Icon: view: null drawable: null size: 0
+04-08 13:36:22.616   818   872 D SplashScreenView: Branding: view: android.view.View{b316d98 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-08 13:36:23.025   818   886 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 13:36:23.249 20294 20294 W ample.qr_dasher: Verification of void androidx.fragment.app.FragmentActivity.dump(java.lang.String, java.io.FileDescriptor, java.io.PrintWriter, java.lang.String[]) took 166.051ms (656.42 bytecodes/s) (3216B approximate peak alloc)
+04-08 13:36:23.436 20294 20294 W ample.qr_dasher: Verification of void androidx.appcompat.app.AppCompatActivity.setSupportActionBar(androidx.appcompat.widget.Toolbar) took 111.799ms (71.56 bytecodes/s) (1424B approximate peak alloc)
+04-08 13:36:23.809   818   818 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 13:36:23.813   818   871 I Choreographer: Skipped 58 frames!  The application may be doing too much work on its main thread.
+04-08 13:36:23.860  1086  1086 I Choreographer: Skipped 61 frames!  The application may be doing too much work on its main thread.
+04-08 13:36:23.884 20294 20345 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+04-08 13:36:23.899 20294 20345 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+04-08 13:36:23.914 20294 20345 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+04-08 13:36:23.925  1086  1924 D EGL_emulation: app_time_stats: avg=128196.41ms min=128196.41ms max=128196.41ms count=1
+04-08 13:36:23.948  1086  1883 I OpenGLRenderer: Davey! duration=1086ms; Flags=0, FrameTimelineVsyncId=4497003, IntendedVsync=19251972098378, Vsync=19252988765004, InputEventId=0, HandleInputStart=19253025514800, AnimationStart=19253025601100, PerformTraversalsStart=19253026562600, DrawStart=19253026782500, FrameDeadline=19251988765044, FrameInterval=19252998383200, FrameStartTime=16666666, SyncQueued=19253031994100, SyncStart=19253037117900, IssueDrawCommandsStart=19253042437000, SwapBuffers=19253046819400, FrameCompleted=19253063966000, DequeueBufferDuration=81300, QueueBufferDuration=5218900, GpuCompleted=19253063274300, SwapBuffersCompleted=19253063966000, DisplayPresentTime=0, CommandSubmissionCompleted=19253046819400,
+04-08 13:36:24.167   586   586 W system_server: Long monitor contention with owner appscheduling.default (673) at long com.android.server.job.JobSchedulerService.getMinJobExecutionGuaranteeMs(com.android.server.job.controllers.JobStatus)(JobSchedulerService.java:3799) waiters=0 in void com.android.server.job.controllers.DeviceIdleJobsController$1.onReceive(android.content.Context, android.content.Intent) for 840ms
+04-08 13:36:24.184 20294 20294 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+04-08 13:36:24.226 20294 20294 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@8ea8c4e in: PRE_ON_CREATE
+04-08 13:36:24.228 20294 20294 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+04-08 13:36:24.277  9087  9095 W ssioncontroller: Reducing the number of considered missed Gc histogram windows from 660 to 100
+04-08 13:36:24.303   818   886 D EGL_emulation: app_time_stats: avg=65769.23ms min=50.54ms max=131487.91ms count=2
+04-08 13:36:24.332   818   886 D EGL_emulation: app_time_stats: avg=4040.15ms min=52.11ms max=15804.29ms count=4
+04-08 13:36:24.523  1690  1690 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+04-08 13:36:24.649 20294 20294 W ample.qr_dasher: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+04-08 13:36:24.654 20294 20294 W ample.qr_dasher: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+04-08 13:36:24.955  1690  2305 E HwDetectorWithState: a: 3
+04-08 13:36:25.341   818   886 D EGL_emulation: app_time_stats: avg=31.13ms min=3.89ms max=190.61ms count=20
+04-08 13:36:25.516 20294 20294 W ample.qr_dasher: Verification of android.view.inputmethod.InputConnection androidx.appcompat.widget.AppCompatTextView.onCreateInputConnection(android.view.inputmethod.EditorInfo) took 291.030ms (48.10 bytecodes/s) (1760B approximate peak alloc)
+04-08 13:36:25.961 20294 20294 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10190; state: ENABLED
+04-08 13:36:27.285 20294 20303 I ample.qr_dasher: Background concurrent copying GC freed 38026(3046KB) AllocSpace objects, 23(652KB) LOS objects, 49% free, 4090KB/8181KB, paused 2.978ms,191us total 157.957ms
+04-08 13:36:27.617 20294 20353 W DynamiteModule: Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+04-08 13:36:27.636  2753  4647 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+04-08 13:36:27.637   416   416 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+04-08 13:36:27.652 20294 20353 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+04-08 13:36:27.653 20294 20353 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+04-08 13:36:27.697 20294 20353 D nativeloader: Configuring clns-10 for other apk /system/framework/com.android.media.remotedisplay.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+04-08 13:36:27.715 20294 20353 D nativeloader: Configuring clns-11 for other apk /system/framework/com.android.location.provider.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+04-08 13:36:27.725 20294 20353 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+04-08 13:36:27.732 20294 20353 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+04-08 13:36:27.781 20294 20353 D nativeloader: InitLlndkLibrariesProduct: libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libbinder_ndk.so:libc.so:libcgrouprc.so:libclang_rt.asan-x86_64-android.so:libcom.android.tethering.connectivity_native.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libselinux.so:libsync.so:libvndksupport.so:libvulkan.so
+04-08 13:36:27.784 20294 20353 D nativeloader: Configuring product-clns-12 for unbundled product apk /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk. target_sdk_version=33, uses_libraries=, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms:/product/lib64:/system/product/lib64
+04-08 13:36:27.811 20294 20353 D nativeloader: InitVndkspLibrariesProduct: android.hardware.common-V2-ndk.so:android.hardware.common.fmq-V1-ndk.so:android.hardware.graphics.allocator-V2-ndk.so:android.hardware.graphics.common-V4-ndk.so:android.hardware.graphics.common@1.0.so:android.hardware.graphics.common@1.1.so:android.hardware.graphics.common@1.2.so:android.hardware.graphics.composer3-V1-ndk.so:android.hardware.graphics.mapper@2.0.so:android.hardware.graphics.mapper@2.1.so:android.hardware.graphics.mapper@3.0.so:android.hardware.graphics.mapper@4.0.so:android.hardware.renderscript@1.0.so:android.hidl.memory.token@1.0.so:android.hidl.memory@1.0-impl.so:android.hidl.memory@1.0.so:android.hidl.safe_union@1.0.so:libRSCpuRef.so:libRSDriver.so:libRS_internal.so:libbase.so:libbcinfo.so:libblas.so:libc++.so:libcompiler_rt.so:libcutils.so:libdmabufheap.so:libgralloctypes.so:libhardware.so:libhidlbase.so:libhidlmemory.so:libion.so:libjsoncpp.so:liblzma.so:libprocessgroup.so:libunwindstack.so:libutils.so:libutilscallstack.so:libz.so
+04-08 13:36:27.854 20294 20294 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@8ea8c4e in: CREATED
+04-08 13:36:27.864 20294 20294 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.qr_dasher.HomePage@8ea8c4e
+04-08 13:36:27.883 20294 20353 V NativeCrypto: Registering com/google/android/gms/org/conscrypt/NativeCrypto's 295 native methods...
+04-08 13:36:27.963 20294 20354 D ProfileInstaller: Installing profile for com.example.qr_dasher
+04-08 13:36:28.007   586   896 D ConnectivityService: requestNetwork for uid/pid:10190/20294 activeRequest: null callbackRequest: 485 [NetworkRequest [ REQUEST id=486, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-08 13:36:28.036 20294 20294 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@33faf5c in: PRE_ON_CREATE
+04-08 13:36:28.037   586   730 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=486, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 13:36:28.038 20294 20294 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.qr_dasher/.HomePage }, activity.getIntent()=Intent { cmp=com.example.qr_dasher/.RolePage }, activity=com.example.qr_dasher.RolePage@33faf5c
+04-08 13:36:28.079   586   730 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=486, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 13:36:28.101   586   737 D ConnectivityService: NetReassign [486 : null → 102] [c 3] [a 10] [i 70]
+04-08 13:36:28.101   586   730 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=486, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 13:36:28.104   586   730 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=486, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 13:36:28.202 20294 20353 W ample.qr_dasher: Accessing hidden method Ljava/security/spec/ECParameterSpec;->getCurveName()Ljava/lang/String; (unsupported, reflection, allowed)
+04-08 13:36:28.254 20294 20294 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@33faf5c in: CREATED
+04-08 13:36:28.257 20294 20294 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.qr_dasher/.HomePage }, activity.getIntent()=Intent { cmp=com.example.qr_dasher/.RolePage }, activity=com.example.qr_dasher.RolePage@33faf5c
+04-08 13:36:28.304 20294 20294 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@33faf5c in: STARTED
+04-08 13:36:28.308 20294 20294 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.qr_dasher/.HomePage }, activity.getIntent()=Intent { cmp=com.example.qr_dasher/.RolePage }, activity=com.example.qr_dasher.RolePage@33faf5c
+04-08 13:36:28.330 20294 20294 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@33faf5c in: RESUMED
+04-08 13:36:28.333 20294 20294 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.qr_dasher/.HomePage }, activity.getIntent()=Intent { cmp=com.example.qr_dasher/.RolePage }, activity=com.example.qr_dasher.RolePage@33faf5c
+04-08 13:36:28.348 20294 20294 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10190; state: DISABLED
+04-08 13:36:28.365 20294 20294 W OpenGLRenderer: Unknown dataspace 0
+04-08 13:36:28.546 20294 20353 I ProviderInstaller: Installed default security provider GmsCore_OpenSSL
+04-08 13:36:28.609 20294 20328 I FA      : Tag Manager is not found and thus will not be used
+04-08 13:36:28.638 20294 20343 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+04-08 13:36:28.646 20294 20343 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+04-08 13:36:28.685   802   802 I wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS
+04-08 13:36:29.098   158   158 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+04-08 13:36:29.102 20294 20343 I Gralloc4: mapper 4.x is not supported
+04-08 13:36:29.358 20294 20343 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 13:36:29.611 20294 20359 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(wmsSync-VRI[RolePage]#0) as ready
+04-08 13:36:29.621 20294 20359 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(VRI[RolePage]#1) as ready
+04-08 13:36:29.668   586   612 W ziparchive: Unable to open '/data/app/~~mICP0_BjVvGm-V5VOYsceQ==/com.example.qr_dasher-yOeJIOTtGFt6l1Cz3h7reg==/base.dm': No such file or directory
+04-08 13:36:29.810   586   612 I ActivityTaskManager: Displayed com.example.qr_dasher/.RolePage for user 0: +7s378ms
+04-08 13:36:29.841   818   886 D EGL_emulation: app_time_stats: avg=3031.50ms min=2172.38ms max=3890.63ms count=2
+04-08 13:36:29.896 20294 20353 W ample.qr_dasher: Verification of java.util.List io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(java.lang.String) took 105.516ms (123.20 bytecodes/s) (1656B approximate peak alloc)
+04-08 13:36:29.984 20294 20309 I OpenGLRenderer: Davey! duration=1501ms; Flags=1, FrameTimelineVsyncId=4497711, IntendedVsync=19257538764822, Vsync=19257538764822, InputEventId=0, HandleInputStart=19257550046400, AnimationStart=19257550166100, PerformTraversalsStart=19257550288500, DrawStart=19258502665400, FrameDeadline=19257555431488, FrameInterval=19257549974100, FrameStartTime=16666666, SyncQueued=19258582690800, SyncStart=19258622968200, IssueDrawCommandsStart=19258651148000, SwapBuffers=19259049681000, FrameCompleted=19259080498700, DequeueBufferDuration=271900, QueueBufferDuration=897800, GpuCompleted=19259078959300, SwapBuffersCompleted=19259080498700, DisplayPresentTime=0, CommandSubmissionCompleted=19259049681000,
+04-08 13:36:30.021 20294 20294 I Choreographer: Skipped 95 frames!  The application may be doing too much work on its main thread.
+04-08 13:36:30.109   586  1914 D ConnectivityService: requestNetwork for uid/pid:10190/20294 activeRequest: null callbackRequest: 487 [NetworkRequest [ REQUEST id=488, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-08 13:36:30.178   586   730 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=488, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 13:36:30.193   586   730 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=488, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 13:36:30.421 20294 20353 W ample.qr_dasher: Verification of io.grpc.stub.AbstractStub io.grpc.stub.AbstractStub.withDeadline(io.grpc.Deadline) took 252.141ms (51.56 bytecodes/s) (1568B approximate peak alloc)
+04-08 13:36:30.438 20294 20351 W ample.qr_dasher: Verification of void io.grpc.LoadBalancer$Helper.<init>() took 215.293ms (18.58 bytecodes/s) (1336B approximate peak alloc)
+04-08 13:36:30.610   818   871 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@aa4457
+04-08 13:36:30.646   586   730 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=488, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 13:36:30.651   586   730 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=488, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10190 RequestorUid: 10190 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 13:36:30.653   586   737 D ConnectivityService: NetReassign [488 : null → 102] [c 4] [a 13] [i 479]
+04-08 13:36:30.690 20294 20370 W ample.qr_dasher: Verification of void io.grpc.Attributes.<init>(java.util.IdentityHashMap, io.grpc.Attributes$1) took 110.295ms (36.27 bytecodes/s) (1360B approximate peak alloc)
+04-08 13:36:30.731   586  1914 I ImeTracker: com.example.qr_dasher:ae63ff34: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+04-08 13:36:30.733   586  1914 I ImeTracker: com.example.qr_dasher:ae63ff34: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 13:36:30.739 20294 20294 I Choreographer: Skipped 42 frames!  The application may be doing too much work on its main thread.
+04-08 13:36:30.796   357 20371 I resolv  : GetAddrInfoHandler::run: {102 102 102 983142 10190 0}
+04-08 13:36:31.073 20294 20369 W ample.qr_dasher: Verification of void androidx.emoji2.text.DefaultEmojiCompatConfig.<init>() took 313.794ms (12.75 bytecodes/s) (1352B approximate peak alloc)
+04-08 13:36:31.317 20294 20369 W ample.qr_dasher: Verification of androidx.emoji2.text.DefaultEmojiCompatConfig$DefaultEmojiCompatConfigHelper androidx.emoji2.text.DefaultEmojiCompatConfig$DefaultEmojiCompatConfigFactory.getHelperForApi() took 193.681ms (98.10 bytecodes/s) (1920B approximate peak alloc)
+04-08 13:36:31.450   357 20372 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-08 13:36:31.474   357 20373 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-08 13:36:31.476   357 20372 I resolv  : res_nsend: used send_dg 70 terrno: 0
+04-08 13:36:31.483   357 20372 I resolv  : doQuery: rcode=0, ancount=1, return value=70
+04-08 13:36:31.509 20294 20294 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@8ea8c4e in: DESTROYED
+04-08 13:36:31.510 20294 20294 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+04-08 13:36:31.582   357 20373 I resolv  : res_nsend: used send_dg 58 terrno: 0
+04-08 13:36:31.583   357 20373 I resolv  : doQuery: rcode=0, ancount=1, return value=58
+04-08 13:36:31.646   586  1914 W InputManager-JNI: Input channel object 'ce73ce7 Splash Screen com.example.qr_dasher (client)' was disposed without first being removed with the input manager!
+04-08 13:36:31.662   818   871 I Choreographer: Skipped 74 frames!  The application may be doing too much work on its main thread.
+04-08 13:36:31.762   586   616 W system_server: Long monitor contention with owner binder:586_1A (1914) at void com.android.server.wm.WindowManagerService.removeWindow(com.android.server.wm.Session, android.view.IWindow)(WindowManagerService.java:1977) waiters=4 in void com.android.server.wm.WindowSurfacePlacer$Traverser.run() for 115ms
+04-08 13:36:31.808  1386  1386 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 13:36:31.828  1386  1386 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 13:36:31.850  1086  1144 I ImeTracker: com.google.android.apps.nexuslauncher:f4bdbfe4: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+04-08 13:36:31.858  1086  1144 I ImeTracker: com.google.android.apps.nexuslauncher:f4bdbfe4: onFailed at PHASE_CLIENT_VIEW_SERVED
+04-08 13:36:31.929  2753  4647 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+04-08 13:36:31.940  1386  1386 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.qr_dasher fieldId=0 fieldName=null extras=null}, false)
+04-08 13:36:31.949  2753  4647 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+04-08 13:36:31.978  1086  2132 D OneSearchSuggestProvider: Shut down the binder channel
+04-08 13:36:31.988  1086  1438 I IPCThreadState: oneway function results for code 2 on binder at 0x714be79a2e30 will be dropped but finished with status UNKNOWN_TRANSACTION
+04-08 13:36:31.991  1386  1386 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 13:36:31.994  1386  1386 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 13:36:32.005  2753  4647 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+04-08 13:36:32.078   818   818 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+04-08 13:36:32.118  2753  4647 I FontLog : Pulling font file for id = 89, cache size = 4 [CONTEXT service_id=132 ]
+04-08 13:36:32.157 20294 20330 W FileTestStorage: Output properties is not supported.
+04-08 13:36:32.174 20294 20330 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+04-08 13:36:32.241 20294 20330 D CompatibilityChangeReporter: Compat change id reported: 247079863; UID 10190; state: ENABLED
+04-08 13:36:32.313 20294 20330 D EventInjectionStrategy: Creating injection strategy with input manager.
+04-08 13:36:32.316 20294 20330 W ample.qr_dasher: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+04-08 13:36:32.326 20294 20330 W ample.qr_dasher: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+04-08 13:36:32.332 20294 20330 W ample.qr_dasher: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+04-08 13:36:32.365  2753  4647 I FontLog : Pulling font file for id = 89, cache size = 4 [CONTEXT service_id=132 ]
+04-08 13:36:32.622 20294 20330 W ample.qr_dasher: Accessing hidden method Landroid/view/ViewConfiguration;->getDoubleTapMinTime()I (unsupported, reflection, allowed)
+04-08 13:36:32.655 20294 20330 W FileTestStorage: Test input args is not supported.
+04-08 13:36:32.708 20294 20294 W ample.qr_dasher: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+04-08 13:36:32.709 20294 20294 W ample.qr_dasher: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+04-08 13:36:32.710 20294 20294 W ample.qr_dasher: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+04-08 13:36:32.752 20294 20294 W ample.qr_dasher: Accessing hidden method Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal; (unsupported, reflection, allowed)
+04-08 13:36:32.753 20294 20294 W ample.qr_dasher: Accessing hidden field Landroid/view/WindowManagerGlobal;->mViews:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+04-08 13:36:32.754 20294 20294 W ample.qr_dasher: Accessing hidden field Landroid/view/WindowManagerGlobal;->mParams:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: Error inserting flex_time=10000 job_id=-1 period=22000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=231818000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712604992708 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at byui.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):59)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at bytb.n(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at bytb.u(:com.google.android.gms@231818047@23.18.18 (190800-535401451):20)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at bytb.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at byot.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-08 13:36:32.834  2753 19734 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: Error inserting flex_time=10000 job_id=-1 period=22000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=231818000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712604992824 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at byui.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):59)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at bytb.n(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at bytb.u(:com.google.android.gms@231818047@23.18.18 (190800-535401451):20)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at bytb.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at byot.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+04-08 13:36:32.853  2753 19734 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 13:36:33.015 20294 20294 D takeScreenshot: Found 1 global views to redraw
+04-08 13:36:33.118   818   818 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 13:36:33.194 20294 20303 I ample.qr_dasher: Background young concurrent copying GC freed 33964(2391KB) AllocSpace objects, 12(368KB) LOS objects, 33% free, 5436KB/8181KB, paused 2.104ms,248us total 205.700ms
+04-08 13:36:33.201   158   158 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+04-08 13:36:33.203 20266 20292 I Gralloc4: mapper 4.x is not supported
+04-08 13:36:33.745 20266 20379 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+04-08 13:36:33.751 20266 20379 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+04-08 13:36:33.762 20266 20379 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+04-08 13:36:34.165 20266 20379 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+04-08 13:36:34.166 20266 20379 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: Failed to take screenshot
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: java.io.FileNotFoundException: view-op-error-1.png: open failed: EROFS (Read-only file system)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at java.io.FileOutputStream.<init>(FileOutputStream.java:125)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.platform.io.FileTestStorage.openOutputFile(FileTestStorage.java:60)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.core.graphics.BitmapStorage.writeToTestStorage(BitmapStorageExt.kt:49)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.espresso.base.DefaultFailureHandler.takeScreenshot(DefaultFailureHandler.java:3)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:3)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:8)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at com.example.qr_dasher.eventIntentTests.createUserProfile(eventIntentTests.java:39)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at java.lang.reflect.Method.invoke(Native Method)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:76)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.rule.GrantPermissionRule$RequestPermissionStatement.evaluate(GrantPermissionRule.java:136)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:67)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:446)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2402)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: Caused by: android.system.ErrnoException: open failed: EROFS (Read-only file system)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at libcore.io.Linux.open(Native Method)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+04-08 13:36:34.799 20294 20330 W DefaultFailureHandler: 	... 44 more
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: Failed to save the view hierarchy to file view-hierarchy-1.txt
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: java.io.FileNotFoundException: view-hierarchy-1.txt: open failed: EROFS (Read-only file system)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at java.io.FileOutputStream.<init>(FileOutputStream.java:125)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.platform.io.FileTestStorage.openOutputFile(FileTestStorage.java:60)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.espresso.base.ViewHierarchyExceptionHandler.addOutputFile(ViewHierarchyExceptionHandler.java:1)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.espresso.base.ViewHierarchyExceptionHandler.dumpFullViewHierarchyToFile(ViewHierarchyExceptionHandler.java:5)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.espresso.base.ViewHierarchyExceptionHandler.handleSafely(ViewHierarchyExceptionHandler.java:2)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.espresso.base.ViewHierarchyExceptionHandler.handleSafely(ViewHierarchyExceptionHandler.java:1)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.espresso.base.DefaultFailureHandler$TypedFailureHandler.handle(DefaultFailureHandler.java:4)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:5)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:8)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at com.example.qr_dasher.eventIntentTests.createUserProfile(eventIntentTests.java:39)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at java.lang.reflect.Method.invoke(Native Method)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:76)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.rule.GrantPermissionRule$RequestPermissionStatement.evaluate(GrantPermissionRule.java:136)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:67)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:446)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2402)
+04-08 13:36:34.834 20294 20330 W ViewHierarchyExceptionHandler: Caused by: android.system.ErrnoException: open failed: EROFS (Read-only file system)
+04-08 13:36:34.836 20294 20330 W ViewHierarchyExceptionHandler: 	at libcore.io.Linux.open(Native Method)
+04-08 13:36:34.836 20294 20330 W ViewHierarchyExceptionHandler: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+04-08 13:36:34.836 20294 20330 W ViewHierarchyExceptionHandler: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+04-08 13:36:34.836 20294 20330 W ViewHierarchyExceptionHandler: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+04-08 13:36:34.836 20294 20330 W ViewHierarchyExceptionHandler: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+04-08 13:36:34.836 20294 20330 W ViewHierarchyExceptionHandler: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+04-08 13:36:34.836 20294 20330 W ViewHierarchyExceptionHandler: 	... 47 more
+04-08 13:36:34.836 20294 20330 W FileTestStorage: Test input args is not supported.
+04-08 13:36:34.864 20294 20330 E TestRunner: failed: joinEvent(com.example.qr_dasher.eventIntentTests)
+04-08 13:36:34.864 20294 20330 E TestRunner: ----- begin exception -----
+04-08 13:36:34.875 20294 20330 E TestRunner: androidx.test.espresso.NoMatchingViewException: No views in hierarchy found matching: view.getId() is <2131231107/com.example.qr_dasher:id/name_edit>
+04-08 13:36:34.875 20294 20330 E TestRunner:
+04-08 13:36:34.875 20294 20330 E TestRunner: View Hierarchy:
+04-08 13:36:34.875 20294 20330 E TestRunner: +>DecorView{id=-1, visibility=VISIBLE, width=1080, height=2400, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params={(0,0)(fillxfill) ty=BASE_APPLICATION wanim=0x10302fe
+04-08 13:36:34.875 20294 20330 E TestRunner:   fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+04-08 13:36:34.875 20294 20330 E TestRunner:   pfl=NO_MOVE_ANIMATION FORCE_DRAW_STATUS_BAR_BACKGROUND FIT_INSETS_CONTROLLED
+04-08 13:36:34.875 20294 20330 E TestRunner:   bhv=DEFAULT
+04-08 13:36:34.875 20294 20330 E TestRunner:   fitSides=}, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+04-08 13:36:34.875 20294 20330 E TestRunner: |
+04-08 13:36:34.875 20294 20330 E TestRunner: +->LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=2337, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+04-08 13:36:34.875 20294 20330 E TestRunner: |
+04-08 13:36:34.875 20294 20330 E TestRunner: +-->ViewStub{id=16908746, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+04-08 13:36:34.875 20294 20330 E TestRunner: |
+04-08 13:36:34.875 20294 20330 E TestRunner: +-->FrameLayout{id=-1, visibility=VISIBLE, width=1080, height=2209, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=128.0, child-count=1}
+04-08 13:36:34.875 20294 20330 E TestRunner: |
+04-08 13:36:34.875 20294 20330 E TestRunner: +--->FitWindowsLinearLayout{id=2131230780, res-name=action_bar_root, visibility=VISIBLE, width=1080, height=2209, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+04-08 13:36:34.875 20294 20330 E TestRunner: |
+04-08 13:36:34.875 20294 20330 E TestRunner: +---->ViewStubCompat{id=2131230791, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+04-08 13:36:34.875 20294 20330 E TestRunner: |
+04-08 13:36:34.875 20294 20330 E TestRunner: +---->ContentFrameLayout{id=16908290, res-name=content, visibility=VISIBLE, width=1080, height=2209, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+04-08 13:36:34.875 20294 20330 E TestRunner: |
+04-08 13:36:34.875 20294 20330 E TestRunner: +----->LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=2209, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=4}
+04-08 13:36:34.875 20294 20330 E TestRunner: |
+04-08 13:36:34.876 20294 20330 E TestRunner: +------>MaterialTextView{id=-1, visibility=VISIBLE, width=628, height=106, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=226.0, y=770.0, text=Choose your Role, input-type=0, ime-target=false, has-links=false}
+04-08 13:36:34.876 20294 20330 E TestRunner: |
+04-08 13:36:34.876 20294 20330 E TestRunner: +------>MaterialButton{id=2131231152, res-name=organizer_button, visibility=VISIBLE, width=438, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=321.0, y=955.0, text=Organizer, input-type=0, ime-target=false, has-links=false, is-checked=false}
+04-08 13:36:34.876 20294 20330 E TestRunner: |
+04-08 13:36:34.876 20294 20330 E TestRunner: +------>MaterialButton{id=2131230821, res-name=attendee_button, visibility=VISIBLE, width=438, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=321.0, y=1134.0, text=Attendee, input-type=0, ime-target=false, has-links=false, is-checked=false}
+04-08 13:36:34.876 20294 20330 E TestRunner: |
+04-08 13:36:34.876 20294 20330 E TestRunner: +------>MaterialButton{id=2131230800, res-name=admin_button, visibility=VISIBLE, width=438, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=321.0, y=1313.0, text=Admin, input-type=0, ime-target=false, has-links=false, is-checked=false}
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.NoMatchingViewException$Builder.build(NoMatchingViewException.java:5)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.base.DefaultFailureHandler.lambda$getNoMatchingViewExceptionTruncater$0(DefaultFailureHandler.java:5)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.base.DefaultFailureHandler$$ExternalSyntheticLambda1.truncateExceptionMessage(Unknown Source:2)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.base.ViewHierarchyExceptionHandler.handleSafely(ViewHierarchyExceptionHandler.java:5)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.base.ViewHierarchyExceptionHandler.handleSafely(ViewHierarchyExceptionHandler.java:1)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.base.DefaultFailureHandler$TypedFailureHandler.handle(DefaultFailureHandler.java:4)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:5)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:8)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at com.example.qr_dasher.eventIntentTests.createUserProfile(eventIntentTests.java:39)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:76)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.rule.GrantPermissionRule$RequestPermissionStatement.evaluate(GrantPermissionRule.java:136)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:67)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:446)
+04-08 13:36:34.876 20294 20330 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2402)
+04-08 13:36:34.876 20294 20330 E TestRunner: ----- end exception -----
+04-08 13:36:34.893 20294 20330 I TestRunner: finished: joinEvent(com.example.qr_dasher.eventIntentTests)

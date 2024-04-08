@@ -23,6 +23,7 @@ id announcement_title
 id announcment_text
 id announcment_title_text
 id attended_events_button
+id attendeeCount
 id attendee_button
 id attendee_list_view
 id attendee_qr_button

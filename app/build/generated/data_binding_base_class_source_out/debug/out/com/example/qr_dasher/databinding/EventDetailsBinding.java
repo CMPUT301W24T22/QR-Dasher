@@ -27,6 +27,9 @@ public final class EventDetailsBinding implements ViewBinding {
   public final Button announcementButton;
 
   @NonNull
+  public final TextView attendeeCount;
+
+  @NonNull
   public final ListView attendeeListView;
 
   @NonNull
@@ -57,13 +60,14 @@ public final class EventDetailsBinding implements ViewBinding {
   public final ListView signupListview;
 
   private EventDetailsBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button announcementButton, @NonNull ListView attendeeListView,
-      @NonNull TextView attendeeTextSignups, @NonNull TextView attendees,
-      @NonNull TextView eventNameTextView, @NonNull CardView mapCard, @NonNull MapView mapView,
-      @NonNull Button notifyButton, @NonNull Button promoQRbutton, @NonNull Button qrCodeButton,
-      @NonNull ListView signupListview) {
+      @NonNull Button announcementButton, @NonNull TextView attendeeCount,
+      @NonNull ListView attendeeListView, @NonNull TextView attendeeTextSignups,
+      @NonNull TextView attendees, @NonNull TextView eventNameTextView, @NonNull CardView mapCard,
+      @NonNull MapView mapView, @NonNull Button notifyButton, @NonNull Button promoQRbutton,
+      @NonNull Button qrCodeButton, @NonNull ListView signupListview) {
     this.rootView = rootView;
     this.announcementButton = announcementButton;
+    this.attendeeCount = attendeeCount;
     this.attendeeListView = attendeeListView;
     this.attendeeTextSignups = attendeeTextSignups;
     this.attendees = attendees;
@@ -106,6 +110,12 @@ public final class EventDetailsBinding implements ViewBinding {
       id = R.id.announcement_button;
       Button announcementButton = ViewBindings.findChildViewById(rootView, id);
       if (announcementButton == null) {
+        break missingId;
+      }
+
+      id = R.id.attendeeCount;
+      TextView attendeeCount = ViewBindings.findChildViewById(rootView, id);
+      if (attendeeCount == null) {
         break missingId;
       }
 
@@ -169,7 +179,7 @@ public final class EventDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new EventDetailsBinding((ConstraintLayout) rootView, announcementButton,
+      return new EventDetailsBinding((ConstraintLayout) rootView, announcementButton, attendeeCount,
           attendeeListView, attendeeTextSignups, attendees, eventNameTextView, mapCard, mapView,
           notifyButton, promoQRbutton, qrCodeButton, signupListview);
     }

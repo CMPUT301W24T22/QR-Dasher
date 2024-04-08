@@ -3340,6 +3340,7 @@ id arc
 id asConfigured
 id async
 id attended_events_button
+id attendeeCount
 id attendee_button
 id attendee_list_view
 id attendee_qr_button

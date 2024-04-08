@@ -4,6 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,6 +38,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
     private CollectionReference usersCollection;
     private Bitmap profile_picture;
     private SharedPreferences app_cache;
+
     /**
      * Initializes the activity, sets up UI components and listeners,
      * and checks if the user is already logged in. If logged in, redirects to RolePage.
@@ -91,6 +95,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                 if (name.isEmpty() || email.isEmpty()) {
                     Toast.makeText(HomePage.this, "Please fill in name and email", Toast.LENGTH_SHORT).show();
                     return;
+
                 }
 
                 // Check for valid email
@@ -100,6 +105,10 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                     return;
                 } else {
                     Log.d("EmailValidation", "Valid email: " + email);
+                }
+                // If no image uploaded, generate a profile picture
+                if (profile_picture == null) {
+                    profile_picture = generateProfilePicture(name);
                 }
                 
                 // Create a User object
@@ -141,7 +150,6 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
         });
     }
 
-    // Callback method to receive the uploaded image bitmap from ImageUploadFragment
     /**
      * Callback method to receive the uploaded image bitmap from ImageUploadFragment.
      *
@@ -149,12 +157,13 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
      */
     @Override
     public void onImageUpload(Bitmap imageBitmap) {
-        // Display the uploaded image in ImageView
+            // Display the uploaded image in ImageView
         imageUpload.setImageBitmap(imageBitmap);
-        // Store the image bitmap in profile_picture variable
+            // Store the image bitmap in profile_picture variable
         profile_picture = imageBitmap;
     }
-      /**
+
+     /**
      * Adds the user data to Firestore
      *
      * @param user The User object containing user data.
@@ -170,11 +179,14 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                     Toast.makeText(HomePage.this, "Upload Failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
+
       /**
-     * Saves the user data to SharedPreferences for local caching.
-     *
-     * @param user The User object containing user data.
-     */
+      * Saves the user data to SharedPreferences for local caching.
+      *
+      * @param user The User object containing user data.
+      * @param guest Boolean value to find out if user is logging in as a guest or not.
+      *
+      */
 
     private void saveUserToCache(User user, boolean guest){
         SharedPreferences.Editor editor = app_cache.edit();
@@ -185,5 +197,41 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
             editor.putBoolean("Guest", false);
         }
         editor.apply();
+    }
+
+    /**
+     * Generates a profile picture with the first letter of the user's name.
+     *
+     * @param name The name of the user.
+     *
+     * @return The generated profile picture bitmap.
+     */
+    private Bitmap generateProfilePicture(String name) {
+        int widthHeight = 200; // Width and Height in pixel
+        Bitmap bitmap = Bitmap.createBitmap(widthHeight, widthHeight, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+
+        Paint backgroundPaint = new Paint();
+        backgroundPaint.setColor(Color.LTGRAY);
+        backgroundPaint.setAntiAlias(true);
+        float centerX = widthHeight / 2f;
+        float centerY = widthHeight / 2f;
+        float radius = widthHeight / 2f;
+        canvas.drawCircle(centerX, centerY, radius, backgroundPaint);
+
+            // Draw the first letter of the name in the center of the circle
+        char firstLetter = name.trim().isEmpty() ? 'A' : name.trim().toUpperCase().charAt(0);
+        Paint textPaint = new Paint();
+        textPaint.setColor(Color.BLACK);
+        textPaint.setTextSize(120f);
+        textPaint.setTextAlign(Paint.Align.CENTER);
+        textPaint.setAntiAlias(true);
+
+            // Calculate the position for the text, so it's centered within the circle
+        float textY = centerY - ((textPaint.descent() + textPaint.ascent()) / 2f);
+
+        canvas.drawText(String.valueOf(firstLetter), centerX, textY, textPaint);
+
+        return bitmap;
     }
 }

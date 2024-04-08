@@ -39,9 +39,12 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicReference;
+
 /**
  * Activity for attendees of an event. Allows attendees to view notifications, edit their profile,
  * and scan a QR code to join an event.
@@ -237,6 +240,16 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
     private void getlocation() {
         int userId = app_cache.getInt("UserID", -1);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         if (lastKnownLocation != null) {
             // Logic to handle location object
@@ -258,6 +271,16 @@ public class Attendee extends AppCompatActivity implements LocationListener {
         if (locationManager != null) {
             // Request location updates for all available providers
             for (String provider : locationManager.getProviders(true)) {
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
                 locationManager.requestLocationUpdates(provider, 1000L, (float) 0, (LocationListener) this);
             }
         } else {
@@ -413,12 +436,16 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                         Event event = documentSnapshot.toObject(Event.class);
                         assert event != null;
                         List<String> attendeeList = new ArrayList<>(event.getAttendee_list());
-                        int currentAttendeeCount = attendeeList.size();
+                        // Use a Set to count unique attendees
+                        Set<String> uniqueAttendees = new HashSet<>(attendeeList);
+                        int uniqueAttendeeCount = uniqueAttendees.size();
                         int maxAttendees = event.getMaxAttendees();
 
-                        if ((currentAttendeeCount < maxAttendees) || (maxAttendees == -1)) {
+                        String userIdStr = String.valueOf(userId);
+
+                        if ((uniqueAttendeeCount < maxAttendees) || (maxAttendees == -1)) {
                             // Add the attendee to the event's attendee list
-                            String userIdStr = String.valueOf(userId);
+
                             attendeeList.add(userIdStr);
                             event.setAttendee_list(new ArrayList<>(attendeeList));
                             updateFirebaseEvent(eventID, event); // Update the event in Firestore
@@ -435,10 +462,6 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                                     }
                                 }
                             });
-
-
-
-
 
                         } else {
                             Toast.makeText(Attendee.this, "Event is full", Toast.LENGTH_SHORT).show();

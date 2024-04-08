@@ -101,7 +101,15 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 startActivity(intent);
             }
         });
-
+        notificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle attendee role selection
+                // For example, start a new activity for attendee tasks
+                Intent intent = new Intent(Attendee.this, Notifications.class);
+                startActivity(intent);
+            }
+        });
 
         editProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override

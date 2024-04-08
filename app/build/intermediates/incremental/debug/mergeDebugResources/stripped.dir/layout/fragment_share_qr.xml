@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ImageUploadFragment">
+
+    <Button
+        android:id="@+id/share_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share Attendee QR code" />
+
+    <Button
+        android:id="@+id/share_qr_promotional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share Promotional QR code"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/generatePromoQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Promotional QR code"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

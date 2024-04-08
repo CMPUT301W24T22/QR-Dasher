@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="com.example.qr_dasher.EventTest" tests="12" skipped="0" failures="1" errors="0" timestamp="2024-04-08T19:43:08" hostname="LAPTOP-DNIRNLEK" time="0.084">
   <properties/>
   <testcase name="testSetAndGetOrganizer" classname="com.example.qr_dasher.EventTest" time="0.006"/>
@@ -63,6 +64,18 @@
   <testcase name="testAddAttendeeSignup" classname="com.example.qr_dasher.EventTest" time="0.0"/>
   <testcase name="testSetAndGetAnnouncements" classname="com.example.qr_dasher.EventTest" time="0.001"/>
   <testcase name="testAddNullAttendeeSignup" classname="com.example.qr_dasher.EventTest" time="0.0"/>
+=======
+<testsuite name="com.example.qr_dasher.EventTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-04-08T19:30:04" hostname="LAPTOP-186O23V3" time="0.007">
+  <properties/>
+  <testcase name="testAddNullAttendee" classname="com.example.qr_dasher.EventTest" time="0.004"/>
+  <testcase name="testAddAttendee" classname="com.example.qr_dasher.EventTest" time="0.0"/>
+  <testcase name="testConstructorAndGetters" classname="com.example.qr_dasher.EventTest" time="0.0"/>
+  <testcase name="testRemoveNonExistentAttendee" classname="com.example.qr_dasher.EventTest" time="0.0"/>
+  <testcase name="testRemoveUserFromEvent" classname="com.example.qr_dasher.EventTest" time="0.0"/>
+  <testcase name="testAddDuplicateAttendee" classname="com.example.qr_dasher.EventTest" time="0.001"/>
+  <testcase name="testAddAttendeeSignup" classname="com.example.qr_dasher.EventTest" time="0.0"/>
+  <testcase name="testSetters" classname="com.example.qr_dasher.EventTest" time="0.0"/>
+>>>>>>> 148840f02bc52e1a025fd268873d38b8199073c1
   <testcase name="testRemoveAttendee" classname="com.example.qr_dasher.EventTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

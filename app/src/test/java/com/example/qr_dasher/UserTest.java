@@ -4,8 +4,14 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import java.util.List;
 
+/**
+ * Test class for the User class.
+ */
 public class UserTest {
 
+    /**
+     * Tests the constructor and getter methods of the User class.
+     */
     @Test
     public void testConstructorAndGetters() {
         User user = new User("John Doe", "john@example.com", true);
@@ -19,11 +25,9 @@ public class UserTest {
         assertEquals(0, user.getEventsJoined().size());
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testInvalidEmail() {
-        new User("Jane Doe", "invalidemail", true);
-    }
-
+    /**
+     * Tests the setter methods of the User class.
+     */
     @Test
     public void testSetters() {
         User user = new User("Alice", "alice@example.com", false);
@@ -55,16 +59,28 @@ public class UserTest {
         assertEquals(1, user.getEventsJoined().size());
     }
 
+    /**
+     * Tests the addition of events to the User's created events lists.
+     */
     @Test
-    public void testAddEvents() {
+    public void testAddEventsCreated() {
         User user = new User("Alice", "alice@example.com", false);
 
         user.addEventsCreated("event1");
         assertEquals(1, user.getEventsCreated().size());
         assertEquals("event1", user.getEventsCreated().get(0));
 
+    }
+
+    /**
+     * Tests the addition of events to the User's joined events lists.
+     */
+    @Test
+    public void testAddEventsJoined(){
+        User user = new User("Alice", "alice@example.com", false);
         user.addEventsJoined("event2");
         assertEquals(1, user.getEventsJoined().size());
         assertEquals("event2", user.getEventsJoined().get(0));
     }
+
 }

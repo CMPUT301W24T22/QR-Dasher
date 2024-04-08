@@ -1,35 +1,30 @@
-# 2024-04-08T19:54:38.776Z:
+# 2024-04-08T21:42:59.365Z:
 test_suite_meta_data {
   scheduled_test_case_count: 1
 }
-test_status: FAILED
+test_status: PASSED
 test_result {
   test_case {
-    test_class: "eventIntentTests"
+    test_class: "adminViewIntentTest"
     test_package: "com.example.qr_dasher"
-    test_method: "initializationError"
+    test_method: "loginAsAnAdmin"
     start_time {
-      seconds: 1712606077
-      nanos: 884000000
+      seconds: 1712612558
+      nanos: 933000000
     }
     end_time {
-      seconds: 1712606077
-      nanos: 923000000
+      seconds: 1712612575
+      nanos: 732000000
     }
   }
-  test_status: FAILED
-  error {
-    error_message: "java.lang.RuntimeException: Failed to instantiate test runner class androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner\n\n\nat androidx.test.ext.junit.runners.AndroidJUnit4.throwInitializationError(AndroidJUnit4.java:129)\nat androidx.test.ext.junit.runners.AndroidJUnit4.loadRunner(AndroidJUnit4.java:121)\nat androidx.test.ext.junit.runners.AndroidJUnit4.loadRunner(AndroidJUnit4.java:82)\nat androidx.test.ext.junit.runners.AndroidJUnit4.<init>(AndroidJUnit4.java:56)\n... 14 trimmed\nCaused by: java.lang.reflect.InvocationTargetException\nat java.lang.reflect.Constructor.newInstance0(Native Method)\nat java.lang.reflect.Constructor.newInstance(Constructor.java:343)\nat androidx.test.ext.junit.runners.AndroidJUnit4.loadRunner(AndroidJUnit4.java:112)\n... 17 more\nCaused by: org.junit.runners.model.InvalidTestClassError: Invalid test class \'com.example.qr_dasher.eventIntentTests\':\n1. Method createUserProfile() should be static\nat org.junit.runners.ParentRunner.validate(ParentRunner.java:525)\nat org.junit.runners.ParentRunner.<init>(ParentRunner.java:92)\nat org.junit.runners.BlockJUnit4ClassRunner.<init>(BlockJUnit4ClassRunner.java:74)\nat androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner.<init>(AndroidJUnit4ClassRunner.java:43)\nat androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner.<init>(AndroidJUnit4ClassRunner.java:48)\n... 20 more"
-    error_type: "java.lang.reflect.InvocationTargetException\nat java.lang.reflect.Constructor.newInstance0(Native Method)\nat java.lang.reflect.Constructor.newInstance(Constructor.java"
-    stack_trace: "java.lang.RuntimeException: Failed to instantiate test runner class androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner\n\n\nat androidx.test.ext.junit.runners.AndroidJUnit4.throwInitializationError(AndroidJUnit4.java:129)\nat androidx.test.ext.junit.runners.AndroidJUnit4.loadRunner(AndroidJUnit4.java:121)\nat androidx.test.ext.junit.runners.AndroidJUnit4.loadRunner(AndroidJUnit4.java:82)\nat androidx.test.ext.junit.runners.AndroidJUnit4.<init>(AndroidJUnit4.java:56)\n... 14 trimmed\nCaused by: java.lang.reflect.InvocationTargetException\nat java.lang.reflect.Constructor.newInstance0(Native Method)\nat java.lang.reflect.Constructor.newInstance(Constructor.java:343)\nat androidx.test.ext.junit.runners.AndroidJUnit4.loadRunner(AndroidJUnit4.java:112)\n... 17 more\nCaused by: org.junit.runners.model.InvalidTestClassError: Invalid test class \'com.example.qr_dasher.eventIntentTests\':\n1. Method createUserProfile() should be static\nat org.junit.runners.ParentRunner.validate(ParentRunner.java:525)\nat org.junit.runners.ParentRunner.<init>(ParentRunner.java:92)\nat org.junit.runners.BlockJUnit4ClassRunner.<init>(BlockJUnit4ClassRunner.java:74)\nat androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner.<init>(AndroidJUnit4ClassRunner.java:43)\nat androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner.<init>(AndroidJUnit4ClassRunner.java:48)\n... 20 more"
-  }
+  test_status: PASSED
   output_artifact {
     label {
       label: "logcat"
       namespace: "android"
     }
     source_path {
-      path: "C:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\outputs\\androidTest-results\\connected\\debug\\emulator-5554 - 14\\logcat-com.example.qr_dasher.eventIntentTests-initializationError.txt"
+      path: "C:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\outputs\\androidTest-results\\connected\\debug\\emulator-5554 - 14\\logcat-com.example.qr_dasher.adminViewIntentTest-loginAsAnAdmin.txt"
     }
   }
   output_artifact {

@@ -32,7 +32,7 @@ public class profileIntentTests {
     );
 
     /**
-     * This test first creates a guest profile and checks what roles they can take (only attendee)
+     * This test first creates a guest profile and checks what roles they can undertake (only attendee)
      * And once they create profile, they should have full access .i.e, can be either organizer or attendee
      *
      *

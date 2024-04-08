@@ -1,6 +1,8 @@
 -- Merging decision tree log ---
 manifest
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-114:12
 INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-114:12
 INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-114:12
@@ -1217,6 +1219,7 @@ ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\jaste\.gr
 	android:name
 		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\jaste\.gradle\caches\transforms-3\e80091ddd1d047b7186e5f58bf520363\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
 =======
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 ADDED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-114:12
 INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-114:12
 INJECTED from C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\AndroidManifest.xml:2:1-114:12
@@ -2432,4 +2435,7 @@ action#androidx.profileinstaller.action.BENCHMARK_OPERATION
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\jaspr\.gradle\caches\transforms-3\e80091ddd1d047b7186e5f58bf520363\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
 	android:name
 		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\jaspr\.gradle\caches\transforms-3\e80091ddd1d047b7186e5f58bf520363\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+<<<<<<< HEAD
+=======
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a

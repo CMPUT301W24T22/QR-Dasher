@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 com.example.qr_dasher.app-lifecycle-livedata-core-ktx-2.6.2-0 C:\Users\jaste\.gradle\caches\transforms-3\0e2472825f386722ea3a89f830000bb6\transformed\lifecycle-livedata-core-ktx-2.6.2\res
 com.example.qr_dasher.app-lifecycle-viewmodel-2.6.2-1 C:\Users\jaste\.gradle\caches\transforms-3\19f0eb30035c5b9ded78e412e233dfc7\transformed\lifecycle-viewmodel-2.6.2\res
 com.example.qr_dasher.app-ads-adservices-java-1.0.0-beta05-2 C:\Users\jaste\.gradle\caches\transforms-3\22395b72a3e926231ad158aadbf04d52\transformed\ads-adservices-java-1.0.0-beta05\res
@@ -59,6 +61,7 @@ com.example.qr_dasher.app-merged_res-56 D:\Documents\CMPUT 301\Project\QR-Dasher
 com.example.qr_dasher.app-debug-57 D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\debug\res
 com.example.qr_dasher.app-main-58 D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\res
 =======
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher.app-lifecycle-livedata-core-ktx-2.6.2-0 C:\Users\jaspr\.gradle\caches\transforms-3\0e2472825f386722ea3a89f830000bb6\transformed\lifecycle-livedata-core-ktx-2.6.2\res
 com.example.qr_dasher.app-lifecycle-viewmodel-2.6.2-1 C:\Users\jaspr\.gradle\caches\transforms-3\19f0eb30035c5b9ded78e412e233dfc7\transformed\lifecycle-viewmodel-2.6.2\res
 com.example.qr_dasher.app-ads-adservices-java-1.0.0-beta05-2 C:\Users\jaspr\.gradle\caches\transforms-3\22395b72a3e926231ad158aadbf04d52\transformed\ads-adservices-java-1.0.0-beta05\res
@@ -118,4 +121,7 @@ com.example.qr_dasher.app-packageDebugResources-55 C:\Users\jaspr\OneDrive\Docum
 com.example.qr_dasher.app-merged_res-56 C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\build\intermediates\merged_res\debug
 com.example.qr_dasher.app-debug-57 C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\debug\res
 com.example.qr_dasher.app-main-58 C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\res
+<<<<<<< HEAD
+=======
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a

@@ -1178,6 +1178,9 @@ com.example.qr_dasher:macro/m3_comp_date_picker_modal_header_supporting_text_typ
 com.example.qr_dasher:integer/app_bar_elevation_anim_duration = 0x7f090002
 com.example.qr_dasher:integer/abc_config_activityShortDur = 0x7f090001
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/zxing_viewfinder_view = 0x7f080296
 com.example.qr_dasher:style/Base.Theme.MaterialComponents.Dialog.FixedSize = 0x7f13006b
 com.example.qr_dasher:id/zxing_status_view = 0x7f080295
@@ -1374,6 +1377,8 @@ com.example.qr_dasher:id/notification_main_column_container = 0x7f08019d
 com.example.qr_dasher:style/Widget.Material3.Button.TextButton.Dialog.Flush = 0x7f13035e
 com.example.qr_dasher:style/MaterialAlertDialog.MaterialComponents.Title.Panel.CenterStacked = 0x7f130134
 com.example.qr_dasher:id/notification_content = 0x7f08019a
+<<<<<<< HEAD
+=======
 =======
 com.example.qr_dasher:id/zxing_viewfinder_view = 0x7f080297
 com.example.qr_dasher:style/Base.Theme.MaterialComponents.Dialog.FixedSize = 0x7f13006b
@@ -1573,6 +1578,7 @@ com.example.qr_dasher:style/MaterialAlertDialog.MaterialComponents.Title.Panel.C
 com.example.qr_dasher:id/notification_content = 0x7f08019b
 com.example.qr_dasher:id/notification_button = 0x7f08019a
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/north = 0x7f080198
 com.example.qr_dasher:id/none = 0x7f080196
 com.example.qr_dasher:style/Widget.Material3.FloatingActionButton.Large.Tertiary = 0x7f13038b
@@ -1645,8 +1651,12 @@ com.example.qr_dasher:id/list_type = 0x7f080140
 <<<<<<< HEAD
 com.example.qr_dasher:id/zxing_decode_succeeded = 0x7f080291
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/zxing_decode_succeeded = 0x7f080291
+=======
 com.example.qr_dasher:id/zxing_decode_succeeded = 0x7f080292
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/list_item = 0x7f08013f
 com.example.qr_dasher:style/Widget.Material3.MaterialCalendar.Day.Invalid = 0x7f130399
 com.example.qr_dasher:id/linear = 0x7f08013d
@@ -1664,8 +1674,12 @@ com.example.qr_dasher:id/inward = 0x7f080130
 <<<<<<< HEAD
 com.example.qr_dasher:id/search_plate = 0x7f0801f2
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/search_plate = 0x7f0801f2
+=======
 com.example.qr_dasher:id/search_plate = 0x7f0801f3
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/info = 0x7f08012e
 com.example.qr_dasher:id/indeterminate = 0x7f08012d
 com.example.qr_dasher:id/immediateStop = 0x7f08012b
@@ -1797,8 +1811,12 @@ com.example.qr_dasher:style/Widget.Material3.MaterialCalendar.DayTextView = 0x7f
 <<<<<<< HEAD
 com.example.qr_dasher:id/textEnd = 0x7f080244
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/textEnd = 0x7f080244
+=======
 com.example.qr_dasher:id/textEnd = 0x7f080245
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/callMeasure = 0x7f08008a
 com.example.qr_dasher:id/cache_measures = 0x7f080089
 com.example.qr_dasher:id/bubble_moreinfo = 0x7f080085
@@ -1824,8 +1842,12 @@ com.example.qr_dasher:id/auto = 0x7f08006b
 <<<<<<< HEAD
 com.example.qr_dasher:id/signup_button = 0x7f08020d
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/signup_button = 0x7f08020d
+=======
 com.example.qr_dasher:id/signup_button = 0x7f08020e
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/attendees_button = 0x7f08006a
 com.example.qr_dasher:id/attendees = 0x7f080069
 com.example.qr_dasher:id/attendee_qr_button = 0x7f080067
@@ -1852,8 +1874,12 @@ com.example.qr_dasher:id/aligned = 0x7f080052
 <<<<<<< HEAD
 com.example.qr_dasher:id/notification_title = 0x7f08019f
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/notification_title = 0x7f08019f
+=======
 com.example.qr_dasher:id/notification_title = 0x7f0801a0
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/alertTitle = 0x7f080051
 com.example.qr_dasher:style/Base.Widget.AppCompat.ListMenuView = 0x7f1300e6
 com.example.qr_dasher:id/adjust_width = 0x7f08004f
@@ -1882,8 +1908,12 @@ com.example.qr_dasher:style/Base.Theme.AppCompat = 0x7f13004b
 <<<<<<< HEAD
 com.example.qr_dasher:id/open_search_view_root = 0x7f0801ad
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/open_search_view_root = 0x7f0801ad
+=======
 com.example.qr_dasher:id/open_search_view_root = 0x7f0801ae
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/action0 = 0x7f080033
 com.example.qr_dasher:id/accessibility_custom_action_9 = 0x7f080032
 com.example.qr_dasher:id/accessibility_custom_action_7 = 0x7f080030
@@ -1924,8 +1954,12 @@ com.example.qr_dasher:style/Platform.ThemeOverlay.AppCompat.Light = 0x7f13013f
 <<<<<<< HEAD
 com.example.qr_dasher:id/overshoot = 0x7f0801b6
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/overshoot = 0x7f0801b6
+=======
 com.example.qr_dasher:id/overshoot = 0x7f0801b7
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/FirstFragment = 0x7f080006
 com.example.qr_dasher:string/cacheManagerNo = 0x7f120032
 com.example.qr_dasher:macro/m3_comp_navigation_rail_inactive_icon_color = 0x7f0c009f
@@ -1935,8 +1969,12 @@ com.example.qr_dasher:string/mtrl_checkbox_button_path_unchecked = 0x7f1200ae
 <<<<<<< HEAD
 com.example.qr_dasher:id/textStart = 0x7f080247
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/textStart = 0x7f080247
+=======
 com.example.qr_dasher:id/textStart = 0x7f080248
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/BOTTOM_START = 0x7f080002
 com.example.qr_dasher:drawable/twotone_navigation_black_48 = 0x7f07010e
 com.example.qr_dasher:drawable/tooltip_frame_dark = 0x7f07010c
@@ -1959,8 +1997,12 @@ com.example.qr_dasher:drawable/osm_ic_center_map = 0x7f0700ff
 <<<<<<< HEAD
 com.example.qr_dasher:id/userList = 0x7f08026d
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/userList = 0x7f08026d
+=======
 com.example.qr_dasher:id/userList = 0x7f08026e
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:drawable/notification_tile_bg = 0x7f0700fd
 com.example.qr_dasher:drawable/notification_template_icon_low_bg = 0x7f0700fc
 com.example.qr_dasher:drawable/notification_template_icon_bg = 0x7f0700fb
@@ -1996,8 +2038,12 @@ com.example.qr_dasher:drawable/mtrl_ic_checkbox_unchecked = 0x7f0700dd
 <<<<<<< HEAD
 com.example.qr_dasher:id/submit_area = 0x7f080230
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/submit_area = 0x7f080230
+=======
 com.example.qr_dasher:id/submit_area = 0x7f080231
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:drawable/mtrl_ic_checkbox_checked = 0x7f0700dc
 com.example.qr_dasher:drawable/mtrl_ic_check_mark = 0x7f0700db
 com.example.qr_dasher:style/TextAppearance.AppCompat.Widget.ActionMode.Title.Inverse = 0x7f1301b9
@@ -2020,8 +2066,12 @@ com.example.qr_dasher:style/Theme.Material3.Light.SideSheetDialog = 0x7f130247
 <<<<<<< HEAD
 com.example.qr_dasher:id/notification_text = 0x7f08019e
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/notification_text = 0x7f08019e
+=======
 com.example.qr_dasher:id/notification_text = 0x7f08019f
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:drawable/moreinfo_arrow = 0x7f0700c9
 com.example.qr_dasher:drawable/material_ic_menu_arrow_up_black_24dp = 0x7f0700c8
 com.example.qr_dasher:drawable/material_ic_menu_arrow_down_black_24dp = 0x7f0700c7
@@ -2118,8 +2168,12 @@ com.example.qr_dasher:layout/abc_list_menu_item_layout = 0x7f0b0010
 <<<<<<< HEAD
 com.example.qr_dasher:id/parentRelative = 0x7f0801bb
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/parentRelative = 0x7f0801bb
+=======
 com.example.qr_dasher:id/parentRelative = 0x7f0801bc
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/navigationRailStyle = 0x7f030373
 com.example.qr_dasher:color/m3_sys_color_dynamic_light_on_surface_variant = 0x7f0501b7
 com.example.qr_dasher:drawable/abc_scrubber_track_mtrl_alpha = 0x7f070062
@@ -2150,8 +2204,12 @@ com.example.qr_dasher:style/Widget.MaterialComponents.MaterialCalendar.Day.Inval
 <<<<<<< HEAD
 com.example.qr_dasher:id/unchecked = 0x7f080267
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/unchecked = 0x7f080267
+=======
 com.example.qr_dasher:id/unchecked = 0x7f080268
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/abc_disabled_alpha_material_light = 0x7f060028
 com.example.qr_dasher:drawable/abc_ic_menu_overflow_material = 0x7f070045
 com.example.qr_dasher:drawable/abc_ic_menu_cut_mtrl_alpha = 0x7f070044
@@ -2167,8 +2225,12 @@ com.example.qr_dasher:macro/m3_comp_filled_text_field_error_trailing_icon_color 
 <<<<<<< HEAD
 com.example.qr_dasher:id/pin = 0x7f0801c3
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/pin = 0x7f0801c3
+=======
 com.example.qr_dasher:id/pin = 0x7f0801c4
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/mtrl_btn_pressed_z = 0x7f060266
 com.example.qr_dasher:attr/colorOutlineVariant = 0x7f030122
 com.example.qr_dasher:drawable/abc_cab_background_top_mtrl_alpha = 0x7f07003a
@@ -2254,8 +2316,12 @@ com.example.qr_dasher:dimen/mtrl_snackbar_margin = 0x7f0602ef
 <<<<<<< HEAD
 com.example.qr_dasher:id/view_offset_helper = 0x7f080276
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/view_offset_helper = 0x7f080276
+=======
 com.example.qr_dasher:id/view_offset_helper = 0x7f080277
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/mtrl_snackbar_action_text_color_alpha = 0x7f0602ec
 com.example.qr_dasher:color/design_dark_default_color_primary_variant = 0x7f050049
 com.example.qr_dasher:drawable/ic_m3_chip_close = 0x7f0700a8
@@ -2279,8 +2345,12 @@ com.example.qr_dasher:dimen/mtrl_slider_label_padding = 0x7f0602e3
 <<<<<<< HEAD
 com.example.qr_dasher:id/showTitle = 0x7f080204
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/showTitle = 0x7f080204
+=======
 com.example.qr_dasher:id/showTitle = 0x7f080205
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/mtrl_slider_halo_radius = 0x7f0602e2
 com.example.qr_dasher:dimen/mtrl_shape_corner_size_medium_component = 0x7f0602e0
 com.example.qr_dasher:style/Base.V21.Theme.MaterialComponents.Light.Dialog = 0x7f1300a9
@@ -2343,8 +2413,12 @@ com.example.qr_dasher:dimen/mtrl_calendar_year_width = 0x7f060297
 <<<<<<< HEAD
 com.example.qr_dasher:id/ratio = 0x7f0801d2
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/ratio = 0x7f0801d2
+=======
 com.example.qr_dasher:id/ratio = 0x7f0801d3
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/mtrl_calendar_year_height = 0x7f060294
 com.example.qr_dasher:dimen/mtrl_calendar_year_corner = 0x7f060293
 com.example.qr_dasher:dimen/mtrl_calendar_text_input_padding_top = 0x7f060290
@@ -2355,8 +2429,12 @@ com.example.qr_dasher:dimen/mtrl_calendar_selection_text_baseline_to_bottom = 0x
 <<<<<<< HEAD
 com.example.qr_dasher:id/scale = 0x7f0801e2
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/scale = 0x7f0801e2
+=======
 com.example.qr_dasher:id/scale = 0x7f0801e3
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/tooltip_precise_anchor_threshold = 0x7f060320
 com.example.qr_dasher:dimen/mtrl_calendar_selection_baseline_to_top_fullscreen = 0x7f06028c
 com.example.qr_dasher:style/Theme.MaterialComponents.DayNight.Dialog.FixedSize.Bridge = 0x7f130256
@@ -2393,8 +2471,12 @@ com.example.qr_dasher:dimen/mtrl_btn_corner_radius = 0x7f060256
 <<<<<<< HEAD
 com.example.qr_dasher:id/password_toggle = 0x7f0801bd
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/password_toggle = 0x7f0801bd
+=======
 com.example.qr_dasher:id/password_toggle = 0x7f0801be
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/browser_actions_context_menu_min_padding = 0x7f060053
 com.example.qr_dasher:color/bright_foreground_disabled_material_dark = 0x7f050022
 com.example.qr_dasher:dimen/mtrl_bottomappbar_fab_cradle_vertical_offset = 0x7f060254
@@ -2473,8 +2555,12 @@ com.example.qr_dasher:style/Platform.AppCompat.Light = 0x7f130138
 <<<<<<< HEAD
 com.example.qr_dasher:id/rightToLeft = 0x7f0801d8
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/rightToLeft = 0x7f0801d8
+=======
 com.example.qr_dasher:id/rightToLeft = 0x7f0801d9
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_ref_palette_dynamic_tertiary40 = 0x7f0500fb
 com.example.qr_dasher:dimen/m3_timepicker_window_elevation = 0x7f06021c
 com.example.qr_dasher:dimen/m3_timepicker_display_stroke_width = 0x7f06021b
@@ -2502,8 +2588,12 @@ com.example.qr_dasher:integer/m3_sys_motion_duration_extra_long2 = 0x7f090012
 <<<<<<< HEAD
 com.example.qr_dasher:id/zxing_decode = 0x7f08028f
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/zxing_decode = 0x7f08028f
+=======
 com.example.qr_dasher:id/zxing_decode = 0x7f080290
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/notification_media_narrow_margin = 0x7f06030f
 com.example.qr_dasher:attr/chipGroupStyle = 0x7f0300cf
 com.example.qr_dasher:color/m3_button_background_color_selector = 0x7f050072
@@ -2515,8 +2605,12 @@ com.example.qr_dasher:styleable/SideSheetBehavior_Layout = 0x7f14008b
 <<<<<<< HEAD
 com.example.qr_dasher:id/open_search_view_background = 0x7f0801a6
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/open_search_view_background = 0x7f0801a6
+=======
 com.example.qr_dasher:id/open_search_view_background = 0x7f0801a7
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:drawable/abc_btn_switch_to_on_mtrl_00012 = 0x7f070037
 com.example.qr_dasher:dimen/m3_sys_motion_easing_emphasized_decelerate_control_y1 = 0x7f0601f9
 com.example.qr_dasher:macro/m3_comp_time_picker_period_selector_selected_hover_state_layer_color = 0x7f0c0158
@@ -2611,8 +2705,12 @@ com.example.qr_dasher:dimen/m3_comp_suggestion_chip_container_height = 0x7f06018
 <<<<<<< HEAD
 com.example.qr_dasher:id/right_side = 0x7f0801da
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/right_side = 0x7f0801da
+=======
 com.example.qr_dasher:id/right_side = 0x7f0801db
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_comp_slider_inactive_track_height = 0x7f060185
 com.example.qr_dasher:attr/colorSurfaceContainerLowest = 0x7f030137
 com.example.qr_dasher:drawable/btn_moreinfo = 0x7f07007f
@@ -2679,8 +2777,12 @@ com.example.qr_dasher:style/Theme.AppCompat.Light.DarkActionBar = 0x7f130220
 <<<<<<< HEAD
 com.example.qr_dasher:id/outward = 0x7f0801b5
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/outward = 0x7f0801b5
+=======
 com.example.qr_dasher:id/outward = 0x7f0801b6
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_comp_navigation_rail_active_indicator_height = 0x7f06014a
 com.example.qr_dasher:string/side_sheet_accessibility_pane_title = 0x7f1200fc
 com.example.qr_dasher:dimen/m3_comp_navigation_drawer_standard_container_elevation = 0x7f060149
@@ -2699,8 +2801,12 @@ com.example.qr_dasher:dimen/m3_comp_navigation_bar_container_height = 0x7f06013e
 <<<<<<< HEAD
 com.example.qr_dasher:id/sharedValueSet = 0x7f0801ff
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/sharedValueSet = 0x7f0801ff
+=======
 com.example.qr_dasher:id/sharedValueSet = 0x7f080200
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_comp_navigation_bar_container_elevation = 0x7f06013d
 com.example.qr_dasher:dimen/m3_comp_navigation_bar_active_indicator_height = 0x7f06013b
 com.example.qr_dasher:dimen/m3_comp_menu_container_elevation = 0x7f06013a
@@ -2763,8 +2869,12 @@ com.example.qr_dasher:macro/m3_comp_outlined_text_field_caret_color = 0x7f0c00b3
 <<<<<<< HEAD
 com.example.qr_dasher:id/selection_type = 0x7f0801f8
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/selection_type = 0x7f0801f8
+=======
 com.example.qr_dasher:id/selection_type = 0x7f0801f9
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_comp_checkbox_selected_disabled_container_opacity = 0x7f060106
 com.example.qr_dasher:dimen/m3_comp_bottom_app_bar_container_height = 0x7f060105
 com.example.qr_dasher:dimen/m3_comp_assist_chip_flat_outline_width = 0x7f060100
@@ -2884,8 +2994,12 @@ com.example.qr_dasher:dimen/design_tab_max_width = 0x7f06008b
 <<<<<<< HEAD
 com.example.qr_dasher:id/textinput_helper_text = 0x7f080252
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/textinput_helper_text = 0x7f080252
+=======
 com.example.qr_dasher:id/textinput_helper_text = 0x7f080253
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_card_stroke_width = 0x7f0600ef
 com.example.qr_dasher:style/Base.Theme.Material3.Dark.BottomSheetDialog = 0x7f13005a
 com.example.qr_dasher:attr/errorTextColor = 0x7f0301cc
@@ -2945,8 +3059,12 @@ com.example.qr_dasher:dimen/compat_button_inset_vertical_material = 0x7f060059
 <<<<<<< HEAD
 com.example.qr_dasher:id/search_badge = 0x7f0801eb
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/search_badge = 0x7f0801eb
+=======
 com.example.qr_dasher:id/search_badge = 0x7f0801ec
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/clock_face_margin_start = 0x7f060057
 com.example.qr_dasher:dimen/cardview_compat_inset_shadow = 0x7f060054
 com.example.qr_dasher:dimen/compat_notification_large_icon_max_height = 0x7f06005d
@@ -2994,8 +3112,12 @@ com.example.qr_dasher:dimen/abc_list_item_padding_horizontal_material = 0x7f0600
 <<<<<<< HEAD
 com.example.qr_dasher:id/zxing_decode_failed = 0x7f080290
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/zxing_decode_failed = 0x7f080290
+=======
 com.example.qr_dasher:id/zxing_decode_failed = 0x7f080291
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/buttonIconTintMode = 0x7f03009a
 com.example.qr_dasher:dimen/m3_appbar_expanded_title_margin_bottom = 0x7f0600a7
 com.example.qr_dasher:drawable/abc_vector_test = 0x7f070077
@@ -3025,8 +3147,12 @@ com.example.qr_dasher:style/TextAppearance.AppCompat.Display2 = 0x7f13019a
 <<<<<<< HEAD
 com.example.qr_dasher:id/transitionToEnd = 0x7f08025f
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/transitionToEnd = 0x7f08025f
+=======
 com.example.qr_dasher:id/transitionToEnd = 0x7f080260
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:drawable/rectangle_shape = 0x7f070107
 com.example.qr_dasher:color/material_personalized_color_control_normal = 0x7f050288
 com.example.qr_dasher:dimen/abc_dropdownitem_text_padding_left = 0x7f06002a
@@ -3124,8 +3250,12 @@ com.example.qr_dasher:color/primary_dark_material_light = 0x7f0502fd
 <<<<<<< HEAD
 com.example.qr_dasher:id/stop = 0x7f08022d
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/stop = 0x7f08022d
+=======
 com.example.qr_dasher:id/stop = 0x7f08022e
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/deltaPolarRadius = 0x7f03018a
 com.example.qr_dasher:color/notification_material_background_media_default_color = 0x7f0502fb
 com.example.qr_dasher:drawable/abc_text_select_handle_right_mtrl = 0x7f070071
@@ -3138,8 +3268,12 @@ com.example.qr_dasher:drawable/abc_textfield_search_material = 0x7f070076
 <<<<<<< HEAD
 com.example.qr_dasher:id/snapMargins = 0x7f080218
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/snapMargins = 0x7f080218
+=======
 com.example.qr_dasher:id/snapMargins = 0x7f080219
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/mtrl_text_btn_text_color_selector = 0x7f0502f3
 com.example.qr_dasher:color/mtrl_tabs_ripple_color = 0x7f0502f2
 com.example.qr_dasher:color/mtrl_tabs_icon_color_selector = 0x7f0502ef
@@ -3170,8 +3304,12 @@ com.example.qr_dasher:dimen/m3_bottom_nav_item_active_indicator_height = 0x7f060
 <<<<<<< HEAD
 com.example.qr_dasher:id/tag_accessibility_actions = 0x7f080233
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/tag_accessibility_actions = 0x7f080233
+=======
 com.example.qr_dasher:id/tag_accessibility_actions = 0x7f080234
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:drawable/mtrl_switch_thumb_unchecked = 0x7f0700ea
 com.example.qr_dasher:dimen/design_snackbar_padding_vertical = 0x7f060088
 com.example.qr_dasher:color/mtrl_indicator_text_color = 0x7f0502dc
@@ -3182,10 +3320,16 @@ com.example.qr_dasher:id/search_go_btn = 0x7f0801f0
 com.example.qr_dasher:color/mtrl_fab_bg_color_selector = 0x7f0502d6
 com.example.qr_dasher:id/send_text = 0x7f0801fb
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/search_go_btn = 0x7f0801f0
+com.example.qr_dasher:color/mtrl_fab_bg_color_selector = 0x7f0502d6
+com.example.qr_dasher:id/send_text = 0x7f0801fb
+=======
 com.example.qr_dasher:id/search_go_btn = 0x7f0801f1
 com.example.qr_dasher:color/mtrl_fab_bg_color_selector = 0x7f0502d6
 com.example.qr_dasher:id/send_text = 0x7f0801fc
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/mtrl_error = 0x7f0502d5
 com.example.qr_dasher:color/mtrl_choice_chip_ripple_color = 0x7f0502d3
 com.example.qr_dasher:dimen/m3_comp_fab_primary_hover_container_elevation = 0x7f06011c
@@ -3319,8 +3463,12 @@ com.example.qr_dasher:dimen/abc_action_button_min_width_overflow_material = 0x7f
 <<<<<<< HEAD
 com.example.qr_dasher:id/user_email = 0x7f08026f
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/user_email = 0x7f08026f
+=======
 com.example.qr_dasher:id/user_email = 0x7f080270
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/material_grey_600 = 0x7f050271
 com.example.qr_dasher:attr/actionBarSplitStyle = 0x7f030007
 com.example.qr_dasher:color/material_grey_50 = 0x7f050270
@@ -3362,8 +3510,12 @@ com.example.qr_dasher:dimen/m3_sys_motion_easing_standard_control_y2 = 0x7f06021
 <<<<<<< HEAD
 com.example.qr_dasher:id/progress_circular = 0x7f0801c7
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/progress_circular = 0x7f0801c7
+=======
 com.example.qr_dasher:id/progress_circular = 0x7f0801c8
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/material_timepicker_cancel_button = 0x7f08015a
 com.example.qr_dasher:color/material_dynamic_primary80 = 0x7f050250
 com.example.qr_dasher:style/Widget.MaterialComponents.MaterialCalendar.Year.Today = 0x7f130430
@@ -3407,8 +3559,12 @@ com.example.qr_dasher:color/material_dynamic_color_light_error_container = 0x7f0
 <<<<<<< HEAD
 com.example.qr_dasher:id/rounded = 0x7f0801db
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/rounded = 0x7f0801db
+=======
 com.example.qr_dasher:id/rounded = 0x7f0801dc
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/disableScroll = 0x7f0800cd
 com.example.qr_dasher:dimen/m3_comp_badge_large_size = 0x7f060102
 com.example.qr_dasher:styleable/zxing_camera_preview = 0x7f1400ac
@@ -3535,8 +3691,12 @@ com.example.qr_dasher:color/m3_sys_color_light_inverse_surface = 0x7f0501dc
 <<<<<<< HEAD
 com.example.qr_dasher:id/title_template = 0x7f080259
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/title_template = 0x7f080259
+=======
 com.example.qr_dasher:id/title_template = 0x7f08025a
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_sys_color_light_inverse_on_surface = 0x7f0501da
 com.example.qr_dasher:color/m3_sys_color_light_error_container = 0x7f0501d9
 com.example.qr_dasher:style/Base.Widget.AppCompat.ButtonBar.AlertDialog = 0x7f1300d5
@@ -3580,8 +3740,12 @@ com.example.qr_dasher:dimen/m3_bottomappbar_fab_cradle_vertical_offset = 0x7f060
 <<<<<<< HEAD
 com.example.qr_dasher:id/scanned_events_text = 0x7f0801e4
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/scanned_events_text = 0x7f0801e4
+=======
 com.example.qr_dasher:id/scanned_events_text = 0x7f0801e5
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_sys_color_dynamic_light_surface_container_highest = 0x7f0501c4
 com.example.qr_dasher:color/m3_sys_color_dynamic_light_surface_container = 0x7f0501c2
 com.example.qr_dasher:id/italic = 0x7f080131
@@ -3607,8 +3771,12 @@ com.example.qr_dasher:color/m3_sys_color_dynamic_light_on_error_container = 0x7f
 <<<<<<< HEAD
 com.example.qr_dasher:id/pressed = 0x7f0801c6
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/pressed = 0x7f0801c6
+=======
 com.example.qr_dasher:id/pressed = 0x7f0801c7
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_sys_color_dynamic_light_on_error = 0x7f0501b0
 com.example.qr_dasher:attr/collapsingToolbarLayoutMediumSize = 0x7f0300ff
 com.example.qr_dasher:dimen/mtrl_calendar_selection_text_baseline_to_top = 0x7f06028f
@@ -3746,8 +3914,12 @@ com.example.qr_dasher:color/m3_ref_palette_primary60 = 0x7f05013c
 <<<<<<< HEAD
 com.example.qr_dasher:id/qr_image = 0x7f0801cf
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/qr_image = 0x7f0801cf
+=======
 com.example.qr_dasher:id/qr_image = 0x7f0801d0
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_ref_palette_primary40 = 0x7f05013a
 com.example.qr_dasher:macro/m3_comp_navigation_bar_inactive_pressed_icon_color = 0x7f0c0077
 com.example.qr_dasher:dimen/mtrl_navigation_rail_margin = 0x7f0602ce
@@ -3922,10 +4094,16 @@ com.example.qr_dasher:id/rtl = 0x7f0801dd
 com.example.qr_dasher:color/m3_sys_color_dynamic_light_secondary_container = 0x7f0501bf
 com.example.qr_dasher:id/scrollIndicatorDown = 0x7f0801e7
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/rtl = 0x7f0801dd
+com.example.qr_dasher:color/m3_sys_color_dynamic_light_secondary_container = 0x7f0501bf
+com.example.qr_dasher:id/scrollIndicatorDown = 0x7f0801e7
+=======
 com.example.qr_dasher:id/rtl = 0x7f0801de
 com.example.qr_dasher:color/m3_sys_color_dynamic_light_secondary_container = 0x7f0501bf
 com.example.qr_dasher:id/scrollIndicatorDown = 0x7f0801e8
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:anim/btn_radio_to_on_mtrl_ring_outer_animation = 0x7f010016
 com.example.qr_dasher:macro/m3_comp_text_button_label_text_color = 0x7f0c0145
 com.example.qr_dasher:attr/subtitleTextStyle = 0x7f030438
@@ -3943,8 +4121,12 @@ com.example.qr_dasher:color/m3_ref_palette_dynamic_neutral17 = 0x7f0500b0
 <<<<<<< HEAD
 com.example.qr_dasher:id/vertical_only = 0x7f080274
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/vertical_only = 0x7f080274
+=======
 com.example.qr_dasher:id/vertical_only = 0x7f080275
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_sys_color_dynamic_light_on_primary = 0x7f0501b2
 com.example.qr_dasher:color/m3_ref_palette_dynamic_neutral100 = 0x7f0500ae
 com.example.qr_dasher:dimen/sliding_pane_detail_pane_width = 0x7f060317
@@ -3954,8 +4136,12 @@ com.example.qr_dasher:dimen/m3_ripple_default_alpha = 0x7f0601d1
 <<<<<<< HEAD
 com.example.qr_dasher:id/touch_outside = 0x7f08025e
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/touch_outside = 0x7f08025e
+=======
 com.example.qr_dasher:id/touch_outside = 0x7f08025f
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/attendeeCount = 0x7f080064
 com.example.qr_dasher:color/m3_navigation_item_ripple_color = 0x7f0500a2
 com.example.qr_dasher:attr/materialTimePickerStyle = 0x7f030321
@@ -3982,8 +4168,12 @@ com.example.qr_dasher:color/m3_navigation_bar_item_with_indicator_icon_tint = 0x
 <<<<<<< HEAD
 com.example.qr_dasher:id/view_transition = 0x7f080277
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/view_transition = 0x7f080277
+=======
 com.example.qr_dasher:id/view_transition = 0x7f080278
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_dark_hint_foreground = 0x7f050086
 com.example.qr_dasher:color/m3_dark_highlighted_text = 0x7f050085
 com.example.qr_dasher:layout/home_page = 0x7f0b0044
@@ -4024,8 +4214,12 @@ com.example.qr_dasher:dimen/m3_comp_sheet_side_docked_standard_container_elevati
 <<<<<<< HEAD
 com.example.qr_dasher:id/zxing_camera_error = 0x7f08028e
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/zxing_camera_error = 0x7f08028e
+=======
 com.example.qr_dasher:id/zxing_camera_error = 0x7f08028f
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_button_ripple_color = 0x7f050075
 com.example.qr_dasher:color/m3_assist_chip_icon_tint_color = 0x7f05006f
 com.example.qr_dasher:color/highlighted_text_material_light = 0x7f05006d
@@ -4095,8 +4289,12 @@ com.example.qr_dasher:style/Base.Theme.MaterialComponents.Light.Dialog.MinWidth 
 <<<<<<< HEAD
 com.example.qr_dasher:id/showHome = 0x7f080203
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/showHome = 0x7f080203
+=======
 com.example.qr_dasher:id/showHome = 0x7f080204
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/common_google_signin_btn_text_light = 0x7f050038
 com.example.qr_dasher:macro/m3_comp_radio_button_unselected_pressed_state_layer_color = 0x7f0c00e6
 com.example.qr_dasher:color/common_google_signin_btn_text_dark = 0x7f050033
@@ -4112,8 +4310,12 @@ com.example.qr_dasher:color/browser_actions_title_color = 0x7f05002b
 <<<<<<< HEAD
 com.example.qr_dasher:id/triangle = 0x7f080266
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/triangle = 0x7f080266
+=======
 com.example.qr_dasher:id/triangle = 0x7f080267
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/layout_constraintStart_toEndOf = 0x7f0302b4
 com.example.qr_dasher:attr/defaultState = 0x7f030188
 com.example.qr_dasher:drawable/$mtrl_checkbox_button_icon_checked_unchecked__1 = 0x7f070012
@@ -4172,8 +4374,12 @@ com.example.qr_dasher:color/abc_background_cache_hint_selector_material_light = 
 <<<<<<< HEAD
 com.example.qr_dasher:id/up = 0x7f08026a
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/up = 0x7f08026a
+=======
 com.example.qr_dasher:id/up = 0x7f08026b
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/abc_background_cache_hint_selector_material_dark = 0x7f050000
 com.example.qr_dasher:interpolator/m3_sys_motion_easing_standard_decelerate = 0x7f0a000d
 com.example.qr_dasher:drawable/abc_btn_colored_material = 0x7f070030
@@ -4237,8 +4443,12 @@ com.example.qr_dasher:attr/values = 0x7f0304fe
 <<<<<<< HEAD
 com.example.qr_dasher:id/organizer_button = 0x7f0801b3
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/organizer_button = 0x7f0801b3
+=======
 com.example.qr_dasher:id/organizer_button = 0x7f0801b4
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/useDrawerArrowDrawable = 0x7f0304fb
 com.example.qr_dasher:color/m3_sys_color_dynamic_dark_surface_container_highest = 0x7f0501a2
 com.example.qr_dasher:id/bounceStart = 0x7f08007b
@@ -4268,16 +4478,22 @@ com.example.qr_dasher:color/m3_radiobutton_ripple_tint = 0x7f0500aa
 com.example.qr_dasher:attr/clickAction = 0x7f0300ea
 com.example.qr_dasher:attr/trackTintMode = 0x7f0304e5
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/with_icon = 0x7f080283
 com.example.qr_dasher:attr/trackDecorationTintMode = 0x7f0304e1
 com.example.qr_dasher:style/Widget.MaterialComponents.MaterialCalendar.HeaderLayout.Fullscreen = 0x7f130426
 com.example.qr_dasher:id/unlabeled = 0x7f080269
+<<<<<<< HEAD
+=======
 =======
 com.example.qr_dasher:id/with_icon = 0x7f080284
 com.example.qr_dasher:attr/trackDecorationTintMode = 0x7f0304e1
 com.example.qr_dasher:style/Widget.MaterialComponents.MaterialCalendar.HeaderLayout.Fullscreen = 0x7f130426
 com.example.qr_dasher:id/unlabeled = 0x7f08026a
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/defaultQueryHint = 0x7f030186
 com.example.qr_dasher:style/Base.Theme.AppCompat.Light.Dialog.MinWidth = 0x7f130057
 com.example.qr_dasher:integer/m3_sys_motion_duration_medium1 = 0x7f090019
@@ -4423,8 +4639,12 @@ com.example.qr_dasher:color/dim_foreground_disabled_material_dark = 0x7f050064
 <<<<<<< HEAD
 com.example.qr_dasher:id/textinput_placeholder = 0x7f080253
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/textinput_placeholder = 0x7f080253
+=======
 com.example.qr_dasher:id/textinput_placeholder = 0x7f080254
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/triggerReceiver = 0x7f0304ed
 com.example.qr_dasher:attr/textAppearanceSmallPopupMenu = 0x7f030483
 com.example.qr_dasher:string/format_distance_only_nautical_mile = 0x7f120065
@@ -4467,8 +4687,12 @@ com.example.qr_dasher:attr/transitionFlags = 0x7f0304e9
 <<<<<<< HEAD
 com.example.qr_dasher:id/open_search_bar_text_view = 0x7f0801a5
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/open_search_bar_text_view = 0x7f0801a5
+=======
 com.example.qr_dasher:id/open_search_bar_text_view = 0x7f0801a6
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/tabInlineLabel = 0x7f03044d
 com.example.qr_dasher:attr/prefixTextColor = 0x7f0303af
 com.example.qr_dasher:style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle = 0x7f1301b2
@@ -4594,8 +4818,12 @@ com.example.qr_dasher:drawable/design_snackbar_background = 0x7f07009d
 <<<<<<< HEAD
 com.example.qr_dasher:id/textTop = 0x7f080248
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/textTop = 0x7f080248
+=======
 com.example.qr_dasher:id/textTop = 0x7f080249
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/spinnerDropDownItemStyle = 0x7f030409
 com.example.qr_dasher:attr/sizePercent = 0x7f030402
 com.example.qr_dasher:dimen/abc_action_bar_subtitle_bottom_margin_material = 0x7f06000b
@@ -4615,8 +4843,12 @@ com.example.qr_dasher:dimen/mtrl_exposed_dropdown_menu_popup_elevation = 0x7f060
 <<<<<<< HEAD
 com.example.qr_dasher:id/onInterceptTouchReturnSwipe = 0x7f0801a4
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/onInterceptTouchReturnSwipe = 0x7f0801a4
+=======
 com.example.qr_dasher:id/onInterceptTouchReturnSwipe = 0x7f0801a5
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_sys_elevation_level5 = 0x7f0601f2
 com.example.qr_dasher:string/clear_text_end_icon_content_description = 0x7f120038
 com.example.qr_dasher:id/floating = 0x7f080109
@@ -4651,9 +4883,14 @@ com.example.qr_dasher:attr/sliderStyle = 0x7f030403
 com.example.qr_dasher:id/textView4 = 0x7f08024c
 com.example.qr_dasher:id/tabMode = 0x7f080232
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/textView4 = 0x7f08024c
+com.example.qr_dasher:id/tabMode = 0x7f080232
+=======
 com.example.qr_dasher:id/textView4 = 0x7f08024d
 com.example.qr_dasher:id/tabMode = 0x7f080233
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/mtrl_badge_toolbar_action_menu_item_horizontal_offset = 0x7f06024d
 com.example.qr_dasher:attr/ifTagSet = 0x7f030249
 com.example.qr_dasher:attr/setsTag = 0x7f0303e2
@@ -4744,8 +4981,12 @@ com.example.qr_dasher:attr/popUpToSaveState = 0x7f0303a8
 <<<<<<< HEAD
 com.example.qr_dasher:id/user_name = 0x7f080272
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/user_name = 0x7f080272
+=======
 com.example.qr_dasher:id/user_name = 0x7f080273
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/mtrl_extended_fab_icon_text_spacing = 0x7f0602aa
 com.example.qr_dasher:style/Widget.MaterialComponents.Toolbar.PrimarySurface = 0x7f13045f
 com.example.qr_dasher:style/Widget.MaterialComponents.AutoCompleteTextView.FilledBox.Dense = 0x7f1303ed
@@ -4776,8 +5017,12 @@ com.example.qr_dasher:macro/m3_comp_secondary_navigation_tab_label_text_type = 0
 <<<<<<< HEAD
 com.example.qr_dasher:id/view = 0x7f080275
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/view = 0x7f080275
+=======
 com.example.qr_dasher:id/view = 0x7f080276
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/fastScrollHorizontalTrackDrawable = 0x7f0301ec
 com.example.qr_dasher:attr/passwordToggleEnabled = 0x7f030393
 com.example.qr_dasher:attr/chipSpacing = 0x7f0300d7
@@ -4863,8 +5108,12 @@ com.example.qr_dasher:dimen/abc_dialog_list_padding_bottom_no_buttons = 0x7f0600
 <<<<<<< HEAD
 com.example.qr_dasher:id/screen = 0x7f0801e5
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/screen = 0x7f0801e5
+=======
 com.example.qr_dasher:id/screen = 0x7f0801e6
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/listPopupWindowStyle = 0x7f0302e2
 com.example.qr_dasher:attr/multiChoiceItemLayout = 0x7f03036d
 com.example.qr_dasher:attr/altSrc = 0x7f030033
@@ -4881,8 +5130,12 @@ com.example.qr_dasher:attr/motionStagger = 0x7f030368
 <<<<<<< HEAD
 com.example.qr_dasher:id/textDateTime = 0x7f080243
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/textDateTime = 0x7f080243
+=======
 com.example.qr_dasher:id/textDateTime = 0x7f080244
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/motionProgress = 0x7f030367
 com.example.qr_dasher:dimen/mtrl_snackbar_message_margin_horizontal = 0x7f0602f0
 com.example.qr_dasher:dimen/design_bottom_navigation_text_size = 0x7f06006c
@@ -4895,8 +5148,12 @@ com.example.qr_dasher:integer/mtrl_view_gone = 0x7f090041
 <<<<<<< HEAD
 com.example.qr_dasher:id/notify_button = 0x7f0801a1
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/notify_button = 0x7f0801a1
+=======
 com.example.qr_dasher:id/notify_button = 0x7f0801a2
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/round = 0x7f0303ce
 com.example.qr_dasher:attr/motionEffect_viewTransition = 0x7f030363
 com.example.qr_dasher:dimen/mtrl_btn_dialog_btn_min_width = 0x7f060257
@@ -4912,12 +5169,17 @@ com.example.qr_dasher:string/mapquest_osm = 0x7f12008f
 com.example.qr_dasher:attr/logo = 0x7f0302eb
 com.example.qr_dasher:attr/contentPadding = 0x7f030151
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/transitionToStart = 0x7f080260
 com.example.qr_dasher:attr/motionEffect_move = 0x7f03035e
 com.example.qr_dasher:id/text_input_start_icon = 0x7f08024f
 com.example.qr_dasher:color/accent_material_light = 0x7f05001a
 com.example.qr_dasher:attr/drawableStartCompat = 0x7f0301a2
 com.example.qr_dasher:id/signup_listview = 0x7f08020e
+<<<<<<< HEAD
+=======
 =======
 com.example.qr_dasher:id/transitionToStart = 0x7f080261
 com.example.qr_dasher:attr/motionEffect_move = 0x7f03035e
@@ -4926,6 +5188,7 @@ com.example.qr_dasher:color/accent_material_light = 0x7f05001a
 com.example.qr_dasher:attr/drawableStartCompat = 0x7f0301a2
 com.example.qr_dasher:id/signup_listview = 0x7f08020f
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/tabMinWidth = 0x7f03044f
 com.example.qr_dasher:dimen/m3_back_progress_main_container_min_edge_gap = 0x7f0600b2
 com.example.qr_dasher:attr/dividerInsetEnd = 0x7f030194
@@ -5016,8 +5279,12 @@ com.example.qr_dasher:attr/methodName = 0x7f030332
 <<<<<<< HEAD
 com.example.qr_dasher:id/src_over = 0x7f080224
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/src_over = 0x7f080224
+=======
 com.example.qr_dasher:id/src_over = 0x7f080225
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/displayQRcodes = 0x7f0800cf
 com.example.qr_dasher:attr/menuGravity = 0x7f030331
 com.example.qr_dasher:macro/m3_comp_navigation_bar_inactive_pressed_state_layer_color = 0x7f0c0079
@@ -5033,8 +5300,12 @@ com.example.qr_dasher:color/material_personalized_color_primary_text = 0x7f05029
 <<<<<<< HEAD
 com.example.qr_dasher:id/tag_accessibility_clickable_spans = 0x7f080234
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/tag_accessibility_clickable_spans = 0x7f080234
+=======
 com.example.qr_dasher:id/tag_accessibility_clickable_spans = 0x7f080235
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/maxLines = 0x7f03032a
 com.example.qr_dasher:style/Widget.AppCompat.Light.ActionBar.TabView.Inverse = 0x7f13030c
 com.example.qr_dasher:style/Base.ThemeOverlay.MaterialComponents.MaterialAlertDialog = 0x7f130089
@@ -5074,11 +5345,16 @@ com.example.qr_dasher:attr/autoAdjustToWithinGrandparentBounds = 0x7f030042
 com.example.qr_dasher:attr/singleSelection = 0x7f030401
 com.example.qr_dasher:attr/gapBetweenBars = 0x7f030224
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/search_voice_btn = 0x7f0801f4
 com.example.qr_dasher:attr/materialCardViewStyle = 0x7f030310
 com.example.qr_dasher:interpolator/mtrl_linear_out_slow_in = 0x7f0a0011
 com.example.qr_dasher:dimen/design_snackbar_padding_vertical_2lines = 0x7f060089
 com.example.qr_dasher:id/textinput_suffix_text = 0x7f080255
+<<<<<<< HEAD
+=======
 =======
 com.example.qr_dasher:id/search_voice_btn = 0x7f0801f5
 com.example.qr_dasher:attr/materialCardViewStyle = 0x7f030310
@@ -5086,6 +5362,7 @@ com.example.qr_dasher:interpolator/mtrl_linear_out_slow_in = 0x7f0a0011
 com.example.qr_dasher:dimen/design_snackbar_padding_vertical_2lines = 0x7f060089
 com.example.qr_dasher:id/textinput_suffix_text = 0x7f080256
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:anim/abc_fade_out = 0x7f010001
 com.example.qr_dasher:attr/materialCardViewOutlinedStyle = 0x7f03030f
 com.example.qr_dasher:id/mtrl_picker_header_title_and_selection = 0x7f08017d
@@ -5238,8 +5515,12 @@ com.example.qr_dasher:color/m3_ref_palette_secondary0 = 0x7f050142
 <<<<<<< HEAD
 com.example.qr_dasher:id/wrap = 0x7f080285
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/wrap = 0x7f080285
+=======
 com.example.qr_dasher:id/wrap = 0x7f080286
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/layout_goneMarginBaseline = 0x7f0302c5
 com.example.qr_dasher:anim/btn_radio_to_on_mtrl_dot_group_animation = 0x7f010015
 com.example.qr_dasher:attr/floatingActionButtonPrimaryStyle = 0x7f0301f7
@@ -5254,8 +5535,12 @@ com.example.qr_dasher:attr/fontProviderQuery = 0x7f03021b
 <<<<<<< HEAD
 com.example.qr_dasher:id/position = 0x7f0801c4
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/position = 0x7f0801c4
+=======
 com.example.qr_dasher:id/position = 0x7f0801c5
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/abc_text_size_medium_material = 0x7f060049
 com.example.qr_dasher:attr/layout_constraintTop_toBottomOf = 0x7f0302b8
 com.example.qr_dasher:string/format_distance_only_kilometer = 0x7f120062
@@ -5292,8 +5577,12 @@ com.example.qr_dasher:style/ThemeOverlay.Material3.Dark.ActionBar = 0x7f130298
 <<<<<<< HEAD
 com.example.qr_dasher:id/transition_current_scene = 0x7f080261
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/transition_current_scene = 0x7f080261
+=======
 com.example.qr_dasher:id/transition_current_scene = 0x7f080262
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/dynamicColorThemeOverlay = 0x7f0301ad
 com.example.qr_dasher:dimen/notification_top_pad = 0x7f060315
 com.example.qr_dasher:attr/layout_constraintBottom_toTopOf = 0x7f03029c
@@ -5342,8 +5631,12 @@ com.example.qr_dasher:style/Base.Widget.AppCompat.Light.PopupMenu = 0x7f1300e4
 <<<<<<< HEAD
 com.example.qr_dasher:id/sliding_pane_layout = 0x7f080214
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/sliding_pane_layout = 0x7f080214
+=======
 com.example.qr_dasher:id/sliding_pane_layout = 0x7f080215
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/collapsingToolbarLayoutLargeStyle = 0x7f0300fe
 com.example.qr_dasher:attr/itemIconSize = 0x7f030264
 com.example.qr_dasher:attr/latLngBoundsNorthEastLongitude = 0x7f030287
@@ -5389,8 +5682,12 @@ com.example.qr_dasher:attr/colorSurfaceInverse = 0x7f030139
 <<<<<<< HEAD
 com.example.qr_dasher:id/textView = 0x7f080249
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/textView = 0x7f080249
+=======
 com.example.qr_dasher:id/textView = 0x7f08024a
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_slider_thumb_elevation = 0x7f0601e8
 com.example.qr_dasher:color/material_personalized_color_surface_container_highest = 0x7f0502a6
 com.example.qr_dasher:style/Theme.QRDasher = 0x7f130277
@@ -5487,8 +5784,12 @@ com.example.qr_dasher:attr/colorOnSurfaceVariant = 0x7f03011c
 <<<<<<< HEAD
 com.example.qr_dasher:id/save_non_transition_alpha = 0x7f0801df
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/save_non_transition_alpha = 0x7f0801df
+=======
 com.example.qr_dasher:id/save_non_transition_alpha = 0x7f0801e0
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/helperTextTextColor = 0x7f030230
 com.example.qr_dasher:attr/helperTextTextAppearance = 0x7f03022f
 com.example.qr_dasher:xml/image_share_filepaths = 0x7f150003
@@ -5631,8 +5932,12 @@ com.example.qr_dasher:attr/fastScrollHorizontalThumbDrawable = 0x7f0301eb
 <<<<<<< HEAD
 com.example.qr_dasher:id/open_search_view_clear_button = 0x7f0801a7
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/open_search_view_clear_button = 0x7f0801a7
+=======
 com.example.qr_dasher:id/open_search_view_clear_button = 0x7f0801a8
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/fabSize = 0x7f0301e9
 com.example.qr_dasher:color/m3_ref_palette_neutral100 = 0x7f050112
 com.example.qr_dasher:style/Widget.AppCompat.AutoCompleteTextView = 0x7f1302f4
@@ -5713,8 +6018,12 @@ com.example.qr_dasher:color/m3_ref_palette_error60 = 0x7f05010a
 <<<<<<< HEAD
 com.example.qr_dasher:id/snackbar_text = 0x7f080216
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/snackbar_text = 0x7f080216
+=======
 com.example.qr_dasher:id/snackbar_text = 0x7f080217
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/accessibility_custom_action_27 = 0x7f080027
 com.example.qr_dasher:attr/endIconTint = 0x7f0301bd
 com.example.qr_dasher:style/MaterialAlertDialog.MaterialComponents.Title.Panel = 0x7f130133
@@ -5737,8 +6046,12 @@ com.example.qr_dasher:dimen/m3_btn_icon_only_icon_padding = 0x7f0600d8
 <<<<<<< HEAD
 com.example.qr_dasher:id/notification_heading = 0x7f08019b
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/notification_heading = 0x7f08019b
+=======
 com.example.qr_dasher:id/notification_heading = 0x7f08019c
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/boxStrokeWidthFocused = 0x7f03008e
 com.example.qr_dasher:dimen/m3_comp_filter_chip_container_height = 0x7f06012f
 com.example.qr_dasher:dimen/m3_extended_fab_bottom_padding = 0x7f0601ac
@@ -5819,8 +6132,12 @@ com.example.qr_dasher:attr/extendedFloatingActionButtonPrimaryStyle = 0x7f0301db
 <<<<<<< HEAD
 com.example.qr_dasher:id/open_search_view_status_bar_spacer = 0x7f0801b0
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/open_search_view_status_bar_spacer = 0x7f0801b0
+=======
 com.example.qr_dasher:id/open_search_view_status_bar_spacer = 0x7f0801b1
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/defaultScrollFlagsEnabled = 0x7f030187
 com.example.qr_dasher:color/m3_ref_palette_secondary40 = 0x7f050147
 com.example.qr_dasher:dimen/m3_badge_horizontal_offset = 0x7f0600b6
@@ -5866,8 +6183,12 @@ com.example.qr_dasher:attr/cornerFamilyBottomLeft = 0x7f03015e
 <<<<<<< HEAD
 com.example.qr_dasher:id/sawtooth = 0x7f0801e1
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/sawtooth = 0x7f0801e1
+=======
 com.example.qr_dasher:id/sawtooth = 0x7f0801e2
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_sys_motion_easing_standard_accelerate_control_y1 = 0x7f06020d
 com.example.qr_dasher:dimen/m3_comp_outlined_card_disabled_outline_opacity = 0x7f060156
 com.example.qr_dasher:attr/labelVisibilityMode = 0x7f030282
@@ -5880,8 +6201,12 @@ com.example.qr_dasher:style/Theme.AppCompat = 0x7f130211
 <<<<<<< HEAD
 com.example.qr_dasher:id/tag_transition_group = 0x7f08023c
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/tag_transition_group = 0x7f08023c
+=======
 com.example.qr_dasher:id/tag_transition_group = 0x7f08023d
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_ref_palette_dynamic_tertiary90 = 0x7f050100
 com.example.qr_dasher:attr/cornerFamily = 0x7f03015d
 com.example.qr_dasher:color/m3_ref_palette_dynamic_neutral_variant80 = 0x7f0500d3
@@ -5937,8 +6262,12 @@ com.example.qr_dasher:string/common_google_play_services_update_title = 0x7f1200
 <<<<<<< HEAD
 com.example.qr_dasher:id/sliding_pane_detail_container = 0x7f080213
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/sliding_pane_detail_container = 0x7f080213
+=======
 com.example.qr_dasher:id/sliding_pane_detail_container = 0x7f080214
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/home = 0x7f08011d
 com.example.qr_dasher:attr/materialCalendarHeaderLayout = 0x7f030304
 com.example.qr_dasher:styleable/MaterialCalendarItem = 0x7f140059
@@ -5969,10 +6298,16 @@ com.example.qr_dasher:id/signedup_events_button = 0x7f08020c
 com.example.qr_dasher:dimen/mtrl_tooltip_padding = 0x7f060306
 com.example.qr_dasher:id/pickTime = 0x7f0801c2
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/signedup_events_button = 0x7f08020c
+com.example.qr_dasher:dimen/mtrl_tooltip_padding = 0x7f060306
+com.example.qr_dasher:id/pickTime = 0x7f0801c2
+=======
 com.example.qr_dasher:id/signedup_events_button = 0x7f08020d
 com.example.qr_dasher:dimen/mtrl_tooltip_padding = 0x7f060306
 com.example.qr_dasher:id/pickTime = 0x7f0801c3
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/colorSurface = 0x7f030131
 com.example.qr_dasher:color/m3_dynamic_highlighted_text = 0x7f050091
 com.example.qr_dasher:dimen/abc_text_size_menu_header_material = 0x7f06004a
@@ -6079,8 +6414,12 @@ com.example.qr_dasher:color/common_google_signin_btn_text_dark_pressed = 0x7f050
 <<<<<<< HEAD
 com.example.qr_dasher:id/staticLayout = 0x7f08022a
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/staticLayout = 0x7f08022a
+=======
 com.example.qr_dasher:id/staticLayout = 0x7f08022b
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:anim/nav_default_pop_enter_anim = 0x7f01002e
 com.example.qr_dasher:style/Animation.AppCompat.Tooltip = 0x7f130004
 com.example.qr_dasher:attr/colorError = 0x7f03010a
@@ -6114,8 +6453,12 @@ com.example.qr_dasher:drawable/$avd_hide_password__2 = 0x7f070002
 <<<<<<< HEAD
 com.example.qr_dasher:id/zxing_preview_failed = 0x7f080293
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/zxing_preview_failed = 0x7f080293
+=======
 com.example.qr_dasher:id/zxing_preview_failed = 0x7f080294
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_ref_palette_secondary60 = 0x7f050149
 com.example.qr_dasher:dimen/mtrl_btn_stroke_size = 0x7f060268
 com.example.qr_dasher:attr/thumbTintMode = 0x7f0304b1
@@ -6161,8 +6504,12 @@ com.example.qr_dasher:color/mtrl_chip_close_icon_tint = 0x7f0502cf
 <<<<<<< HEAD
 com.example.qr_dasher:id/notification_main_column = 0x7f08019c
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/notification_main_column = 0x7f08019c
+=======
 com.example.qr_dasher:id/notification_main_column = 0x7f08019d
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/drawableRightCompat = 0x7f0301a0
 com.example.qr_dasher:attr/circleCrop = 0x7f0300e0
 com.example.qr_dasher:drawable/mtrl_checkbox_button_icon_unchecked_indeterminate = 0x7f0700d4
@@ -6173,8 +6520,12 @@ com.example.qr_dasher:styleable/FloatingActionButton_Behavior_Layout = 0x7f14003
 <<<<<<< HEAD
 com.example.qr_dasher:id/selected = 0x7f0801f7
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/selected = 0x7f0801f7
+=======
 com.example.qr_dasher:id/selected = 0x7f0801f8
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/navigationViewStyle = 0x7f030374
 com.example.qr_dasher:macro/m3_comp_date_picker_modal_header_headline_color = 0x7f0c0016
 com.example.qr_dasher:attr/badgeStyle = 0x7f03005d
@@ -6189,8 +6540,12 @@ com.example.qr_dasher:macro/m3_comp_time_input_time_input_field_supporting_text_
 <<<<<<< HEAD
 com.example.qr_dasher:id/startVertical = 0x7f080229
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/startVertical = 0x7f080229
+=======
 com.example.qr_dasher:id/startVertical = 0x7f08022a
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_card_dragged_z = 0x7f0600e8
 com.example.qr_dasher:attr/chipIconVisible = 0x7f0300d4
 com.example.qr_dasher:string/snapshot = 0x7f1200fe
@@ -6240,8 +6595,12 @@ com.example.qr_dasher:attr/iconStartPadding = 0x7f030244
 <<<<<<< HEAD
 com.example.qr_dasher:id/share_image_button = 0x7f0801fc
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/share_image_button = 0x7f0801fc
+=======
 com.example.qr_dasher:id/share_image_button = 0x7f0801fd
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/latLngBoundsSouthWestLatitude = 0x7f030288
 com.example.qr_dasher:attr/springBoundary = 0x7f030410
 com.example.qr_dasher:color/m3_sys_color_light_on_surface_variant = 0x7f0501e5
@@ -6253,8 +6612,12 @@ com.example.qr_dasher:attr/barrierAllowsGoneWidgets = 0x7f03006a
 <<<<<<< HEAD
 com.example.qr_dasher:id/status_bar_latest_event_content = 0x7f08022c
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/status_bar_latest_event_content = 0x7f08022c
+=======
 com.example.qr_dasher:id/status_bar_latest_event_content = 0x7f08022d
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/cardForegroundColor = 0x7f0300ab
 com.example.qr_dasher:dimen/m3_btn_icon_only_min_width = 0x7f0600d9
 com.example.qr_dasher:attr/cardElevation = 0x7f0300aa
@@ -6289,8 +6652,12 @@ com.example.qr_dasher:string/material_slider_range_start = 0x7f12009d
 <<<<<<< HEAD
 com.example.qr_dasher:id/snap = 0x7f080217
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/snap = 0x7f080217
+=======
 com.example.qr_dasher:id/snap = 0x7f080218
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/itemPaddingTop = 0x7f03026a
 com.example.qr_dasher:attr/buttonBarPositiveButtonStyle = 0x7f030093
 com.example.qr_dasher:attr/boxStrokeWidth = 0x7f03008d
@@ -6298,8 +6665,12 @@ com.example.qr_dasher:style/TextAppearance.Compat.Notification.Title.Media = 0x7
 <<<<<<< HEAD
 com.example.qr_dasher:id/tag_screen_reader_focusable = 0x7f08023a
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/tag_screen_reader_focusable = 0x7f08023a
+=======
 com.example.qr_dasher:id/tag_screen_reader_focusable = 0x7f08023b
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/m3_comp_input_chip_with_leading_icon_leading_icon_size = 0x7f060138
 com.example.qr_dasher:color/design_default_color_on_surface = 0x7f050053
 com.example.qr_dasher:attr/boxStrokeColor = 0x7f03008b
@@ -6329,8 +6700,12 @@ com.example.qr_dasher:style/Widget.Material3.MaterialTimePicker.Display.Divider 
 <<<<<<< HEAD
 com.example.qr_dasher:id/rectangles = 0x7f0801d3
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/rectangles = 0x7f0801d3
+=======
 com.example.qr_dasher:id/rectangles = 0x7f0801d4
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/m3_fab_efab_foreground_color_selector = 0x7f050097
 com.example.qr_dasher:anim/abc_popup_exit = 0x7f010004
 com.example.qr_dasher:id/admin_button = 0x7f080050
@@ -6368,8 +6743,12 @@ com.example.qr_dasher:macro/m3_comp_outlined_text_field_error_trailing_icon_colo
 <<<<<<< HEAD
 com.example.qr_dasher:id/promotionalQR = 0x7f0801ca
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/promotionalQR = 0x7f0801ca
+=======
 com.example.qr_dasher:id/promotionalQR = 0x7f0801cb
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:dimen/mtrl_btn_disabled_elevation = 0x7f060258
 com.example.qr_dasher:id/geolocation = 0x7f080112
 com.example.qr_dasher:color/material_dynamic_primary70 = 0x7f05024f
@@ -6381,10 +6760,16 @@ com.example.qr_dasher:id/right = 0x7f0801d7
 com.example.qr_dasher:attr/carousel_emptyViewsBehavior = 0x7f0300b2
 com.example.qr_dasher:id/zxing_prewiew_size_ready = 0x7f080294
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/right = 0x7f0801d7
+com.example.qr_dasher:attr/carousel_emptyViewsBehavior = 0x7f0300b2
+com.example.qr_dasher:id/zxing_prewiew_size_ready = 0x7f080294
+=======
 com.example.qr_dasher:id/right = 0x7f0801d8
 com.example.qr_dasher:attr/carousel_emptyViewsBehavior = 0x7f0300b2
 com.example.qr_dasher:id/zxing_prewiew_size_ready = 0x7f080295
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:anim/btn_checkbox_to_checked_box_inner_merged_animation = 0x7f01000c
 com.example.qr_dasher:dimen/mtrl_slider_thumb_radius = 0x7f0602e7
 com.example.qr_dasher:attr/badgeHeight = 0x7f030059
@@ -6403,8 +6788,12 @@ com.example.qr_dasher:attr/textAppearancePopupMenuHeader = 0x7f030480
 <<<<<<< HEAD
 com.example.qr_dasher:id/share_qr = 0x7f0801fd
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/share_qr = 0x7f0801fd
+=======
 com.example.qr_dasher:id/share_qr = 0x7f0801fe
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/colorTertiaryFixed = 0x7f03013e
 com.example.qr_dasher:dimen/mtrl_progress_circular_size_small = 0x7f0602d9
 com.example.qr_dasher:color/m3_fab_ripple_color_selector = 0x7f050098
@@ -6420,10 +6809,16 @@ com.example.qr_dasher:id/tag_unhandled_key_listeners = 0x7f08023e
 com.example.qr_dasher:attr/lineSpacing = 0x7f0302d9
 com.example.qr_dasher:id/scanned_events_listview = 0x7f0801e3
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/tag_unhandled_key_listeners = 0x7f08023e
+com.example.qr_dasher:attr/lineSpacing = 0x7f0302d9
+com.example.qr_dasher:id/scanned_events_listview = 0x7f0801e3
+=======
 com.example.qr_dasher:id/tag_unhandled_key_listeners = 0x7f08023f
 com.example.qr_dasher:attr/lineSpacing = 0x7f0302d9
 com.example.qr_dasher:id/scanned_events_listview = 0x7f0801e4
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:color/mtrl_btn_text_btn_bg_color_selector = 0x7f0502c5
 com.example.qr_dasher:color/material_personalized_color_on_tertiary = 0x7f050295
 com.example.qr_dasher:dimen/notification_action_icon_size = 0x7f060308
@@ -6440,8 +6835,12 @@ com.example.qr_dasher:attr/autoSizeMinTextSize = 0x7f030047
 <<<<<<< HEAD
 com.example.qr_dasher:id/titleDividerNoCustom = 0x7f080258
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/titleDividerNoCustom = 0x7f080258
+=======
 com.example.qr_dasher:id/titleDividerNoCustom = 0x7f080259
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/iconEndPadding = 0x7f030240
 com.example.qr_dasher:attr/layout_constraintWidth = 0x7f0302bd
 com.example.qr_dasher:dimen/m3_comp_fab_primary_small_container_height = 0x7f060123
@@ -6513,8 +6912,12 @@ com.example.qr_dasher:color/m3_dark_default_color_secondary_text = 0x7f050084
 <<<<<<< HEAD
 com.example.qr_dasher:id/textinput_error = 0x7f080251
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/textinput_error = 0x7f080251
+=======
 com.example.qr_dasher:id/textinput_error = 0x7f080252
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:anim/mtrl_bottom_sheet_slide_in = 0x7f010029
 com.example.qr_dasher:style/Widget.Material3.FloatingActionButton.Large.Surface = 0x7f13038a
 com.example.qr_dasher:attr/tickColorActive = 0x7f0304b3
@@ -6568,8 +6971,12 @@ com.example.qr_dasher:attr/actionBarTheme = 0x7f03000c
 <<<<<<< HEAD
 com.example.qr_dasher:id/signUp_Time = 0x7f080207
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/signUp_Time = 0x7f080207
+=======
 com.example.qr_dasher:id/signUp_Time = 0x7f080208
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:anim/linear_indeterminate_line2_tail_interpolator = 0x7f010020
 com.example.qr_dasher:dimen/design_bottom_sheet_elevation = 0x7f06006d
 com.example.qr_dasher:style/Widget.Material3.MaterialCalendar.Item = 0x7f1303a7
@@ -6597,16 +7004,22 @@ com.example.qr_dasher:drawable/abc_textfield_default_mtrl_alpha = 0x7f070073
 com.example.qr_dasher:color/material_personalized_color_on_surface = 0x7f050292
 com.example.qr_dasher:macro/m3_comp_outlined_text_field_disabled_input_text_color = 0x7f0c00b5
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/pathRelative = 0x7f0801bf
 com.example.qr_dasher:attr/backgroundStacked = 0x7f030055
 com.example.qr_dasher:macro/m3_comp_outlined_button_hover_outline_color = 0x7f0c00a8
 com.example.qr_dasher:id/spline = 0x7f08021c
+<<<<<<< HEAD
+=======
 =======
 com.example.qr_dasher:id/pathRelative = 0x7f0801c0
 com.example.qr_dasher:attr/backgroundStacked = 0x7f030055
 com.example.qr_dasher:macro/m3_comp_outlined_button_hover_outline_color = 0x7f0c00a8
 com.example.qr_dasher:id/spline = 0x7f08021d
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/dropdownListPreferredItemHeight = 0x7f0301ab
 com.example.qr_dasher:attr/badgeRadius = 0x7f03005a
 com.example.qr_dasher:styleable/Slider = 0x7f14008d
@@ -6632,8 +7045,12 @@ com.example.qr_dasher:styleable/ShapeableImageView = 0x7f14008a
 <<<<<<< HEAD
 com.example.qr_dasher:id/scroll = 0x7f0801e6
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/scroll = 0x7f0801e6
+=======
 com.example.qr_dasher:id/scroll = 0x7f0801e7
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:id/accessibility_custom_action_18 = 0x7f08001d
 com.example.qr_dasher:attr/actionModeFindDrawable = 0x7f030019
 com.example.qr_dasher:styleable/RadialViewGroup = 0x7f140081
@@ -6649,8 +7066,12 @@ com.example.qr_dasher:attr/toolbarSurfaceStyle = 0x7f0304d1
 <<<<<<< HEAD
 com.example.qr_dasher:id/viewfinder_view = 0x7f08027c
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/viewfinder_view = 0x7f08027c
+=======
 com.example.qr_dasher:id/viewfinder_view = 0x7f08027d
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/contentInsetEndWithActions = 0x7f03014c
 com.example.qr_dasher:dimen/m3_bottom_sheet_modal_elevation = 0x7f0600c7
 com.example.qr_dasher:id/accessibility_custom_action_6 = 0x7f08002f
@@ -6661,8 +7082,12 @@ com.example.qr_dasher:attr/iconPadding = 0x7f030242
 <<<<<<< HEAD
 com.example.qr_dasher:id/path = 0x7f0801be
 =======
+<<<<<<< HEAD
+com.example.qr_dasher:id/path = 0x7f0801be
+=======
 com.example.qr_dasher:id/path = 0x7f0801bf
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 com.example.qr_dasher:attr/uiCompass = 0x7f0304f0
 com.example.qr_dasher:animator/mtrl_fab_transformation_sheet_expand_spec = 0x7f020021
 com.example.qr_dasher:attr/behavior_significantVelocityThreshold = 0x7f030077

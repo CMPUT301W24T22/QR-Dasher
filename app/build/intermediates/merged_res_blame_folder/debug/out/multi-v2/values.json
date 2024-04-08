@@ -5,6 +5,9 @@
             "map": [
                 {
 <<<<<<< HEAD
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\c8de9ac3b95dba75c7f035b4ee4733d4\\transformed\\navigation-runtime-2.7.6\\res\\values\\values.xml",
+=======
+<<<<<<< HEAD
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\b4c6ffa77a8b718b5d53452f9d4c973d\\transformed\\zxing-android-embedded-4.2.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,38,48,55",
@@ -81,6 +84,7 @@
 =======
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\c8de9ac3b95dba75c7f035b4ee4733d4\\transformed\\navigation-runtime-2.7.6\\res\\values\\values.xml",
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "from": {
                         "startLines": "2,3,10,13",
                         "startColumns": "4,4,4,4",
@@ -99,6 +103,9 @@
                     }
                 },
                 {
+<<<<<<< HEAD
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\2e589140b80facb6e2b5152549c0d1b5\\transformed\\cardview-1.0.0\\res\\values\\values.xml",
+=======
 <<<<<<< HEAD
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\a3c59454fcb396351e0cb7b6158bf984\\transformed\\savedstate-1.2.1\\res\\values\\values.xml",
                     "from": {
@@ -265,6 +272,7 @@
 =======
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\2e589140b80facb6e2b5152549c0d1b5\\transformed\\cardview-1.0.0\\res\\values\\values.xml",
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "from": {
                         "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -283,6 +291,9 @@
                     }
                 },
                 {
+<<<<<<< HEAD
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\8485f682f3f64f11e34a606687cb8fba\\transformed\\viewpager2-1.0.0\\res\\values\\values.xml",
+=======
 <<<<<<< HEAD
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\e87f05d1e34e391f433e196eeb88e8b5\\transformed\\core-1.9.0\\res\\values\\values.xml",
                     "from": {
@@ -415,6 +426,7 @@
 =======
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\8485f682f3f64f11e34a606687cb8fba\\transformed\\viewpager2-1.0.0\\res\\values\\values.xml",
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -433,6 +445,8 @@
                     }
                 },
                 {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\bfccc05a5c51bbb7e38430635b1f75d2\\transformed\\recyclerview-1.1.0\\res\\values\\values.xml",
                     "from": {
@@ -565,6 +579,7 @@
                 {
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\65c12f567367eea9b53784de488c5ce7\\transformed\\coordinatorlayout-1.1.0\\res\\values\\values.xml",
 =======
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\d4da2ea22605114151be5169e2b088d5\\transformed\\constraintlayout-2.1.4\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,9,10,15,16,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,42,43,44,45,55,63,64,65,70,71,76,81,82,83,88,89,94,95,100,101,102,108,109,110,115,121,122,123,124,130,131,132,133,136,139,142,143,146,149,150,151,152,153,156,159,160,161,162,168,173,176,179,180,181,186,187,188,191,194,195,198,201,204,207,208,209,212,215,216,221,222,228,233,236,239,240,241,242,243,244,245,246,247,248,249,250,266,272,273,274,275,276,283,289,290,291,294,299,300,308,309,310,311,312,313,314,315,324,325,326,332,333,339,343,344,345,346,347,356,360,361,380,566,694,700,704,874,1026,1039,1055,1080,1103,1106,1109,1112,1141,1168,1185,1271,1279,1292,1308,1312,1342,1355,1359,1369,1379,1423,1436,1440,1443,1459,1500,1535,1542,1559",
@@ -602,7 +617,10 @@
                 },
                 {
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\65c12f567367eea9b53784de488c5ce7\\transformed\\coordinatorlayout-1.1.0\\res\\values\\values.xml",
+<<<<<<< HEAD
+=======
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "from": {
                         "startLines": "2,3,6,16",
                         "startColumns": "4,4,4,4",
@@ -621,6 +639,8 @@
                     }
                 },
                 {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\4a2b68d1dd4d12dab7e6f1a04f97ba7b\\transformed\\activity-1.8.0\\res\\values\\values.xml",
                     "from": {
@@ -641,6 +661,7 @@
                 {
                     "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\19f0eb30035c5b9ded78e412e233dfc7\\transformed\\lifecycle-viewmodel-2.6.2\\res\\values\\values.xml",
 =======
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\bfccc05a5c51bbb7e38430635b1f75d2\\transformed\\recyclerview-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
@@ -790,11 +811,16 @@
                 },
                 {
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\a3c59454fcb396351e0cb7b6158bf984\\transformed\\savedstate-1.2.1\\res\\values\\values.xml",
+<<<<<<< HEAD
+=======
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                         "endColumns": "49",
                         "endOffsets": "100"
@@ -810,6 +836,7 @@
                 {
                     "source": "D:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\src\\main\\res\\values\\themes.xml",
 =======
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                         "endColumns": "53",
                         "endOffsets": "104"
                     },
@@ -823,7 +850,10 @@
                 },
                 {
                     "source": "C:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\src\\main\\res\\values\\themes.xml",
+<<<<<<< HEAD
+=======
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "from": {
                         "startLines": "2,7",
                         "startColumns": "4,4",
@@ -843,8 +873,11 @@
                 },
                 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     "source": "D:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\src\\main\\res\\values\\colors.xml",
 =======
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\e87f05d1e34e391f433e196eeb88e8b5\\transformed\\core-1.9.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,89,90,94,95,96,97,103,113,146,167,200",
@@ -1043,7 +1076,10 @@
                 },
                 {
                     "source": "C:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\src\\main\\res\\values\\colors.xml",
+<<<<<<< HEAD
+=======
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "from": {
                         "startLines": "2,4,3",
                         "startColumns": "4,4,4",
@@ -1060,6 +1096,9 @@
                     }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                 },
                 {
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\f34cab2461e17d54e03cbf853b183423\\transformed\\startup-runtime-1.1.1\\res\\values\\values.xml",
@@ -1185,7 +1224,10 @@
                         "endColumns": "42",
                         "endOffsets": "125967"
                     }
+<<<<<<< HEAD
+=======
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                 }
             ]
         }

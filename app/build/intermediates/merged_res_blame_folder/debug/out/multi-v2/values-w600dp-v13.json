@@ -5,6 +5,8 @@
             "map": [
                 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     "source": "D:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
@@ -13,6 +15,7 @@
                         "endColumns": "41",
                         "endOffsets": "54"
 =======
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "source": "C:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
@@ -20,7 +23,10 @@
                         "startOffsets": "16",
                         "endColumns": "41",
                         "endOffsets": "53"
+<<<<<<< HEAD
+=======
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     },
                     "to": {
                         "startLines": "2",

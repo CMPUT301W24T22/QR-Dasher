@@ -3650,6 +3650,9 @@ int id normal 0x7f080197
 int id north 0x7f080198
 int id notification_background 0x7f080199
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 int id notification_content 0x7f08019a
 int id notification_heading 0x7f08019b
 int id notification_main_column 0x7f08019c
@@ -3903,6 +3906,8 @@ int id zxing_preview_failed 0x7f080293
 int id zxing_prewiew_size_ready 0x7f080294
 int id zxing_status_view 0x7f080295
 int id zxing_viewfinder_view 0x7f080296
+<<<<<<< HEAD
+=======
 =======
 int id notification_button 0x7f08019a
 int id notification_content 0x7f08019b
@@ -4159,6 +4164,7 @@ int id zxing_prewiew_size_ready 0x7f080295
 int id zxing_status_view 0x7f080296
 int id zxing_viewfinder_view 0x7f080297
 >>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 int integer abc_config_activityDefaultDur 0x7f090000
 int integer abc_config_activityShortDur 0x7f090001
 int integer app_bar_elevation_anim_duration 0x7f090002

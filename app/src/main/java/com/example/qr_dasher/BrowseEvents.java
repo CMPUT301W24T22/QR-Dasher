@@ -35,6 +35,7 @@ public class BrowseEvents extends AppCompatActivity {
     private ListView browseEventList;
     private FirebaseFirestore db;
     private List<String> eventNames;
+    private List<String> eventPosters;
     private List<String> eventIds;
     private List<String> eventDetails;
     private List<Timestamp> eventTimestamps;
@@ -67,6 +68,7 @@ public class BrowseEvents extends AppCompatActivity {
 
         eventNames = new ArrayList<>();
         eventIds = new ArrayList<>();
+        eventPosters = new ArrayList<>();
         eventDetails = new ArrayList<>();
         eventTimestamps = new ArrayList<>();
 
@@ -95,6 +97,7 @@ public class BrowseEvents extends AppCompatActivity {
                         // Update the list with new data
                         eventNames.clear();
                         eventIds.clear();
+                        eventPosters.clear();
                         eventDetails.clear();
                         eventTimestamps.clear();
 
@@ -107,6 +110,7 @@ public class BrowseEvents extends AppCompatActivity {
                                 Long eventIdLong = documentSnapshot.getLong("event_id");
                                 if (eventIdLong != null) {
                                     // removing events where the user has signed up/ checked in
+                                    String eventPoster = documentSnapshot.getString("Poster");
                                     String eventId = String.valueOf(eventIdLong);
                                     String eventDetail = documentSnapshot.getString("details");
                                     Timestamp eventTime = documentSnapshot.getTimestamp("timestamp");
@@ -115,6 +119,7 @@ public class BrowseEvents extends AppCompatActivity {
                                     if ((attendeeList == null  || !attendeeList.contains(userid_str)) && (signupList == null|| !signupList.contains(userid_str))){
                                         eventNames.add(eventName);
                                         eventIds.add(eventId);
+                                        eventPosters.add(eventPoster);
                                         eventDetails.add(eventDetail);
                                         eventTimestamps.add(eventTime);
                                         // TO-DO: for poster get the poster in an array then put it in the bundle
@@ -130,7 +135,7 @@ public class BrowseEvents extends AppCompatActivity {
     }
     private void displayEventList(List<String> eventNames, List<String> eventIds) {
         // Create an ArrayAdapter to display the event names
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, eventNames);
+        ListAdapter adapter = new ListAdapter(this, eventNames, eventPosters);
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         browseEventList.setAdapter(adapter);
@@ -148,6 +153,9 @@ public class BrowseEvents extends AppCompatActivity {
 
                 String detail = eventDetails.get(position);
                 bundle.putString("eventDetail",detail);
+
+                String eventPoster = eventPosters.get(position);
+                bundle.putString("eventPoster",eventPoster);
 
                 String eventId = eventIds.get(position);
                 bundle.putString("eventId", eventId);

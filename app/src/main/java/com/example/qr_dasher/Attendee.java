@@ -345,6 +345,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                         String detail = event.getDetails();
                         bundle.putString("eventDetail", detail);
 
+
                         String eventId = String.valueOf(event.getEvent_id());
                         bundle.putString("eventId", eventId);
 
@@ -682,6 +683,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 String eventId = scannedEventIds.get(position);
                 bundle.putString("eventId", eventId);
 
+
                 // Converting timeStamp to date to put in bundle
                 Timestamp eventTimestamp = scannedEventTimestamps.get(position);
                 Date date = eventTimestamp.toDate();
@@ -720,6 +722,8 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
                 String detail = signedEventDetails.get(position);
                 bundle.putString("eventDetail", detail);
+
+
 
                 String eventId = signedEventIds.get(position);
                 bundle.putString("eventId", eventId);

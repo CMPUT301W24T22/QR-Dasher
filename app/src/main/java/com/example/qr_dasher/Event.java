@@ -49,7 +49,7 @@ public class Event {
         this.signup_list = new ArrayList<>();
         this.maxAttendees = -1;
         this.announcements = new ArrayList<>();
-        
+
         //this.dateTime = dateTime;
     }
     public Event(String name, String details, int userID,int maxAttendees){
@@ -65,7 +65,7 @@ public class Event {
         this.announcements = new ArrayList<>();
 
     }
-    
+
     /**
      * Gets the event ID.
      *
@@ -109,7 +109,7 @@ public class Event {
     public void setAttendee_list(ArrayList<String> attendee_list) {
         this.attendee_list = attendee_list;
     }
-     /**
+    /**
      * Gets the attendee QR code.
      *
      * @return The attendee QR code.
@@ -125,7 +125,7 @@ public class Event {
     public void setAttendee_qr(QRCode attendee_qr) {
         this.attendee_qr = attendee_qr;
     }
-     /**
+    /**
      * Gets the name of the event.
      *
      * @return The name of the event.
@@ -133,7 +133,7 @@ public class Event {
     public String getName() {
         return name;
     }
-     /**
+    /**
      * Sets the name of the event.
      *
      * @param name The name to set.
@@ -141,7 +141,7 @@ public class Event {
     public void setName(String name) {
         this.name = name;
     }
-     /**
+    /**
      * Gets the promotional QR code.
      *
      * @return The promotional QR code.
@@ -171,7 +171,7 @@ public class Event {
             this.attendee_qr = new QRCode(this.event_id, content, this.organizer, false);
         }
     }
-     /**
+    /**
      * Adds an attendee to the event.
      *
      * @param attendee The ID of the attendee to add.
@@ -305,7 +305,7 @@ public class Event {
     public void setSignup_list(ArrayList<String> signup_list) {
         this.signup_list = signup_list;
     }
-        
+
     public void setAnnouncements(ArrayList<String> announcements) {
         this.announcements = announcements;
     }

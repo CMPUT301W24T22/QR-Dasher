@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomePage"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Profile"
+        android:textSize="40dp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Profile Picture (Optional):"
+        android:textSize="20dp"
+        android:padding="2dp"/>
+
+    <ImageView
+        android:id="@+id/image_upload"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:padding="15dp"
+        android:background="@drawable/circle_shape"/>
+
+    <Button
+        android:id="@+id/select_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Select Image" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Name:"
+            android:textSize="20dp"
+            android:padding="2dp"/>
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Email:"
+            android:textSize="20dp"
+            android:padding="2dp"/>
+
+        <EditText
+            android:id="@+id/email_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Details:"
+            android:textSize="20dp"
+            android:padding="2dp"/>
+
+        <EditText
+            android:id="@+id/details_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/geolocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable Geolocation"/>
+
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Create Profile" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Use as Guest" />
+
+</LinearLayout>

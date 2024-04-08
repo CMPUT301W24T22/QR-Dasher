@@ -49,6 +49,7 @@ public class Event {
         this.signup_list = new ArrayList<>();
         this.maxAttendees = -1;
         this.announcements = new ArrayList<>();
+        this.Poster = Poster;
         
         //this.dateTime = dateTime;
     }
@@ -61,7 +62,7 @@ public class Event {
         this.organizer = userID;
         this.signup_list = new ArrayList<>();
         this.maxAttendees = maxAttendees;
-
+        this.Poster = Poster;
         this.announcements = new ArrayList<>();
 
     }

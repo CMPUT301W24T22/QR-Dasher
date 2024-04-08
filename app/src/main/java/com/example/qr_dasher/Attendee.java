@@ -680,6 +680,9 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 String detail = scannedEventDetails.get(position);
                 bundle.putString("eventDetail", detail);
 
+                String eventPoster = scannedEventPoster.get(position);
+                bundle.putString("eventPoster", eventPoster);
+
                 String eventId = scannedEventIds.get(position);
                 bundle.putString("eventId", eventId);
 
@@ -723,7 +726,8 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 String detail = signedEventDetails.get(position);
                 bundle.putString("eventDetail", detail);
 
-              
+                String eventPoster = signedEventPoster.get(position);
+                bundle.putString("eventPoster", eventPoster);
 
                 String eventId = signedEventIds.get(position);
                 bundle.putString("eventId", eventId);

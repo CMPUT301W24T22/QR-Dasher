@@ -53,7 +53,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    //implementation("com.google.firebase:firebase-messaging:23.4.1")  // Update version as needed
+    implementation("com.google.firebase:firebase-messaging")
     implementation("com.google.firebase:firebase-messaging")
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-analytics")

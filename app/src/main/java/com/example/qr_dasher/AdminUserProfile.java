@@ -18,6 +18,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * An activity to display a user's profile details and allow the admin to perform actions such as
+ * deleting the user or their profile picture.
+ */
 public class AdminUserProfile extends AppCompatActivity {
 
     private Button deleteUserButton, deleteProfilePictureButton, backButton;
@@ -196,6 +200,11 @@ public class AdminUserProfile extends AppCompatActivity {
         backButton.setOnClickListener(view -> onBackPressed());
     }
 
+    /**
+     * Opens the AdminUserEventListFragment to display a list of events associated with the user.
+     * @param eventType Type of events ('s' for signed up, 'a' for attended, 'c' for created)
+     * @param eventList List of event IDs associated with the user
+     */
     private void openAdminUserEventListFragment(char eventType, List<String> eventList) {
         // Create a bundle to pass the eventType character and eventList
         Bundle bundle = new Bundle();
@@ -224,6 +233,10 @@ public class AdminUserProfile extends AppCompatActivity {
         }
     }
 
+    /**
+     * Populates the UI with user data retrieved from Firestore.
+     * @param user User object containing user data
+     */
     private void populateUIWithUserData(User user) {
         String profileImageString = user.getProfile_image();
         Bitmap profile_picture = null;
@@ -243,6 +256,11 @@ public class AdminUserProfile extends AppCompatActivity {
         profilePicture.setImageBitmap(profile_picture);
     }
 
+    /**
+     * Retrieves user data from Firestore.
+     * @param userID ID of the user to retrieve
+     * @param callback Callback to handle retrieved user data
+     */
     public void retrieveUserFromFirebase(String userID, final FirebaseCallback callback) {
         // Retrieve the user document from Firestore using documentID (userID)
         usersCollection.document(userID)
@@ -274,6 +292,9 @@ public class AdminUserProfile extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Callback interface for handling Firebase data retrieval.
+     */
     public interface FirebaseCallback {
         void onCallback(User user);
     }

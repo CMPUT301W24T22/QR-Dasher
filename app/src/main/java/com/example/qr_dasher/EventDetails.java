@@ -265,7 +265,11 @@ public class EventDetails extends AppCompatActivity {
 //        signupListView.setAdapter(adapter2);
 //    }
 
-
+    /**
+     * Retrieves the promotional QR code associated with the specified event from Firestore.
+     *
+     * @param eventId The ID of the event to retrieve the promotional QR code for
+     */
     private void retrievePromotionalQR(String eventId) {
         db = FirebaseFirestore.getInstance();
 
@@ -296,6 +300,14 @@ public class EventDetails extends AppCompatActivity {
                     e.printStackTrace();
                 });
     }
+
+    /**
+     * Retrieves user details from Firebase Firestore for the given attendee and sign-up lists.
+     * Updates the attendee and sign-up list views accordingly.
+     *
+     * @param attendeeList The list of attendee user IDs
+     * @param signUpList   The list of sign-up user IDs
+     */
     private void getUserDetailsFromFirebase(List<String> attendeeList, List<String> signUpList){
         db = FirebaseFirestore.getInstance();
 
@@ -421,9 +433,21 @@ public class EventDetails extends AppCompatActivity {
         }
 
     }
+
+    /**
+     * Updates the attendee count text view with the provided count.
+     *
+     * @param count The number of attendees to display
+     */
     private void updateAttendeeCount(int count) {
         attendeeCountTextView.setText("Attendees: " + count);
     }
+
+    /**
+     * Displays the list of attendees with their corresponding scan counts in the attendee list view.
+     *
+     * @param attendeeList The list of attendee names
+     */
     private void displayAttendee(List<String> attendeeList) {
         Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
 
@@ -462,6 +486,12 @@ public class EventDetails extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * Displays the list of sign-ups in the sign-up list view.
+     *
+     * @param signUpList The list of sign-up names
+     */
     private void displaySignup(List<String> signUplist) {
 
         // Create an ArrayAdapter to display the event names
@@ -481,6 +511,10 @@ public class EventDetails extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Sets up the map view by configuring its tile source, scaling, zoom level, and map events receiver.
+     */
     private void setUpMap() {
         mapView.setTileSource(TileSourceFactory.MAPNIK);
         mapView.setTilesScaledToDpi(true);
@@ -506,6 +540,11 @@ public class EventDetails extends AppCompatActivity {
         }));
     }
 
+    /**
+     * Checks if certain milestones based on attendee count have been reached and displays corresponding alerts.
+     *
+     * @param attendeeCount The current number of attendees
+     */
     private void checkAndUpdateMilestones(int attendeeCount) {
         if (attendeeCount >= MILESTONE_ONE && !isMilestoneOneReached) {
             showMilestoneAlert(MILESTONE_ONE);
@@ -520,6 +559,12 @@ public class EventDetails extends AppCompatActivity {
             isMilestoneThreeReached = true;
         }
     }
+
+    /**
+     * Displays an alert indicating that a milestone has been reached.
+     *
+     * @param milestone The milestone reached
+     */
     private void showMilestoneAlert(int milestone) {
         String message = "Milestone reached: Over " + milestone + " attendees!";
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();

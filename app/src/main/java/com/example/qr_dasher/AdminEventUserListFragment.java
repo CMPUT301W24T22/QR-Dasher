@@ -16,6 +16,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
+/**
+ * A DialogFragment subclass to display a list of users who have attended or signed up for an event.
+ */
 public class AdminEventUserListFragment extends DialogFragment {
 
     private ListView usersListView;

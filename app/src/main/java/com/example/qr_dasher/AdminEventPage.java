@@ -14,6 +14,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * An activity to display detailed information about an event retrieved from Firebase Firestore.
+ * This activity allows administrators to view event details, manage attendees, delete events, and view QR codes.
+ */
 public class AdminEventPage extends AppCompatActivity {
 
     private Button deleteEventButton, deleteEventPosterButton, backButton;
@@ -178,6 +182,12 @@ public class AdminEventPage extends AppCompatActivity {
         backButton.setOnClickListener(view -> onBackPressed());
     }
 
+    /**
+     * Open AdminEventUserListFragment to display a list of users.
+     *
+     * @param listType The type of user list ('s' for signed up attendees, 'a' for all attendees).
+     * @param userList The list of user IDs.
+     */
     private void openAdminEventUserListFragment(char listType, ArrayList<String> userList) {
         // Create a bundle to pass the eventType character and eventList
         Bundle bundle = new Bundle();
@@ -203,6 +213,11 @@ public class AdminEventPage extends AppCompatActivity {
         }
     }
 
+    /**
+     * Populate UI with event data.
+     *
+     * @param event The event object containing data.
+     */
     private void populateUIWithEventData(Event event) {
         eventName.setText(event.getName());
         eventOrganizer.setText(String.valueOf(event.getOrganizer()));
@@ -212,6 +227,12 @@ public class AdminEventPage extends AppCompatActivity {
         }
     }
 
+    /**
+     * Retrieve event data from Firebase Firestore.
+     *
+     * @param eventID  The ID of the event to retrieve.
+     * @param callback Callback to pass retrieved event data.
+     */
     public void retrieveEventFromFirebase(String eventID, final FirebaseCallback callback) {
         // Retrieve the user document from Firestore using documentID (userID)
         eventsCollection.document(eventID)
@@ -248,6 +269,9 @@ public class AdminEventPage extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Interface for Firebase callback.
+     */
     public interface FirebaseCallback {
         void onCallback(Event event);
     }

@@ -12,6 +12,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 
+/**
+ * An activity to display a list of users for an admin to view.
+ */
 public class AdminUserList extends AppCompatActivity {
 
     ListView userListView;
@@ -69,6 +72,10 @@ public class AdminUserList extends AppCompatActivity {
         });
     }
 
+    /**
+     * Called when the activity is resumed.
+     * Method to fetch users from Firestore and populate the UI with it.
+     */
     @Override
     protected void onResume() {
         super.onResume();

@@ -132,6 +132,12 @@ public class Attendee extends AppCompatActivity implements LocationListener {
         locationManager.removeUpdates((LocationListener) this);
     }
 
+    /**
+     * Called when the location has changed.
+     * Updates the GeoPoint with the latest location coordinates.
+     *
+     * @param location The new location with updated coordinates
+     */
     @Override
     public void onLocationChanged(@NonNull Location location) {
         // Update geoPoint with the latest location
@@ -257,6 +263,10 @@ public class Attendee extends AppCompatActivity implements LocationListener {
         }
     }
 
+    /**
+     * Retrieves the current location of the user and updates the GeoPoint.
+     * If the necessary location permissions are not granted, the function returns without performing any action.
+     */
     private void requestLocationUpdates() {
         // Check if location manager is not null
         if (locationManager != null) {
@@ -288,7 +298,12 @@ public class Attendee extends AppCompatActivity implements LocationListener {
         }
     }
 
-
+    /**
+     * Checks whether the location feature is enabled for a specific user document in Firestore.
+     *
+     * @param docId    The document ID of the user in Firestore
+     * @param callback A callback interface to handle the result of the location check
+     */
     private void checkLocation(String docId, LocationCheckCallback callback) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users").document(docId)
@@ -316,7 +331,12 @@ public class Attendee extends AppCompatActivity implements LocationListener {
     }
 
 
-
+    /**
+     * Adds the user's current location (GeoPoint) to Firestore.
+     *
+     * @param userId   The ID of the user whose location is being updated
+     * @param geoPoint The GeoPoint object representing the user's current location
+     */
     private void addLocation(Integer userId, GeoPoint geoPoint) {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -337,7 +357,13 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 });
     }
 
-
+    /**
+     * Displays the EventSignUpPage based on the promotional QR code content.
+     * Retrieves event information from Firebase based on the QR content, prepares a bundle,
+     * and starts the EventSignUpPage Activity.
+     *
+     * @param pQRcontent The content of the promotional QR code
+     */
     private void displayEventSignUpPage(String pQRcontent) {
         // Remove "p" and get the event info from firebase
         // Start EventSignUpPage Activity
@@ -391,7 +417,14 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 });
     }
 
-
+    /**
+     * Updates the user and event documents in Firebase after the user joins an event.
+     * Adds the event to the user's eventsJoined list and adds the user to the event's attendee list.
+     * If the event allows more attendees and the user has not already joined the event, the user is added to the event.
+     * Also, checks if the user's location feature is enabled and retrieves the location if enabled.
+     *
+     * @param event_id The ID of the event being joined
+     */
     private void updateFirebase(String event_id) {
         int userId = app_cache.getInt("UserID", -1);
         String eventID = event_id; // Assuming event_id is already the document ID
@@ -473,8 +506,6 @@ public class Attendee extends AppCompatActivity implements LocationListener {
      * @param userId The user ID
      * @param user   The User object to update
      */
-
-
     private void updateFirebaseUser(String userId, User user) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users")
@@ -504,6 +535,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                     e.printStackTrace();
                 });
     }
+
 
     private void getCheckedSignedEvents(Integer userId) {
 
@@ -538,6 +570,14 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 });
     }
 
+    /**
+     * Retrieves the list of events that the user has signed up for or checked into from Firebase Firestore.
+     * It queries the Firestore database to find documents where the "userId" field matches the provided userId.
+     * If documents are found, it retrieves the lists of events the user has signed up for and checked into.
+     * It then displays the details of these events using the {@link #getEventDetails(List, List)} method.
+     *
+     * @param userId The ID of the user for whom events are being retrieved
+     */
     private void getEventDetails(List<String> checkedInEvents, List<String> eventsSignedUp) {
         // Once we have the event ids, we can get the other details
         // Getting the current date > dealing with only new events
@@ -668,6 +708,14 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
     // First get the events in separate lists then use those events to get
 
+    /**
+     * Displays the list of scanned and signed-up events.
+     * Uses ArrayAdapter to display the event names in ListView.
+     * Clicking on an event item starts the EventSignUpPage activity with the event details.
+     *
+     * @param scannedEventNames   The list of names of scanned events
+     * @param signedEventNames    The list of names of signed-up events
+     */
     private void displayEventList(List<String> scannedEventNames, List<String> signedEventNames) {
         // Create an ArrayAdapter to display the event names
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, scannedEventNames);

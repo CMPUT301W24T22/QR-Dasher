@@ -14,6 +14,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
+/**
+ * An activity to display a list of events stored in Firestore.
+ * This activity fetches event data from Firestore and populates a ListView with event names and posters.
+ * Clicking on an event in the list navigates to the AdminEventPage activity for further details.
+ */
 public class AdminEventList extends AppCompatActivity {
 
     private ListView eventListView;
@@ -21,6 +26,14 @@ public class AdminEventList extends AppCompatActivity {
     private CollectionReference eventsCollection;
     private ArrayList<String> eventNamesList, eventPostersList, eventIDList;
 
+    /**
+     * Called when the activity is starting.
+     *
+     * @param savedInstanceState If the activity is being re-initialized after previously being
+     *                           shut down then this Bundle contains the data it most recently
+     *                           supplied in onSaveInstanceState(Bundle).
+     *                           Note: Otherwise, it is null.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +87,10 @@ public class AdminEventList extends AppCompatActivity {
         });
     }
 
+    /**
+     * Called when the activity is resumed.
+     * Fetches event data from Firestore and populates the ListView.
+     */
     @Override
     protected void onResume() {
         super.onResume();

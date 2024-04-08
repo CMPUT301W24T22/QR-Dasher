@@ -30,11 +30,7 @@ import java.util.List;
  * The edited profile information is updated in Firebase Firestore.
  */
 
-public class
-
-
-
-EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUploadListener {
+public class EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUploadListener {
 
     private EditText nameEdit, emailEdit, detailsEdit;
     private CheckBox geolocationCheckBox;

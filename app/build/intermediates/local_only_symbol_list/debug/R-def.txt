@@ -37,7 +37,6 @@ id browseEvents
 id cancel_button
 id capture_image_button
 id check_announcement
-id clear_notifications_button
 id container
 id content
 id createEventButton
@@ -52,7 +51,6 @@ id download_image_button
 id downloadbutton
 id edit_profile_button
 id email_edit
-id enable_disable_button
 id enter_button
 id enter_pin
 id eventList
@@ -84,13 +82,8 @@ id max_attendees
 id name_edit
 id nav_graph
 id next_button
-<<<<<<< HEAD
-=======
-id notification_button
->>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
 id notification_content
 id notification_heading
-id notification_text
 id notification_title
 id notification_title_text
 id notify_button
@@ -166,7 +159,6 @@ layout fragment_share_qr
 layout home_page
 layout mytextview
 layout mytextview_nopicture
-layout notifications
 layout organizer
 layout role_page
 layout scan_qr

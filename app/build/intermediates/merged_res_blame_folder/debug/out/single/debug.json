@@ -124,10 +124,6 @@
         "source": "com.example.qr_dasher.app-main-58:/layout/check_announcements.xml"
     },
     {
-        "merged": "com.example.qr_dasher.app-merged_res-56:/layout_notifications.xml.flat",
-        "source": "com.example.qr_dasher.app-main-58:/layout/notifications.xml"
-    },
-    {
         "merged": "com.example.qr_dasher.app-merged_res-56:/layout_activity_create_event_organizer.xml.flat",
         "source": "com.example.qr_dasher.app-main-58:/layout/activity_create_event_organizer.xml"
     },

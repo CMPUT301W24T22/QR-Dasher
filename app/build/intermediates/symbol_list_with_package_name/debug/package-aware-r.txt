@@ -3396,7 +3396,6 @@ id checkbox
 id checked
 id chronometer
 id circle_center
-id clear_notifications_button
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -3469,7 +3468,6 @@ id edit_query
 id elastic
 id email_edit
 id embed
-id enable_disable_button
 id end
 id endToStart
 id end_padder
@@ -3650,15 +3648,10 @@ id none
 id normal
 id north
 id notification_background
-<<<<<<< HEAD
-=======
-id notification_button
->>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
 id notification_content
 id notification_heading
 id notification_main_column
 id notification_main_column_container
-id notification_text
 id notification_title
 id notification_title_text
 id notify_button
@@ -4132,7 +4125,6 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout notifications
 layout organizer
 layout role_page
 layout scan_qr

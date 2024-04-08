@@ -16,6 +16,9 @@ import android.widget.Toast;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+/**
+ * Fragment class to display a QR code image along with options to download, share, or delete it.
+ */
 public class QRImageFragment extends DialogFragment {
 
     private ImageView QRImage;
@@ -26,13 +29,23 @@ public class QRImageFragment extends DialogFragment {
     private CollectionReference eventsCollection;
     private String eventID, qrType;
 
+    /**
+     * Default constructor for QRImageFragment .
+     */
     public QRImageFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * Inflates the layout for the fragment and initializes views.
+     *
+     * @param inflater           The LayoutInflater object that can be used to inflate any views in the fragment.
+     * @param container          If non-null, this is the parent view that the fragment's UI should be attached to.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state.
+     * @return The View for the fragment's UI.
+     */
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_qr_image, container, false);
 
@@ -76,7 +89,7 @@ public class QRImageFragment extends DialogFragment {
                             .addOnSuccessListener(aVoid -> {
                                 // Handle deletion success
                                 Toast.makeText(getContext(), "Promotional QR deleted successfully", Toast.LENGTH_SHORT).show();
-                                dismiss(); // Dismiss the fragment after deletion
+                                dismiss();                                       // Dismiss the fragment after deletion
                             })
                             .addOnFailureListener(e -> {
                                 // Handle deletion failure
@@ -88,7 +101,7 @@ public class QRImageFragment extends DialogFragment {
                             .addOnSuccessListener(aVoid -> {
                                 // Handle deletion success
                                 Toast.makeText(getContext(), "Attendee QR deleted successfully", Toast.LENGTH_SHORT).show();
-                                dismiss(); // Dismiss the fragment after deletion
+                                dismiss();                                      // Dismiss the fragment after deletion
                             })
                             .addOnFailureListener(e -> {
                                 // Handle deletion failure
@@ -97,10 +110,6 @@ public class QRImageFragment extends DialogFragment {
                 }
             }
         });
-
-
-
-        // TODO: Implement download and share functionality if needed
 
         return view;
     }

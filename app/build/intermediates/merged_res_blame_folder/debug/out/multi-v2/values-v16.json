@@ -4,7 +4,21 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-54:/values-v16/values-v16.xml",
             "map": [
                 {
+<<<<<<< HEAD
+                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\e87f05d1e34e391f433e196eeb88e8b5\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\e051a5ed7ee8d1d036c0319145b5fdd2\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+=======
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\e051a5ed7ee8d1d036c0319145b5fdd2\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+>>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,6 +35,8 @@
                         "endColumns": "12",
                         "endOffsets": "289"
                     }
+<<<<<<< HEAD
+=======
                 },
                 {
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\e87f05d1e34e391f433e196eeb88e8b5\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
@@ -31,6 +47,7 @@
                         "endColumns": "65",
                         "endOffsets": "116"
                     }
+>>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
                 }
             ]
         }

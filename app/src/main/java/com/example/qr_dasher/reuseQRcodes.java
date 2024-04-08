@@ -18,7 +18,6 @@ import android.widget.LinearLayout;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -98,7 +97,6 @@ public class reuseQRcodes extends AppCompatActivity {
      *
      * @param qrCodes List of QR code strings
      */
-    // Inside displayQRcodes method, set onClickListener for each ImageView to select the QR code
     private void displayQRcodes(List<String> qrCodes) {
         LinearLayout container = findViewById(R.id.container);
 

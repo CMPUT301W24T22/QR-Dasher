@@ -8,22 +8,12 @@ import android.graphics.Bitmap;
 import android.util.Base64;
 import android.util.Log;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 
-import org.checkerframework.checker.nullness.qual.NonNull;
 
-import java.io.ByteArrayOutputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Class for generating QR codes.
@@ -53,13 +43,16 @@ public class QRCode {
         this.promotional = promotional;
         this.QRImage = createQRImage(content);
     }
+
      /**
      * Get the event ID associated with the QR code.
      *
      * @return The event ID.
      */
     public int getEvent_id() {
-        return event_id;    }
+        return event_id;
+    }
+
     /**
      * Set the event ID associated with the QR code.
      *
@@ -68,6 +61,7 @@ public class QRCode {
     public void setEvent_id(int event_id) {
         this.event_id = event_id;
     }
+
     /**
      * Get the content embedded in the QR code.
      *
@@ -76,6 +70,7 @@ public class QRCode {
     public String getContent() {
         return content;
     }
+
     /**
      * Set the content embedded in the QR code.
      *
@@ -84,6 +79,7 @@ public class QRCode {
     public void setContent(String content) {
         this.content = content;
     }
+
      /**
      * Get the Base64 string representation of the QR code image.
      *
@@ -101,6 +97,7 @@ public class QRCode {
     public void setQrImage(String qrImage) {
         this.QRImage = qrImage;
     }
+
     /**
      * Get the user ID associated with the QR code.
      *
@@ -109,6 +106,7 @@ public class QRCode {
     public int getUserID() {
         return this.userID;
     }
+
     /**
      * Set the user ID associated with the QR code.
      *
@@ -117,6 +115,7 @@ public class QRCode {
     public void setUserID(int userID) {
         this.userID = userID;
     }
+
     /**
      * Get the type of the QR code (promotional or not).
      *
@@ -125,6 +124,7 @@ public class QRCode {
     public boolean getQRType(){
         return this.promotional;
     }
+
      /**
      * Set the type of the QR code (promotional or not).
      *
@@ -164,9 +164,5 @@ public class QRCode {
         String qrImage = Picture.convertBitmaptoString(myBitmap);
         return qrImage;
 
-
     }
-
-
-
 }

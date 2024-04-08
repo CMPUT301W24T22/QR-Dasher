@@ -22,24 +22,21 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
+
 /**
  * A DialogFragment for uploading images from either the device's camera or gallery.
  * Provides options to capture a new image or select an existing image.
  */
 
 public class ImageUploadFragment extends DialogFragment {
-   /**
-    * Constant for requesting image capture.
-    */
+        // Constant for requesting image capture.
     private static final int REQUEST_IMAGE_CAPTURE = 1;
-    /**
-     * Constant for requesting image selection from gallery.
-     */
+        // Constant for requesting image selection from gallery.
     private static final int REQUEST_IMAGE_PICK = 2;
-
     private Button captureImageButton, selectImageButton, deleteImageButton;
     private Bitmap capturedImageBitmap;
     private ImageUploadListener imageUploadListener;
+
     /**
      * Interface for communicating image upload events to the hosting activity.
      */
@@ -101,6 +98,7 @@ public class ImageUploadFragment extends DialogFragment {
             }
         });
     }
+
     /**
      * Deletes the currently selected image.
      */
@@ -116,7 +114,7 @@ public class ImageUploadFragment extends DialogFragment {
     private void dispatchTakePictureIntent() {
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
-            // Permission is not granted, request the permission
+                // Permission is not granted, request the permission
             ActivityCompat.requestPermissions(requireActivity(),
                     new String[]{Manifest.permission.CAMERA},
                     REQUEST_CAMERA_PERMISSION);
@@ -129,7 +127,7 @@ public class ImageUploadFragment extends DialogFragment {
     // Constant for camera permission request
     private static final int REQUEST_CAMERA_PERMISSION = 101;
 
-    // Start camera intent
+
     /**
      * Start camera intent
      */
@@ -140,7 +138,6 @@ public class ImageUploadFragment extends DialogFragment {
         }
     }
 
-    // Handle permission request result
     /**
      * Handle permission request result
      */
@@ -165,6 +162,7 @@ public class ImageUploadFragment extends DialogFragment {
         pickPhotoIntent.setType("image/*");
         startActivityForResult(Intent.createChooser(pickPhotoIntent, "Select Picture"), REQUEST_IMAGE_PICK);
     }
+
     /**
      * Handles the result of image capture or selection.
      *
@@ -202,7 +200,11 @@ public class ImageUploadFragment extends DialogFragment {
         }
     }
 
-
+    /**
+     * Sets the image upload listener.
+     *
+     * @param listener The listener object to be set.
+     */
     public void setImageUploadListener(ImageUploadListener listener) {
         this.imageUploadListener = listener;
     }

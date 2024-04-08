@@ -1,3 +1,64 @@
+<<<<<<< HEAD
+com.example.qr_dasher.app-lifecycle-livedata-core-ktx-2.6.2-0 C:\Users\jaste\.gradle\caches\transforms-3\0e2472825f386722ea3a89f830000bb6\transformed\lifecycle-livedata-core-ktx-2.6.2\res
+com.example.qr_dasher.app-lifecycle-viewmodel-2.6.2-1 C:\Users\jaste\.gradle\caches\transforms-3\19f0eb30035c5b9ded78e412e233dfc7\transformed\lifecycle-viewmodel-2.6.2\res
+com.example.qr_dasher.app-ads-adservices-java-1.0.0-beta05-2 C:\Users\jaste\.gradle\caches\transforms-3\22395b72a3e926231ad158aadbf04d52\transformed\ads-adservices-java-1.0.0-beta05\res
+com.example.qr_dasher.app-cardview-1.0.0-3 C:\Users\jaste\.gradle\caches\transforms-3\2e589140b80facb6e2b5152549c0d1b5\transformed\cardview-1.0.0\res
+com.example.qr_dasher.app-savedstate-ktx-1.2.1-4 C:\Users\jaste\.gradle\caches\transforms-3\2eb4a95183025313828a26674335fbd9\transformed\savedstate-ktx-1.2.1\res
+com.example.qr_dasher.app-lifecycle-livedata-2.6.2-5 C:\Users\jaste\.gradle\caches\transforms-3\39ce0cce35aa00e715a381ad16fcd751\transformed\lifecycle-livedata-2.6.2\res
+com.example.qr_dasher.app-navigation-common-2.7.6-6 C:\Users\jaste\.gradle\caches\transforms-3\3d753dd8b5df964deeeeef52dc650066\transformed\navigation-common-2.7.6\res
+com.example.qr_dasher.app-activity-1.8.0-7 C:\Users\jaste\.gradle\caches\transforms-3\4a2b68d1dd4d12dab7e6f1a04f97ba7b\transformed\activity-1.8.0\res
+com.example.qr_dasher.app-transition-1.4.1-8 C:\Users\jaste\.gradle\caches\transforms-3\4bea755ed5d360ce7527cec9a2e56ab6\transformed\transition-1.4.1\res
+com.example.qr_dasher.app-emoji2-views-helper-1.2.0-9 C:\Users\jaste\.gradle\caches\transforms-3\53dc2da1907e37d265d6522913080849\transformed\emoji2-views-helper-1.2.0\res
+com.example.qr_dasher.app-drawerlayout-1.1.1-10 C:\Users\jaste\.gradle\caches\transforms-3\556fd296f19a46cf9b3e8ba9a0831d79\transformed\drawerlayout-1.1.1\res
+com.example.qr_dasher.app-fragment-ktx-1.6.2-11 C:\Users\jaste\.gradle\caches\transforms-3\57c7972d0247f913f4e24e387edd6eb2\transformed\fragment-ktx-1.6.2\res
+com.example.qr_dasher.app-appcompat-resources-1.6.1-12 C:\Users\jaste\.gradle\caches\transforms-3\57d1500c400131156db40972bab21db8\transformed\appcompat-resources-1.6.1\res
+com.example.qr_dasher.app-navigation-ui-2.7.6-13 C:\Users\jaste\.gradle\caches\transforms-3\5996a14d1a8e2bad452f3e4ba08659e6\transformed\navigation-ui-2.7.6\res
+com.example.qr_dasher.app-play-services-measurement-api-21.5.1-14 C:\Users\jaste\.gradle\caches\transforms-3\59e5477a10b7daa7f6e381ecc3256b40\transformed\play-services-measurement-api-21.5.1\res
+com.example.qr_dasher.app-media-1.0.0-15 C:\Users\jaste\.gradle\caches\transforms-3\617a3062327e8e783de6b469165ddbc1\transformed\media-1.0.0\res
+com.example.qr_dasher.app-coordinatorlayout-1.1.0-16 C:\Users\jaste\.gradle\caches\transforms-3\65c12f567367eea9b53784de488c5ce7\transformed\coordinatorlayout-1.1.0\res
+com.example.qr_dasher.app-ads-adservices-1.0.0-beta05-17 C:\Users\jaste\.gradle\caches\transforms-3\6bc3504c5ed859aed2595f1c4f641878\transformed\ads-adservices-1.0.0-beta05\res
+com.example.qr_dasher.app-firebase-messaging-23.4.1-18 C:\Users\jaste\.gradle\caches\transforms-3\70e1c4ab8acd3687064ed53c2559b0f1\transformed\firebase-messaging-23.4.1\res
+com.example.qr_dasher.app-material-1.11.0-19 C:\Users\jaste\.gradle\caches\transforms-3\725e24c93ab4967c856ab85386d50074\transformed\material-1.11.0\res
+com.example.qr_dasher.app-lifecycle-runtime-2.6.2-20 C:\Users\jaste\.gradle\caches\transforms-3\747e385648b533cfe7fed071c6aba7f4\transformed\lifecycle-runtime-2.6.2\res
+com.example.qr_dasher.app-emoji2-1.2.0-21 C:\Users\jaste\.gradle\caches\transforms-3\74d3c4a74032ee981397ec65a1c72cbe\transformed\emoji2-1.2.0\res
+com.example.qr_dasher.app-lifecycle-process-2.6.2-22 C:\Users\jaste\.gradle\caches\transforms-3\80c9d50e9d69b8a38068d23a0d63f388\transformed\lifecycle-process-2.6.2\res
+com.example.qr_dasher.app-viewpager2-1.0.0-23 C:\Users\jaste\.gradle\caches\transforms-3\8485f682f3f64f11e34a606687cb8fba\transformed\viewpager2-1.0.0\res
+com.example.qr_dasher.app-lifecycle-viewmodel-ktx-2.6.2-24 C:\Users\jaste\.gradle\caches\transforms-3\97df7fe0a3324995030925d6fb0fda0b\transformed\lifecycle-viewmodel-ktx-2.6.2\res
+com.example.qr_dasher.app-lifecycle-runtime-ktx-2.6.2-25 C:\Users\jaste\.gradle\caches\transforms-3\a34c81082526d67b5012ec89bb2b0493\transformed\lifecycle-runtime-ktx-2.6.2\res
+com.example.qr_dasher.app-savedstate-1.2.1-26 C:\Users\jaste\.gradle\caches\transforms-3\a3c59454fcb396351e0cb7b6158bf984\transformed\savedstate-1.2.1\res
+com.example.qr_dasher.app-core-ktx-1.9.0-27 C:\Users\jaste\.gradle\caches\transforms-3\abb0f97ed9bef3b2faa58f488a809bf9\transformed\core-ktx-1.9.0\res
+com.example.qr_dasher.app-zxing-android-embedded-4.2.0-28 C:\Users\jaste\.gradle\caches\transforms-3\b4c6ffa77a8b718b5d53452f9d4c973d\transformed\zxing-android-embedded-4.2.0\res
+com.example.qr_dasher.app-fragment-1.6.2-29 C:\Users\jaste\.gradle\caches\transforms-3\b530ce65a6a770ba46fcb365c15c462a\transformed\fragment-1.6.2\res
+com.example.qr_dasher.app-recyclerview-1.1.0-30 C:\Users\jaste\.gradle\caches\transforms-3\bfccc05a5c51bbb7e38430635b1f75d2\transformed\recyclerview-1.1.0\res
+com.example.qr_dasher.app-activity-ktx-1.8.0-31 C:\Users\jaste\.gradle\caches\transforms-3\c2b971d7e8efef1a72f1ee53b5899d05\transformed\activity-ktx-1.8.0\res
+com.example.qr_dasher.app-play-services-base-18.1.0-32 C:\Users\jaste\.gradle\caches\transforms-3\c68921685bcae29391210cd1baa14c51\transformed\play-services-base-18.1.0\res
+com.example.qr_dasher.app-navigation-runtime-2.7.6-33 C:\Users\jaste\.gradle\caches\transforms-3\c8de9ac3b95dba75c7f035b4ee4733d4\transformed\navigation-runtime-2.7.6\res
+com.example.qr_dasher.app-annotation-experimental-1.3.0-34 C:\Users\jaste\.gradle\caches\transforms-3\cb78c11f3fd800991da78d1c5f9c2c0b\transformed\annotation-experimental-1.3.0\res
+com.example.qr_dasher.app-play-services-maps-18.2.0-35 C:\Users\jaste\.gradle\caches\transforms-3\cb9107a5c171154133f51e50654a9680\transformed\play-services-maps-18.2.0\res
+com.example.qr_dasher.app-constraintlayout-2.1.4-36 C:\Users\jaste\.gradle\caches\transforms-3\d4da2ea22605114151be5169e2b088d5\transformed\constraintlayout-2.1.4\res
+com.example.qr_dasher.app-play-services-basement-18.3.0-37 C:\Users\jaste\.gradle\caches\transforms-3\d54c9b41dae1829294e43ca4332cb06d\transformed\play-services-basement-18.3.0\res
+com.example.qr_dasher.app-firebase-common-20.4.2-38 C:\Users\jaste\.gradle\caches\transforms-3\d6e7acce88ccb68c30b0ba6a4f4e26ba\transformed\firebase-common-20.4.2\res
+com.example.qr_dasher.app-slidingpanelayout-1.2.0-39 C:\Users\jaste\.gradle\caches\transforms-3\d9259847c5f4c4cf6d34fc16c3f4e652\transformed\slidingpanelayout-1.2.0\res
+com.example.qr_dasher.app-appcompat-1.6.1-40 C:\Users\jaste\.gradle\caches\transforms-3\e051a5ed7ee8d1d036c0319145b5fdd2\transformed\appcompat-1.6.1\res
+com.example.qr_dasher.app-lifecycle-livedata-core-2.6.2-41 C:\Users\jaste\.gradle\caches\transforms-3\e2dae485176ace0dae4c266a7083e1b5\transformed\lifecycle-livedata-core-2.6.2\res
+com.example.qr_dasher.app-core-runtime-2.2.0-42 C:\Users\jaste\.gradle\caches\transforms-3\e39e7e28144681d732d724d8df73900c\transformed\core-runtime-2.2.0\res
+com.example.qr_dasher.app-browser-1.4.0-43 C:\Users\jaste\.gradle\caches\transforms-3\e3ac77d78fd11b152c2d4d9750a47832\transformed\browser-1.4.0\res
+com.example.qr_dasher.app-profileinstaller-1.3.0-44 C:\Users\jaste\.gradle\caches\transforms-3\e80091ddd1d047b7186e5f58bf520363\transformed\profileinstaller-1.3.0\res
+com.example.qr_dasher.app-core-1.9.0-45 C:\Users\jaste\.gradle\caches\transforms-3\e87f05d1e34e391f433e196eeb88e8b5\transformed\core-1.9.0\res
+com.example.qr_dasher.app-navigation-fragment-2.7.6-46 C:\Users\jaste\.gradle\caches\transforms-3\ed308cadf900d9dc831e0bec5473de04\transformed\navigation-fragment-2.7.6\res
+com.example.qr_dasher.app-window-1.0.0-47 C:\Users\jaste\.gradle\caches\transforms-3\ef3606e7ee1c588282954a01f081bc0f\transformed\window-1.0.0\res
+com.example.qr_dasher.app-osmdroid-android-6.1.14-48 C:\Users\jaste\.gradle\caches\transforms-3\f2b0a8d8f1fe80816cf0895f1ccf379d\transformed\osmdroid-android-6.1.14\res
+com.example.qr_dasher.app-startup-runtime-1.1.1-49 C:\Users\jaste\.gradle\caches\transforms-3\f34cab2461e17d54e03cbf853b183423\transformed\startup-runtime-1.1.1\res
+com.example.qr_dasher.app-lifecycle-viewmodel-savedstate-2.6.2-50 C:\Users\jaste\.gradle\caches\transforms-3\fd27c4e9691467deb0e0549dc360186f\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+com.example.qr_dasher.app-pngs-51 D:\Documents\CMPUT 301\Project\QR-Dasher\app\build\generated\res\pngs\debug
+com.example.qr_dasher.app-res-52 D:\Documents\CMPUT 301\Project\QR-Dasher\app\build\generated\res\processDebugGoogleServices
+com.example.qr_dasher.app-resValues-53 D:\Documents\CMPUT 301\Project\QR-Dasher\app\build\generated\res\resValues\debug
+com.example.qr_dasher.app-packageDebugResources-54 D:\Documents\CMPUT 301\Project\QR-Dasher\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.qr_dasher.app-packageDebugResources-55 D:\Documents\CMPUT 301\Project\QR-Dasher\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.qr_dasher.app-merged_res-56 D:\Documents\CMPUT 301\Project\QR-Dasher\app\build\intermediates\merged_res\debug
+com.example.qr_dasher.app-debug-57 D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\debug\res
+com.example.qr_dasher.app-main-58 D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\res
+=======
 com.example.qr_dasher.app-lifecycle-livedata-core-ktx-2.6.2-0 C:\Users\jaspr\.gradle\caches\transforms-3\0e2472825f386722ea3a89f830000bb6\transformed\lifecycle-livedata-core-ktx-2.6.2\res
 com.example.qr_dasher.app-lifecycle-viewmodel-2.6.2-1 C:\Users\jaspr\.gradle\caches\transforms-3\19f0eb30035c5b9ded78e412e233dfc7\transformed\lifecycle-viewmodel-2.6.2\res
 com.example.qr_dasher.app-ads-adservices-java-1.0.0-beta05-2 C:\Users\jaspr\.gradle\caches\transforms-3\22395b72a3e926231ad158aadbf04d52\transformed\ads-adservices-java-1.0.0-beta05\res
@@ -57,3 +118,4 @@ com.example.qr_dasher.app-packageDebugResources-55 C:\Users\jaspr\OneDrive\Docum
 com.example.qr_dasher.app-merged_res-56 C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\build\intermediates\merged_res\debug
 com.example.qr_dasher.app-debug-57 C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\debug\res
 com.example.qr_dasher.app-main-58 C:\Users\jaspr\OneDrive\Documents\University\Third year computing science\CMPUT301\QRdasher\app\src\main\res
+>>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d

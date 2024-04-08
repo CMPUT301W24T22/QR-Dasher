@@ -1,11 +1,5 @@
 package com.example.qr_dasher;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,26 +9,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -47,12 +29,13 @@ import okhttp3.Response;
 /**
  * SendNotification activity allows users to compose and send notifications.
  * It provides input fields for notification title and content, along with a button to send the notification.
+ *
+ * https://www.youtube.com/watch?v=6_t87WW6_Gc , The Code City,2022, Accessed on March 2024
  */
 public class SendNotification extends AppCompatActivity {
     private EditText notificationTitleEditText;
     private EditText notificationContentEditText;
     private Button sendNotificationButton;
-
     private FirebaseFirestore db;
     private String eventId;
     List<String> tokensList;
@@ -72,9 +55,7 @@ public class SendNotification extends AppCompatActivity {
         notificationContentEditText = findViewById(R.id.notification_content);
         sendNotificationButton = findViewById(R.id.send_notifications_button);
 
-
         db = FirebaseFirestore.getInstance();
-
 
         // Get event ID passed from EventDetails activity
         eventId = getIntent().getStringExtra("event_id");
@@ -93,16 +74,19 @@ public class SendNotification extends AppCompatActivity {
         });
     }
 
-
-
+    /**
+     * Sends the notification to the attendees using Firebase Cloud Messaging (FCM) API.
+     *
+     * @param eventId The ID of the event associated with the notification.
+     * @param title   The title of the notification.
+     * @param message The content of the notification.
+     */
     private void sendNotification(String eventId, String title, String message) {
 
         for (String token : tokensList) {
             Log.d("SendNotification", "Tokens : " + token);
             Log.d("SendNotification", "Title : " + title);
             Log.d("SendNotification", "Message : " + message);
-
-            // to send the notification we call the api of fcm(firebase)
 
             OkHttpClient client = new OkHttpClient();
             MediaType mediaType = MediaType.parse("application/json");
@@ -129,7 +113,6 @@ public class SendNotification extends AppCompatActivity {
                     .addHeader("Content-Type", "application/json")
                     .build();
 
-
             client.newCall(request).enqueue(new Callback() {
                 @Override
                 public void onFailure(@NonNull Call call, @NonNull IOException e) {
@@ -144,7 +127,6 @@ public class SendNotification extends AppCompatActivity {
                     } else {
                         Log.d("SendNotification", "Notification sent successfully!");
                     }
-
                 }
             });
         }

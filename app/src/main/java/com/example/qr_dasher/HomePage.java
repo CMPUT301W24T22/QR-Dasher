@@ -38,6 +38,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
     private CollectionReference usersCollection;
     private Bitmap profile_picture;
     private SharedPreferences app_cache;
+
     /**
      * Initializes the activity, sets up UI components and listeners,
      * and checks if the user is already logged in. If logged in, redirects to RolePage.
@@ -94,6 +95,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                 if (name.isEmpty() || email.isEmpty()) {
                     Toast.makeText(HomePage.this, "Please fill in name and email", Toast.LENGTH_SHORT).show();
                     return;
+
                 }
 
                 // Check for valid email
@@ -148,7 +150,6 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
         });
     }
 
-    // Callback method to receive the uploaded image bitmap from ImageUploadFragment
     /**
      * Callback method to receive the uploaded image bitmap from ImageUploadFragment.
      *
@@ -156,12 +157,13 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
      */
     @Override
     public void onImageUpload(Bitmap imageBitmap) {
-        // Display the uploaded image in ImageView
+            // Display the uploaded image in ImageView
         imageUpload.setImageBitmap(imageBitmap);
-        // Store the image bitmap in profile_picture variable
+            // Store the image bitmap in profile_picture variable
         profile_picture = imageBitmap;
     }
-      /**
+
+     /**
      * Adds the user data to Firestore
      *
      * @param user The User object containing user data.
@@ -177,11 +179,14 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                     Toast.makeText(HomePage.this, "Upload Failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
+
       /**
-     * Saves the user data to SharedPreferences for local caching.
-     *
-     * @param user The User object containing user data.
-     */
+      * Saves the user data to SharedPreferences for local caching.
+      *
+      * @param user The User object containing user data.
+      * @param guest Boolean value to find out if user is logging in as a guest or not.
+      *
+      */
 
     private void saveUserToCache(User user, boolean guest){
         SharedPreferences.Editor editor = app_cache.edit();
@@ -193,12 +198,19 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
         }
         editor.apply();
     }
+
+    /**
+     * Generates a profile picture with the first letter of the user's name.
+     *
+     * @param name The name of the user.
+     *
+     * @return The generated profile picture bitmap.
+     */
     private Bitmap generateProfilePicture(String name) {
         int widthHeight = 200; // Width and Height in pixel
         Bitmap bitmap = Bitmap.createBitmap(widthHeight, widthHeight, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
 
-        //background color and draw a circle on the canvas
         Paint backgroundPaint = new Paint();
         backgroundPaint.setColor(Color.LTGRAY);
         backgroundPaint.setAntiAlias(true);
@@ -207,7 +219,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
         float radius = widthHeight / 2f;
         canvas.drawCircle(centerX, centerY, radius, backgroundPaint);
 
-        // Draw the first letter of the name in the center of the circle
+            // Draw the first letter of the name in the center of the circle
         char firstLetter = name.trim().isEmpty() ? 'A' : name.trim().toUpperCase().charAt(0);
         Paint textPaint = new Paint();
         textPaint.setColor(Color.BLACK);
@@ -215,7 +227,7 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
         textPaint.setTextAlign(Paint.Align.CENTER);
         textPaint.setAntiAlias(true);
 
-        // Calculate the position for the text, so it's centered within the circle
+            // Calculate the position for the text, so it's centered within the circle
         float textY = centerY - ((textPaint.descent() + textPaint.ascent()) / 2f);
 
         canvas.drawText(String.valueOf(firstLetter), centerX, textY, textPaint);

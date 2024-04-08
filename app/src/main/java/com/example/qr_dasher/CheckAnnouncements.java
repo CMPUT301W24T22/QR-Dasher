@@ -12,6 +12,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
+/**
+ * An activity to check announcements for a specific event.
+ */
 public class CheckAnnouncements extends AppCompatActivity {
     private ListView listView;
     private FirebaseFirestore db;
@@ -37,6 +40,11 @@ public class CheckAnnouncements extends AppCompatActivity {
         displayEventSignUpPage(eventId);
     }
 
+    /**
+     * Retrieves announcements for the specified event from Firestore and displays them in the ListView.
+     *
+     * @param eventId ID of the event to retrieve announcements for
+     */
     private void displayEventSignUpPage(String eventId) {
         // Retrieve event details from Firestore
         db.collection("eventsCollection")
@@ -62,6 +70,11 @@ public class CheckAnnouncements extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Displays the list of announcements in the ListView.
+     *
+     * @param announcements List of announcements to display
+     */
     private void displayAnnouncements(List<String> announcements) {
         if (announcements != null) {
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, announcements);

@@ -3650,7 +3650,6 @@ id none
 id normal
 id north
 id notification_background
-id notification_button
 id notification_content
 id notification_heading
 id notification_main_column

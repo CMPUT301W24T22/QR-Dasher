@@ -1,10 +1,10 @@
-#Sun Apr 07 20:34:17 MDT 2024
-base.0=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
-base.3=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
-base.4=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
-base.5=/Users/rishabh2.7/QR-Dasher/app/build/intermediates/dex/debug/mergeExtDexDebug/classes3.dex
+#Mon Apr 08 04:33:04 MDT 2024
+base.0=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.3=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.4=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.5=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=2/classes.dex

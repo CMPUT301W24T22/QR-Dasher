@@ -28,9 +28,6 @@ public final class AttendeeBinding implements ViewBinding {
   public final Button editProfileButton;
 
   @NonNull
-  public final Button notificationButton;
-
-  @NonNull
   public final Button qrButton;
 
   @NonNull
@@ -49,14 +46,13 @@ public final class AttendeeBinding implements ViewBinding {
   public final TextView welcomeText;
 
   private AttendeeBinding(@NonNull ConstraintLayout rootView, @NonNull Button browseEvents,
-      @NonNull Button editProfileButton, @NonNull Button notificationButton,
-      @NonNull Button qrButton, @NonNull ListView scannedEventsListview,
-      @NonNull TextView scannedEventsText, @NonNull ListView signedUpEventsListview,
-      @NonNull TextView signedUpEventsText, @NonNull TextView welcomeText) {
+      @NonNull Button editProfileButton, @NonNull Button qrButton,
+      @NonNull ListView scannedEventsListview, @NonNull TextView scannedEventsText,
+      @NonNull ListView signedUpEventsListview, @NonNull TextView signedUpEventsText,
+      @NonNull TextView welcomeText) {
     this.rootView = rootView;
     this.browseEvents = browseEvents;
     this.editProfileButton = editProfileButton;
-    this.notificationButton = notificationButton;
     this.qrButton = qrButton;
     this.scannedEventsListview = scannedEventsListview;
     this.scannedEventsText = scannedEventsText;
@@ -104,12 +100,6 @@ public final class AttendeeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.notification_button;
-      Button notificationButton = ViewBindings.findChildViewById(rootView, id);
-      if (notificationButton == null) {
-        break missingId;
-      }
-
       id = R.id.qr_button;
       Button qrButton = ViewBindings.findChildViewById(rootView, id);
       if (qrButton == null) {
@@ -147,8 +137,8 @@ public final class AttendeeBinding implements ViewBinding {
       }
 
       return new AttendeeBinding((ConstraintLayout) rootView, browseEvents, editProfileButton,
-          notificationButton, qrButton, scannedEventsListview, scannedEventsText,
-          signedUpEventsListview, signedUpEventsText, welcomeText);
+          qrButton, scannedEventsListview, scannedEventsText, signedUpEventsListview,
+          signedUpEventsText, welcomeText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,6 +1,5 @@
 package com.example.qr_dasher;
 
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,9 +14,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
-
 import java.util.List;
 
 

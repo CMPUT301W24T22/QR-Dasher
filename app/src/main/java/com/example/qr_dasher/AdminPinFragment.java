@@ -15,22 +15,43 @@ import android.widget.Toast;
 import android.content.SharedPreferences;
 
 /**
- * A simple {@link DialogFragment} subclass.
- * Use the {@link AdminPinFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * A DialogFragment subclass used for entering an admin PIN.
+ * This fragment displays an input field for entering a PIN and a button to submit the entered PIN.
+ * If the entered PIN matches the predefined admin PIN ("QRDasher"), it starts the AdminActivity.
+ * Otherwise, it displays a toast message indicating an incorrect PIN.
  */
 public class AdminPinFragment extends DialogFragment {
     private Button enter_button;
     private EditText enter_pin;
 
+    /**
+     * Default constructor for the AdminPinFragment.
+     */
     public AdminPinFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * Static factory method to create a new instance of AdminPinFragment.
+     *
+     * @return A new instance of AdminPinFragment.
+     */
     public static AdminPinFragment newInstance() {
         return new AdminPinFragment();
     }
 
+    /**
+     * Called to create the view hierarchy associated with the fragment.
+     *
+     * @param inflater           The LayoutInflater object that can be used to inflate
+     *                           any views in the fragment.
+     * @param container          If non-null, this is the parent view that the fragment's
+     *                           UI should be attached to. The fragment should not add the view itself,
+     *                           but this can be used to generate the LayoutParams of the view.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous
+     *                           saved state as given here.
+     * @return Return the View for the fragment's UI.
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

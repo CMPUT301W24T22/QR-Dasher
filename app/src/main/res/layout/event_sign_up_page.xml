@@ -10,7 +10,7 @@
         android:id="@+id/signUp_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:text="Event Name"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -21,13 +21,13 @@
 
     <TextView
         android:id="@+id/signUp_Time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="244dp"
         android:text="Event Time"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signUp_Name" />
 
@@ -35,11 +35,11 @@
         android:id="@+id/signUp_Details"
         android:layout_width="200dp"
         android:layout_height="125dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="28dp"
         android:text="Event Details"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signUp_Time" />
 
@@ -52,30 +52,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signUp_Name" />
 
+
     <Button
         android:id="@+id/signup_button"
+        style="@android:style/Widget.Material.Light.Button"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginBottom="48dp"
         android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUp_Details"
-        app:layout_constraintVertical_bias="0.159" />
+        app:layout_constraintTop_toBottomOf="@+id/check_announcement" />
 
-
-    
     <Button
         android:id="@+id/check_announcement"
         style="@android:style/Widget.Material.Light.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="164dp"
+        android:layout_marginTop="36dp"
         android:text="Check Announcements"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_Details" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

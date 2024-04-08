@@ -312,3 +312,4 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
 
         return bitmap;
     }
+}

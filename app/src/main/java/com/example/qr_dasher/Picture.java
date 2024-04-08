@@ -10,6 +10,7 @@ import android.graphics.Rect;
 import android.util.Base64;
 
 import java.io.ByteArrayOutputStream;
+
 /**
  * Utility class for working with images, providing methods to convert between Bitmap, Base64 string, and JPEG byte array formats.
  */
@@ -18,7 +19,6 @@ public class Picture {
     private String image_string;
     private byte[] image_jpeg; // Store JPEG image as byte array
 
-    // Constructor
     /**
      * Constructor to initialize Picture object with Bitmap, Base64 string, and JPEG byte array.
      *
@@ -37,7 +37,6 @@ public class Picture {
      * @param bitmap The Bitmap image to be converted.
      * @return The JPEG byte array representation of the image.
      */
-    // Method to convert Bitmap to JPEG
     public static byte[] convertBitmapToJPEG(Bitmap bitmap) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
@@ -49,7 +48,6 @@ public class Picture {
      * @param bitmap The Bitmap image to be converted.
      * @return The Base64 string representation of the image.
      */
-    // Method to convert Bitmap to Base64 string
     public static String convertBitmaptoString(Bitmap bitmap){
         // Create a new output Stream (base64 string)
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -65,7 +63,6 @@ public class Picture {
      * @param string The Base64 string representation of the image.
      * @return The Bitmap image.
      */
-    // Method to convert Base64 string to Bitmap
     public static Bitmap convertStringtoBitmap(String string) {
         byte[] decodedString = Base64.decode(string, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
@@ -76,8 +73,6 @@ public class Picture {
      * @param string The Base64 string representation of the image.
      * @return The JPEG byte array representation of the image.
      */
-
-    // Method to convert Base64 string to JPEG byte array
     public static byte[] convertStringtoJPEG(String string) {
         Bitmap bitmap = convertStringtoBitmap(string);
         return convertBitmapToJPEG(bitmap);
@@ -88,26 +83,21 @@ public class Picture {
      * @param jpeg The JPEG byte array representation of the image.
      * @return The Bitmap image.
      */
-
-    // Method to convert JPEG byte array to Bitmap
     public static Bitmap convertJPEGtoBitmap(byte[] jpeg) {
         return BitmapFactory.decodeByteArray(jpeg, 0, jpeg.length);
     }
+
     /**
      * Convert a JPEG byte array to a Base64 string.
      *
      * @param jpeg The JPEG byte array representation of the image.
      * @return The Base64 string representation of the image.
      */
-
-    // Method to convert JPEG byte array to Base64 string
     public static String convertJPEGtoString(byte[] jpeg) {
         Bitmap bitmap = convertJPEGtoBitmap(jpeg);
         return convertBitmaptoString(bitmap);
     }
 
-    // Method to create an Image instance based on input type
-    // Method to create an instance of Image
     /**
      * Create an instance of Picture based on the input type (Bitmap, Base64 string, or JPEG byte array).
      *
@@ -136,6 +126,7 @@ public class Picture {
         Picture picture = new Picture(bitmap, string, jpeg);
         return picture;
     }
+
      /**
      * Crop a Bitmap image into a circular shape.
      *
@@ -157,6 +148,7 @@ public class Picture {
         canvas.drawBitmap(bitmap, (width - diameter) / 2f, (height - diameter) / 2f, paint);
         return output;
     }
+
     /**
      * Get the Bitmap image.
      *
@@ -165,6 +157,7 @@ public class Picture {
     public Bitmap getImage_bitmap() {
         return image_bitmap;
     }
+
      /**
      * Get the Base64 string representation of the image.
      *
@@ -173,6 +166,7 @@ public class Picture {
     public String getImage_string() {
         return image_string;
     }
+
     /**
      * Get the JPEG byte array representation of the image.
      *

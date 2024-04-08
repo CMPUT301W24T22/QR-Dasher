@@ -17,15 +17,35 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
+/**
+ * A custom ArrayAdapter for displaying a list of event names with corresponding images.
+ */
 public class ListAdapter extends ArrayAdapter<String> {
     private static final String TAG = "ListAdapter";
     private List<String> eventPostersBase64; // List of Base64 strings representing images
 
+
+    /**
+     * Constructs a new ListAdapter.
+     *
+     * @param context             The context in which the adapter is being used.
+     * @param eventNames          The list of event names to be displayed.
+     * @param eventPostersBase64  The list of Base64 strings representing images for each event.
+     */
     public ListAdapter(Context context, List<String> eventNames, List<String> eventPostersBase64) {
         super(context, 0, eventNames);
         this.eventPostersBase64 = eventPostersBase64;
     }
 
+
+    /**
+     * Gets a View that displays the data at the specified position in the data set.
+     *
+     * @param position    The position of the item within the adapter's data set.
+     * @param convertView The old view to reuse, if possible.
+     * @param parent      The parent that this view will eventually be attached to.
+     * @return The View corresponding to the data at the specified position.
+     */
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View itemView = convertView;

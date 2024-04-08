@@ -1,0 +1,32 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.qr_dasher.test.app-mergeDebugAndroidTestResources-3:/values/values.xml",
+            "map": [
+                {
+<<<<<<< HEAD
+                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\2fb6a0fba2ec0c53e70b1d9266a93cfa\\transformed\\core-1.5.0\\res\\values\\values.xml",
+=======
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\2fb6a0fba2ec0c53e70b1d9266a93cfa\\transformed\\core-1.5.0\\res\\values\\values.xml",
+>>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+                    "from": {
+                        "startLines": "4,11",
+                        "startColumns": "0,0",
+                        "startOffsets": "176,544",
+                        "endLines": "10,17",
+                        "endColumns": "8,8",
+                        "endOffsets": "543,909"
+                    },
+                    "to": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,427",
+                        "endLines": "8,15",
+                        "endColumns": "8,8",
+                        "endOffsets": "422,792"
+                    }
+                }
+            ]
+        }
+    ]
+}

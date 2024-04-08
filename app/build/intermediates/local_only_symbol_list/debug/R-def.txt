@@ -84,6 +84,13 @@ id max_attendees
 id name_edit
 id nav_graph
 id next_button
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+id notification_button
+>>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
 id notification_content
 id notification_heading
 id notification_text

@@ -12,15 +12,12 @@ import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.FirebaseApp;
+
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.EventListener;
@@ -139,8 +136,7 @@ public class Organizer extends AppCompatActivity {
 
 
                             }
-                            //eventNames.add(eventName);
-                            //eventPosters.add(eventPoster);
+
                         }
 
                         displayEventList(eventNames, eventIds);
@@ -184,17 +180,14 @@ public class Organizer extends AppCompatActivity {
                 intent.putExtra("eventId",qrEventIdLong );
                 Log.d("MainActivity", "qrUserid before putExtra: " + qrUserIdLong);
                 Log.d("MainActivity", "qrEventId before putExtra: " + qrEventIdLong);
-                //Log.d("Debug", "Attendee List before adding to intent: " + attendeeList);
-                //Log.d("Debug", "Signup List before adding to intent: " + signupList);
+
                 if (attendeeList!= null){
                     intent.putStringArrayListExtra("attendee_list",(ArrayList<String>) attendeeList);
                 }
                 if (signupList!= null){
-                intent.putStringArrayListExtra("signup_list", (ArrayList<String>) signupList);}
-                //Log.d("Debug", "Attendee List after adding to intent: " + attendeeList);
-                //Log.d("Debug", "Signup List after adding to intent: " + signupList);
-               startActivity(intent);
-//                intent.putExtra("event_id", eventId);
+                intent.putStringArrayListExtra("signup_list", (ArrayList<String>) signupList);
+                }
+                startActivity(intent);
 
             }
         });

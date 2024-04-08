@@ -28,6 +28,15 @@ public final class AttendeeBinding implements ViewBinding {
   public final Button editProfileButton;
 
   @NonNull
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  public final Button notificationButton;
+
+  @NonNull
+>>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
   public final Button qrButton;
 
   @NonNull
@@ -46,6 +55,10 @@ public final class AttendeeBinding implements ViewBinding {
   public final TextView welcomeText;
 
   private AttendeeBinding(@NonNull ConstraintLayout rootView, @NonNull Button browseEvents,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
       @NonNull Button editProfileButton, @NonNull Button qrButton,
       @NonNull ListView scannedEventsListview, @NonNull TextView scannedEventsText,
       @NonNull ListView signedUpEventsListview, @NonNull TextView signedUpEventsText,
@@ -53,6 +66,19 @@ public final class AttendeeBinding implements ViewBinding {
     this.rootView = rootView;
     this.browseEvents = browseEvents;
     this.editProfileButton = editProfileButton;
+<<<<<<< HEAD
+=======
+=======
+      @NonNull Button editProfileButton, @NonNull Button notificationButton,
+      @NonNull Button qrButton, @NonNull ListView scannedEventsListview,
+      @NonNull TextView scannedEventsText, @NonNull ListView signedUpEventsListview,
+      @NonNull TextView signedUpEventsText, @NonNull TextView welcomeText) {
+    this.rootView = rootView;
+    this.browseEvents = browseEvents;
+    this.editProfileButton = editProfileButton;
+    this.notificationButton = notificationButton;
+>>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
     this.qrButton = qrButton;
     this.scannedEventsListview = scannedEventsListview;
     this.scannedEventsText = scannedEventsText;
@@ -100,6 +126,18 @@ public final class AttendeeBinding implements ViewBinding {
         break missingId;
       }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      id = R.id.notification_button;
+      Button notificationButton = ViewBindings.findChildViewById(rootView, id);
+      if (notificationButton == null) {
+        break missingId;
+      }
+
+>>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
       id = R.id.qr_button;
       Button qrButton = ViewBindings.findChildViewById(rootView, id);
       if (qrButton == null) {
@@ -137,8 +175,18 @@ public final class AttendeeBinding implements ViewBinding {
       }
 
       return new AttendeeBinding((ConstraintLayout) rootView, browseEvents, editProfileButton,
+<<<<<<< HEAD
           qrButton, scannedEventsListview, scannedEventsText, signedUpEventsListview,
           signedUpEventsText, welcomeText);
+=======
+<<<<<<< HEAD
+          qrButton, scannedEventsListview, scannedEventsText, signedUpEventsListview,
+          signedUpEventsText, welcomeText);
+=======
+          notificationButton, qrButton, scannedEventsListview, scannedEventsText,
+          signedUpEventsListview, signedUpEventsText, welcomeText);
+>>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
+>>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

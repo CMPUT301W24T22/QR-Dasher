@@ -53,8 +53,12 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+<<<<<<< HEAD
     androidTestImplementation("androidx.test:runner:1.4.0")
     androidTestImplementation("androidx.test:rules:1.4.0")
+=======
+    androidTestImplementation("org.mockito:mockito-android:5.11.0")
+>>>>>>> aba1183d906621e527ddcef19b0903e64a7d69c5
 
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     //implementation("com.google.firebase:firebase-messaging:23.4.1")  // Update version as needed

@@ -576,7 +576,6 @@ public class Attendee extends AppCompatActivity implements LocationListener {
      * If documents are found, it retrieves the lists of events the user has signed up for and checked into.
      * It then displays the details of these events using the {@link #getEventDetails(List, List)} method.
      *
-     * @param userId The ID of the user for whom events are being retrieved
      */
     private void getEventDetails(List<String> checkedInEvents, List<String> eventsSignedUp) {
         // Once we have the event ids, we can get the other details
@@ -745,6 +744,8 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 String eventId = scannedEventIds.get(position);
                 bundle.putString("eventId", eventId);
 
+                String eventPoster = scannedEventPoster.get(position);
+                bundle.putString("eventPoster", eventPoster);
 
                 // Converting timeStamp to date to put in bundle
                 Timestamp eventTimestamp = scannedEventTimestamps.get(position);
@@ -785,7 +786,8 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 String detail = signedEventDetails.get(position);
                 bundle.putString("eventDetail", detail);
 
-
+                String eventPoster = signedEventPoster.get(position);
+                bundle.putString("eventPoster", eventPoster);
 
                 String eventId = signedEventIds.get(position);
                 bundle.putString("eventId", eventId);

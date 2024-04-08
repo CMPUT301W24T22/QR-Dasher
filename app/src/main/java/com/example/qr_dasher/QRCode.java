@@ -5,8 +5,7 @@ import static android.graphics.Color.WHITE;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.util.Base64;
-import android.util.Log;
+
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
@@ -140,7 +139,7 @@ public class QRCode {
      * @param text The text content to encode into the QR code.
      * @return The Base64 string representation of the QR code image.
      */
-    public String createQRImage(String text){
+    public static String createQRImage(String text){
         BitMatrix result = null;
         try {
             result = new MultiFormatWriter().encode(text, BarcodeFormat.QR_CODE, 300, 300, null);

@@ -42,7 +42,7 @@ import java.util.Objects;
  * It retrieves check-in locations from Firestore, converts them to GeoPoints, and adds markers to the map accordingly.
  */
 public class MapsActivity extends AppCompatActivity {
-    private FirebaseFirestore db;
+    protected FirebaseFirestore db;
     private final int REQUEST_PERMISSIONS_REQUEST_CODE = 1;
     private MapView map = null;
     private IMapController controller;
@@ -50,7 +50,6 @@ public class MapsActivity extends AppCompatActivity {
     private String eventIDstr;
     private ArrayList<Marker> markerList = new ArrayList<>();
 
-    // OpenAI, ChatGPT, Refactor code (check previous commit)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +60,7 @@ public class MapsActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        map.onResume(); //needed for compass, my location overlays, v6.0.0 and up
+        map.onResume();
     }
 
     @Override
@@ -69,6 +68,9 @@ public class MapsActivity extends AppCompatActivity {
         super.onPause();
         map.onPause();  //needed for compass, my location overlays, v6.0.0 and up
     }
+    /**
+     * Initializes components required for the activity, such as map and location overlay.
+     */
 
     public void initializeComponents() {
         eventIDstr = getIntent().getStringExtra("eventIDstr");
@@ -77,6 +79,9 @@ public class MapsActivity extends AppCompatActivity {
         initializeMap();
         initializeLocationOverlay();
     }
+    /**
+     * Initializes the map view.
+     */
 
     public void initializeMap() {
         Context ctx = getApplicationContext();
@@ -104,6 +109,9 @@ public class MapsActivity extends AppCompatActivity {
 
         map.getOverlays().add(locationOverlay);
     }
+    /**
+     * Initializes the location overlay on the map.
+     */
 
     public void initializeLocationOverlay() {
         locationOverlay = new MyLocationNewOverlay(new GpsMyLocationProvider(this), map);
@@ -115,7 +123,6 @@ public class MapsActivity extends AppCompatActivity {
     /**
      * Populates the map with markers representing check-in locations.
      */
-    // OpenAI, ChatGPT, 2024, Refactor populateMapWithMarkers for better mock testing
     public void populateMapWithMarkers() {
         Toast.makeText(getApplicationContext(), "Event ID: " + eventIDstr, Toast.LENGTH_SHORT).show();
         FirebaseFirestore.getInstance().collection("eventsCollection").document(eventIDstr)
@@ -173,7 +180,12 @@ public class MapsActivity extends AppCompatActivity {
                 });
     }
 
-
+    /**
+     * Creates a marker at the given GeoPoint.
+     *
+     * @param geoPoint The GeoPoint where the marker will be placed.
+     * @return The created Marker object.
+     */
 
     public Marker createMarker(GeoPoint geoPoint) {
         Marker marker = new Marker(map);
@@ -181,6 +193,13 @@ public class MapsActivity extends AppCompatActivity {
         marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
         return marker;
     }
+    /**
+     * Fetches the attendee name from Firestore and sets it as the title for the marker.
+     *
+     * @param attendees The Firestore collection reference for attendees.
+     * @param attendeeID The ID of the attendee.
+     * @param marker The marker object to which the title will be set.
+     */
 
     public void fetchAttendeeName(CollectionReference attendees, String attendeeID, Marker marker) {
         attendees.document(attendeeID)
@@ -196,13 +215,20 @@ public class MapsActivity extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Converts a Firebase GeoPoint object to an osmdroid GeoPoint object.
+     *
+     * @param firebaseGeoPoint The Firebase GeoPoint to be converted.
+     * @return The converted osmdroid GeoPoint object, or null if the input is null.
+     */
+
     public GeoPoint convertFirebaseGeoPoint(com.google.firebase.firestore.GeoPoint firebaseGeoPoint) {
         if (firebaseGeoPoint != null) {
             double latitude = firebaseGeoPoint.getLatitude();
             double longitude = firebaseGeoPoint.getLongitude();
             return new org.osmdroid.util.GeoPoint(latitude, longitude);
         } else {
-            return null; // Or handle null case as needed
+            return null;
         }
     }
 }

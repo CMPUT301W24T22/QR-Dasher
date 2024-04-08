@@ -94,9 +94,12 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                 }
 
                 // Check for valid email
-                if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    Toast.makeText(HomePage.this, "Please enter valid email", Toast.LENGTH_SHORT).show();
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    Log.d("EmailValidation", "Invalid email: " + email);
+                    Toast.makeText(getApplicationContext(), "Please enter a valid email", Toast.LENGTH_LONG).show();
                     return;
+                } else {
+                    Log.d("EmailValidation", "Valid email: " + email);
                 }
                 
                 // Create a User object

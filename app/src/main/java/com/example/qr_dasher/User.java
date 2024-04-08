@@ -1,4 +1,6 @@
 package com.example.qr_dasher;
+import com.google.firebase.firestore.GeoPoint;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -17,6 +19,8 @@ public class User {
     private List<String> eventsSignedUp;
     private String token;
 
+    private static GeoPoint geoPoint;
+
     public User(){
 
     }
@@ -30,7 +34,7 @@ public class User {
     public User(String name, String email, boolean location){
         Random random = new Random();
         this.name = name;
-        if (email.contains("@")){
+        if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             this.email = email;
         } else {
             throw new IllegalArgumentException("Invalid email");
@@ -40,6 +44,7 @@ public class User {
         this.eventsCreated = new ArrayList<>();
         this.eventsJoined = new ArrayList<>();
         this.eventsSignedUp = new ArrayList<>();
+        this.geoPoint = geoPoint;
         this.token = token;
     }
     public static User createGuest(){
@@ -58,6 +63,7 @@ public class User {
         user.setEventsJoined(eventsJoined);
         user.setEventsCreated(eventsCreated);
         user.setEventsSignedUp(eventsSignedUp);
+        user.setGeoPoint(geoPoint);
 
         return user;
     }
@@ -76,6 +82,10 @@ public class User {
      */
     public String getEmail(){
         return this.email;
+    }
+
+    public GeoPoint getGeoPoint(){
+        return this.geoPoint;
     }
     /**
      * Get the details of the user.
@@ -136,6 +146,10 @@ public class User {
      */
     public void setLocation(boolean location){
         this.location = location;
+    }
+
+    public void setGeoPoint(GeoPoint geoPoint){
+        this.geoPoint = geoPoint;
     }
     /**
      * Set the profile image of the user.

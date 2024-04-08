@@ -1,4 +1,5 @@
 package com.example.qr_dasher;
+
 import android.widget.ImageView;
 
 import java.sql.Time;
@@ -27,9 +28,13 @@ public class Event {
 
     private ArrayList<String> announcements;
 
-    public Event(){
+    /**
+     * Default constructor for the Event class.
+     */
+    public Event() {
 
     }
+
     /**
      * Constructor for creating an Event object.
      *
@@ -37,9 +42,7 @@ public class Event {
      * @param details  Details about the event.
      * @param userID   The ID of the organizer.
      */
-
-
-    public Event(String name, String details, int userID){
+    public Event(String name, String details, int userID) {
         Random random = new Random();
         this.name = name;
         this.details = details;
@@ -49,10 +52,17 @@ public class Event {
         this.signup_list = new ArrayList<>();
         this.maxAttendees = -1;
         this.announcements = new ArrayList<>();
-
-        //this.dateTime = dateTime;
     }
-    public Event(String name, String details, int userID,int maxAttendees){
+
+    /**
+     * Constructor for creating an Event object with maximum attendees specified.
+     *
+     * @param name         The name of the event.
+     * @param details      Details about the event.
+     * @param userID       The ID of the organizer.
+     * @param maxAttendees The maximum number of attendees allowed for the event.
+     */
+    public Event(String name, String details, int userID, int maxAttendees) {
         Random random = new Random();
         this.name = name;
         this.details = details;
@@ -61,9 +71,7 @@ public class Event {
         this.organizer = userID;
         this.signup_list = new ArrayList<>();
         this.maxAttendees = maxAttendees;
-
         this.announcements = new ArrayList<>();
-
     }
 
     /**
@@ -74,6 +82,7 @@ public class Event {
     public int getEvent_id() {
         return event_id;
     }
+
     /**
      * Sets the event ID.
      *
@@ -82,6 +91,7 @@ public class Event {
     public void setEvent_id(int event_id) {
         this.event_id = event_id;
     }
+
     /**
      * Gets the details of the event.
      *
@@ -90,6 +100,7 @@ public class Event {
     public String getDetails() {
         return details;
     }
+
     /**
      * Sets the details of the event.
      *
@@ -98,6 +109,7 @@ public class Event {
     public void setDetails(String details) {
         this.details = details;
     }
+
     /**
      * Gets the list of attendees for the event.
      *
@@ -106,9 +118,16 @@ public class Event {
     public ArrayList<String> getAttendee_list() {
         return attendee_list;
     }
+
+    /**
+     * Sets the list of attendees for the event.
+     *
+     * @param attendee_list The list of attendees to set.
+     */
     public void setAttendee_list(ArrayList<String> attendee_list) {
         this.attendee_list = attendee_list;
     }
+
     /**
      * Gets the attendee QR code.
      *
@@ -117,6 +136,7 @@ public class Event {
     public QRCode getAttendee_qr() {
         return attendee_qr;
     }
+
     /**
      * Sets the attendee QR code.
      *
@@ -125,6 +145,7 @@ public class Event {
     public void setAttendee_qr(QRCode attendee_qr) {
         this.attendee_qr = attendee_qr;
     }
+
     /**
      * Gets the name of the event.
      *
@@ -133,6 +154,7 @@ public class Event {
     public String getName() {
         return name;
     }
+
     /**
      * Sets the name of the event.
      *
@@ -141,6 +163,7 @@ public class Event {
     public void setName(String name) {
         this.name = name;
     }
+
     /**
      * Gets the promotional QR code.
      *
@@ -149,6 +172,7 @@ public class Event {
     public QRCode getPromotional_qr() {
         return promotional_qr;
     }
+
     /**
      * Sets the promotional QR code.
      *
@@ -157,20 +181,22 @@ public class Event {
     public void setPromotional_qr(QRCode promotional_qr) {
         this.promotional_qr = promotional_qr;
     }
+
     /**
      * Generates a QR code for the event.
      *
      * @param content     The content of the QR code.
      * @param promotional Whether the QR code is promotional or not.
      */
-    public void generateQR(String content, boolean promotional){
-        if (promotional){
-            String pcontent = "p" +content;
+    public void generateQR(String content, boolean promotional) {
+        if (promotional) {
+            String pcontent = "p" + content;
             this.promotional_qr = new QRCode(this.event_id, pcontent, this.organizer, true);
         } else {
             this.attendee_qr = new QRCode(this.event_id, content, this.organizer, false);
         }
     }
+
     /**
      * Adds an attendee to the event.
      *
@@ -186,6 +212,7 @@ public class Event {
         }
         attendee_list.add(attendee);
     }
+
     /**
      * Removes an attendee from the event.
      *
@@ -198,6 +225,7 @@ public class Event {
         }
         attendee_list.remove(attendee);
     }
+
     /**
      * Gets the list of attendees who signed up for the event.
      *
@@ -206,9 +234,15 @@ public class Event {
     public ArrayList<String> getSignup_list() {
         return signup_list;
     }
-//    public void setAttendee_list(ArrayList<User> attendee_list) {
-//        this.attendee_list = attendee_list;
-//    }
+
+    /**
+     * Sets the list of attendees who signed up for the event.
+     *
+     * @param signup_list The list of attendees who signed up for the event.
+     */
+    public void setSignup_list(ArrayList<String> signup_list) {
+        this.signup_list = signup_list;
+    }
 
     /**
      * Signs up an attendee for the event.
@@ -225,6 +259,7 @@ public class Event {
         }
         signup_list.add(attendee);
     }
+
     /**
      * Removes an attendee from the signup sheet for an event.
      *
@@ -237,6 +272,7 @@ public class Event {
         }
         signup_list.remove(attendee);
     }
+
     /**
      * Gets the DateTime object of the event.
      *
@@ -245,6 +281,7 @@ public class Event {
     public DateTime getDateTime() {
         return dateTime;
     }
+
     /**
      * Sets the DateTime object of the event.
      *
@@ -254,10 +291,20 @@ public class Event {
         this.dateTime = dateTime;
     }
 
+    /**
+     * Gets the timestamp of the event.
+     *
+     * @return The timestamp of the event.
+     */
     public Timestamp getTimestamp() {
         return timestamp;
     }
 
+    /**
+     * Sets the timestamp of the event.
+     *
+     * @param timestamp The timestamp of the event.
+     */
     public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
     }
@@ -280,37 +327,65 @@ public class Event {
         this.event_poster = event_poster;
     }
 
+    /**
+     * Gets the maximum number of attendees allowed for the event.
+     *
+     * @return The maximum number of attendees allowed.
+     */
     public int getMaxAttendees() {
         return maxAttendees;
     }
 
+    /**
+     * Sets the maximum number of attendees allowed for the event.
+     *
+     * @param maxAttendees The maximum number of attendees allowed.
+     */
     public void setMaxAttendees(int maxAttendees) {
-        this.maxAttendees = maxAttendees;}
+        this.maxAttendees = maxAttendees;
+    }
+
+    /**
+     * Gets the organizer ID of the event.
+     *
+     * @return The ID of the organizer.
+     */
     public int getOrganizer() {
         return organizer;
     }
 
+    /**
+     * Sets the organizer ID of the event.
+     *
+     * @param organizer The ID of the organizer to set.
+     */
     public void setOrganizer(int organizer) {
         this.organizer = organizer;
     }
 
-
     /**
      * Gets the list of announcements for the event.
      *
-     * @return The all announcments in a list for an event.
+     * @return The list of announcements for the event.
      */
     public ArrayList<String> getAnnouncements() {
-        return announcements;}
-    public void setSignup_list(ArrayList<String> signup_list) {
-        this.signup_list = signup_list;
+        return announcements;
     }
 
+    /**
+     * Sets the list of announcements for the event.
+     *
+     * @param announcements The list of announcements to set.
+     */
     public void setAnnouncements(ArrayList<String> announcements) {
         this.announcements = announcements;
     }
 
-
+    /**
+     * Removes a user from the event.
+     *
+     * @param userID The ID of the user to remove.
+     */
     public void removeUserFromEvent(String userID) {
         // Remove user from attendee_list
         if (attendee_list.contains(userID)) {
@@ -322,5 +397,4 @@ public class Event {
             signup_list.remove(userID);
         }
     }
-
 }

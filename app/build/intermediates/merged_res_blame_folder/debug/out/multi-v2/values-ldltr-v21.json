@@ -4,15 +4,7 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-54:/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\e051a5ed7ee8d1d036c0319145b5fdd2\\transformed\\appcompat-1.6.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
-=======
-<<<<<<< HEAD
-                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\e051a5ed7ee8d1d036c0319145b5fdd2\\transformed\\appcompat-1.6.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
-=======
-                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\e051a5ed7ee8d1d036c0319145b5fdd2\\transformed\\appcompat-1.6.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
->>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
->>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

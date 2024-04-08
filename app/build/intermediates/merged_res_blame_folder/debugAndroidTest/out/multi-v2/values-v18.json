@@ -4,11 +4,7 @@
             "outputFile": "com.example.qr_dasher.test.app-mergeDebugAndroidTestResources-3:/values-v18/values-v18.xml",
             "map": [
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\2fb6a0fba2ec0c53e70b1d9266a93cfa\\transformed\\core-1.5.0\\res\\values-v18\\values.xml",
-=======
                     "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\2fb6a0fba2ec0c53e70b1d9266a93cfa\\transformed\\core-1.5.0\\res\\values-v18\\values.xml",
->>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
                     "from": {
                         "startLines": "4,12",
                         "startColumns": "0,0",

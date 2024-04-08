@@ -5,6 +5,12 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="eventIntentTests">
+        <State />
+      </entry>
+      <entry key="profileIntentTests">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

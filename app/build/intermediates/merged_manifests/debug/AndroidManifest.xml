@@ -87,10 +87,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-<<<<<<< HEAD
-=======
         android:testOnly="true"
->>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
         android:theme="@style/Theme.QRDasher" >
         <activity
             android:name="com.example.qr_dasher.AdminEventList"

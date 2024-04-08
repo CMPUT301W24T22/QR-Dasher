@@ -24,13 +24,23 @@ import java.io.InputStream;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-
+/**
+ * This class represents a page where an attendee can sign up for an event and view the event details
+ * and poster for an event they haven't attended or signed up for yet.
+ */
 public class EventSignUpPage extends AppCompatActivity {
     private TextView signUp_Name, signUp_Details, signUp_Time;
     private Button signup_button, announcement_button;
     private SharedPreferences app_cache;
     private String eventId;
     private ImageView signUp_poster;
+
+    /**
+     * Initializes the activity, sets up UI components and listeners,
+     * and retrieves event details from the intent extras.
+     *
+     * @param savedInstanceState Saved instance state bundle
+     */
     @SuppressLint("MissingInflatedId")          // TODO    ///////////////////
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,12 +124,24 @@ public class EventSignUpPage extends AppCompatActivity {
 
     }
 
+    /**
+     * Converts a Base64 encoded string to a Bitmap.
+     *
+     * @param base64String The Base64 encoded string representing the image
+     * @return The Bitmap decoded from the Base64 string
+     */
     private Bitmap base64ToBitmap(String base64String) {
         byte[] imageBytes = Base64.decode(base64String, Base64.DEFAULT);
         InputStream inputStream = new ByteArrayInputStream(imageBytes);
         return BitmapFactory.decodeStream(inputStream);
     }
 
+    /**
+     * Compresses the given Bitmap to a specified width and height.
+     *
+     * @param bitmap The Bitmap to be compressed
+     * @return The compressed Bitmap
+     */
     private Bitmap compressBitmap(Bitmap bitmap) {
         // Calculate the compressed width and height as per your requirements
         int compressedWidth = 200;
@@ -127,6 +149,12 @@ public class EventSignUpPage extends AppCompatActivity {
         return Bitmap.createScaledBitmap(bitmap, compressedWidth, compressedHeight, true);
     }
 
+
+    /**
+     * Updates the Firestore database with the attendee's sign-up information for an event.
+     *
+     * @param event_id The ID of the event to sign up for
+     */
     private void updateFirebase(String event_id){
 
         int userId = app_cache.getInt("UserID", -1);
@@ -171,7 +199,12 @@ public class EventSignUpPage extends AppCompatActivity {
                 });
     }
 
-
+    /**
+     * Updates the Firestore database with the user's sign-up information.
+     *
+     * @param userId The ID of the user to update
+     * @param user   The updated User object
+     */
     private void updateFirebaseUser(String userId, User user) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users")

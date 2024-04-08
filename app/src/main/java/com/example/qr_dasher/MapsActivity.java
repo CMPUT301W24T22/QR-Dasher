@@ -42,13 +42,13 @@ import java.util.Objects;
  * It retrieves check-in locations from Firestore, converts them to GeoPoints, and adds markers to the map accordingly.
  */
 public class MapsActivity extends AppCompatActivity {
-    protected FirebaseFirestore db;
+    FirebaseFirestore db;
     private final int REQUEST_PERMISSIONS_REQUEST_CODE = 1;
     private MapView map = null;
     private IMapController controller;
     private MyLocationNewOverlay locationOverlay;
     private String eventIDstr;
-    private ArrayList<Marker> markerList = new ArrayList<>();
+    ArrayList<Marker> markerList = new ArrayList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

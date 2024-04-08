@@ -322,4 +322,4 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
         canvas.drawText(String.valueOf(firstLetter), centerX, textY, textPaint);
 
         return bitmap;
-    }
+    }}

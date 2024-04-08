@@ -34,11 +34,7 @@ public class User {
     public User(String name, String email, boolean location){
         Random random = new Random();
         this.name = name;
-        if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            this.email = email;
-        } else {
-            throw new IllegalArgumentException("Invalid email");
-        }
+        this.email = email;
         this.location = location;
         this.UserId = random.nextInt();
         this.eventsCreated = new ArrayList<>();
@@ -109,13 +105,13 @@ public class User {
      * @return The unique ID of the user.
      */
     public int getUserId() { return UserId; }
-    /**
+     /**
      * Get the profile image of the user.
      *
      * @return The profile image of the user.
      */
     public String getProfile_image() { return profile_image; }
-    /**
+     /**
      * Set the name of the user.
      *
      * @param Name The name of the user.
@@ -131,7 +127,7 @@ public class User {
     public void setEmail(String email){
         this.email = email;
     }
-    /**
+     /**
      * Set the details of the user.
      *
      * @param details The details of the user.
@@ -188,7 +184,7 @@ public class User {
     public List<String> getEventsJoined(){
         return this.eventsJoined;
     }
-    /**
+     /**
      * Get the list of events created by the user.
      *
      * @return The list of events created by the user.

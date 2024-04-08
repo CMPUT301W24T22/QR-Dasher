@@ -50,7 +50,7 @@ public class MapsActivity extends AppCompatActivity {
     private String eventIDstr;
     private ArrayList<Marker> markerList = new ArrayList<>();
 
-    // OpenAI, ChatGPT, Refactor code (check previous commit)
+   
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +115,7 @@ public class MapsActivity extends AppCompatActivity {
     /**
      * Populates the map with markers representing check-in locations.
      */
-    // OpenAI, ChatGPT, 2024, Refactor populateMapWithMarkers for better mock testing
+   
     public void populateMapWithMarkers() {
         Toast.makeText(getApplicationContext(), "Event ID: " + eventIDstr, Toast.LENGTH_SHORT).show();
         FirebaseFirestore.getInstance().collection("eventsCollection").document(eventIDstr)

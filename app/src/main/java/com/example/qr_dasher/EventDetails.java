@@ -58,7 +58,7 @@ public class EventDetails extends AppCompatActivity {
     private ListView attendeeListView;
     private ListView signupListView;
     private String eventIDstr;
-    private List<String> attendeeListUserNames,  attendeeListDetails, attendeeListEmails;
+    private List<String> attendeeListUserNames,  attendeeListDetails, attendeeListEmails, attendeeScanCounts;
     private List<String> signUpListListUserNames,signUpListListDetails, signUpListListEmails;
     private List<Integer>attendeeListUserIds, signUpListListUserIds;
 
@@ -297,8 +297,6 @@ public class EventDetails extends AppCompatActivity {
                 });
     }
     private void getUserDetailsFromFirebase(List<String> attendeeList, List<String> signUpList){
-       // Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
-
         db = FirebaseFirestore.getInstance();
 
         // Initialize lists
@@ -306,6 +304,8 @@ public class EventDetails extends AppCompatActivity {
         attendeeListUserIds = new ArrayList<>();
         attendeeListDetails = new ArrayList<>();
         attendeeListEmails = new ArrayList<>();
+        attendeeScanCounts = new ArrayList<>();
+
         signUpListListUserNames = new ArrayList<>();
         signUpListListUserIds = new ArrayList<>();
         signUpListListDetails = new ArrayList<>();
@@ -330,46 +330,51 @@ public class EventDetails extends AppCompatActivity {
                             }
 
                             if (queryDocumentSnapshots != null) {
-                                // Clear lists before updating with new data
                                 attendeeListUserNames.clear();
                                 attendeeListUserIds.clear();
                                 attendeeListDetails.clear();
                                 attendeeListEmails.clear();
+                                attendeeScanCounts.clear();
 
-                                // Iterate through query results
                                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                                     Integer userId = documentSnapshot.getLong("userId").intValue();
                                     String userName = documentSnapshot.getString("name");
                                     String userEmail = documentSnapshot.getString("email");
                                     String userDetail = documentSnapshot.getString("details");
+                                    List<String> eventsJoined = (List<String>) documentSnapshot.get("eventsJoined");
 
-                                    // Add user details to respective lists
+                                    int scanCount = 0;
+                                    if (eventsJoined != null) {
+                                        for (String eventId : eventsJoined) {
+                                            if (eventId.equals(eventIDstr)) {
+                                                scanCount++;
+                                            }
+                                        }
+                                    }
+
                                     attendeeListUserNames.add(userName);
                                     attendeeListUserIds.add(userId);
                                     attendeeListDetails.add(userDetail);
                                     attendeeListEmails.add(userEmail);
+                                    attendeeScanCounts.add(String.valueOf(scanCount));
                                 }
 
                                 updateAttendeeCount(attendeeListUserNames.size());
-
-                                // Display attendees
                                 if (attendeeListUserNames.size() > 0) {
                                     displayAttendee(attendeeListUserNames);
                                 }
-
-                                // Check and update milestones
                                 checkAndUpdateMilestones(attendeeListUserNames.size());
                             }
                         }
                     });
         }
+
         if (signUpList!=null&&!signUpList.isEmpty()) {
             List<Integer> signUpListInt = new ArrayList<>();
             for (String str : signUpList) {
                 signUpListInt.add(Integer.parseInt(str));
             }
-
-
+            
             // for sign up list
             db.collection("users")
                     .whereIn("userId", signUpListInt)
@@ -422,11 +427,27 @@ public class EventDetails extends AppCompatActivity {
     private void displayAttendee(List<String> attendeeList) {
         Log.d("length of attendeeList","Attendee List Size: " + attendeeList.size());
 
-        // Create an ArrayAdapter to display the event names
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, attendeeList);
+        List<String> combinedList = new ArrayList<>();
+
+        // Iterate through each item in the attendeeList and combine it with the corresponding scan count
+        for (int i = 0; i < attendeeList.size(); i++) {
+            String eventName = attendeeList.get(i);
+            int scanCount = Integer.parseInt(attendeeScanCounts.get(i));
+
+            // Concatenate the event name and scan count into a single string
+            String combinedString = eventName + " (Scan Count: " + scanCount + ")";
+
+            // Add the combined string to the list
+            combinedList.add(combinedString);
+        }
+
+        // Create ArrayAdapter with the combined list
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, combinedList);
         adapter.notifyDataSetChanged();
+
         // Set the adapter to the ListView
         attendeeListView.setAdapter(adapter);
+
 
         attendeeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

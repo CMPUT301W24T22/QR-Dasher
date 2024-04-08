@@ -6,15 +6,21 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
@@ -24,6 +30,7 @@ public class EventSignUpPage extends AppCompatActivity {
     private Button signup_button, announcement_button;
     private SharedPreferences app_cache;
     private String eventId;
+    private ImageView signUp_poster;
     @SuppressLint("MissingInflatedId")          // TODO    ///////////////////
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +45,8 @@ public class EventSignUpPage extends AppCompatActivity {
         signUp_Name = findViewById(R.id.signUp_Name);
         signUp_Details = findViewById(R.id.signUp_Details);
         signUp_Time = findViewById(R.id.signUp_Time);
-
         announcement_button = findViewById(R.id.check_announcement);
+        signUp_poster = findViewById(R.id.signUp_poster);
 
         if (extras != null) {
             // Extract data from the bundle
@@ -50,11 +57,9 @@ public class EventSignUpPage extends AppCompatActivity {
             boolean signUpBool = extras.getBoolean("signUpBool",false);
             boolean checkAnnounce = extras.getBoolean("checkAnnounce",false);
 
-
             if (!signUpBool){
                 signup_button.setVisibility(View.GONE);
             }
-
             if (!checkAnnounce){
                 announcement_button.setVisibility(View.GONE);
             }
@@ -65,6 +70,25 @@ public class EventSignUpPage extends AppCompatActivity {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd\nHH:mm:ss");
             String formattedDate = sdf.format(date);
             signUp_Time.setText(formattedDate);
+
+            String posterBase64 = extras.getString("eventPoster");
+            if (posterBase64 != null) {
+                // Convert Base64 string to bitmap
+                Bitmap posterBitmap = base64ToBitmap(posterBase64);
+                if (posterBitmap != null) {
+                    // Compress and display the bitmap
+                    Bitmap compressedBitmap = compressBitmap(posterBitmap);
+                    if (compressedBitmap != null) {
+                        signUp_poster.setImageBitmap(compressedBitmap);
+                    } else {
+                        // Log an error if compression fails
+                        Log.e("EventSignUpPage", "Failed to compress bitmap");
+                    }
+                } else {
+                    // Log an error if conversion fails
+                    Log.e("EventSignUpPage", "Failed to convert Base64 string to bitmap");
+                }
+            }
         }
         signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +112,19 @@ public class EventSignUpPage extends AppCompatActivity {
             }
         });
 
+    }
+
+    private Bitmap base64ToBitmap(String base64String) {
+        byte[] imageBytes = Base64.decode(base64String, Base64.DEFAULT);
+        InputStream inputStream = new ByteArrayInputStream(imageBytes);
+        return BitmapFactory.decodeStream(inputStream);
+    }
+
+    private Bitmap compressBitmap(Bitmap bitmap) {
+        // Calculate the compressed width and height as per your requirements
+        int compressedWidth = 200;
+        int compressedHeight = 200;
+        return Bitmap.createScaledBitmap(bitmap, compressedWidth, compressedHeight, true);
     }
 
     private void updateFirebase(String event_id){

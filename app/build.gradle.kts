@@ -60,4 +60,5 @@ dependencies {
     implementation("com.google.firebase:firebase-storage")
     implementation("com.google.firebase:firebase-core:21.1.1")
     implementation("org.osmdroid:osmdroid-android:6.1.14")
+
 }

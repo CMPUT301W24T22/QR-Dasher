@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-101:12
-INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-101:12
-INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-101:12
-INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-101:12
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-114:12
+INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-114:12
+INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-114:12
+INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:2:1-114:12
 MERGED from [androidx.databinding:viewbinding:8.2.1] C:\Users\jaste\.gradle\caches\transforms-3\c6192920f7423fdf8c342419ce2b4ec4\transformed\viewbinding-8.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jaste\.gradle\caches\transforms-3\b4c6ffa77a8b718b5d53452f9d4c973d\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:17:1-56:12
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\jaste\.gradle\caches\transforms-3\506003114397dd4278010ceeecbd3702\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:2:1-26:12
@@ -165,8 +165,8 @@ ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest
 	android:name
 		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:9:22-78
 application
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:11:5-99:19
-INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:11:5-99:19
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:11:5-112:19
+INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:11:5-112:19
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jaste\.gradle\caches\transforms-3\b4c6ffa77a8b718b5d53452f9d4c973d\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:46:5-54:19
 MERGED from [com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\jaste\.gradle\caches\transforms-3\b4c6ffa77a8b718b5d53452f9d4c973d\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:46:5-54:19
 MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\jaste\.gradle\caches\transforms-3\506003114397dd4278010ceeecbd3702\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:13:5-24:19
@@ -269,134 +269,162 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\jaste\.gradle\cach
 		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:19:9-46
 	android:dataExtractionRules
 		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:13:9-65
+activity#com.example.qr_dasher.AdminEventList
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:23:13-43
+activity#com.example.qr_dasher.AdminUserProfile
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:26:13-45
+activity#com.example.qr_dasher.AdminUserList
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:28:9-30:40
+	android:exported
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:29:13-42
+activity#com.example.qr_dasher.AdminEventPage
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:31:9-33:40
+	android:exported
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:33:13-37
+	android:name
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:32:13-43
+activity#com.example.qr_dasher.AdminActivity
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:34:9-51
+	android:name
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:34:19-48
 meta-data#com.google.android.geo.API_KEY
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:33:9-35:44
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:9-48:44
 	android:value
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:35:13-41
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:48:13-41
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:34:13-58
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:13-58
 activity#com.example.qr_dasher.MapsActivity
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:37:9-40:59
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:50:9-53:59
 	android:label
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:40:13-56
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:53:13-56
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:52:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:38:13-41
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:51:13-41
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:42:9-44:53
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:55:9-57:53
 	android:resource
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:44:13-50
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:57:13-50
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:43:13-83
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:56:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:45:9-47:47
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:58:9-60:47
 	android:resource
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:47:13-44
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:60:13-44
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:46:13-84
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:59:13-84
 activity#com.example.qr_dasher.EventSignUpPage
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:49:9-51:40
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:62:9-64:40
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:51:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:64:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:50:13-44
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:63:13-44
 activity#com.example.qr_dasher.BrowseEvents
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:52:9-54:40
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:65:9-67:40
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:54:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:67:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:53:13-41
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:66:13-41
 activity#com.example.qr_dasher.EditProfile
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:55:9-57:40
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:68:9-70:40
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:57:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:70:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:56:13-40
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:69:13-40
 activity#com.example.qr_dasher.SendNotification
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:58:9-60:40
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:71:9-73:40
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:60:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:73:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:59:13-45
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:72:13-45
 activity#com.example.qr_dasher.SendAnnouncement
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:61:9-63:40
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:74:9-76:40
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:63:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:76:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:62:13-45
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:75:13-45
 activity#com.example.qr_dasher.CheckAnnouncements
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:64:9-66:40
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:77:9-79:40
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:66:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:79:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:65:13-47
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:78:13-47
 activity#com.example.qr_dasher.EventDetails
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:67:9-69:40
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:80:9-82:40
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:69:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:82:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:68:13-41
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:81:13-41
 activity#com.example.qr_dasher.CreateEventOrganizer
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:70:9-72:40
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:83:9-85:40
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:72:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:85:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:71:13-49
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:84:13-49
 activity#com.example.qr_dasher.reuseQRcodes
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:73:9-75:40
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:86:9-88:40
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:75:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:88:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:74:13-41
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:87:13-41
 activity#com.example.qr_dasher.HomePage
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:76:9-86:20
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:89:9-99:20
 	android:label
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:79:13-45
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:92:13-45
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:78:13-36
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:91:13-36
 	android:theme
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:80:13-50
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:93:13-50
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:77:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:90:13-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:81:13-85:29
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:94:13-98:29
 action#android.intent.action.MAIN
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:82:17-69
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:95:17-69
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:82:25-66
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:95:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:84:17-77
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:97:17-77
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:84:27-74
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:97:27-74
 activity#com.example.qr_dasher.RolePage
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:87:9-46
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:100:9-46
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:87:19-43
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:100:19-43
 activity#com.example.qr_dasher.Attendee
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:88:9-46
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:101:9-46
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:88:19-43
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:101:19-43
 activity#com.example.qr_dasher.Organizer
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:89:9-47
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:102:9-47
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:89:19-44
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:102:19-44
 activity#com.example.qr_dasher.ScanQR
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:90:9-44
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:103:9-44
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:90:19-41
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:103:19-41
 service#com.example.qr_dasher.MyFirebaseMessagingService
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:92:9-98:19
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:105:9-111:19
 	android:exported
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:94:13-37
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:107:13-37
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:93:13-55
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:106:13-55
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:95:13-97:29
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:108:13-110:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:96:17-78
+ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:109:17-78
 	android:name
-		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:96:25-75
+		ADDED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml:109:25-75
 uses-sdk
 INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Documents\CMPUT 301\Project\QR-Dasher\app\src\main\AndroidManifest.xml

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.ArrayMap;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -31,6 +32,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 /**
  * This activity represents the Organizer's interface where they can view and manage their events.
  * It retrieves events associated with the logged-in organizer from Firestore and displays them in a ListView.
@@ -46,6 +48,7 @@ public class Organizer extends AppCompatActivity {
 
     private List<String> eventNames,eventIds,eventPosters;
     private  List<List<String>> attendeeLists, signupLists;
+    private List<Map<String, Object>> attendeeQrMap, promotionalQrMap;
 
 
     private SharedPreferences app_cache; // To get the userID
@@ -94,7 +97,7 @@ public class Organizer extends AppCompatActivity {
         attendeeLists= new ArrayList<>();
         signupLists = new ArrayList<>();
         eventPosters = new ArrayList<>();
-
+        attendeeQrMap = new ArrayList<>();
 
         db.collection("eventsCollection")
                 .whereEqualTo("attendee_qr.userID", userId)
@@ -111,7 +114,7 @@ public class Organizer extends AppCompatActivity {
                         attendeeLists.clear();
                         signupLists.clear();
                         eventPosters.clear();
-
+                        attendeeQrMap.clear();
 
                         for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                             String eventName = documentSnapshot.getString("name");
@@ -119,7 +122,7 @@ public class Organizer extends AppCompatActivity {
 
                             List<String> attendeeList = (List<String>) documentSnapshot.get("attendee_list");
                             List<String> signupList = (List<String>) documentSnapshot.get("signup_list");
-
+                            Map<String, Object> attendeeQr =(Map<String, Object>) documentSnapshot.getData().get("attendee_qr");
 
                             if (documentSnapshot.contains("event_id")) {
                                 Long eventIdLong = documentSnapshot.getLong("event_id");
@@ -131,6 +134,7 @@ public class Organizer extends AppCompatActivity {
                                     attendeeLists.add(attendeeList);
                                     signupLists.add(signupList);
                                     eventPosters.add(eventPoster);}
+                                    attendeeQrMap.add(attendeeQr);
 
 
 
@@ -152,7 +156,7 @@ public class Organizer extends AppCompatActivity {
      */
     private void displayEventList(List<String> eventNames, List<String> eventIds) {
         // Create an ArrayAdapter to display the event names
-        EventAdapter adapter = new EventAdapter(this, eventNames, eventPosters);
+        ListAdapter adapter = new ListAdapter(this, eventNames, eventPosters);
         adapter.notifyDataSetChanged();
         eventListView.setAdapter(adapter);
 
@@ -165,16 +169,23 @@ public class Organizer extends AppCompatActivity {
                 String eventId = eventIds.get(position);
                 List<String> attendeeList = attendeeLists.get(position);
                 List<String> signupList = signupLists.get(position);
+                Map<String, Object> attendeeQr = attendeeQrMap.get(position);
+                String qrImage = (String) attendeeQr.get("qrImage");
+                String qrContent =(String) attendeeQr.get("content");
+                Long qrUserIdLong = (Long) attendeeQr.get("userID");
+                Long qrEventIdLong = (Long) attendeeQr.get("event_id");
 
-                // TO:DO fix this comment
-//                String eventId = eventIds.get(position);
-                //Integer eventId = Integer.parseInt(eventIdStr);
-                // Start new activity with the event name
                 Intent intent = new Intent(Organizer.this, EventDetails.class);
                 intent.putExtra("eventName", eventName);
                 intent.putExtra("event_id", eventId);
-                Log.d("Debug", "Attendee List before adding to intent: " + attendeeList);
-                Log.d("Debug", "Signup List before adding to intent: " + signupList);
+                intent.putExtra("qrImage",qrImage);
+                intent.putExtra("qrContent", qrContent);
+                intent.putExtra("userID",qrUserIdLong);
+                intent.putExtra("eventId",qrEventIdLong );
+                Log.d("MainActivity", "qrUserid before putExtra: " + qrUserIdLong);
+                Log.d("MainActivity", "qrEventId before putExtra: " + qrEventIdLong);
+                //Log.d("Debug", "Attendee List before adding to intent: " + attendeeList);
+                //Log.d("Debug", "Signup List before adding to intent: " + signupList);
                 if (attendeeList!= null){
                     intent.putStringArrayListExtra("attendee_list",(ArrayList<String>) attendeeList);
                 }

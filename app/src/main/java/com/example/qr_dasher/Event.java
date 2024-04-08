@@ -21,7 +21,7 @@ public class Event {
     private int organizer;
     private DateTime dateTime;
     private Timestamp timestamp;
-    private String event_poster;
+    private String Poster;
 
     private int maxAttendees;
 
@@ -49,7 +49,7 @@ public class Event {
         this.signup_list = new ArrayList<>();
         this.maxAttendees = -1;
         this.announcements = new ArrayList<>();
-
+        
         //this.dateTime = dateTime;
     }
     public Event(String name, String details, int userID,int maxAttendees){
@@ -61,17 +61,11 @@ public class Event {
         this.organizer = userID;
         this.signup_list = new ArrayList<>();
         this.maxAttendees = maxAttendees;
+
         this.announcements = new ArrayList<>();
 
-        //this.dateTime = dateTime;
     }
-
-    //    public User getOrganizer() {
-//        return organizer;
-//    }
-//    public void setOrganizer(User organizer) {
-//        this.organizer = organizer;
-//    }
+    
     /**
      * Gets the event ID.
      *
@@ -274,7 +268,7 @@ public class Event {
      * @return The event poster ImageView.
      */
     public String getEventPoster() {
-        return event_poster;
+        return Poster;
     }
 
     /**
@@ -283,7 +277,7 @@ public class Event {
      * @param event_poster The event poster ImageView to set.
      */
     public void setEventPoster(String event_poster) {
-        this.event_poster = event_poster;
+        this.Poster = Poster;
     }
 
     public int getMaxAttendees() {
@@ -300,16 +294,33 @@ public class Event {
         this.organizer = organizer;
     }
 
+
     /**
      * Gets the list of announcements for the event.
      *
      * @return The all announcments in a list for an event.
      */
     public ArrayList<String> getAnnouncements() {
-        return announcements;
+        return announcements;}
+    public void setSignup_list(ArrayList<String> signup_list) {
+        this.signup_list = signup_list;
     }
-
+        
     public void setAnnouncements(ArrayList<String> announcements) {
         this.announcements = announcements;
     }
+
+
+    public void removeUserFromEvent(String userID) {
+        // Remove user from attendee_list
+        if (attendee_list.contains(userID)) {
+            attendee_list.remove(userID);
+        }
+
+        // Remove user from signup_list
+        if (signup_list.contains(userID)) {
+            signup_list.remove(userID);
+        }
+    }
+
 }

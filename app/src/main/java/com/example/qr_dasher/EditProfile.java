@@ -19,13 +19,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Activity for editing user profile information.
  * Allows users to edit their profile details including name, email, details, and profile picture.
  * The edited profile information is updated in Firebase Firestore.
  */
 
-public class EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUploadListener{
+public class
+
+
+
+EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUploadListener{
 
     private EditText nameEdit, emailEdit, detailsEdit;
     private CheckBox geolocationCheckBox;
@@ -35,6 +43,8 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
     private CollectionReference usersCollection;
     private Bitmap profile_picture;
     private SharedPreferences app_cache;
+    private List<String> createdEvents, signedUpEvents, joinedEvents;
+    private String token;
     /**
      * Initializes the activity, sets up UI components and listeners,
      * and retrieves user data from Firebase Firestore.
@@ -50,19 +60,14 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
         db = FirebaseFirestore.getInstance();
         usersCollection = db.collection("users");
 
+        createdEvents = new ArrayList<String>();
+        signedUpEvents = new ArrayList<String>();
+        joinedEvents = new ArrayList<String>();
+        token = new String();
+
         app_cache = getSharedPreferences("UserData", Context.MODE_PRIVATE);
         int userId = app_cache.getInt("UserID", -1);
-        retrieveUserFromFirebase(String.valueOf(userId), new FirebaseCallback() {
-            @Override
-            public void onCallback(User user) {
-                if (user != null) {
-                    // Populate UI with retrieved user data
-                    populateUIWithUserData(user);
-                } else {
-                    // Handle user not found or retrieval failure
-                }
-            }
-        });
+        boolean guest = app_cache.getBoolean("Guest", false);
 
         nameEdit = findViewById(R.id.name_edit);
         emailEdit = findViewById(R.id.email_edit);
@@ -71,6 +76,27 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
         imageUpload = findViewById(R.id.image_upload);
         selectImageButton = findViewById(R.id.select_image_button);
         uploadButton = findViewById(R.id.upload_button);
+
+        if(guest == false) {
+            retrieveUserFromFirebase(String.valueOf(userId), new FirebaseCallback() {
+                @Override
+                public void onCallback(User user) {
+                    if (user != null) {
+                        // Populate UI with retrieved user data
+                        populateUIWithUserData(user);
+                    } else {
+                        // Handle user not found or retrieval failure
+                    }
+                }
+            });
+        } else {
+            nameEdit.setText(null);
+            emailEdit.setText(null);
+            detailsEdit.setText(null);
+            geolocationCheckBox.setChecked(true);
+            imageUpload.setImageBitmap(null);
+        }
+
         Button generateProfilePictureButton = findViewById(R.id.generate_profile_button);
         generateProfilePictureButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,12 +130,28 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
                 String details = detailsEdit.getText().toString().trim();
                 boolean location = geolocationCheckBox.isChecked();
 
+                if(guest){
+                    if (name.isEmpty() || email.isEmpty()) {
+                        // Display toast message
+                        Toast.makeText(EditProfile.this, "Enter at least name and email", Toast.LENGTH_SHORT).show();
+                        return; // Exit the method without uploading anything
+                    } else {
+                        SharedPreferences.Editor editor = app_cache.edit();
+                        editor.putBoolean("Guest", false);
+                        editor.apply();
+                    }
+                }
+
                 User user = new User(name, email, location);
                 user.setUserId(userId);
                 user.setDetails(details);
                 if (profile_picture != null){
                     user.setProfile_image(Picture.convertBitmaptoString(profile_picture));
                 }
+                user.setEventsCreated(createdEvents);
+                user.setEventsJoined(joinedEvents);
+                user.setEventsSignedUp(signedUpEvents);
+                user.setToken(token);
 
                 updateUserOnFirebase(user);
 
@@ -160,6 +202,10 @@ public class EditProfile extends AppCompatActivity implements ImageUploadFragmen
                         User user = documentSnapshot.toObject(User.class);
                         // Optionally, set the userID in the User object
                         user.setUserId(Integer.parseInt(userID));
+                        createdEvents = (List<String>) user.getEventsCreated();
+                        signedUpEvents = (List<String>) user.getEventsSignedUp();
+                        joinedEvents = (List<String>) user.getEventsJoined();
+                        token = user.getToken();
                         // Invoke the callback with the retrieved user object
                         callback.onCallback(user);
                     } else {

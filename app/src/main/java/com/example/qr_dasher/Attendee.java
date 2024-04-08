@@ -27,6 +27,7 @@ import androidx.core.content.ContextCompat;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FieldPath;
@@ -39,6 +40,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 /**
  * Activity for attendees of an event. Allows attendees to view notifications, edit their profile,
@@ -163,26 +165,66 @@ public class Attendee extends AppCompatActivity implements LocationListener {
             if (resultCode == RESULT_OK) {
                 String scannedText = data.getStringExtra("scannedText");
                 Toast.makeText(this, "Scanning successful " + scannedText, Toast.LENGTH_SHORT).show();
-
-                // Determine if it is promotional or checkin QR
                 if (scannedText != null) {
-                    if (scannedText.charAt(0) == 'p') {
-                        // Promotional QR
-                        Log.d("QR Scanning", "Promotional Detected");
-                        displayEventSignUpPage(scannedText);
-                    } else {
-                        // Checkin QR
-                        Log.d("QR Scanning", "Checkin Detected");
-                        updateFirebase(scannedText);
-                    }
+                    FirebaseFirestore db = FirebaseFirestore.getInstance();
+                    CollectionReference eventsCollection = db.collection("eventsCollection");
+
+                    // Query Firestore to find the document containing the scanned text in either attendee_qr or promotional_qr
+                    eventsCollection
+                            .whereEqualTo("attendee_qr.content", scannedText)
+                            .get()
+                            .addOnSuccessListener(queryDocumentSnapshots -> {
+                                // Handle documents found in attendee_qr
+                                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                                    Map<String, Object> attendeeQR = (Map<String, Object>) documentSnapshot.get("attendee_qr");
+                                    if (attendeeQR != null && attendeeQR.get("content").equals(scannedText)) {
+                                        // Proceed with attendee QR action
+                                        String eventId = String.valueOf(attendeeQR.get("event_id"));
+                                        updateFirebase(eventId);
+                                        return;
+                                    }
+                                }
+
+                                // If not found in attendee_qr, query promotional_qr separately
+                                eventsCollection
+                                        .whereEqualTo("promotional_qr.content", scannedText)
+                                        .get()
+                                        .addOnSuccessListener(promotionalQueryDocumentSnapshots -> {
+                                            // Handle documents found in promotional_qr
+                                            for (QueryDocumentSnapshot promotionalDocumentSnapshot : promotionalQueryDocumentSnapshots) {
+                                                Map<String, Object> promotionalQR = (Map<String, Object>) promotionalDocumentSnapshot.get("promotional_qr");
+                                                if (promotionalQR != null && promotionalQR.get("content").equals(scannedText)) {
+                                                    // Proceed with promotional QR action
+                                                    displayEventSignUpPage(scannedText);
+                                                    return;
+                                                }
+                                            }
+
+                                            // Handle case where scanned text is not found in any document
+                                            Toast.makeText(this, "Scanned text not found in any document: " + scannedText, Toast.LENGTH_SHORT).show();
+                                        })
+                                        .addOnFailureListener(e -> {
+                                            // Handle any errors that may occur during the promotional_qr query
+                                            Log.e("Firestore", "Error getting promotional documents: ", e);
+                                            // Handle case where there's an error in querying Firestore for promotional_qr
+                                            Toast.makeText(this, "Error querying promotional Firestore", Toast.LENGTH_SHORT).show();
+                                        });
+                            })
+                            .addOnFailureListener(e -> {
+                                // Handle any errors that may occur during the attendee_qr query
+                                Log.e("Firestore", "Error getting attendee documents: ", e);
+                                // Handle case where there's an error in querying Firestore for attendee_qr
+                                Toast.makeText(this, "Error querying attendee Firestore", Toast.LENGTH_SHORT).show();
+                            });
+
                 }
             } else {
                 // Handle case where scanning was canceled or failed
                 Toast.makeText(this, "Scanning failed or canceled", Toast.LENGTH_SHORT).show();
             }
         }
-
     }
+
 
     @Override
     protected void onResume() {
@@ -303,14 +345,15 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                         String detail = event.getDetails();
                         bundle.putString("eventDetail", detail);
 
+
                         String eventId = String.valueOf(event.getEvent_id());
                         bundle.putString("eventId", eventId);
 
                         boolean signUpBool = true;
                         bundle.putBoolean("signUpBool", signUpBool);
-
-                        // TODO  /////////////////////////////////
-
+                        
+                        // TODO /////////////////////////////////
+                        
                         // Converting timeStamp to date to put in bundle
                         Timestamp eventTimestamp = event.getTimestamp();
                         Date date = eventTimestamp.toDate();
@@ -640,6 +683,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 String eventId = scannedEventIds.get(position);
                 bundle.putString("eventId", eventId);
 
+
                 // Converting timeStamp to date to put in bundle
                 Timestamp eventTimestamp = scannedEventTimestamps.get(position);
                 Date date = eventTimestamp.toDate();
@@ -655,8 +699,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 // TODO ////////////////////////
                 boolean checkAnnounce = true;
                 bundle.putBoolean("checkAnnounce",checkAnnounce);
-
-
+                
                 //Integer eventId = Integer.parseInt(eventIdStr);
                 // Start new activity with the event name
                 Intent intent = new Intent(Attendee.this, EventSignUpPage.class);
@@ -680,6 +723,8 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 String detail = signedEventDetails.get(position);
                 bundle.putString("eventDetail", detail);
 
+              
+
                 String eventId = signedEventIds.get(position);
                 bundle.putString("eventId", eventId);
 
@@ -691,10 +736,11 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 boolean signUpBool = false;
                 bundle.putBoolean("signUpBool", signUpBool);
 
+                
                 //TODO  ///////////////////////////
                 boolean checkAnnounce = true;
                 bundle.putBoolean("checkAnnounce",checkAnnounce);
-
+                
 //                if (signedEventPoster != null && !signedEventPoster.get(position).isEmpty()) {
 //                    String eventPoster = signedEventPoster.get(position);
 //                    bundle.putString("Poster",eventPoster);

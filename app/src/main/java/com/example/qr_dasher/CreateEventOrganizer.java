@@ -98,6 +98,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     private int savedHour = 0;
     private int savedMinute = 0;
     private static final int PICK_IMAGE_REQUEST = 1;
+    private static final int SCAN_QR_REQUEST_CODE = 2;
     private boolean twoQRcodes = false;
 
     /**
@@ -157,8 +158,8 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
                     if (!TextUtils.isDigitsOnly(maxAttendeesString)) {
                         Toast.makeText(CreateEventOrganizer.this, "Maximum attendees must be a number", Toast.LENGTH_SHORT).show();
                         return;
-                        }
-                int maxAttendees = Integer.parseInt(maxAttendeesString);
+                    }
+                    int maxAttendees = Integer.parseInt(maxAttendeesString);
                     event = new Event(event_name, event_details, userId, maxAttendees);
                 }
                 else{
@@ -244,19 +245,10 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Old download button code:
-//                String fileName = "qrcode.png";
-//                   MediaStore.Images.Media.insertImage(getContentResolver(), generatedQRCode, fileName, "Image saved from your app");
-//                Toast.makeText(getApplicationContext(), "Image saved to Gallery", Toast.LENGTH_SHORT).show();
 
-                // New Code: Share button
-              //  Intent shareIntent = new Intent(Intent.ACTION_SEND);
-               // shareIntent.setType("image/*");
-               // shareIntent.putExtra(Intent.EXTRA_STREAM, bitmapToUri(generatedQRCode));
-               // startActivity(Intent.createChooser(shareIntent, "Share via"));
                 if (!twoQRcodes){
-                ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, event.getName());
-                fragment.showFragment(getSupportFragmentManager());}
+                    ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, event.getName());
+                    fragment.showFragment(getSupportFragmentManager());}
                 else {
                     ShareQRFragment fragment = ShareQRFragment.newInstance(generatedQRCode, pgeneratedQRCode,event.getName());
                     fragment.showFragment(getSupportFragmentManager());
@@ -265,14 +257,17 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
             }
 
         });
-
-
         displayQRcodes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getQRFromFirebase();
+                // Launch the ScanQR activity
+                Intent intent = new Intent(CreateEventOrganizer.this, ScanQR.class);
+                startActivityForResult(intent, SCAN_QR_REQUEST_CODE);
             }
         });
+
+
+
 
         eventPosterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -283,7 +278,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
         });
 
     }
-//    private Uri bitmapToUri(Bitmap bitmap) {
+    //    private Uri bitmapToUri(Bitmap bitmap) {
 //        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
 //        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
 //        String path = MediaStore.Images.Media.insertImage(getContentResolver(), bitmap, event.getName(), null);
@@ -375,26 +370,7 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
      * This method is called when the organizer wants to display QR codes for all events stored in Firestore.
      * It retrieves the QR codes and starts a new activity to display them.
      */
-    public void getQRFromFirebase() {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("events")
-                .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    List<String> qrCodes = new ArrayList<>();
-                    for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                        Map<String, Object> qrCodeData = documentSnapshot.getData();
-                        String qrCodeString = (String) qrCodeData.get("image");
-                        qrCodes.add(qrCodeString);
-                    }
-                    Intent intent = new Intent(CreateEventOrganizer.this, reuseQRcodes.class);
-                    intent.putStringArrayListExtra(EXTRA_QR_CODES, (ArrayList<String>) qrCodes);
-                    startActivityForResult(intent, REQUEST_CODE_REUSE_QR);
-                })
-                .addOnFailureListener(e -> {
-                    Log.d("QR", "Failed to retrieve QR codes from Firestore");
-                    e.printStackTrace();
-                });
-    }
+
 
     private String bitmapToBase64(Bitmap bitmap) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -426,31 +402,43 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == REQUEST_CODE_REUSE_QR && resultCode == RESULT_OK) {
-            String selectedQRCode = data.getStringExtra("selectedQRCode");
-            if (selectedQRCode != null) {
-                byte[] imageBytes = Base64.decode(selectedQRCode, Base64.DEFAULT);
-                Bitmap selectedQRBitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
-                qrImage.setImageBitmap(selectedQRBitmap);
+        if (requestCode == SCAN_QR_REQUEST_CODE) { // Assuming 2 is the request code for QR code scanning
+            if (resultCode == RESULT_OK && data != null) {
+                String scannedText = data.getStringExtra("scannedText");
+                if (scannedText != null) {
+                    // Generate QR code based on scanned text
+                    event.generateQR(scannedText, false);
+                    String qrCodeString = event.getAttendee_qr().getQrImage();
+                    byte[] imageBytes = Base64.decode(qrCodeString, Base64.DEFAULT);
+                    generatedQRCode = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                    qrImage.setImageBitmap(generatedQRCode);
+                    addEventToFirebase(event);
+                } else {
+                    // Handle case where scanned text is null
+                    Toast.makeText(this, "Failed to get scanned text", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                // Handle case where QR code scanning was canceled or failed
+                Toast.makeText(this, "QR code scanning canceled or failed", Toast.LENGTH_SHORT).show();
             }
         }
-
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             Uri selectedImageUri = data.getData();
             try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImageUri);
-                // Resize bitmap if needed to avoid large image storage
-                Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 200, 200, false);
-                // Convert bitmap to Base64 string
-                String encodedImage = bitmapToBase64(resizedBitmap);
-                // Save the image to Firestore for the specific event
-                saveEventPosterToFirestore(encodedImage);
-            } catch (IOException e) {
-                e.printStackTrace();
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImageUri);
+                    // Resize bitmap if needed to avoid large image storage
+                    Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 200, 200, false);
+                    // Convert bitmap to Base64 string
+                    String encodedImage = bitmapToBase64(resizedBitmap);
+                    // Save the image to Firestore for the specific event
+                    saveEventPosterToFirestore(encodedImage);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-        }
+
+
 
     }
 }
-
 

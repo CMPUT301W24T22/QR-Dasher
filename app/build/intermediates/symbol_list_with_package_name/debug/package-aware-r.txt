@@ -3480,7 +3480,6 @@ id eventList
 id eventListView
 id eventName
 id eventNameTextView
-id eventPosterImageView
 id event_details
 id event_id
 id event_list_button

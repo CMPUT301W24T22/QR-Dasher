@@ -93,9 +93,18 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
                     return;
                 }
 
+                // Check for valid email
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    Log.d("EmailValidation", "Invalid email: " + email);
+                    Toast.makeText(getApplicationContext(), "Please enter a valid email", Toast.LENGTH_LONG).show();
+                    return;
+                } else {
+                    Log.d("EmailValidation", "Valid email: " + email);
+                }
+                
                 // Create a User object
                 User user = new User(name, email, location);
-
+                
                 // tokens used for notifications
                 FirebaseMessaging.getInstance().getToken()
                         .addOnCompleteListener(task -> {

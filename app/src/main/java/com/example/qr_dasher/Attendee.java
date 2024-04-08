@@ -723,7 +723,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 String detail = signedEventDetails.get(position);
                 bundle.putString("eventDetail", detail);
 
-              
+
 
                 String eventId = signedEventIds.get(position);
                 bundle.putString("eventId", eventId);

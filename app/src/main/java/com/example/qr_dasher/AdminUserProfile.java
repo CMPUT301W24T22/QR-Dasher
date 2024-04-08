@@ -65,6 +65,7 @@ public class AdminUserProfile extends AppCompatActivity {
             signedUpEvents.setVisibility(View.GONE);
             attendedEvents.setVisibility(View.GONE);
             createdEvents.setVisibility(View.GONE);
+
         }
         retrieveUserFromFirebase(selectedUserID, new AdminUserProfile.FirebaseCallback() {
             @Override

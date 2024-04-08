@@ -29,7 +29,9 @@ import java.util.ArrayList;
 import java.util.List;
 import android.os.Bundle;
 
-
+/**
+ * An activity for attendees to browse upcoming events they haven't attended or signed up for.
+ */
 public class BrowseEvents extends AppCompatActivity {
 
     private ListView browseEventList;
@@ -62,6 +64,10 @@ public class BrowseEvents extends AppCompatActivity {
         retrieveEventsFromFirestore(userId);
     }
 
+    /**
+     * Retrieves upcoming events from Firestore that the user hasn't attended or signed up for.
+     * @param userId ID of the current user
+     */
     private void retrieveEventsFromFirestore(int userId) {
         // We only want to retrieve the events (1) which will take place in future
         // and (2) the attendee has not signed up/checked in yet
@@ -133,6 +139,12 @@ public class BrowseEvents extends AppCompatActivity {
                 });
 
     }
+
+    /**
+     * Displays the list of events in the ListView.
+     * @param eventNames List of event names
+     * @param eventIds List of event IDs
+     */
     private void displayEventList(List<String> eventNames, List<String> eventIds) {
         // Create an ArrayAdapter to display the event names
         ListAdapter adapter = new ListAdapter(this, eventNames, eventPosters);

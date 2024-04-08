@@ -89,7 +89,6 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
         getCheckedSignedEvents(userId);
 
-        notificationButton = findViewById(R.id.notification_button);
         editProfileButton = findViewById(R.id.edit_profile_button);
         qrCodeButton = findViewById(R.id.qr_button);
         browseEvents = findViewById(R.id.browseEvents);
@@ -102,15 +101,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                 startActivity(intent);
             }
         });
-        notificationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle attendee role selection
-                // For example, start a new activity for attendee tasks
-                Intent intent = new Intent(Attendee.this, Notifications.class);
-                startActivity(intent);
-            }
-        });
+
 
         editProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override

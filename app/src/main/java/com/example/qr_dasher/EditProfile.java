@@ -81,7 +81,7 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
         selectImageButton = findViewById(R.id.select_image_button);
         uploadButton = findViewById(R.id.upload_button);
 
-        if (guest == false) {
+        if (!guest) {
             retrieveUserFromFirebase(String.valueOf(userId), new FirebaseCallback() {
                 @Override
                 public void onCallback(User user) {
@@ -94,11 +94,17 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
                 }
             });
         } else {
-            nameEdit.setText(null);
-            emailEdit.setText(null);
-            detailsEdit.setText(null);
-            geolocationCheckBox.setChecked(true);
-            imageUpload.setImageBitmap(null);
+            retrieveUserFromFirebase(String.valueOf(userId), new FirebaseCallback() {
+                @Override
+                public void onCallback(User user) {
+                    // Reset UI elements
+                    nameEdit.setText(null);
+                    emailEdit.setText(null);
+                    detailsEdit.setText(null);
+                    geolocationCheckBox.setChecked(true);
+                    imageUpload.setImageBitmap(null);
+                }
+            });
         }
 
         Button generateProfilePictureButton = findViewById(R.id.generate_profile_button);
@@ -317,4 +323,3 @@ EditProfile extends AppCompatActivity implements ImageUploadFragment.ImageUpload
 
         return bitmap;
     }
-}

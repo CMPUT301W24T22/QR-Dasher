@@ -460,4 +460,3 @@ public class CreateEventOrganizer extends AppCompatActivity implements DatePicke
 
     }
 }
-

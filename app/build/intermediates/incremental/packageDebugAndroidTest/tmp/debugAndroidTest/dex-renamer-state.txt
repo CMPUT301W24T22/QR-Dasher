@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-#Mon Apr 08 04:28:51 MDT 2024
+#Mon Apr 08 13:35:19 MDT 2024
 base.0=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
 base.1=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
 base.2=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\9\\classes.dex
-=======
-#Mon Apr 08 01:07:53 MDT 2024
-base.0=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
-base.1=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
-base.2=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\9\\classes.dex
->>>>>>> a6e392544fffa1a180195d9e1a79d636441d366d
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=9/classes.dex

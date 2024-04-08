@@ -44,6 +44,9 @@
 
         <!-- Needs to be explicitly declared on Android R+ -->
         <package android:name="com.google.android.apps.maps" />
+        <package android:name="androidx.test.orchestrator" />
+        <package android:name="androidx.test.services" />
+        <package android:name="com.google.android.apps.common.testing.services" />
     </queries>
 
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
@@ -87,10 +90,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-<<<<<<< HEAD
-=======
         android:testOnly="true"
->>>>>>> ea20684aff6da10ccad700c8654e75aa4852b97a
         android:theme="@style/Theme.QRDasher" >
         <activity
             android:name="com.example.qr_dasher.AdminEventList"

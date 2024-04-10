@@ -142,8 +142,20 @@ public class HomePage extends AppCompatActivity implements ImageUploadFragment.I
             @Override
             public void onClick(View v) {
                 User guest = User.createGuest();
-                saveUserToCache(guest, true);
-                addUserToFirestore(guest);
+                // tokens used for notifications
+                FirebaseMessaging.getInstance().getToken()
+                        .addOnCompleteListener(task -> {
+                            if (!task.isSuccessful()) {
+                                Log.w("tag","Couldn't retrieve FCM token",task.getException());
+                                return;
+                            }
+                            String token = task.getResult();
+                            Log.d("Token", token);
+                            guest.setToken(token);
+
+                            saveUserToCache(guest, true);
+                            addUserToFirestore(guest);
+                        });
                 startActivity(new Intent(HomePage.this, RolePage.class));
                 finish();
             }

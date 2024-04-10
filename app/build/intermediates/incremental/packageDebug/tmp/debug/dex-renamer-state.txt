@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#Tue Apr 09 22:13:06 MDT 2024
+=======
+<<<<<<< HEAD
 #Mon Apr 08 14:26:08 MDT 2024
 base.0=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
@@ -8,6 +11,7 @@ base.4=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing 
 base.5=C\:\\Users\\jaspr\\OneDrive\\Documents\\University\\Third year computing science\\CMPUT301\\QRdasher\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 =======
 #Mon Apr 08 15:23:53 MDT 2024
+>>>>>>> b5f9ada4fb06b11c01da6bbe594dbbe9c5e3c2ae
 base.0=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=D\:\\Documents\\CMPUT 301\\Project\\QR-Dasher\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex

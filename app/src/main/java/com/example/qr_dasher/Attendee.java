@@ -181,6 +181,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                                         // Proceed with attendee QR action
                                         String eventId = String.valueOf(attendeeQR.get("event_id"));
                                         updateFirebase(eventId);
+                                        getCheckedSignedEvents(userId);
                                         return;
                                     }
                                 }
@@ -719,6 +720,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
     private void displayEventList(List<String> scannedEventNames, List<String> signedEventNames) {
         // Create an ArrayAdapter to display the event names
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, scannedEventNames);
+        Log.d("Attendee","scan is working");
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         scannedEvents.setAdapter(adapter);

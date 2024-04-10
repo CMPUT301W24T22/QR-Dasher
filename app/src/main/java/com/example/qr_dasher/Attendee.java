@@ -577,7 +577,6 @@ public class Attendee extends AppCompatActivity implements LocationListener {
      * If documents are found, it retrieves the lists of events the user has signed up for and checked into.
      * It then displays the details of these events using the {@link #getEventDetails(List, List)} method.
      *
-     * @param userId The ID of the user for whom events are being retrieved
      */
     private void getEventDetails(List<String> checkedInEvents, List<String> eventsSignedUp) {
         // Once we have the event ids, we can get the other details

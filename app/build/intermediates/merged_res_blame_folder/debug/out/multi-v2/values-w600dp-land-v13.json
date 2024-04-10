@@ -4,7 +4,7 @@
             "outputFile": "com.example.qr_dasher.app-mergeDebugResources-54:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jaste\\.gradle\\caches\\transforms-3\\725e24c93ab4967c856ab85386d50074\\transformed\\material-1.11.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
+                    "source": "C:\\Users\\jaspr\\.gradle\\caches\\transforms-3\\725e24c93ab4967c856ab85386d50074\\transformed\\material-1.11.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

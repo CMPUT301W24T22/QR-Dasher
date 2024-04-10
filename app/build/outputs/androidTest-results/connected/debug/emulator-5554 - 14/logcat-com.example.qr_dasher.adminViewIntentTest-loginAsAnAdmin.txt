@@ -1,0 +1,687 @@
+04-08 15:42:27.293 25156 25194 I TestRunner: started: loginAsAnAdmin(com.example.qr_dasher.adminViewIntentTest)
+04-08 15:42:27.303 25156 25193 D TrafficStats: tagSocket(92) with statsTag=0x8001, statsUid=-1
+04-08 15:42:27.326 25156 25194 I UiAutomation: Initialized for user 0 on display 0
+04-08 15:42:27.409  1661  1683 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+04-08 15:42:27.415  1661  1795 I AiAiEcho: Predicting[0]:
+04-08 15:42:27.415  1661  1795 I AiAiEcho: EchoTargets:
+04-08 15:42:27.415  1661  1795 I AiAiEcho: Filtered by AiAi flag check:
+04-08 15:42:27.416  1661  1795 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+04-08 15:42:27.416  1661  1795 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0 (types=[])
+04-08 15:42:27.420  1391  1391 D SsMediaDataProvider: Forwarding Smartspace updates []
+04-08 15:42:27.423  1661  1795 I AiAiEcho: Predicting[0]:
+04-08 15:42:27.424  1661  1795 I AiAiEcho: EchoTargets:
+04-08 15:42:27.424  1661  1795 I AiAiEcho: Filtered by AiAi flag check:
+04-08 15:42:27.425  1661  1795 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+04-08 15:42:27.426  1661  1795 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+04-08 15:42:27.429  1391  1391 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+04-08 15:42:27.431  1661  1795 I AiAiEcho: Predicting[0]:
+04-08 15:42:27.431  1661  1795 I AiAiEcho: EchoTargets:
+04-08 15:42:27.431  1661  1795 I AiAiEcho: Filtered by AiAi flag check:
+04-08 15:42:27.432  1661  1795 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+04-08 15:42:27.433  1661  1795 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+04-08 15:42:27.486 25156 25194 I UiAutomationShellCmd: Requesting permission: pm grant com.example.qr_dasher android.permission.ACCESS_COARSE_LOCATION
+04-08 15:42:27.487 25156 25194 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+04-08 15:42:27.617 25156 25194 I UiAutomationShellCmd: Requesting permission: pm grant com.example.qr_dasher android.permission.ACCESS_FINE_LOCATION
+04-08 15:42:27.617 25156 25194 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+04-08 15:42:27.715 25156 25194 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+04-08 15:42:27.719 25156 25203 I FA      : App measurement initialized, version: 85007
+04-08 15:42:27.720 25156 25203 I FA      : To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+04-08 15:42:27.720 25156 25203 I FA      : To enable faster debug mode event logging run:
+04-08 15:42:27.720 25156 25203 I FA      :   adb shell setprop debug.firebase.analytics.app com.example.qr_dasher
+04-08 15:42:27.724  5911  6031 I A       : NGA disabled due to not being eligible.
+04-08 15:42:27.911 27225 27225 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+04-08 15:42:27.915 27225 27225 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+04-08 15:42:28.180   412   412 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+04-08 15:42:28.541  1391  1438 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:28.649 15136 15136 I Finsky  : [2] acda.onStartJob(127): SCH: job service start with id 9443.
+04-08 15:42:28.809 25156 25226 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+04-08 15:42:28.820 15136 25039 I Finsky  : [646] kum.a(245): SCH: Satisfied jobs for 9443 are: 12-1
+04-08 15:42:28.834 25156 25226 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+04-08 15:42:28.878 25156 25156 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+04-08 15:42:28.907 25156 25226 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+04-08 15:42:28.915 15136 25228 I Finsky  : [654] zhs.accept(439): SCH: Job 12-1 starting
+04-08 15:42:28.916  1019  1852 D EGL_emulation: app_time_stats: avg=2718.36ms min=30.60ms max=8079.29ms count=3
+04-08 15:42:28.927  1391  1434 I Choreographer: Skipped 41 frames!  The application may be doing too much work on its main thread.
+04-08 15:42:28.940 15136 15136 I Finsky  : [2] ContentSyncJob.h(9): [ContentSync] job started
+04-08 15:42:29.029 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@2d641d9 in: PRE_ON_CREATE
+04-08 15:42:29.038 25156 25156 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+04-08 15:42:29.167  1700  1700 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+04-08 15:42:29.243  1700  2426 E HwDetectorWithState: a: 3
+04-08 15:42:29.304 27225 27225 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-08 15:42:29.363  1391  1391 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 15:42:29.419 25156 25156 W ample.qr_dasher: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+04-08 15:42:29.422 25156 25156 W ample.qr_dasher: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+04-08 15:42:29.464 25156 25156 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10282; state: ENABLED
+04-08 15:42:29.517  1391  1438 D EGL_emulation: app_time_stats: avg=90927.27ms min=6.29ms max=1636167.62ms count=18
+04-08 15:42:29.767 15136 15165 I Finsky  : [80] alhk.m(226): Package com.google.android.gms is verified.
+04-08 15:42:29.814  1391  1438 D EGL_emulation: app_time_stats: avg=14887.88ms min=244.56ms max=29531.20ms count=2
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: Error inserting flex_time=0 job_id=-1 period=2000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612549399 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):97)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:29.925  1267 24936 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:29.949 27225 25220 W FA-SVC  : Service response is missing Install Referrer install timestamp
+04-08 15:42:30.158 27225 25233 D TrafficStats: tagSocket(133) with statsTag=0x20003300, statsUid=10282
+04-08 15:42:30.167 15136 25229 I Finsky  : [655] lbo.f(36): Completed 0 account content syncs with 0 successful.
+04-08 15:42:30.169 15136 15136 I Finsky  : [2] ContentSyncJob.a(12): [ContentSync] Installation state replication succeeded.
+04-08 15:42:30.172 15136 15136 I Finsky  : [2] acbi.r(79): SCH: jobFinished: 12-1. TimeElapsed: 1245ms.
+04-08 15:42:30.245 15136 15275 I Finsky  : [107] pda.accept(66): SCH: Scheduling phonesky job Id: 1-1337, CT: 1712606724740, Constraints: [{ L: 43081254, D: 86281254, C: 1, I: 1, N: 1 }]
+04-08 15:42:30.274  1391  1391 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 15:42:30.288 15136 15268 I Finsky  : [103] jtq.apply(56): SCH: Scheduling 1 system job(s)
+04-08 15:42:30.289 15136 15268 I Finsky  : [103] acbe.d(246): SCH: Scheduling system job Id: 9445, L: 37255706, D: 80455706, C: false, I: false, N: 1
+04-08 15:42:30.312 15136 25228 I Finsky  : [654] acda.a(24): SCH: job service finished with id 9443.
+04-08 15:42:30.392  1391  1391 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 15:42:30.521  1391  1438 D EGL_emulation: app_time_stats: avg=14.01ms min=2.49ms max=82.57ms count=46
+04-08 15:42:30.778 25156 25243 W DynamiteModule: Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+04-08 15:42:30.795  1267  6096 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+04-08 15:42:30.812 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@2d641d9 in: CREATED
+04-08 15:42:30.813 25156 25156 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.qr_dasher.HomePage@2d641d9
+04-08 15:42:30.818 25156 25243 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+04-08 15:42:30.819 25156 25243 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+04-08 15:42:30.837 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@2d641d9 in: STARTED
+04-08 15:42:30.837 25156 25156 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.qr_dasher.HomePage@2d641d9
+04-08 15:42:30.843 25156 25243 D nativeloader: Configuring clns-11 for other apk /system/framework/com.android.media.remotedisplay.jar. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~6daLCPS4NsVHnVM81e9Cig==/com.google.android.gms-LMG0MOtTDMUbRIM28pMCJA==/lib/x86_64:/data/app/~~6daLCPS4NsVHnVM81e9Cig==/com.google.android.gms-LMG0MOtTDMUbRIM28pMCJA==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+04-08 15:42:30.851 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@2d641d9 in: RESUMED
+04-08 15:42:30.852 25156 25156 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.qr_dasher.HomePage@2d641d9
+04-08 15:42:30.869 25156 25156 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10282; state: DISABLED
+04-08 15:42:30.881 25156 25156 W OpenGLRenderer: Unknown dataspace 0
+04-08 15:42:30.900 25156 25243 D nativeloader: Configuring clns-12 for other apk /system/framework/com.android.location.provider.jar. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~6daLCPS4NsVHnVM81e9Cig==/com.google.android.gms-LMG0MOtTDMUbRIM28pMCJA==/lib/x86_64:/data/app/~~6daLCPS4NsVHnVM81e9Cig==/com.google.android.gms-LMG0MOtTDMUbRIM28pMCJA==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+04-08 15:42:30.916 25156 25243 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+04-08 15:42:30.916 25156 25243 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+04-08 15:42:31.106 25156 25243 D nativeloader: Configuring clns-13 for other apk /data/app/~~6daLCPS4NsVHnVM81e9Cig==/com.google.android.gms-LMG0MOtTDMUbRIM28pMCJA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~6daLCPS4NsVHnVM81e9Cig==/com.google.android.gms-LMG0MOtTDMUbRIM28pMCJA==/lib/x86_64:/data/app/~~6daLCPS4NsVHnVM81e9Cig==/com.google.android.gms-LMG0MOtTDMUbRIM28pMCJA==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+04-08 15:42:31.189  1267  1267 W SystemServiceRegistry: No service published for: persistent_data_block
+04-08 15:42:31.216 27225 27225 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.checkin.START pkg=com.google.android.gms }
+04-08 15:42:31.217 27225 27225 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.checkin.START pkg=com.google.android.gms }
+04-08 15:42:31.266 27225 27237 I Checkin : [CheckinApiChimeraService] onGetService
+04-08 15:42:31.291   412   555 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10282 pid=0
+04-08 15:42:31.291   412   555 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10282 => denied (2918 us)
+04-08 15:42:31.293   412   676 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10282 pid=25156
+04-08 15:42:31.293   412   555 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10282 pid=0
+04-08 15:42:31.293   412   676 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10282 => denied (2309 us)
+04-08 15:42:31.293   412   555 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10282 => denied (1383 us)
+04-08 15:42:31.293   412   676 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10282 pid=25156
+04-08 15:42:31.293   412   676 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10282 => denied (689 us)
+04-08 15:42:31.295   412   676 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10282 pid=25156
+04-08 15:42:31.295   412   676 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10282 => denied (1994 us)
+04-08 15:42:31.296   412   555 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10282 pid=0
+04-08 15:42:31.297   412   555 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10282 => denied (3742 us)
+04-08 15:42:31.377 25156 25222 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+04-08 15:42:31.379 25156 25222 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: Error inserting flex_time=3599000 job_id=-1 period=7200000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612551429 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:31.450  1267 24905 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:31.457  1267  3689 D TrafficStats: tagSocket(123) with statsTag=0x407, statsUid=-1
+04-08 15:42:31.595   571  2289 D ConnectivityService: requestNetwork for uid/pid:10282/25156 activeRequest: null callbackRequest: 1383 [NetworkRequest [ REQUEST id=1384, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-08 15:42:31.621   571   708 D ConnectivityService: NetReassign [1384 : null → 104] [c 1] [a 9] [i 11]
+04-08 15:42:31.623   571   701 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=1384, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 15:42:31.624   571   701 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1384, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 15:42:31.625   571   701 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1384, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 15:42:31.627   571   701 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1384, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 15:42:31.641 25156 25203 I FA      : Tag Manager is not found and thus will not be used
+04-08 15:42:31.670 25156 25243 V NativeCrypto: Registering com/google/android/gms/org/conscrypt/NativeCrypto's 305 native methods...
+04-08 15:42:31.713   159   159 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+04-08 15:42:31.713 25156 25222 I Gralloc4: mapper 4.x is not supported
+04-08 15:42:31.781 25156 25243 W ample.qr_dasher: Accessing hidden method Ljava/security/spec/ECParameterSpec;->getCurveName()Ljava/lang/String; (unsupported, reflection, allowed)
+04-08 15:42:31.788 25156 25222 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: Error inserting flex_time=3599000 job_id=-1 period=7200000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612551907 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:31.912  1267 24905 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: Error inserting flex_time=3599000 job_id=-1 period=7199000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612551978 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:31.983  1267 24936 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:31.992 25156 25243 I ProviderInstaller: Installed default security provider GmsCore_OpenSSL
+04-08 15:42:32.315   571  2289 D ConnectivityService: requestNetwork for uid/pid:10282/25156 activeRequest: null callbackRequest: 1385 [NetworkRequest [ REQUEST id=1386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+04-08 15:42:32.323   571   701 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=1386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 15:42:32.324   571   701 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 15:42:32.326   571   701 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 15:42:32.332   571   701 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1386, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: com.example.qr_dasher UnderlyingNetworks: Null] ]
+04-08 15:42:32.333   571   708 D ConnectivityService: NetReassign [1386 : null → 104] [c 0] [a 1] [i 15]
+04-08 15:42:32.349 25156 25247 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(wmsSync-VRI[HomePage]#0) as ready
+04-08 15:42:32.350 25156 25247 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(VRI[HomePage]#1) as ready
+04-08 15:42:32.351   571  2289 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10282 pid=0
+04-08 15:42:32.351   571  2289 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10282 => denied (183 us)
+04-08 15:42:32.351   571  2289 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10282 pid=0
+04-08 15:42:32.351   571  2289 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10282 => denied (97 us)
+04-08 15:42:32.351   571  2289 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10282 pid=0
+04-08 15:42:32.351   571  2289 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10282 => denied (89 us)
+04-08 15:42:32.393   571   593 W ziparchive: Unable to open '/data/app/~~vrkgNn81yqeJ2pVzR7jIJw==/com.example.qr_dasher-9qMcnCZl9fj5H_vFKhkDVw==/base.dm': No such file or directory
+04-08 15:42:32.419 25156 25156 I Choreographer: Skipped 87 frames!  The application may be doing too much work on its main thread.
+04-08 15:42:32.419 25156 25170 I OpenGLRenderer: Davey! duration=1493ms; Flags=1, FrameTimelineVsyncId=2000706, IntendedVsync=132860155766330, Vsync=132860189099662, InputEventId=0, HandleInputStart=132860191075260, AnimationStart=132860191123360, PerformTraversalsStart=132860191223860, DrawStart=132861034672060, FrameDeadline=132860172432996, FrameInterval=132860191012260, FrameStartTime=16666666, SyncQueued=132861074726860, SyncStart=132861078983760, IssueDrawCommandsStart=132861145004560, SwapBuffers=132861636403060, FrameCompleted=132861653390860, DequeueBufferDuration=57100, QueueBufferDuration=1228800, GpuCompleted=132861652993460, SwapBuffersCompleted=132861653390860, DisplayPresentTime=0, CommandSubmissionCompleted=132861636403060,
+04-08 15:42:32.421   571   593 I ActivityTaskManager: Displayed com.example.qr_dasher/.HomePage for user 0: +4s614ms
+04-08 15:42:32.475   571  2289 I ImeTracker: com.example.qr_dasher:5e528a38: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+04-08 15:42:32.478   571  2289 I ImeTracker: com.example.qr_dasher:5e528a38: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 15:42:32.493 25156 25170 I OpenGLRenderer: Davey! duration=1502ms; Flags=0, FrameTimelineVsyncId=2000751, IntendedVsync=132860205766328, Vsync=132861655766270, InputEventId=0, HandleInputStart=132861668910260, AnimationStart=132861668957860, PerformTraversalsStart=132861670714660, DrawStart=132861671116560, FrameDeadline=132861672432936, FrameInterval=132861664635960, FrameStartTime=16666666, SyncQueued=132861679657160, SyncStart=132861679795060, IssueDrawCommandsStart=132861682389660, SwapBuffers=132861697240260, FrameCompleted=132861708151360, DequeueBufferDuration=252500, QueueBufferDuration=582900, GpuCompleted=132861708151360, SwapBuffersCompleted=132861699686860, DisplayPresentTime=0, CommandSubmissionCompleted=132861697240260,
+04-08 15:42:32.571 25156 25262 D ProfileInstaller: Installing profile for com.example.qr_dasher
+04-08 15:42:32.696  1019  1091 I ImeTracker: com.google.android.apps.nexuslauncher:7c0496f2: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+04-08 15:42:32.718  1019  1091 I ImeTracker: com.google.android.apps.nexuslauncher:7c0496f2: onFailed at PHASE_CLIENT_VIEW_SERVED
+04-08 15:42:32.741  1267  4503 I FontLog : (REDACTED) Received query %s, URI %s
+04-08 15:42:32.744 25156 25262 W ample.qr_dasher: Verification of void androidx.profileinstaller.DeviceProfileWriter.result(int, java.lang.Object) took 139.591ms (78.80 bytecodes/s) (1592B approximate peak alloc)
+04-08 15:42:32.761  1267  4503 I FontLog : (REDACTED) Query [%s] resolved to %s
+04-08 15:42:32.762 25156 25194 W FileTestStorage: Output properties is not supported.
+04-08 15:42:32.766  1019  2054 D OneSearchSuggestProvider: Shut down the binder channel
+04-08 15:42:32.772 25156 25194 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+04-08 15:42:32.793  1391  1434 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@7bb5005
+04-08 15:42:32.811   571  2289 W InputManager-JNI: Input channel object 'febde0 Splash Screen com.example.qr_dasher (client)' was disposed without first being removed with the input manager!
+04-08 15:42:32.869 25156 25194 D CompatibilityChangeReporter: Compat change id reported: 247079863; UID 10282; state: ENABLED
+04-08 15:42:32.909 25156 25194 D EventInjectionStrategy: Creating injection strategy with input manager.
+04-08 15:42:32.909 25156 25194 W ample.qr_dasher: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+04-08 15:42:32.917 25156 25194 W ample.qr_dasher: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+04-08 15:42:32.918 25156 25194 W ample.qr_dasher: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+04-08 15:42:32.962  1267  4503 I FontLog : (REDACTED) Fetch %s end status %s
+04-08 15:42:33.057  1267  4503 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+04-08 15:42:33.108 25156 25194 W ample.qr_dasher: Accessing hidden method Landroid/view/ViewConfiguration;->getDoubleTapMinTime()I (unsupported, reflection, allowed)
+04-08 15:42:33.141 25156 25194 W FileTestStorage: Test input args is not supported.
+04-08 15:42:33.145  1019 22963 I IPCThreadState: oneway function results for code 2 on binder at 0x7ebcd380c4f0 will be dropped but finished with status UNKNOWN_TRANSACTION
+04-08 15:42:33.068  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 15:42:33.202  1267  4503 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+04-08 15:42:33.204 25156 25156 W ample.qr_dasher: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+04-08 15:42:33.206 25156 25156 W ample.qr_dasher: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+04-08 15:42:33.212 25156 25156 W ample.qr_dasher: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+04-08 15:42:33.239 25156 25156 W ample.qr_dasher: Accessing hidden method Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal; (unsupported, reflection, allowed)
+04-08 15:42:33.239 25156 25156 W ample.qr_dasher: Accessing hidden field Landroid/view/WindowManagerGlobal;->mViews:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+04-08 15:42:33.240 25156 25156 W ample.qr_dasher: Accessing hidden field Landroid/view/WindowManagerGlobal;->mParams:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+04-08 15:42:33.267 25156 25156 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131231121/com.example.qr_dasher:id/next_button>
+04-08 15:42:33.277  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 15:42:33.300  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.qr_dasher fieldId=0 fieldName=null extras=null}, false)
+04-08 15:42:33.302  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 15:42:33.303  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:33.307 25156 25194 W ample.qr_dasher: Verification of boolean androidx.test.espresso.core.internal.deps.guava.util.concurrent.AbstractFuture$UnsafeAtomicHelper.casValue(androidx.test.espresso.core.internal.deps.guava.util.concurrent.AbstractFuture, java.lang.Object, java.lang.Object) took 104.639ms (114.68 bytecodes/s) (1608B approximate peak alloc)
+04-08 15:42:33.626 25156 25165 I ample.qr_dasher: Background concurrent copying GC freed 81767(5842KB) AllocSpace objects, 33(1300KB) LOS objects, 49% free, 5700KB/11MB, paused 63.104ms,105us total 1.057s
+04-08 15:42:33.629 25156 25222 D EGL_emulation: app_time_stats: avg=147.32ms min=6.01ms max=943.45ms count=8
+04-08 15:42:33.880   412   412 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+04-08 15:42:33.888 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@2d641d9 in: PAUSED
+04-08 15:42:33.890   408 27377 D audioserver: FGS Logger Transaction failed
+04-08 15:42:33.890   408 27377 D audioserver: -129
+04-08 15:42:33.984 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@82837f6 in: PRE_ON_CREATE
+04-08 15:42:34.120 25156 25156 D CompatibilityChangeReporter: Compat change id reported: 147798919; UID 10282; state: ENABLED
+04-08 15:42:35.221 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@82837f6 in: CREATED
+04-08 15:42:35.223 25156 25241 W ample.qr_dasher: Verification of void io.grpc.ClientCall$Listener.onClose(io.grpc.Status, io.grpc.Metadata) took 1.052s (0.95 bytecodes/s) (1304B approximate peak alloc)
+04-08 15:42:35.229   412   494 W EventThread: Faking VSYNC due to driver stall for thread app
+04-08 15:42:35.229   412   496 W EventThread: Faking VSYNC due to driver stall for thread appSf
+04-08 15:42:35.235 25156 25266 I OpenGLRenderer: Davey! duration=1087ms; Flags=2, FrameTimelineVsyncId=2001482, IntendedVsync=132863389099534, Vsync=132863389099534, InputEventId=0, HandleInputStart=132863389099534, AnimationStart=132863389099534, PerformTraversalsStart=132863389099534, DrawStart=132863389099534, FrameDeadline=132863405766200, FrameInterval=132863389099534, FrameStartTime=16666666, SyncQueued=132863396090960, SyncStart=132863396107360, IssueDrawCommandsStart=132863396159360, SwapBuffers=132863397312360, FrameCompleted=132864476620160, DequeueBufferDuration=41300, QueueBufferDuration=845000, GpuCompleted=132864476620160, SwapBuffersCompleted=132863404240360, DisplayPresentTime=0, CommandSubmissionCompleted=132863397312360,
+04-08 15:42:35.236 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@82837f6 in: STARTED
+04-08 15:42:35.241   408   534 W AudioFlinger: write blocked for 1148 msecs, 3 delayed writes, thread 13
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: Error inserting flex_time=3597000 job_id=-1 period=7195000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612555255 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:35.268  1267 24936 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:35.274 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@82837f6 in: RESUMED
+04-08 15:42:35.289 25156 25156 I Choreographer: Skipped 80 frames!  The application may be doing too much work on its main thread.
+04-08 15:42:35.295 25156 25222 D EGL_emulation: app_time_stats: avg=58.49ms min=4.61ms max=1136.61ms count=27
+04-08 15:42:35.302 25156 25266 I OpenGLRenderer: Davey! duration=1353ms; Flags=0, FrameTimelineVsyncId=2001388, IntendedVsync=132863189099542, Vsync=132864522432822, InputEventId=0, HandleInputStart=132864535202060, AnimationStart=132864535237060, PerformTraversalsStart=132864535714560, DrawStart=132864536319360, FrameDeadline=132864505766156, FrameInterval=132864534463760, FrameStartTime=16666666, SyncQueued=132864538257760, SyncStart=132864538326160, IssueDrawCommandsStart=132864538609660, SwapBuffers=132864539794560, FrameCompleted=132864542581860, DequeueBufferDuration=32900, QueueBufferDuration=370100, GpuCompleted=132864542581860, SwapBuffersCompleted=132864542146560, DisplayPresentTime=0, CommandSubmissionCompleted=132864539794560,
+04-08 15:42:35.358 25156 25222 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:35.391   408   534 D audioserver: FGS Logger Transaction failed
+04-08 15:42:35.392   408   534 D audioserver: -129
+04-08 15:42:35.444   571   593 I ActivityTaskManager: Displayed com.example.qr_dasher/.RolePage for user 0: +1s607ms
+04-08 15:42:35.452 25156 25277 D TrafficStats: tagSocket(140) with statsTag=0xffffffff, statsUid=-1
+04-08 15:42:35.453 25156 25171 I OpenGLRenderer: Davey! duration=1501ms; Flags=1, FrameTimelineVsyncId=2001388, IntendedVsync=132863189099542, Vsync=132864522432822, InputEventId=0, HandleInputStart=132864535202060, AnimationStart=132864535237060, PerformTraversalsStart=132864535714560, DrawStart=132864606747260, FrameDeadline=132863205766208, FrameInterval=132864534463760, FrameStartTime=16666666, SyncQueued=132864627053260, SyncStart=132864628774160, IssueDrawCommandsStart=132864628842560, SwapBuffers=132864642770260, FrameCompleted=132864691855760, DequeueBufferDuration=56800, QueueBufferDuration=1076500, GpuCompleted=132864691855760, SwapBuffersCompleted=132864679752560, DisplayPresentTime=-70931689852654777, CommandSubmissionCompleted=132864642770260,
+04-08 15:42:35.494  1391  1391 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 15:42:35.502 25156 25277 W ample.qr_dasher: Accessing hidden field Ljava/net/Socket;->impl:Ljava/net/SocketImpl; (unsupported, reflection, allowed)
+04-08 15:42:35.632  1391  1438 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: Error inserting flex_time=3595000 job_id=-1 period=7192000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612555685 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:35.689  1267 24905 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:35.754 25156 25156 D RootViewPicker: Root not ready - waiting: 10ms for one to appear.
+04-08 15:42:35.765 25156 25156 D RootViewPicker: Root not ready - waiting: 25ms for one to appear.
+04-08 15:42:35.784   571  2289 I ImeTracker: com.example.qr_dasher:ef019286: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+04-08 15:42:35.785   571  2289 I ImeTracker: com.example.qr_dasher:ef019286: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 15:42:35.794 25156 25156 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230800/com.example.qr_dasher:id/admin_button>
+04-08 15:42:35.812  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 15:42:35.816  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 15:42:35.818  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.qr_dasher fieldId=0 fieldName=null extras=null}, false)
+04-08 15:42:35.818  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 15:42:35.819  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:35.844   408 27377 D audioserver: FGS Logger Transaction failed
+04-08 15:42:35.844   408 27377 D audioserver: -129
+04-08 15:42:35.866   408   534 D AudioFlinger: mixer(0x72cffd203930) throttle end: throttle time(35)
+04-08 15:42:35.884 25156 25156 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+04-08 15:42:35.884 25156 25156 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+04-08 15:42:36.069   408   534 D audioserver: FGS Logger Transaction failed
+04-08 15:42:36.069   408   534 D audioserver: -129
+04-08 15:42:36.074 25156 25277 W ample.qr_dasher: Accessing hidden method Ljava/security/spec/ECParameterSpec;->setCurveName(Ljava/lang/String;)V (unsupported, reflection, allowed)
+04-08 15:42:36.113 25156 25222 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:36.240 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@2d641d9 in: STOPPED
+04-08 15:42:36.251 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.HomePage@2d641d9 in: DESTROYED
+04-08 15:42:36.252 25156 25156 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@252f00
+04-08 15:42:36.260  1391  1438 D EGL_emulation: app_time_stats: avg=1602.26ms min=12.29ms max=6279.22ms count=4
+04-08 15:42:36.266   571  2289 W InputManager-JNI: Input channel object 'fc76081 com.example.qr_dasher/com.example.qr_dasher.HomePage (client)' was disposed without first being removed with the input manager!
+04-08 15:42:36.293   571  2508 I ImeTracker: com.example.qr_dasher:e18cf1ee: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+04-08 15:42:36.293   571  2508 I ImeTracker: com.example.qr_dasher:e18cf1ee: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 15:42:36.294  1391  1391 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 15:42:36.304  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 15:42:36.305  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 15:42:36.309  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.qr_dasher fieldId=0 fieldName=null extras=null}, false)
+04-08 15:42:36.310  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 15:42:36.315  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:36.562  1391  1438 D EGL_emulation: app_time_stats: avg=164.61ms min=2.66ms max=5426.24ms count=35
+04-08 15:42:36.561 25156 25156 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getId() is <2131230954/com.example.qr_dasher:id/enter_pin>
+04-08 15:42:36.589 25156 25156 I ViewInteraction: Performing 'type text(QRDasher)' action on view view.getId() is <2131230954/com.example.qr_dasher:id/enter_pin>
+04-08 15:42:36.684 25156 25156 D CompatibilityChangeReporter: Compat change id reported: 163400105; UID 10282; state: ENABLED
+04-08 15:42:36.689 25156 25156 I ImeTracker: com.example.qr_dasher:74e0c0e: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT
+04-08 15:42:36.695 25156 25156 D InputMethodManager: showSoftInput() view=androidx.appcompat.widget.AppCompatEditText{dc03d41 VFED..CL. .F.P..ID 274,165-482,283 #7f0800ea app:id/enter_pin aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+04-08 15:42:36.710  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 15:42:36.716  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 15:42:36.717  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x20001(Normal) imeOptions=0x40000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.qr_dasher fieldId=2131230954 fieldName=null extras=Bundle[mParcelledData.dataSize=240]}, false)
+04-08 15:42:36.717  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 15:42:36.719  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:36.741 25156 25156 I AssistStructure: Flattened final assist data: 1860 bytes, containing 2 windows, 11 views
+04-08 15:42:36.773  1391  1391 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@1a7486c
+04-08 15:42:36.776   571  2321 W InputManager-JNI: Input channel object '2b1526e Toast (client)' was disposed without first being removed with the input manager!
+04-08 15:42:36.805  1573  1573 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-08 15:42:36.839  1391  1438 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:36.915  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1995 onStartInputView(EditorInfo{inputType=0x20001(Normal) imeOptions=0x40000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.qr_dasher fieldId=2131230954 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=9, android.support.text.emoji.emojiCompat_replaceAll=false}]}, false)
+04-08 15:42:36.921  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:36.954  1573  1660 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-08 15:42:36.957  1573  1573 W ModuleManager: ModuleManager.loadModule():450 Module erj is not available
+04-08 15:42:36.989  1573  1573 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+04-08 15:42:36.999 25156 25156 D UiControllerImpl: Injecting string: "QRDasher"
+04-08 15:42:37.005  1573  1573 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=0x20001(Normal) imeOptions=0x40000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.qr_dasher fieldId=2131230954 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=9, android.support.text.emoji.emojiCompat_replaceAll=false}], IncognitoMode = false, DeviceLocked = false
+04-08 15:42:37.101  1573  1573 I Delight5Facilitator: Delight5Facilitator.initializeForIme():777 initializeForIme() : Locale = [en_US], layout = qwerty
+04-08 15:42:37.199  1573  1573 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+04-08 15:42:37.201  1573  1573 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+04-08 15:42:37.255  1573  1573 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1003 inline flag updated to:false
+04-08 15:42:37.258  1573  3450 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():205 maybeScheduleAutoPackDownloadForFallback()
+04-08 15:42:37.262  1573  3450 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():195 maybeScheduleAutoPackDownload() for language tag en-US
+04-08 15:42:37.507  1573  1573 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+04-08 15:42:37.565  1391  1438 D EGL_emulation: app_time_stats: avg=18.00ms min=2.09ms max=176.75ms count=46
+04-08 15:42:37.671 25156 25222 D EGL_emulation: app_time_stats: avg=101.20ms min=4.63ms max=516.30ms count=14
+04-08 15:42:37.716  1573  1573 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+04-08 15:42:37.723  1573  1573 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-08 15:42:37.730  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = HEADER, shownType = SHOW_OPTIONAL
+04-08 15:42:37.730  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+04-08 15:42:37.730  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = BODY, shownType = SHOW_MANDATORY
+04-08 15:42:37.731  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+04-08 15:42:37.732  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = FLOATING_CANDIDATES, shownType = HIDE
+04-08 15:42:37.732  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = false
+04-08 15:42:37.758  1573  1573 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+04-08 15:42:37.783  1573  1573 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-08 15:42:37.827  1573  1573 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-08 15:42:37.832  1573  1573 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-08 15:42:37.833  1573  1573 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+04-08 15:42:37.837  1573  1573 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-08 15:42:37.843  1573  1573 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+04-08 15:42:37.844  1573  1573 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-08 15:42:37.862  1573  1573 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+04-08 15:42:37.867  1573  1573 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+04-08 15:42:37.913  1573  1573 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():383 No private IME option set to start voice input.
+04-08 15:42:37.978 27225 27225 D BoundBrokerSvc: onBind: Intent { act=com.google.firebase.dynamiclinks.service.START pkg=com.google.android.gms }
+04-08 15:42:37.978 27225 27225 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.firebase.dynamiclinks.service.START pkg=com.google.android.gms }
+04-08 15:42:38.106  1573  1573 I Choreographer: Skipped 71 frames!  The application may be doing too much work on its main thread.
+04-08 15:42:38.256  1573  1699 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:38.284  1391  1391 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 15:42:38.330  1267  1267 W AutofillChimeraService: Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+04-08 15:42:38.375 27225 27225 D BoundBrokerSvc: onBind: Intent { act=com.google.android.mdd.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-08 15:42:38.378 27225 27225 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.mdd.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-08 15:42:38.674 25156 25222 D EGL_emulation: app_time_stats: avg=334.01ms min=141.95ms max=499.93ms count=3
+04-08 15:42:38.864  1573  1573 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-08 15:42:38.868  1573  1573 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+04-08 15:42:38.877  1573  1573 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+04-08 15:42:38.880  1573  1573 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-08 15:42:38.884 25156 25156 D InsetsController: show(ime(), fromIme=true)
+04-08 15:42:38.945   359  3337 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 100824960
+04-08 15:42:38.949  1573  1573 W AndroidSpellCheckerService: AndroidSpellCheckerService.initialize():82 initialize...
+04-08 15:42:38.951  1573  1573 I ShortcutsDataManager: ShortcutsDataManager.onContentChanged():70 onContentChanged()
+04-08 15:42:38.952  1573  1573 I ContactsDataManager: ContactsDataManager.onContentChanged():156 onContentChanged()
+04-08 15:42:38.956  1573  1573 W AndroidSpellCheckerService: AndroidSpellCheckerService.initialize():94 initialize...done
+04-08 15:42:39.028  1573  1573 I Choreographer: Skipped 44 frames!  The application may be doing too much work on its main thread.
+04-08 15:42:39.114  1391  1438 D EGL_emulation: app_time_stats: avg=109.01ms min=6.82ms max=1799.61ms count=19
+04-08 15:42:39.200  1573  2001 I native  : I0000 00:00:1712612559.186545    2001 input-context-store.cc:255] Ignoring stale client request for FetchSuggestions
+04-08 15:42:39.219  1573  2001 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():457 setKeyboardLayout()
+04-08 15:42:39.236  1573  1573 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():897 Ignore [FetchSuggestions] diff due to stale request: 8236<8239, inputStateId=7968, lastInputStateId=7968
+04-08 15:42:39.241 25156 25156 I ImeTracker: com.example.qr_dasher:74e0c0e: onShown
+04-08 15:42:39.252  1391  1438 D EGL_emulation: app_time_stats: avg=93.38ms min=5.10ms max=1154.25ms count=18
+04-08 15:42:39.303  1046  1046 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:1689242682
+04-08 15:42:39.323  1267  4503 I IPCThreadState: oneway function results for code 1 on binder at 0x7ebcd3850200 will be dropped but finished with status UNKNOWN_TRANSACTION and reply parcel size 80
+04-08 15:42:39.363  1391  1391 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@6a2d7d0
+04-08 15:42:39.372   571  2321 W InputManager-JNI: Input channel object '96ca73d Toast (client)' was disposed without first being removed with the input manager!
+04-08 15:42:39.463  1391  1438 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:39.698 25156 25222 D EGL_emulation: app_time_stats: avg=78.25ms min=4.95ms max=310.74ms count=13
+04-08 15:42:39.731 25156 25156 I ViewInteraction: Performing 'close keyboard' action on view view.getId() is <2131230954/com.example.qr_dasher:id/enter_pin>
+04-08 15:42:39.734 25156 25156 D IdlingRegistry: Registering idling resources: [androidx.test.espresso.action.CloseKeyboardAction$CloseKeyboardIdlingResult@1f4385]
+04-08 15:42:39.736 25156 25156 I ImeTracker: com.example.qr_dasher:f542ae4: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+04-08 15:42:39.740  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2241
+04-08 15:42:39.745  1573  1573 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+04-08 15:42:39.750  1573  2001 I native  : I0000 00:00:1712612559.749181    2001 input-context-store.cc:255] Ignoring stale client request for FetchSuggestions
+04-08 15:42:39.940  1573  2001 I native  : I0000 00:00:1712612559.940099    2001 input-context-store.cc:255] Ignoring stale client request for FetchSuggestions
+04-08 15:42:39.971 25156 25156 I ImeTracker: com.example.qr_dasher:fcd300f1: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT_BY_INSETS_API
+04-08 15:42:39.973   571  2508 I ImeTracker: com.example.qr_dasher:fcd300f1: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 15:42:39.975 25156 25156 I ImeTracker: com.example.qr_dasher:f542ae4: onHidden
+04-08 15:42:39.982  1573  1573 I InputBundle: InputBundle.consumeEvent():923 Skip consuming an event as keyboard status is 0
+04-08 15:42:39.985  1573  1573 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+04-08 15:42:39.985  1573  1573 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+04-08 15:42:39.993  1573  1573 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+04-08 15:42:40.006 25156 25156 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=ImeCallback=ImeOnBackInvokedCallback@77554338 Callback=android.window.IOnBackInvokedCallback$Stub$Proxy@6159301
+04-08 15:42:40.037  1573  1573 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():897 Ignore [FetchSuggestions] diff due to stale request: 8245<8258, inputStateId=7974, lastInputStateId=7977
+04-08 15:42:40.040  1573  1573 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():897 Ignore [FetchSuggestions] diff due to stale request: 8255<8258, inputStateId=7975, lastInputStateId=7977
+04-08 15:42:40.062  1573  1573 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():897 Ignore [FetchSuggestions] diff due to stale request: 8257<8258, inputStateId=7976, lastInputStateId=7977
+04-08 15:42:40.111  1573  2548 E native  : E0000 00:00:1712612560.110051    2548 keyboard.cc:27] Cannot create a keyboard with 0 valid keys
+04-08 15:42:40.264  1391  1438 D EGL_emulation: app_time_stats: avg=22.35ms min=7.84ms max=240.57ms count=44
+04-08 15:42:40.268  1391  1391 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 15:42:40.307 25156 25156 D IdlingRegistry: Unregistering idling resources: [androidx.test.espresso.action.CloseKeyboardAction$CloseKeyboardIdlingResult@1f4385]
+04-08 15:42:40.310 25156 25156 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230953/com.example.qr_dasher:id/enter_button>
+04-08 15:42:40.422 25156 25222 D EGL_emulation: app_time_stats: avg=622.02ms min=13.37ms max=2769.64ms count=8
+04-08 15:42:40.472   408 27377 D audioserver: FGS Logger Transaction failed
+04-08 15:42:40.472   408 27377 D audioserver: -129
+04-08 15:42:40.485 25156 25156 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@6e8940c
+04-08 15:42:40.504 25156 25222 D OpenGLRenderer: endAllActiveAnimators on 0x7ebe837efba0 (RippleDrawable) with handle 0x7ebcd3800c10
+04-08 15:42:40.506   571  1389 W InputManager-JNI: Input channel object '79c4f07 com.example.qr_dasher/com.example.qr_dasher.RolePage (client)' was disposed without first being removed with the input manager!
+04-08 15:42:40.527 25156 25156 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+04-08 15:42:40.527 25156 25156 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+04-08 15:42:40.544   412   412 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+04-08 15:42:40.545 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@82837f6 in: PAUSED
+04-08 15:42:40.573 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminActivity@1ca29eb in: PRE_ON_CREATE
+04-08 15:42:40.638   408   534 D audioserver: FGS Logger Transaction failed
+04-08 15:42:40.639   408   534 D audioserver: -129
+04-08 15:42:40.657 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminActivity@1ca29eb in: CREATED
+04-08 15:42:40.665 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminActivity@1ca29eb in: STARTED
+04-08 15:42:40.668 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminActivity@1ca29eb in: RESUMED
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: Error inserting flex_time=3590000 job_id=-1 period=7182000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612560688 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:40.705  1267 24936 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:40.765 25156 25222 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:40.872   571   593 I ActivityTaskManager: Displayed com.example.qr_dasher/.AdminActivity for user 0: +381ms
+04-08 15:42:40.900  1391  1438 D EGL_emulation: app_time_stats: avg=579.60ms min=14.68ms max=4509.10ms count=8
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: Error inserting flex_time=3590000 job_id=-1 period=7182000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612560930 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):97)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:40.959  1267 24446 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:41.086 25156 25156 D RootViewPicker: Root not ready - waiting: 10ms for one to appear.
+04-08 15:42:41.099 25156 25156 D RootViewPicker: Root not ready - waiting: 25ms for one to appear.
+04-08 15:42:41.127 25156 25156 D RootViewPicker: Root not ready - waiting: 50ms for one to appear.
+04-08 15:42:41.153   571  2321 I ImeTracker: com.example.qr_dasher:e1559d16: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+04-08 15:42:41.154   571  2321 I ImeTracker: com.example.qr_dasher:e1559d16: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 15:42:41.158  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 15:42:41.160  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 15:42:41.160  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.qr_dasher fieldId=0 fieldName=null extras=null}, false)
+04-08 15:42:41.160  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 15:42:41.161  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:41.169  1573  1573 I ShortcutsDataManager: AbstractContentDataManager.startImportContentTask():234 startImportContentTask()
+04-08 15:42:41.180  1573  1872 I ShortcutsDataManager: AbstractContentDataManager$ImportContentTask.doInBackground():248 doInBackground()
+04-08 15:42:41.186  1573  1872 I PersonalDictionaryDataHandler: PersonalDictionaryDataHandler.beginProcess():111 LanguageTags = [en-US]
+04-08 15:42:41.186 25156 25156 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131231342/com.example.qr_dasher:id/user_list_button>
+04-08 15:42:41.304   408   638 D audioserver: FGS Logger Transaction failed
+04-08 15:42:41.305   408   638 D audioserver: -129
+04-08 15:42:41.316   408   534 D AudioFlinger: mixer(0x72cffd203930) throttle end: throttle time(37)
+04-08 15:42:41.336 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminActivity@1ca29eb in: PAUSED
+04-08 15:42:41.384 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminUserList@2471602 in: PRE_ON_CREATE
+04-08 15:42:41.432 25156 25156 D CompatibilityChangeReporter: Compat change id reported: 171228096; UID 10282; state: ENABLED
+04-08 15:42:41.453 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminUserList@2471602 in: CREATED
+04-08 15:42:41.457 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminUserList@2471602 in: STARTED
+04-08 15:42:41.460 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminUserList@2471602 in: RESUMED
+04-08 15:42:41.521   408   534 D audioserver: FGS Logger Transaction failed
+04-08 15:42:41.521   408   534 D audioserver: -129
+04-08 15:42:41.713 25156 25222 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:41.828  1391  1438 D EGL_emulation: app_time_stats: avg=106.05ms min=6.97ms max=1862.61ms count=20
+04-08 15:42:41.883 25156 25222 D EGL_emulation: app_time_stats: avg=25.52ms min=3.42ms max=246.77ms count=33
+04-08 15:42:41.908  1573  1872 I ShortcutsDataManager: AbstractContentDataManager.importRecords():338 importRecords() : Success : Count = 0
+04-08 15:42:41.929  1391  1391 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@2068aa9
+04-08 15:42:42.009   571   593 I ActivityTaskManager: Displayed com.example.qr_dasher/.AdminUserList for user 0: +689ms
+04-08 15:42:42.013  1573  1872 I ShortcutsDataManager: AbstractContentDataManager.importContentData():288 importContentData() : Ending import process
+04-08 15:42:42.020  1573  2001 I Delight5Decoder: Delight5DecoderWrapper.unloadLanguageModel():857 unloadLanguageModel() : 4, version [n/a]
+04-08 15:42:42.027   571  1389 W InputManager-JNI: Input channel object 'da329f2 Toast (client)' was disposed without first being removed with the input manager!
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: Error inserting flex_time=3589000 job_id=-1 period=7179000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612562072 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:42.088  1267 24905 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:42.101 25156 25165 I ample.qr_dasher: Background young concurrent copying GC freed 62246(3360KB) AllocSpace objects, 15(684KB) LOS objects, 34% free, 7411KB/11MB, paused 4.248ms,91us total 629.424ms
+04-08 15:42:42.135 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.RolePage@82837f6 in: STOPPED
+04-08 15:42:42.158  1573  1872 I PersonalLanguageModelUpdater: PersonalLanguageModelUpdater$UpdateOperation.performInternal():162 run() : Added 0 words and 0 shortcuts
+04-08 15:42:42.159  1573  1872 I DynamicLanguageModelOperation: DynamicLanguageModelOperation.perform():41 perform() : 4 : cje : Completed
+04-08 15:42:42.160  1573  2001 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():649 loadLanguageModel() : 4, version [n/a]
+04-08 15:42:42.166  1573  1573 I ShortcutsDataManager: AbstractContentDataManager$ImportContentTask.onPostExecute():259 onPostExecute() : Result = [2,0]
+04-08 15:42:42.172  1573  2001 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():690 Loaded dynamic LM 4.en
+04-08 15:42:42.177  1573  1573 I ShortcutsDataManager: ShortcutsDataManager.onImportFinished():80 onImportFinished() : Result = 2 : Count = 0
+04-08 15:42:42.284   571  1389 I ImeTracker: com.example.qr_dasher:3b3c687c: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+04-08 15:42:42.286   571  1389 I ImeTracker: com.example.qr_dasher:3b3c687c: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 15:42:42.289  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 15:42:42.292  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 15:42:42.297  1391  1391 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+04-08 15:42:42.300  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.qr_dasher fieldId=0 fieldName=null extras=null}, false)
+04-08 15:42:42.301  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 15:42:42.303  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:42.325   958   958 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=132871565 mSleepTimeMs=0 mIdleTimeMs=132339090 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[0, 0, 0, 0, 0],mRxTimeMs=0}]}
+04-08 15:42:42.461 25156 25156 I ViewInteraction: Performing 'send keyCode: 4, metaState: 0 key event' action on view view.getRootView() to equal view
+04-08 15:42:42.474  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onKeyDown():2444 Received KEYCODE_BACK. isAllViewsInvisible=false
+04-08 15:42:42.527 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminUserList@2471602 in: PAUSED
+04-08 15:42:42.549 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminActivity@1ca29eb in: RESUMED
+04-08 15:42:42.605   571  2649 I ImeTracker: com.example.qr_dasher:b91eae53: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+04-08 15:42:42.607   571  2649 I ImeTracker: com.example.qr_dasher:b91eae53: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 15:42:42.608  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 15:42:42.611  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 15:42:42.614  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.qr_dasher fieldId=0 fieldName=null extras=null}, false)
+04-08 15:42:42.615  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 15:42:42.619  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:42.673  1267  1280 I .gms.persistent: Background young concurrent copying GC freed 297610(16MB) AllocSpace objects, 5(272KB) LOS objects, 47% free, 18MB/35MB, paused 1.207ms,127us total 1.989s
+04-08 15:42:42.678  1267  1280 W .gms.persistent: Reducing the number of considered missed Gc histogram windows from 165 to 100
+04-08 15:42:42.793   571  1389 I ImeTracker: com.example.qr_dasher:c0782de2: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR
+04-08 15:42:42.793   571  1389 I ImeTracker: com.example.qr_dasher:c0782de2: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 15:42:42.798  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 15:42:42.801  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 15:42:42.803  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.qr_dasher fieldId=0 fieldName=null extras=null}, false)
+04-08 15:42:42.804  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 15:42:42.806  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:42.887 25156 25222 D EGL_emulation: app_time_stats: avg=31.79ms min=4.32ms max=404.67ms count=28
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: Error inserting flex_time=3588000 job_id=-1 period=7178000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612562905 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:42.908  1267 25251 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: Error inserting flex_time=3588000 job_id=-1 period=7177000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612563040 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:43.049  1267 25251 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:43.389 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminUserList@2471602 in: STOPPED
+04-08 15:42:43.398 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminUserList@2471602 in: DESTROYED
+04-08 15:42:43.400 25156 25156 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@d7d0629
+04-08 15:42:43.407   571  2289 W InputManager-JNI: Input channel object '4df2026 com.example.qr_dasher/com.example.qr_dasher.AdminUserList (client)' was disposed without first being removed with the input manager!
+04-08 15:42:43.420 25156 25156 W KeyEventActionBase: Back was pressed and left the application in an inconsistent state even after 600ms.
+04-08 15:42:43.431 25156 25156 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230961/com.example.qr_dasher:id/event_list_button>
+04-08 15:42:43.477   408   638 D audioserver: FGS Logger Transaction failed
+04-08 15:42:43.477   408   638 D audioserver: -129
+04-08 15:42:43.501   412   412 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+04-08 15:42:43.518 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminActivity@1ca29eb in: PAUSED
+04-08 15:42:43.568 25156 25165 I ample.qr_dasher: Background concurrent copying GC freed 51514(3058KB) AllocSpace objects, 43(920KB) LOS objects, 49% free, 7305KB/14MB, paused 781us,522us total 143.048ms
+04-08 15:42:43.681 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminEventList@aa06a01 in: PRE_ON_CREATE
+04-08 15:42:43.697   408   534 D audioserver: FGS Logger Transaction failed
+04-08 15:42:43.697   408   534 D audioserver: -129
+04-08 15:42:43.714 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminEventList@aa06a01 in: CREATED
+04-08 15:42:43.718 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminEventList@aa06a01 in: STARTED
+04-08 15:42:43.723 25156 25156 D LifecycleMonitor: Lifecycle status change: com.example.qr_dasher.AdminEventList@aa06a01 in: RESUMED
+04-08 15:42:43.810 25156 25222 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: Error inserting flex_time=3587000 job_id=-1 period=7176000 source=16 requires_charging=0 preferred_network_type=1 target_class=com.google.android.gms.measurement.PackageMeasurementTaskService user_id=0 target_package=com.google.android.gms tag=Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG task_type=0 required_idleness_state=0 service_kind=0 source_version=240812000 persistence_level=1 preferred_charging_state=1 required_network_type=0 runtime=1712612563833 retry_strategy={"maximum_backoff_seconds":{"3600":0},"initial_backoff_seconds":{"30":0},"retry_policy":{"0":0}} last_runtime=0 [CONTEXT service_id=218 ]
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: pending_ops.tag, pending_ops.target_class, pending_ops.target_package, pending_ops.user_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertWithOnConflict(SQLiteDatabase.java:1870)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at android.database.sqlite.SQLiteDatabase.insertOrThrow(SQLiteDatabase.java:1765)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at ctph.d(:com.google.android.gms@240812041@24.08.12 (190800-608507424):743)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at ctne.n(:com.google.android.gms@240812041@24.08.12 (190800-608507424):29)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at ctne.u(:com.google.android.gms@240812041@24.08.12 (190800-608507424):362)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at ctne.h(:com.google.android.gms@240812041@24.08.12 (190800-608507424):51)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at ctih.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):72)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at alab.c(:com.google.android.gms@240812041@24.08.12 (190800-608507424):50)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at alab.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):76)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at alfp.run(:com.google.android.gms@240812041@24.08.12 (190800-608507424):8)
+04-08 15:42:43.837  1267 25251 W NetworkScheduler: 	at java.lang.Thread.run(Thread.java:1012)
+04-08 15:42:43.872   571   593 I ActivityTaskManager: Displayed com.example.qr_dasher/.AdminEventList for user 0: +389ms
+04-08 15:42:43.894 25156 25222 D EGL_emulation: app_time_stats: avg=30.16ms min=3.51ms max=545.98ms count=26
+04-08 15:42:44.100   571  2508 I ImeTracker: com.example.qr_dasher:e585f482: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+04-08 15:42:44.101   571  2508 I ImeTracker: com.example.qr_dasher:e585f482: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-08 15:42:44.102  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+04-08 15:42:44.105  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+04-08 15:42:44.106  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.qr_dasher fieldId=0 fieldName=null extras=null}, false)
+04-08 15:42:44.107  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+04-08 15:42:44.108  1573  1573 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+04-08 15:42:44.115 25156 25194 I TestRunner: finished: loginAsAnAdmin(com.example.qr_dasher.adminViewIntentTest)

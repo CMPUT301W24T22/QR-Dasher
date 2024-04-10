@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="attendee_profile"
+        android:text="Attendee Profile"
         android:textSize="40dp"
         android:padding="10dp"/>
 
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="2dp"
-        android:text="update_profile_picture"
+        android:text="Update Profile Picture"
         android:textSize="20dp"
         tools:ignore="TextSizeCheck" />
 
@@ -52,7 +52,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="enter_name"
+            android:text="Enter Name"
             android:textSize="20dp"
             android:padding="2dp"/>
 
@@ -74,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="2dp"
-            android:text="enter_email"
+            android:text="Enter Email"
             android:textSize="20dp"
             tools:ignore="TextSizeCheck" />
 
@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="7"
-            android:text="email"/>
+            android:text="Email"/>
 
     </LinearLayout>
 
@@ -95,7 +95,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="enter_details"
+            android:text="Enter Details"
             android:textSize="20dp"
             android:padding="2dp"/>
 

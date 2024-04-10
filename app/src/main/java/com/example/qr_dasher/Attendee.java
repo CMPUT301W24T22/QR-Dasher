@@ -391,6 +391,10 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
                         boolean signUpBool = true;
                         bundle.putBoolean("signUpBool", signUpBool);
+                        if (event.getEventPoster()!=null) {
+                            String eventPoster = event.getEventPoster();
+                            bundle.putString("eventPoster", eventPoster);
+                        }
                         
                         // TODO /////////////////////////////////
                         
@@ -634,6 +638,10 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                                             if (eventPoster != null) {
                                                 scannedEventPoster.add(eventPoster);
                                             }
+                                            else {
+                                                scannedEventPoster.add(null);
+
+                                            }
                                         }
                                     }
                                 }
@@ -690,6 +698,9 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                                             signedEventTimestamps.add(eventTime);
                                             if (eventPoster != null) {
                                                 signedEventPoster.add(eventPoster);
+                                            }
+                                            else {
+                                                signedEventPoster.add(null);
                                             }
                                         }
                                     }
@@ -788,6 +799,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
                 String eventPoster = signedEventPoster.get(position);
                 bundle.putString("eventPoster", eventPoster);
+
 
                 String eventId = signedEventIds.get(position);
                 bundle.putString("eventId", eventId);

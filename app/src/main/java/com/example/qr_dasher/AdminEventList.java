@@ -58,7 +58,7 @@ public class AdminEventList extends AppCompatActivity {
                 String eventName = documentSnapshot.getString("name");
                 eventNamesList.add(eventName);
                 // Get event poster (base64 string) from each document
-                String eventPosterBase64 = documentSnapshot.getString("eventPoster");
+                String eventPosterBase64 = documentSnapshot.getString("Poster");
                 eventPostersList.add(eventPosterBase64);
                 // Get userID (documentID) from each document
                 String eventID = documentSnapshot.getId();

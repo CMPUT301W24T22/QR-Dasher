@@ -83,22 +83,26 @@ public class EventSignUpPage extends AppCompatActivity {
 
             String posterBase64 = extras.getString("eventPoster");
             if (posterBase64 != null) {
-                // Convert Base64 string to bitmap
-                Bitmap posterBitmap = base64ToBitmap(posterBase64);
-                if (posterBitmap != null) {
-                    // Compress and display the bitmap
-                    Bitmap compressedBitmap = compressBitmap(posterBitmap);
-                    if (compressedBitmap != null) {
-                        signUp_poster.setImageBitmap(compressedBitmap);
-                    } else {
-                        // Log an error if compression fails
-                        Log.e("EventSignUpPage", "Failed to compress bitmap");
-                    }
-                } else {
-                    // Log an error if conversion fails
-                    Log.e("EventSignUpPage", "Failed to convert Base64 string to bitmap");
-                }
+
+                signUp_poster.setImageBitmap(Picture.convertStringtoBitmap(posterBase64));
             }
+//            if (posterBase64 != null) {
+//                // Convert Base64 string to bitmap
+//                Bitmap posterBitmap = base64ToBitmap(posterBase64);
+//                if (posterBitmap != null) {
+//                    // Compress and display the bitmap
+//                    Bitmap compressedBitmap = compressBitmap(posterBitmap);
+//                    if (compressedBitmap != null) {
+//                        signUp_poster.setImageBitmap(compressedBitmap);
+//                    } else {
+//                        // Log an error if compression fails
+//                        Log.e("EventSignUpPage", "Failed to compress bitmap");
+//                    }
+//                } else {
+//                    // Log an error if conversion fails
+//                    Log.e("EventSignUpPage", "Failed to convert Base64 string to bitmap");
+//                }
+//            }
         }
         signup_button.setOnClickListener(new View.OnClickListener() {
             @Override

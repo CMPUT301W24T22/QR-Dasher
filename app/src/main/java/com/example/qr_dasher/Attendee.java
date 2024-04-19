@@ -181,6 +181,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                                         // Proceed with attendee QR action
                                         String eventId = String.valueOf(attendeeQR.get("event_id"));
                                         updateFirebase(eventId);
+                                        getCheckedSignedEvents(userId);
                                         return;
                                     }
                                 }
@@ -391,6 +392,13 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
                         boolean signUpBool = true;
                         bundle.putBoolean("signUpBool", signUpBool);
+
+                        if (event.getEventPoster()==null){
+                            Log.d("no event poster","no event poster");
+                        }
+                        String eventPoster = documentSnapshot.getString("Poster");
+                        bundle.putString("eventPoster", eventPoster);
+
                         
                         // TODO /////////////////////////////////
                         
@@ -399,12 +407,8 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                         Date date = eventTimestamp.toDate();
                         bundle.putSerializable("timestamp", date);
 
-
-                        //Integer eventId = Integer.parseInt(eventIdStr);
-                        // Start new activity with the event name
                         Intent intent = new Intent(Attendee.this, EventSignUpPage.class);
-                        //intent.putExtra("eventName", eventName);
-                        //intent.putExtra("event_id", eventId);
+
                         intent.putExtras(bundle);
                         startActivity(intent);
                     } else {
@@ -634,6 +638,10 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                                             if (eventPoster != null) {
                                                 scannedEventPoster.add(eventPoster);
                                             }
+                                            else {
+                                                scannedEventPoster.add(null);
+
+                                            }
                                         }
                                     }
                                 }
@@ -691,6 +699,9 @@ public class Attendee extends AppCompatActivity implements LocationListener {
                                             if (eventPoster != null) {
                                                 signedEventPoster.add(eventPoster);
                                             }
+                                            else {
+                                                signedEventPoster.add(null);
+                                            }
                                         }
                                     }
                                 }
@@ -718,6 +729,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
     private void displayEventList(List<String> scannedEventNames, List<String> signedEventNames) {
         // Create an ArrayAdapter to display the event names
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.mytextview_nopicture, scannedEventNames);
+        Log.d("Attendee","scan is working");
         adapter.notifyDataSetChanged();
         // Set the adapter to the ListView
         scannedEvents.setAdapter(adapter);
@@ -788,6 +800,7 @@ public class Attendee extends AppCompatActivity implements LocationListener {
 
                 String eventPoster = signedEventPoster.get(position);
                 bundle.putString("eventPoster", eventPoster);
+
 
                 String eventId = signedEventIds.get(position);
                 bundle.putString("eventId", eventId);

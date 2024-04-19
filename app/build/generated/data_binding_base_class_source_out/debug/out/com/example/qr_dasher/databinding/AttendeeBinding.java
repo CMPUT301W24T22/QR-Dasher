@@ -5,11 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_dasher.R;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class AttendeeBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final Button browseEvents;
@@ -45,7 +45,7 @@ public final class AttendeeBinding implements ViewBinding {
   @NonNull
   public final TextView welcomeText;
 
-  private AttendeeBinding(@NonNull ConstraintLayout rootView, @NonNull Button browseEvents,
+  private AttendeeBinding(@NonNull LinearLayout rootView, @NonNull Button browseEvents,
       @NonNull Button editProfileButton, @NonNull Button qrButton,
       @NonNull ListView scannedEventsListview, @NonNull TextView scannedEventsText,
       @NonNull ListView signedUpEventsListview, @NonNull TextView signedUpEventsText,
@@ -63,7 +63,7 @@ public final class AttendeeBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -136,9 +136,9 @@ public final class AttendeeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new AttendeeBinding((ConstraintLayout) rootView, browseEvents, editProfileButton,
-          qrButton, scannedEventsListview, scannedEventsText, signedUpEventsListview,
-          signedUpEventsText, welcomeText);
+      return new AttendeeBinding((LinearLayout) rootView, browseEvents, editProfileButton, qrButton,
+          scannedEventsListview, scannedEventsText, signedUpEventsListview, signedUpEventsText,
+          welcomeText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -71,10 +71,10 @@
 <div>  
 <a href="https://github.com/Jastegh"><img src="https://images.weserv.nl/?url=https://github.com/Jastegh.png?v=4&h=50&w=50&fit=cover&mask=circle&maxage=7d"/></a>
 <a href="https://github.com/jassidaksingh"><img src="https://images.weserv.nl/?url=https://github.com/jassidaksingh.png?v=4&h=50&w=50&fit=cover&mask=circle&maxage=7d"/></a>
-<a href="https://github.com/jaz404"><img src="https://avatars.githubusercontent.com/u/115124290?v=4"/></a>
-<a href="https://github.com/saipranav1512"><img src="https://avatars.githubusercontent.com/u/145928964?v=4"/></a>
-<a href="https://github.com/rithwikkb"><img src="https://avatars.githubusercontent.com/u/111675689?v=4"/></a>
-<a href="https://github.com/rishabh2727"><img src="https://avatars.githubusercontent.com/u/121647557?v=4"/></a>
+<a href="https://github.com/jaz404"><img src="https://images.weserv.nl/?url=https://github.com/jaz404.png?v=4&h=50&w=50&fit=cover&mask=circle&maxage=7d"/></a>
+<a href="https://github.com/saipranav1512"><img src="https://images.weserv.nl/?url=https://github.com/saipranav1512.png?v=4&h=50&w=50&fit=cover&mask=circle&maxage=7d"/></a>
+<a href="https://github.com/rithwikkb"><img src="https://images.weserv.nl/?url=https://github.com/rithwikkb.png?v=4&h=50&w=50&fit=cover&mask=circle&maxage=7d"/></a>
+<a href="https://github.com/rishabh2727"><img src="https://images.weserv.nl/?url=https://github.com/rishabh2727.png?v=4&h=50&w=50&fit=cover&mask=circle&maxage=7d"/></a>
 </div>  
 
 ## 📜 License
